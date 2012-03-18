@@ -34,7 +34,7 @@ namespace GGS {
       this->reply = this->manager->get(QNetworkRequest(uri));
       this->response = responseBuffer;
       connect(this->reply, SIGNAL(readyRead()), this, SLOT(slotReadyRead()));
-      connect(this->reply, SIGNAL(downloadProgress(qint64,qint64)), this, SLOT(slotDownloadProgress(qint64,qint64)));
+      connect(this->reply, SIGNAL(downloadProgress(qint64,qint64)), this, SIGNAL(downloadProgress(qint64,qint64)));
       connect(this->reply, SIGNAL(finished()), this, SLOT(slotReplayDownloadFinished()));
       connect(this->reply, SIGNAL(error(QNetworkReply::NetworkError)), this, SLOT(slotError(QNetworkReply::NetworkError)));
     }
@@ -59,6 +59,5 @@ namespace GGS {
     {
       emit this->downloadError(error);
     }
-
   }
 }

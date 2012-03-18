@@ -48,6 +48,7 @@ namespace GGS {
         this->_resultCallback->downloadWarning(true, error);
 
         int timeout = this->_timeout->getTimeout(this->_retryCount);
+        emit downloadRetryNumber(_retryCount);
         if(timeout > 0) {
           QTimer::singleShot(timeout, this, SLOT(internalStartDownload()));
         } else {

@@ -7,12 +7,12 @@ MemoryLeaksChecker::MemoryLeaksChecker()
 
 void MemoryLeaksChecker::start()
 {
-  this->_leaksFound = false;
-  _CrtMemCheckpoint(&beginMemoryState);
+ // this->_leaksFound = false;
+ // _CrtMemCheckpoint(&beginMemoryState);
 }
 
 void MemoryLeaksChecker::finish()
-{
+{/*
   // only check for memory leaks if the test did not end in a failure
   _CrtMemState endingMemoryState; // holds the current memory state (state during destruction)
   _CrtMemState memoryStateDiff;   // holds the difference between states during construction and destruction
@@ -26,6 +26,6 @@ void MemoryLeaksChecker::finish()
     _CrtMemDumpStatistics(&memoryStateDiff);
 
     this->_leaksFound = true;
-  }
+  }*/
 }
 

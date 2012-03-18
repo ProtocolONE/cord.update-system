@@ -49,7 +49,8 @@ namespace GGS {
 
     private slots:
       void internalStartDownload();
-
+    signals:
+      void downloadRetryNumber(int retryNumber);
     private:
       FileDownloaderInterface *_downloader;
       DownloadResultInterface *_resultCallback;

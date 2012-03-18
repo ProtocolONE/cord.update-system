@@ -42,6 +42,7 @@ namespace GGS {
     signals:
       void downloadComplited();
       void downloadError(QNetworkReply::NetworkError error);
+      void downloadProgress(qint64 recieved, qint64 total);
 
     private:
       QNetworkAccessManager *manager;
