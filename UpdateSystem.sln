@@ -4,7 +4,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UpdateSystem", "UpdateSyste
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GuiSample", "GuiSample\GuiSample.vcxproj", "{80412590-0943-3CD7-8E3F-8F134398F175}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UpdateSystemTestQt", "UpdateSystemTestQt\UpdateSystemTestQt.vcxproj", "{BF8B9419-E66E-4286-B6DF-42ABE588D423}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2BE542FE-190F-41B6-ADAB-27CF689D1BB7}"
+	ProjectSection(SolutionItems) = preProject
+		Deploy.props = Deploy.props
+		Readme.txt = Readme.txt
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UpdateSystemTest", "UpdateSystemTest\UpdateSystemTest.vcxproj", "{BF8B9419-E66E-4286-B6DF-42ABE588D423}"
 	ProjectSection(ProjectDependencies) = postProject
 		{73F98D23-AC4A-3FF8-BA86-6B2825C19169} = {73F98D23-AC4A-3FF8-BA86-6B2825C19169}
 	EndProjectSection
@@ -20,9 +26,7 @@ Global
 		{73F98D23-AC4A-3FF8-BA86-6B2825C19169}.Release|Win32.ActiveCfg = Release|Win32
 		{73F98D23-AC4A-3FF8-BA86-6B2825C19169}.Release|Win32.Build.0 = Release|Win32
 		{80412590-0943-3CD7-8E3F-8F134398F175}.Debug|Win32.ActiveCfg = Debug|Win32
-		{80412590-0943-3CD7-8E3F-8F134398F175}.Debug|Win32.Build.0 = Debug|Win32
 		{80412590-0943-3CD7-8E3F-8F134398F175}.Release|Win32.ActiveCfg = Release|Win32
-		{80412590-0943-3CD7-8E3F-8F134398F175}.Release|Win32.Build.0 = Release|Win32
 		{BF8B9419-E66E-4286-B6DF-42ABE588D423}.Debug|Win32.ActiveCfg = Debug|Win32
 		{BF8B9419-E66E-4286-B6DF-42ABE588D423}.Debug|Win32.Build.0 = Debug|Win32
 		{BF8B9419-E66E-4286-B6DF-42ABE588D423}.Release|Win32.ActiveCfg = Release|Win32

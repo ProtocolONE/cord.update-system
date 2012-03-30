@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
 	qmlRegisterType<GGS::UpdateSystem::UpdateManagerViewModel>("qGNA.Library", 1, 0, "UpdateManagerViewModel");
 
-	QUrl url(QUrl::fromLocalFile("..\\..\\..\\qGNA.Main\\qGNA_Main.qml"));
+	QUrl url(QUrl::fromLocalFile("qGNA_Main.qml"));
     QDeclarativeView *nQMLContainer = new QDeclarativeView(url);       
     nQMLContainer->setAlignment(Qt::AlignCenter);                                                                               
     nQMLContainer->setResizeMode(QDeclarativeView::SizeRootObjectToView);     
