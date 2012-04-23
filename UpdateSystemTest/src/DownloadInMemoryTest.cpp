@@ -6,8 +6,8 @@
 
 #include "DownloadInMemoryTestWorker.h"
 
-#include "Downloader/MemoryDownloader.h"
-#include "Downloader/DownloadInMemoryInterface.h"
+#include <UpdateSystem/Downloader/MemoryDownloader.h>
+#include <UpdateSystem/Downloader/DownloadInMemoryInterface.h>
 
 class DownloadInMemoryTest: public ::testing::Test
 {

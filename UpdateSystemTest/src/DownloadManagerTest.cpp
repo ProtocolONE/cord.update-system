@@ -1,15 +1,14 @@
 #ifndef _GGS_DOWNLOAD_MANAGER_TEST_H_
 #define _GGS_DOWNLOAD_MANAGER_TEST_H_
 
-#include <QtCore/QThread>
+#include <UpdateSystem/Downloader/DownloadResultInterface.h>
+#include <UpdateSystem/Downloader/filedownloaderinterface.h>
 
-#include "gtest/gtest.h"
+#include <QtCore/QThread>
+#include <gtest/gtest.h>
 
 #include "MemoryLeaksChecker.h"
-
 #include "DownloadManagerTestWorker.h"
-#include "Downloader/DownloadResultInterface.h"
-#include "Downloader/filedownloaderinterface.h"
 #include "Utils.h"
 
 class DownloadResultCallback : public GGS::Downloader::DownloadResultInterface

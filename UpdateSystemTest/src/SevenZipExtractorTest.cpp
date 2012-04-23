@@ -7,9 +7,8 @@
 #include <QtCore>
 #include <QDebug>
 
-#include "Extractor/ExtractorInterface.h"
-#include "Extractor/SevenZipExtractor.h"
-
+#include <UpdateSystem/Extractor/ExtractorInterface.h>
+#include <UpdateSystem/Extractor/SevenZipExtractor.h>
 
 bool RemoveDirectory(QDir &aDir)
 {

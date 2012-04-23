@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 #include "MemoryLeaksChecker.h"
-#include "Downloader/DynamicRetryTimeout.h"
+
+#include <UpdateSystem/Downloader/DynamicRetryTimeout.h>
 
 class DynamicRetryTimeoutTest : public ::testing::Test
 {

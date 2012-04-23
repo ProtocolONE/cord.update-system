@@ -6,10 +6,8 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QDir>
 
-
-#include "Downloader/DownloadResultInterface.h"
-#include "Downloader/downloadmanager.h"
-
+#include <UpdateSystem/Downloader/DownloadResultInterface.h>
+#include <UpdateSystem/Downloader/downloadmanager.h>
 
 class DownloadManagerTestWorker : public QObject
 {

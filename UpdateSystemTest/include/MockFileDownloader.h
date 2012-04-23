@@ -11,8 +11,8 @@
      #define new DEBUG_NEW
   #endif
 
-#include "Downloader/FileDownloaderInterface.h"
-#include "Downloader/DownloadResultInterface.h"
+#include <UpdateSystem/Downloader/filedownloaderinterface.h>
+#include <UpdateSystem/Downloader/DownloadResultInterface.h>
 
 class MockFileDownloader :  public QObject,
                             public GGS::Downloader::FileDownloaderInterface

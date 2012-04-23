@@ -1,10 +1,11 @@
 #include "gtest/gtest.h"
 #include "MemoryLeaksChecker.h"
 
-#include "Downloader/MultiDownloadResultInterface.h"
-#include "Downloader/MultiFileDownloader.h"
-#include "Downloader/filedownloaderinterface.h"
-#include "Downloader/DownloadResultInterface.h"
+#include <UpdateSystem/Downloader/MultiDownloadResultInterface.h>
+#include <UpdateSystem/Downloader/MultiFileDownloader.h>
+#include <UpdateSystem/Downloader/filedownloaderinterface.h>
+#include <UpdateSystem/Downloader/DownloadResultInterface.h>
+
 
 class MultiFileDownloaderTest : public ::testing::Test
 {

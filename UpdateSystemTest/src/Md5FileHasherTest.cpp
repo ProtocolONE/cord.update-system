@@ -1,11 +1,11 @@
+#include <UpdateSystem/Hasher/Md5FileHasher.h>
+
 #include "gtest/gtest.h"
 #include "MemoryLeaksChecker.h"
 
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 #include <QtCore/QTime>
-
-#include "Hasher/Md5FileHasher.h"
 
 class Md5FileHasherTest : public ::testing::Test
 {

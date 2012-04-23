@@ -5,8 +5,7 @@
 #include <QtCore/QByteArray>
 #include <QtCore/QThread>
 
-#include "Downloader/MemoryDownloader.h"
-
+#include <UpdateSystem/Downloader/MemoryDownloader.h>
 
 class DownloadInMemoryTestWorker :
   public QObject

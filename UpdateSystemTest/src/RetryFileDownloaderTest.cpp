@@ -2,10 +2,9 @@
 #include "gtest/gtest.h"
 #include "MemoryLeaksChecker.h"
 
-#include "Downloader/DownloadResultInterface.h"
-
-#include "Downloader/DynamicRetryTimeout.h"
-#include "Downloader/RetryFileDownloader.h"
+#include <UpdateSystem/Downloader/DownloadResultInterface.h>
+#include <UpdateSystem/Downloader/DynamicRetryTimeout.h>
+#include <UpdateSystem/Downloader/RetryFileDownloader.h>
 
 class RetryFileDownloaderTest : public ::testing::Test
 {

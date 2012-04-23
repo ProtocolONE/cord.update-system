@@ -1,6 +1,6 @@
 #ifdef _DEBUG
   #ifdef WIN32
-    #include <Windows.h>
+  #include <Windows.h>
   #endif
   //#include <vld.h>
 #endif
@@ -20,7 +20,7 @@
 
 int main(int argc, char *argv[])
 {
-	QCoreApplication app(argc, argv);
-    testing::InitGoogleTest(&argc, argv);
-    return  RUN_ALL_TESTS();
+  QCoreApplication app(argc, argv);
+  testing::InitGoogleTest(&argc, argv);
+  return  RUN_ALL_TESTS();
 }
