@@ -10,8 +10,9 @@
 #pragma comment(lib, "UpdateSystemX86.lib")
 #endif 
 
-#include "updatemanagerviewmodel.h"
+//#include "updatemanagerviewmodel.h"
 
+#include <UpdateSystemViewModel/updatemanagerviewmodel>
 /*!
     Устанавливает текстовые кодеки для кодировки \a codecName.
 */
@@ -30,10 +31,9 @@ int main(int argc, char *argv[])
 	
     QString tmp(QObject::tr("123"));
     QApplication a(argc, argv);
+	  qmlRegisterType<GGS::UpdateSystem::UpdateManagerViewModel>("qGNA.Library", 1, 0, "UpdateManagerViewModel");
 
-	qmlRegisterType<GGS::UpdateSystem::UpdateManagerViewModel>("qGNA.Library", 1, 0, "UpdateManagerViewModel");
-
-	QUrl url(QUrl::fromLocalFile("qGNA_Main.qml"));
+	  QUrl url(QUrl::fromLocalFile("qGNA_Main.qml"));
     QDeclarativeView *nQMLContainer = new QDeclarativeView(url);       
     nQMLContainer->setAlignment(Qt::AlignCenter);                                                                               
     nQMLContainer->setResizeMode(QDeclarativeView::SizeRootObjectToView);     

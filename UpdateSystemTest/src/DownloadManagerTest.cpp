@@ -5,11 +5,16 @@
 #include <UpdateSystem/Downloader/filedownloaderinterface.h>
 
 #include <QtCore/QThread>
+#include <QtCore/QTimer>
 #include <gtest/gtest.h>
 
 #include "MemoryLeaksChecker.h"
 #include "DownloadManagerTestWorker.h"
 #include "Utils.h"
+
+#include "TestEventLoopFinisher.h"
+#include "SignalCounter.h"
+#include <functional>
 
 class DownloadResultCallback : public GGS::Downloader::DownloadResultInterface
 {
@@ -56,6 +61,40 @@ public:
   bool _isWarningCalled;
 private:
   QThread *_thread;
+};
+
+class DownloadManagerResultLamda : public GGS::Downloader::DownloadResultInterface
+{
+public:
+  ~DownloadManagerResultLamda() {}
+  DownloadManagerResultLamda() 
+    : _downloadProgressFunction(0)
+    , _downloadResultFunction(0)
+    , _downloadWarningFunction(0)
+  {}
+
+  virtual void downloadResult( bool isError, GGS::Downloader::DownloadResults error ) 
+  {
+    if (this->_downloadResultFunction)
+      this->_downloadResultFunction(isError, error);
+  }
+
+  virtual void downloadProgress( quint64 current, quint64 total ) 
+  {
+    if (this->_downloadProgressFunction)
+      this->_downloadProgressFunction(current, total);
+  }
+
+  virtual void downloadWarning( bool isError, GGS::Downloader::DownloadResults error ) 
+  {
+    if (this->_downloadWarningFunction)
+      this->_downloadWarningFunction(isError, error);
+  }
+
+  std::tr1::function<void (bool, GGS::Downloader::DownloadResults)> _downloadResultFunction;
+  std::tr1::function<void (quint64, quint64)> _downloadProgressFunction;
+  std::tr1::function<void (bool, GGS::Downloader::DownloadResults)> _downloadWarningFunction;
+
 };
 
 
@@ -187,7 +226,7 @@ TEST_F(DownloadManagerTest, downloadUpdateCrcTest2)
   QString testDirectory = QCoreApplication::applicationDirPath();
   testDirectory.append("/DownloadManagerTestWorker");
   QDir dir(testDirectory);
-  if(dir.exists(testDirectory)){
+  if (dir.exists(testDirectory)) {
     Utils::removeDir(dir);
   }
 
@@ -281,6 +320,57 @@ TEST_F(DownloadManagerTest, downloadUpdateCrcFailWithEmptyFileTest)
   delete thread;
   delete test;
   delete resultCallback;
-
 }
+
+TEST(DownloadManagerTests, FailTest)
+{
+  GGS::Downloader::DownloadManager manager;
+  QEventLoop loop;
+  DownloadManagerResultLamda result;
+  int progresCount = 0;
+  int resultCallCount = 0;
+  int resultIsError = 0;
+  int warningCount = 0;
+  int warningIsError = 0;
+  result._downloadProgressFunction = [&] (qint64 current, qint64 total) mutable {
+    progresCount++;
+  };
+
+  result._downloadResultFunction = [&] (bool isError, GGS::Downloader::DownloadResults result1) mutable {
+    resultCallCount++;
+    if (isError)
+      resultIsError++;
+
+    QTimer::singleShot(1000, &loop, SLOT(quit()));
+  };
+
+  result._downloadWarningFunction = [&] (bool isError, GGS::Downloader::DownloadResults result1) mutable {
+    warningCount++;
+    if (isError)
+      warningIsError++;
+  };
+
+  manager.setResultCallback(&result);
+
+  QString testDirectory = QCoreApplication::applicationDirPath();
+  testDirectory.append("/DownloadManagerTestWorker");
+  QDir dir(testDirectory);
+  if(dir.exists(testDirectory)){
+    Utils::removeDir(dir);
+  }
+
+  dir.mkpath(testDirectory);
+  QString testFilePath = testDirectory;
+  testFilePath.append("/update.crc");
+  
+  manager.downloadFile("http://fs0w.gamenet.ru/fake.txt", testFilePath);
+  loop.exec();
+
+  ASSERT_LT(0, progresCount);
+  ASSERT_EQ(1, resultCallCount);
+  ASSERT_EQ(1, resultIsError);
+  ASSERT_EQ(0, warningCount);
+  ASSERT_EQ(0, warningIsError);
+}
+
 #endif // _GGS_DOWNLOAD_MANAGER_TEST_H_

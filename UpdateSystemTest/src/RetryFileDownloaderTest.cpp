@@ -71,10 +71,12 @@ private:
 class MockFailDownloadResultCallback : public GGS::Downloader::DownloadResultInterface
 {
 public:
-  MockFailDownloadResultCallback() { 
-    this->_resultCount = 0; 
-    this->_lastError = GGS::Downloader::NoError; 
-    this->_lastWarning = GGS::Downloader::NoError; 
+  MockFailDownloadResultCallback() 
+  : _resultCount(0)
+  , _warningCount(0)
+  , _lastError(GGS::Downloader::NoError)
+  , _lastWarning(GGS::Downloader::NoError)
+  { 
   }
 
   ~MockFailDownloadResultCallback() {}
@@ -126,7 +128,7 @@ TEST_F(RetryFileDownloaderTest, SingleFailThenGood)
   MockFailDownloadResultCallback retryResult;
   GGS::Downloader::DynamicRetryTimeout timeout;
   MockFailDownloader downloader;
-  downloader.setFailCountBeforeGood(1);
+  downloader.setFailCountBeforeGood(3);
 
   target.setMaxRetry(5);
   target.setTimeout(&timeout);
@@ -137,6 +139,7 @@ TEST_F(RetryFileDownloaderTest, SingleFailThenGood)
   target.downloadFile(QString("qwe"), QString("asd"));
 
   ASSERT_EQ(QNetworkReply::NoError, retryResult._lastError);
+  ASSERT_EQ(3, retryResult._warningCount);
   ASSERT_EQ(1, retryResult._resultCount);
 }
 
@@ -158,4 +161,5 @@ TEST_F(RetryFileDownloaderTest, FailSingleTry)
 
   ASSERT_EQ(GGS::Downloader::NetworkErrok, retryResult._lastError);
   ASSERT_EQ(1, retryResult._resultCount);
+  ASSERT_EQ(1, retryResult._warningCount);
 }

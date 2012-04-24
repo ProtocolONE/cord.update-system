@@ -17,20 +17,19 @@
 #include <QNetworkReply>
 #include <QNetworkRequest>
 
-#include "UpdateManagerWorker.h"
+#include <UpdateSystem/UpdateManagerWorker>
+#include <UpdateSystem/updatemanager>
 
-#include "updatemanager.h"
-#include "UpdateInfoGetterInterface.h"
-#include "UpdateInfoGetterResultInterface.h"
-#include "UpdateInfoGetter.h"
+#include <UpdateSystem/UpdateInfoGetter>
+#include <UpdateSystem/UpdateInfoGetterInterface>
+#include <UpdateSystem/UpdateInfoGetterResultInterface>
+#include <UpdateSystem/Extractor/SevenZipExtractor>
 
-#include "Extractor/SevenZipExtractor.h"
-
-#include "Downloader/RetryFileDownloader.h"
-#include "Downloader/downloadmanager.h"
-#include "Downloader/MultiFileDownloader.h"
-#include "Downloader/MultiFileDownloaderWithExtracter.h"
-#include "Hasher/Md5FileHasher.h"
+#include <UpdateSystem/Downloader/RetryFileDownloader>
+#include <UpdateSystem/Downloader/downloadmanager>
+#include <UpdateSystem/Downloader/MultiFileDownloader>
+#include <UpdateSystem/Downloader/MultiFileDownloaderWithExtracter>
+#include <UpdateSystem/Hasher/Md5FileHasher>
 
 
 namespace Ui {
