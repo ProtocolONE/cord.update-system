@@ -175,7 +175,11 @@ xcopy /Y /I /R /E "$(QTDIR)\bin\QtScript%D%4.dll" "$(TargetDir)"
 xcopy /Y /I /R /E "$(QTDIR)\bin\QtWebKit%D%4.dll" "$(TargetDir)"
 xcopy /Y /I /R /E "$(QTDIR)\bin\QtXmlPatterns%D%4.dll" "$(TargetDir)"
 xcopy /Y /I /R /E "$(QTDIR)\bin\QtDeclarative%D%4.dll" "$(TargetDir)"
-xcopy /Y /I /R /E "$(QTDIR)\bin\QtOpenGL%D%4.dll" "$(TargetDir)"</Command>
+xcopy /Y /I /R /E "$(QTDIR)\bin\QtOpenGL%D%4.dll" "$(TargetDir)"
+
+xcopy /Y /I /R /S "$(ProjectDir)qml\*.qml" "$(TargetDir)"
+xcopy /Y /I /R /S "$(ProjectDir)qml\*.ttf" "$(TargetDir)"
+xcopy /Y /I /R /S "$(ProjectDir)qml\*.png" "$(TargetDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
