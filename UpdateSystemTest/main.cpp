@@ -24,9 +24,6 @@
 int main(int argc, char *argv[])
 {
   QCoreApplication app(argc, argv);
-
-  qRegisterMetaType<GGS::UpdateSystem::CheckUpdateHelper::Results>("GGS::UpdateSystem::CheckUpdateHelper::Results");
-
   testing::InitGoogleTest(&argc, argv);
   return  RUN_ALL_TESTS();
 }
