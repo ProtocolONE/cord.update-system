@@ -79,7 +79,7 @@ TEST(SevenZipExtractor, ExtractTest)
   QString badArchive = fixturePath;
   badArchive.append("test.txt");
   result = iextractor->extract(badArchive, workingPath);
-  ASSERT_EQ(GGS::Extractor::NoArchive, result);
+  ASSERT_EQ(GGS::Extractor::BadArchive, result);
 
   QString badArchive2 = fixturePath;
   badArchive2.append("currupted_test.txt.7z");
