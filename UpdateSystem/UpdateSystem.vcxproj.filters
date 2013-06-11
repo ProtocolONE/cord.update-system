@@ -2,7 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="Debug\moc_downloadmanager.cpp" />
-    <ClCompile Include="Debug\moc_DownloadResultInterface.cpp" />
     <ClCompile Include="Debug\moc_DynamicRetryTimeout.cpp" />
     <ClCompile Include="Debug\moc_Md5FileHasher.cpp" />
     <ClCompile Include="Debug\moc_MemoryDownloader.cpp" />
@@ -11,7 +10,6 @@
     <ClCompile Include="Debug\moc_UpdateFileInfo.cpp" />
     <ClCompile Include="Debug\moc_UpdateInfoContainer.cpp" />
     <ClCompile Include="Debug\moc_UpdateInfoGetter.cpp" />
-    <ClCompile Include="Debug\moc_UpdateInfoGetterResultInterface.cpp" />
     <ClCompile Include="Debug\moc_UpdateInstaller.cpp" />
     <ClCompile Include="Debug\moc_updatemanager.cpp" />
     <ClCompile Include="Debug\moc_UpdateManagerWorker.cpp" />
@@ -88,6 +86,18 @@
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_DownloadResultInterface.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_DownloadResultInterface.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_UpdateInfoGetterResultInterface.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_UpdateInfoGetterResultInterface.cpp">
+      <Filter>Generated Files\Release</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

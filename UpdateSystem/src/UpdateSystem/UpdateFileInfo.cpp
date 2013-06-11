@@ -10,10 +10,8 @@
 
 #include <UpdateSystem/UpdateFileInfo.h>
 
-namespace GGS 
-{
-  namespace UpdateSystem
-  {
+namespace GGS {
+  namespace UpdateSystem {
     UpdateFileInfo::UpdateFileInfo(QObject *parent)
       : QObject(parent)
       , _relativePath(QString())

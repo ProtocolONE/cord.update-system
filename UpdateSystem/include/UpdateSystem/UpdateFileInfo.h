@@ -15,12 +15,13 @@
 #include <QtCore/QString>
 #include <QtCore/QObject>
 #include <QtCore/QMetaType>
+#include <QtCore/QDataStream>
 
 namespace GGS 
 {
   namespace UpdateSystem
   {
-    class UPDATESYSTEMSHARED_EXPORT UpdateFileInfo : QObject
+    class UPDATESYSTEMSHARED_EXPORT UpdateFileInfo : public QObject
     {
       Q_OBJECT
     public:

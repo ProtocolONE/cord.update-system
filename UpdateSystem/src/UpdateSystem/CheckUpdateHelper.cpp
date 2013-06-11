@@ -23,7 +23,7 @@ namespace GGS {
       QNetworkRequest request(this->_updateUrl);
 
       if (this->_isInitialized)
-        request.setRawHeader("If-Modified-Since", this->_lastModified.toAscii());
+        request.setRawHeader("If-Modified-Since", this->_lastModified.toLatin1());
 
       QNetworkReply *reply = this->_manager->head(request);
       SIGNAL_CONNECT_CHECK(connect(reply, SIGNAL(finished()), this, SLOT(slotReplyDownloadFinished())));
@@ -52,7 +52,7 @@ namespace GGS {
         return;
       }
 
-      QString lastModified = QString::fromAscii(reply->rawHeader(QByteArray("Last-Modified")));
+      QString lastModified = QString::fromLatin1(reply->rawHeader(QByteArray("Last-Modified")));
       if (!this->_isInitialized) {
         this->_lastModified = lastModified;
         this->_isInitialized = true;

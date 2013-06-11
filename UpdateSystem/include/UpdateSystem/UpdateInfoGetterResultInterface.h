@@ -24,13 +24,16 @@ namespace GGS {
       BadArguments = 4,
       CanNotDeleteOldUpdateFiles = 5,
     };
-	
-	class UPDATESYSTEMSHARED_EXPORT UpdateInfoGetterResultsWrapper 
-    : public QObject
+
+	class UPDATESYSTEMSHARED_EXPORT UpdateInfoGetterResultsWrapper : public QObject
 	{
 		Q_OBJECT
 		Q_ENUMS(UpdateInfoGetterResultsEnum)
+
 	public:
+    UpdateInfoGetterResultsWrapper(QObject *parent = 0) : QObject(parent) {}
+    ~UpdateInfoGetterResultsWrapper(){};
+    
 		enum UpdateInfoGetterResultsEnum {
       NoError = 0,
       DownloadError = 1,
@@ -40,7 +43,7 @@ namespace GGS {
       CanNotDeleteOldUpdateFiles = 5,
 		};
 	};
-
+ 
     class UPDATESYSTEMSHARED_EXPORT UpdateInfoGetterResultInterface {
     public:
       virtual ~UpdateInfoGetterResultInterface() {};
