@@ -85,6 +85,7 @@ namespace GGS {
     void UpdateManagerViewModel::startCheckUpdate()
     {
       this->_updateThread = new QThread();
+      this->_updateThread->setObjectName("Update manager thread");
       connect( _updateThread, SIGNAL(finished()), this, SLOT(updateThreadFinished()));
 
       this->_updateManagerWorker->setInstallSubDir(installPath());

@@ -49,6 +49,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;_DEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessorDefinitions>UNICODE;WIN32;_DEBUG;QT_LARGEFILE_SUPPORT;QT_DLL;QT_CORE_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_WIDGETS_LIB;QT_TESTLIB_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Optimization>Disabled</Optimization>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -72,6 +73,7 @@ xcopy /Y /I /R "$(QGNACOMMONDIR)\SevenZip\trunk\bin\7za.dll" "$(TargetDir)"
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessorDefinitions>UNICODE;WIN32;QT_LARGEFILE_SUPPORT;QT_NO_DEBUG;NDEBUG;QT_DLL;QT_CORE_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_WIDGETS_LIB;QT_TESTLIB_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DebugInformationFormat>
       </DebugInformationFormat>
