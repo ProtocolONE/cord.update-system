@@ -26,29 +26,23 @@ TEST(SevenZipCompressor, CompressorTest)
   QString fixturePath = rootDirPath;
   fixturePath.append("/UpdateSystemTestFixtures/ca/");
 
-  QString workingPath = rootDirPath;
-  workingPath.append("/UpdateSystemTestWork/");
+  QString relativePath("1950/123.txt");
 
-  QDir workDir(workingPath);
-  if(workDir.exists()) {
-    RemoveDirectory(workDir);
-  }
+  QString fullSourcePath = fixturePath;
+  fullSourcePath.append("live/");
+  fullSourcePath.append(relativePath);
 
-  ASSERT_TRUE( workDir.mkpath(workingPath) );
+  QString expectedTarget = fullSourcePath;
+  expectedTarget.append(".7z");
+  
+  QString targetPath = fixturePath;
+  targetPath.append("new/");
+  targetPath.append(relativePath);
+  targetPath.append(".7z");
 
-  QString packFileName = "bdcap32.dll";
-  QString normalPath = fixturePath + "live/";
-  QString arcPath = fixturePath + "new/";
-  normalPath.append(packFileName);
-  arcPath.append("bdcap32.dll.7z");
-
-  bool g = QFile::exists(normalPath);
-
-  ASSERT_TRUE(QFile::exists(normalPath));
-  ASSERT_EQ(0, comp.compress(fixturePath + "live/", packFileName, arcPath));
-  ASSERT_TRUE(QFile::exists(arcPath));
-
-  QString distFile = fixturePath + "dist/live/bdcap32.dll.7z";
-  bool h = QFile::exists(distFile);
-  assertFileEqual(distFile, arcPath);
+  comp.compressFile(fullSourcePath, targetPath);
+  ASSERT_TRUE(QFile::exists(targetPath));
+  assertFileEqual(expectedTarget, targetPath);
 }
+
+

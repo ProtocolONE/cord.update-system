@@ -34,7 +34,8 @@ namespace GGS {
 
       void setCompressionLevel(CompressionLevel level);
       void setNumThreads(int threads);
-      GGS::Compressor::CompressorInterface::CompressionResult compress(const QString& targetPath, const QString& fileName, const QString& archivePath);
+      
+      CompressorInterface::CompressionResult compressFile(const QString& sourcePath, const QString& targetPath);
 
     private:
       CompressionLevel _level;

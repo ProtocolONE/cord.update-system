@@ -11,10 +11,8 @@
 
 #include <QtCore/QString>
 
-namespace GGS 
-{
-  namespace Compressor
-  {
+namespace GGS {
+  namespace Compressor {
 
     class CompressorInterface 
     {
@@ -29,7 +27,7 @@ namespace GGS
 
       virtual ~CompressorInterface() {};
 
-      virtual CompressionResult compress(const QString& targetPath, const QString& fileName, const QString& archivePath) = 0;
+      virtual CompressionResult compressFile(const QString& sourcePath, const QString& targetPath) = 0;
     };
 
   }

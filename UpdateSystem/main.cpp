@@ -13,6 +13,9 @@ BOOL WINAPI DllMain(
   DWORD fdwReason,     // reason for calling function
   LPVOID lpReserved )  // reserved
 {
+  UNREFERENCED_PARAMETER(hinstDLL);
+  UNREFERENCED_PARAMETER(lpReserved);
+
   // Perform actions based on the reason for calling.
   switch( fdwReason ) 
   { 

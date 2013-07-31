@@ -16,12 +16,9 @@
 #include <SevenZip/CompressionLevel.h>
 
 #include <QtCore/QByteArray>
-#include <QtCore/QDebug>
 #include <QtCore/QFile>
 #include <QTCore/QDir>
 #include <WinError.h>
-
-#define DEBUG_LOG qDebug() << __FILE__ << __LINE__ << __FUNCTION__
 
 using namespace GGS::Compressor;
 
@@ -45,37 +42,46 @@ void SevenZipCompressor::setCompressionLevel(CompressionLevel level)
  this->_level = level;
 }
 
-CompressorInterface::CompressionResult SevenZipCompressor::compress(const QString& targetPath, const QString& fileName, const QString& archivePath)
+CompressorInterface::CompressionResult SevenZipCompressor::compressFile(const QString& sourcePath, const QString& targetPath)
 {
-  QString targetFilePath = targetPath + "/" + fileName;
-
-  if (!QFile::exists(targetFilePath))
+  using namespace SevenZip::intl;
+  if (!QFile::exists(sourcePath))
     return CompressorInterface::ReadError;
 
-  QFileInfo info(archivePath);
+  QString sourcePath2 = QDir::toNativeSeparators(sourcePath);
+  QString targetPath2 = QDir::toNativeSeparators(targetPath);
+
+  QFileInfo info(targetPath2);
   QDir archivePathDir = info.dir();
   QString pathToFile = info.absolutePath();
   if (!archivePathDir.exists())
     archivePathDir.mkpath(pathToFile);
 
-  wchar_t archive[261];
-  wchar_t path[261];
-  wchar_t target[261];
+  QFileInfo sourceInfo(sourcePath2);
+  QDir sourceDirInfo = sourceInfo.dir();
+  QString sourceDirPath = QDir::toNativeSeparators(sourceDirInfo.absolutePath()) + "\\";
 
-  int length = archivePath.toWCharArray(archive);
-  archive[length] = L'\0';
+  std::vector<wchar_t> source;
+  source.resize(sourcePath2.size() + 1);
 
-  length = fileName.toWCharArray(target);
+  std::vector<wchar_t> sourceDir;
+  sourceDir.resize(sourceDirPath.size() + 1);
+
+  std::vector<wchar_t> target;
+  target.resize(targetPath2.size() + 1);
+
+  int length = sourcePath2.toWCharArray(source.data());
+  source[length] = L'\0';
+  length = targetPath2.toWCharArray(target.data());
   target[length] = L'\0';
-
-  length = targetPath.toWCharArray(path);
-  path[length] = L'\0';
+  length = sourceDirPath.toWCharArray(sourceDir.data());
+  sourceDir[length] = L'\0';
 
   try {
     SevenZip::SevenZipLibrary lib;
     lib.Load();
 
-    SevenZip::SevenZipCompressor compressor(lib, archive);
+    SevenZip::SevenZipCompressor compressor(lib, target.data());
 
     switch(this->_level) {
     case None: compressor.SetCompressionLevel(SevenZip::CompressionLevel::None); break;
@@ -87,18 +93,17 @@ CompressorInterface::CompressionResult SevenZipCompressor::compress(const QStrin
     default: compressor.SetCompressionLevel(SevenZip::CompressionLevel::Ultra); break;
     }
 
-    compressor.CompressFiles(path, target, false);
-
+    compressor.CompressFile(sourceDir.data(), source.data());
   } catch(SevenZip::SevenZipException& ex) {
 
     ::std::wstring des(ex.GetMessage().GetString());
-    
+
     DEBUG_LOG << "7-zip exception: " 
       << QString::fromWCharArray(des.c_str()) 
-      << " archive path: "
-      << archivePath
+      << " source path: "
+      << sourcePath2
       << " target file path: "
-      << targetPath + "/" + fileName;
+      << targetPath2;
 
     return WriteError;
 
@@ -107,5 +112,5 @@ CompressorInterface::CompressionResult SevenZipCompressor::compress(const QStrin
     return UnknownError;
   }
 
-  return NoError;
+  return CompressorInterface::NoError;
 }
