@@ -23,15 +23,13 @@ namespace GGS {
       NetworkErrok = 3,
       ExtractionError = 4,
     };
-   
-    class UPDATESYSTEMSHARED_EXPORT DownloadResultsWrapper : public QObject
+
+    class UPDATESYSTEMSHARED_EXPORT DownloadResultsWrapper 
+      : public QObject
     {
       Q_OBJECT
-      Q_ENUMS(DownloadResultsEnum)
+        Q_ENUMS(DownloadResultsEnum)
     public:
-      DownloadResultsWrapper(QObject *parent = 0) : QObject(parent) {};
-      ~DownloadResultsWrapper(){};
-
       enum DownloadResultsEnum {
         NoError = 0,
         BadUrl = 1,

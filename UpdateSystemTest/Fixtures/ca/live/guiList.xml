@@ -1,0 +1,3247 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<roots>
+<gui>
+<adv_filter.xml>
+<typeID>b0000001</typeID>
+<name>其他游戏</name>
+<a>浪漫Q唐</a>
+<a>狼队</a>
+<a>古域</a>
+<a>红楼Q梦</a>
+<a>魔界2</a>
+<a>战斗足球</a>
+<a>大唐无双</a>
+<a>勇者斗斗龙</a>
+<a>仙剑神曲</a>
+<a>醉逍遥</a>
+<a>东邪西毒</a>
+<a>侠客行</a>
+<a>晶铁之门</a>
+<a>天工物语</a>
+<a>绝对火力</a>
+<a>神魔大陆</a>
+<a>红颜</a>
+<a>十二封印</a>
+<a>诸神之战</a>
+<a>快乐神仙</a>
+<a>流星蝴蝶剑</a>
+<a>星空传奇</a>
+<a>龙魂</a>
+<a>英雄联盟</a>
+<a>倾国倾城</a>
+<a>洛汗</a>
+<a>征途2</a>
+<a>三国争霸</a>
+<a>梦三国</a>
+<a>星空之恋</a>
+<a>圣魔之血</a>
+<a>春秋争霸</a>
+<a>御龙在天</a>
+<a>神兵传奇</a>
+<a>极速轮滑</a>
+<a>梦幻问情</a>
+<a>天之痕</a>
+<a>八仙过海</a>
+<a>沧海</a>
+<a>英雄美人</a>
+<a>通灵王</a>
+<a>西游记</a>
+<a>桃花源记</a>
+<a>龙之谷</a>
+<a>剑仙</a>
+<a>降龙之剑</a>
+<a>奇侠传</a>
+<a>聊个斋</a>
+<a>天之翼</a>
+<a>石器时代2</a>
+<a>龙腾世界</a>
+<a>MKZ-军魂</a>
+<a>月影传说</a>
+<a>穿越OL</a>
+<a>飞天风云</a>
+<a>蓬莱</a>
+<a>石器Q传</a>
+<a>霸者无双</a>
+<a>超级西西三国</a>
+<a>神魔传</a>
+<a>英雄年代2</a>
+<a>猎刃</a>
+<a>镜花缘OL</a>
+<a>鹿鼎记</a>
+<a>倩女幽魂OL</a>
+<a>梦回山海</a>
+<a>猎国</a>
+<a>第七区</a>
+<a>星辰变</a>
+<a>异界OL</a>
+<a>恶魔法则</a>
+<a>雷电战纪OL</a>
+<a>飘邈之旅</a>
+<a>梦幻星球</a>
+<a>开心果</a>
+<a>街头篮球2</a>
+<a>长江七号</a>
+<a>苍生</a>
+<a>封神榜3</a>
+<a>侠道金刚</a>
+<a>轩辕传奇</a>
+</adv_filter.xml>
+<combat.xml>
+<typeID>b0000002</typeID>
+<name>其他</name>
+<level>ур.</level>
+<hour> ч.</hour>
+<minute> мин. </minute>
+<second> сек.</second>
+<money>Монеты</money>
+<next>След. уровень</next>
+<total>Всего:</total>
+<detail>Подробный счет:</detail>
+<exp>Опыт за ур.: </exp>
+<gameexp>Опыт за игру: </gameexp>
+<moneyadd>Монеты: </moneyadd>
+<extra>Доп.: </extra>
+<elo>Рейтинг: </elo>
+<lei>Всего: </lei>
+<str0>Подробнее о навыках</str0>
+<str1>Подробнее о предметах</str1>
+<head0>Профиль игрока</head0>
+<head1>Герои</head1>
+<head2>Здания</head2>
+<head3>Солдаты</head3>
+<head4>Нейтральные монстры</head4>
+<head5>Инфо об улучшении навыка</head5>
+<head6>Инфо о купленном предмете</head6>
+<head7>Инфо об убитых</head7>
+<head8>Инфо об ассистах</head8>
+<head9>Инфо о смертях</head9>
+<text0>Звезды</text0>
+<text1>Всего опыта</text1>
+<text2>Опыт/мин.</text2>
+<text3>Всего золота</text3>
+<text4>Золота/мин.</text4>
+<text5>APM</text5>
+<text6>Время в игре</text6>
+<text7>Нанесенный физ. урон</text7>
+<text8>Нанесенный маг. урон</text8>
+<text9>Полученный урон</text9>
+<text10>Весь нанесенный урон</text10>
+<text11>Макс. комбо</text11>
+<text12>Убито</text12>
+<text13>Ассистов</text13>
+<text14>Получено золота</text14>
+<text15>Размер награды</text15>
+<text16>Число смертей</text16>
+<text17>Время смерти</text17>
+<text18>Общий урон</text18>
+<text19>Опыт</text19>
+<text20>Золота</text20>
+<text21>Убито</text21>
+<text22>Убитые Боссы</text22>
+<text23>Уничтожено</text23>
+<monster>Нейтральная сторона</monster>
+<building>Защитная башня</building>
+<soldier>Вражеские отряды</soldier>
+<noend>N/A</noend>
+<nodata>Тренировочный режим</nodata>
+<wait>Сбор данных</wait>
+<topmatch>в рейтинге</topmatch>
+<nogive>Член вашей команды использовал плагин, награда 0.</nogive>
+<all>Всего</all>
+<name0>Побед</name0>
+<name1>Поражений</name1>
+<name2>Двойной опыт</name2>
+<name3>Удержать участок</name3>
+<name4>Лучший игрок</name4>
+<name5>5 звезд</name5>
+<name6>Название комбо</name6>
+<name7>VIP</name7>
+<name8/>
+<name9>Монеты удваиваются</name9>
+<name10>Выбрать героя заново</name10>
+<name11>Усталость</name11>
+<name12>Прервать</name12>
+<name13>Временные рамки</name13>
+<name14>Опыт</name14>
+<name15>Монеты</name15>
+<name16>Общий счет</name16>
+</combat.xml>
+<common_str.xml>
+<typeID>b0000003</typeID>
+<name>英雄属性</name>
+<learn>Обучение</learn>
+<meter>м</meter>
+<second>сек.</second>
+<minute>мин.</minute>
+<gold>Золота</gold>
+<hp>очки</hp>
+<cd>Перезарядка: </cd>
+<lcd>Продолжительность: </lcd>
+<ddis>Радиус действия:</ddis>
+<dis>Дальность заклинания: </dis>
+<level>ур. </level>
+<hpCost>Здоровье: </hpCost>
+<mpCost>Мана: </mpCost>
+<goldCost>Золота: </goldCost>
+<needlevel>Необходимый ур.: </needlevel>
+<property>Характеристики: </property>
+<str1>Щелкните ПКМ, чтобы купить предмет. Щелкните ЛКМ, чтобы просмотреть инфо о синтезе.</str1>
+<str5>Щелкните ПКМ, чтобы продать предмет.</str5>
+<str2>Щелкните ЛКМ, чтобы использовать предмет. Чтобы продать предмет, щелкните ПКМ,</str2>
+<str3>Щелкните ЛКМ "+", чтобы изучить навык.</str3>
+<str4>Щелкните ЛКМ, чтобы использовать навык.</str4>
+<str6>Пассивный навык, действует постоянно.</str6>
+<str7>Чтобы изучить навык, дважды щелкните по иконке ЛКМ.</str7>
+<noskill>Нет изученных навыков.</noskill>
+<hpRate>Скорость восстановления здоровья/сек.: </hpRate>
+<mpRate>Скорость восстановления маны/сек.: </mpRate>
+<movespeed>Скорость перемещения: </movespeed>
+<exp>Опыт: </exp>
+<wdef>Физ. защита: </wdef>
+<mdef>Маг. защита: </mdef>
+<atk>Сила атаки: </atk>
+<radius>Радиус атаки: </radius>
+<hurt>Урон в сек.: </hurt>
+<atkm>Частота атак: </atkm>
+<atkt>Скорость атаки: </atkt>
+<batkm>Частота базовых атак: </batkm>
+<whd>Уменьшение физ. урона: </whd>
+<mhd>Уменьшение маг. урона: </mhd>
+<pro>Хар-ки героя</pro>
+<addpro>Улучшить для усиления хар-к: </addpro>
+<ll>Сила</ll>
+<mj>Ловкость</mj>
+<zl>Интеллект</zl>
+<mll>Каждая ед. силы дает герою: </mll>
+<atk1>Сила атаки: </atk1>
+<dsm>Макс. здоровья</dsm>
+<sm>Скорость восстановления здоровья</sm>
+<mmj>Каждая ед. ловкости дает герою: </mmj>
+<mdef1>Физ. защита</mdef1>
+<atks>% скорости атаки</atks>
+<mzl>Каждая ед. интеллекта дает герою:</mzl>
+<dmf>Макс. маны</dmf>
+<mf>Скорость восстановления маны</mf>
+<wdef1>Сила магии</wdef1>
+<mfatk>Сила магии: </mfatk>
+<merge>Формула: </merge>
+<total>Всего: </total>
+<death>Возрождение: </death>
+<key>Горячие кнопки</key>
+<numpad>Num Lock</numpad>
+<team0>Нейтральная сторона</team0>
+<team1>Святые</team1>
+<team2>Падшие</team2>
+<fuhuo0>Золото для возрождения:</fuhuo0>
+<fuhuo1>Время для возрождения:</fuhuo1>
+<fuhuo2>Недостаточно золота</fuhuo2>
+<atktype1>Атака героя</atktype1>
+<atktype2>Обычная атака</atktype2>
+<atktype3>Прокол</atktype3>
+<atktype4>Осада</atktype4>
+<atktohero>по геройской защите - </atktohero>
+<atktocomm>по обычной защите - </atktocomm>
+<atktobuild>по защите зданий - </atktobuild>
+<deftype1>Защита героя</deftype1>
+<deftype2>обычная защита</deftype2>
+<deftype3>защита зданий</deftype3>
+<heroto>от атаки героя - </heroto>
+<commto>от обычной атаки -  </commto>
+<cito>от колющего оружия - </cito>
+<buildto>от катапульт -  </buildto>
+<shanghai> урон</shanghai>
+<fullmap>Особое</fullmap>
+<exname>[Усилить эффект]</exname>
+<exskill>Божественные навыки</exskill>
+<kill>Убито</kill>
+<pdeath>Смертей</pdeath>
+<ass>Ассистов</ass>
+<zhengbu>Добивание врагов</zhengbu>
+<fanbu>Добивание своих</fanbu>
+</common_str.xml>
+<gui_button.xml>
+<typeID>b0000004</typeID>
+<name>杂</name>
+<character0>Выкуп</character0>
+<character1>Золота: </character1>
+<chatbox0>Союзник</chatbox0>
+<chatbox1>Все</chatbox1>
+<chatbox2>F12 открывает окно сообщений</chatbox2>
+<chatbox3>Судья</chatbox3>
+<exskill1>Навыки атаки</exskill1>
+<exskill2>Навыки защиты</exskill2>
+<exskill3>Вспом. навыки</exskill3>
+<exskill0>Все навыки</exskill0>
+<exskill4>Уровень: </exskill4>
+<exskill5>След. Ур.: </exskill5>
+<exskill6>Изучить</exskill6>
+<exskill7>О навыках</exskill7>
+<exskill8>Улучшение каждые 10, 20, 30 мин.</exskill8>
+<exskill9>%d стр.</exskill9>
+<topbar0>У/С/А</topbar0>
+<topbar1>Добивание своих/врагов</topbar1>
+<systemmenu0>Пауза (M)</systemmenu0>
+<systemmenu1>Сдаться (V)</systemmenu1>
+<systemmenu2>Настройки (O)</systemmenu2>
+<systemmenu3>Назад в Зал (Q)</systemmenu3>
+<systemmenu4>Выйти из игры (X)</systemmenu4>
+<systemmenu5>Назад в игру (R)</systemmenu5>
+<systemmenu6>Игроки</systemmenu6>
+<systemmenu7>Поделиться</systemmenu7>
+<systemmenu8>Блокировать сообщения</systemmenu8>
+<systemmenu9>Друзья</systemmenu9>
+<systemmenu10>Черный список</systemmenu10>
+<systemmenu11>Святые</systemmenu11>
+<systemmenu12>Падшие</systemmenu12>
+<systemmenu13>Назад в Зал</systemmenu13>
+<systemmenu14>Вы действительно хотите вернуться в Зал?</systemmenu14>
+<systemmenu15>Продолжить (M)</systemmenu15>
+<menuandscore0>Главное меню (F10)</menuandscore0>
+<menuandscore1>Битва (~)</menuandscore1>
+<menuandscore2>Мы:</menuandscore2>
+<menuandscore3>Враги:</menuandscore3>
+<score0>Статус</score0>
+<score1>Герой</score1>
+<score2>Игроки</score2>
+<score3>У/С/А</score3>
+<score4>Перезарядка</score4>
+<score5>Золота</score5>
+<score6>Предметы</score6>
+<score7>Возрождение</score7>
+<score8>Выйти на время</score8>
+<score9>Всего убито: </score9>
+<score10>Задержка: </score10>
+<ctrl0>Очистить</ctrl0>
+<ctrl1>По умолчанию</ctrl1>
+<ctrl2>Горячие клавиши</ctrl2>
+<ctrl3>Системные клавиши</ctrl3>
+<ctrl4>Нажмите любую клавишу.</ctrl4>
+<ctrl5>Предмет 1</ctrl5>
+<ctrl6>Предмет 2</ctrl6>
+<ctrl7>Предмет 3</ctrl7>
+<ctrl8>Предмет 4</ctrl8>
+<ctrl9>Предмет 5</ctrl9>
+<ctrl10>Предмет 6</ctrl10>
+<ctrl11>Предмет 7</ctrl11>
+<ctrl12>Предмет 8</ctrl12>
+<ctrl13>Навык 1</ctrl13>
+<ctrl14>Навык 2</ctrl14>
+<ctrl15>Навык 3</ctrl15>
+<ctrl16>Навык 4</ctrl16>
+<ctrl17>Доп. навык</ctrl17>
+<ctrl18>Вспом. навык 1</ctrl18>
+<ctrl19>Вспом. навык 2</ctrl19>
+<ctrl20>Вспом. навык 3</ctrl20>
+<ctrl21>Снимок экрана</ctrl21>
+<ctrl22>Открыть магазин</ctrl22>
+<ctrl23>Чат команды</ctrl23>
+<ctrl24>Общий чат</ctrl24>
+<ctrl25>Изучать навыки</ctrl25>
+<ctrl26>След. отряд</ctrl26>
+<ctrl27>Пред. отряд</ctrl27>
+<ctrl28>Левая часть кадра</ctrl28>
+<ctrl29>Правая часть кадра</ctrl29>
+<ctrl30>Приблизить</ctrl30>
+<ctrl31>Отдалить</ctrl31>
+<ctrl32>Поднять камеру</ctrl32>
+<ctrl33>Опустить камеру</ctrl33>
+<ctrl34>Сброс кадра</ctrl34>
+<ctrl35>Модель кадра</ctrl35>
+<ctrl36>Экран влево</ctrl36>
+<ctrl37>Экран вправо</ctrl37>
+<ctrl38>Экран вверх</ctrl38>
+<ctrl39>Экран вниз</ctrl39>
+<ctrl40>Атака</ctrl40>
+<ctrl41>Стоп</ctrl41>
+<ctrl42>Защищать позицию</ctrl42>
+<ctrl43>Патруль</ctrl43>
+<ctrl44>Движение</ctrl44>
+<ctrl45>Выбрать героя</ctrl45>
+<ctrl46>История чата</ctrl46>
+<ctrl47>F11</ctrl47>
+<ctrl48>B</ctrl48>
+<ctrl49>Enter</ctrl49>
+<ctrl50>SHFIT+Enter</ctrl50>
+<ctrl51>CTRL+Кнопка навыка</ctrl51>
+<ctrl52>TAB</ctrl52>
+<ctrl53>SHIFT+TAB</ctrl53>
+<ctrl54>HOME</ctrl54>
+<ctrl55>END</ctrl55>
+<ctrl56>Scroll Up</ctrl56>
+<ctrl57>Scroll Down</ctrl57>
+<ctrl58>PGUP</ctrl58>
+<ctrl59>PGDN</ctrl59>
+<ctrl60>INSERT</ctrl60>
+<ctrl61>DELETE</ctrl61>
+<ctrl62>←</ctrl62>
+<ctrl63>→</ctrl63>
+<ctrl64>↑</ctrl64>
+<ctrl65>↓</ctrl65>
+<ctrl66>A</ctrl66>
+<ctrl67>S</ctrl67>
+<ctrl68>H</ctrl68>
+<ctrl69>P</ctrl69>
+<ctrl70>M</ctrl70>
+<ctrl71>F1</ctrl71>
+<ctrl72>F12</ctrl72>
+<ctrl73>Это сочетание клавиш уже занято.</ctrl73>
+<ctrl74>Команда 1</ctrl74>
+<ctrl75>Команда 2</ctrl75>
+<ctrl76>Команда 3</ctrl76>
+<ctrl77>Команда 4</ctrl77>
+<ctrl78>Команда 5</ctrl78>
+<ctrl79>Команда 6</ctrl79>
+<ctrl80>Команда 7</ctrl80>
+<ctrl81>Команда 8</ctrl81>
+<ctrl82>Команда 9</ctrl82>
+<ctrl83>Команда 0</ctrl83>
+<ctrl84>Статистика матча</ctrl84>
+<ctrl85>Выбрать героя</ctrl85>
+<ctrl86>Системное меню</ctrl86>
+<ctrl87>История чата</ctrl87>
+<ctrl88>Друзья и чаты</ctrl88>
+<ctrl89>Использовать кристалл</ctrl89>
+<ctrl90>Использовать транспорт</ctrl90>
+<opt0>ОК</opt0>
+<opt1>Отмена</opt1>
+<opt2>Графика</opt2>
+<opt3>Звук</opt3>
+<opt4>Горячие клавиши</opt4>
+<opt5>Настройки игры</opt5>
+<opt6>Чат</opt6>
+<opt7>Настройки чата</opt7>
+<opt8>По умолчанию</opt8>
+<opt9>Вернуть настройки по умолчанию?</opt9>
+<opt10>Настройки по умолчанию</opt10>
+<opt11>Для активации опций, отмеченных *, нажмите ОК</opt11>
+<info0>Показать пол./нег. эффекты</info0>
+<info1>Показать время перезарядки навыка</info1>
+<info2>Показать полученное золото</info2>
+<info3>Показать полученный опыт</info3>
+<info4>Показать крит. удары</info4>
+<info5>Показать особый урон</info5>
+<info6>Показать полученный героем урон</info6>
+<info7>Показать нанесенный героем урон</info7>
+<info8>Подсказки по статусу героя</info8>
+<info9>Показать вспом. навык</info9>
+<info10>Инфо об убито показывается вверху</info10>
+<info11>Выделить выбранные отряды</info11>
+<info12>Горячие клавиши для предметов</info12>
+<info13>Затемнение экрана</info13>
+<info14>Индикатор атаки за пределами обзора</info14>
+<info15>Показать радиус действия заклинания</info15>
+<info16>Показать транспорт</info16>
+<info17>Транспорт по умолчанию</info17>
+<info00>Показать здоровье и ману всех отрядов</info00>
+<info01>Показать только здоровье и ману героя</info01>
+<infohead>Инфо об игре</infohead>
+<sysshop0>Настройки магазина</sysshop0>
+<sysshop1>Открыть предлагаемые предметы</sysshop1>
+<sysshop2>Показать разницу цен на предмет</sysshop2>
+<sysshop3>Показать полную стоимость предмета</sysshop3>
+<sysshop4>Купить синтезированный предмет (недостающие предметы)</sysshop4>
+<sysshop5>Быстрое перемещение предметов - Ctrl+щелчок ПКМ.</sysshop5>
+<sysshop6>Быстрая покупка предметов - Ctrl+щелчок ПКМ.</sysshop6>
+<sysshop7>При входе в магазин предметы автоматически собираются в рюкзак.</sysshop7>
+<sysshop8>Если у вас недостаточно денег для покупки предмета, его иконка становится серой.</sysshop8>
+<sysshop9>Щелчок ЛКМ - просмотр инфо о предмете, щелчок ПКМ - купить.</sysshop9>
+<sysshop10>Наведите курсор на предмет, чтобы просмотреть инфо о нем. Дважды щелкните ЛКМ, чтобы купить предмет.</sysshop10>
+<sysshop11>Наведите курсор на предмет, чтобы просмотреть инфо о нем. Дважды щелкните ЛКМ, чтобы купить предмет.</sysshop11>
+<shop0>Основной</shop0>
+<shop1>Помощь</shop1>
+<shop2>Оружие</shop2>
+<shop3>Броня</shop3>
+<shop4>Хар-ки</shop4>
+<shop5>Маг. шары</shop5>
+<shop6>Расходники</shop6>
+<shop7>Рекомендованное оборудование</shop7>
+<shop8>Купить все</shop8>
+<shop9>Синтезировать в:</shop9>
+<shop10>Список оборудования</shop10>
+<shop11>Рюкзак</shop11>
+<shop12>Купить</shop12>
+<shop13>Продать</shop13>
+<shop14>Особое</shop14>
+<test0>Тренировка</test0>
+<test1>Обновить</test1>
+<test2>Смерть</test2>
+<test3>1</test3>
+<test4>Полный</test4>
+<test5>Отмена</test5>
+<test6>10000</test6>
+<test7>Отмена</test7>
+<test8>+10000</test8>
+<test9>Обновить</test9>
+<test10>Герой</test10>
+<test11>Ур.</test11>
+<test12>Золото</test12>
+<test13>Солдаты</test13>
+<test14>Нейтральные монстры</test14>
+<test15>BOSS</test15>
+<test16>Перезарядка</test16>
+<test17>Туман войны</test17>
+<test18>Все юниты</test18>
+<test20/>
+<test21/>
+<suggest>Подсказки предметов</suggest>
+<herobox0>Неупорядоченный список</herobox0>
+<kill>Убито</kill>
+<death>Смертей</death>
+<ass>Ассистов</ass>
+<sound0>Управление звуком</sound0>
+<sound1>Музыка</sound1>
+<sound2>Эффекты</sound2>
+<pic0>Разрешение</pic0>
+<pic1>Качество текстур</pic1>
+<pic2>Фильтр текстур</pic2>
+<pic3>Качество воды</pic3>
+<pic4>Качество модели*</pic4>
+<pic5>Ландшафт</pic5>
+<pic6>Детали образа</pic6>
+<pic7>Качество теней</pic7>
+<pic8>Эффекты удара</pic8>
+<pic9>Спецэффекты</pic9>
+<pic10>Эффекты смерти</pic10>
+<pic11>В окне</pic11>
+<pic12>Детализированный ландшафт*</pic12>
+<pic13>Улучшенная обработка*</pic13>
+<pic14>Динамическое освещение</pic14>
+<pic15>Полноэкранные эффекты</pic15>
+<pic16>Показать доп. эффекты</pic16>
+<pic17>Яркость игры</pic17>
+<pic18>Ск. камеры </pic18>
+<pic19>Качество графики</pic19>
+<pic20>Блокировка окна</pic20>
+<pic21>Качество интерфейса</pic21>
+<pic22>FPS</pic22>
+<pic00>Основные настройки</pic00>
+<pic01>Настройки графики</pic01>
+<pic02>Вкл.</pic02>
+<pic03>Выкл.</pic03>
+<pic04>Высокий</pic04>
+<pic05>Средний</pic05>
+<pic06>Низкий</pic06>
+<pic07>Очень низкий</pic07>
+<pic08>Нет</pic08>
+<pic09>Трилинейная фильтрация</pic09>
+<pic0a>Билинейная фильтрация</pic0a>
+<pic0b>Точечный фильтр</pic0b>
+<pic0c>Качество текстур и FPS</pic0c>
+<pic0d>Пользовательский</pic0d>
+<pic0e>Постоянный</pic0e>
+<pic0f>Высокий FPS</pic0f>
+<message0>Чат</message0>
+<message1>Битва</message1>
+<message2>Системное сообщение</message2>
+<message3>Рупор</message3>
+<message4/>
+<menu0>FPS:</menu0>
+<magic0>Готово</magic0>
+<magic1>Поражение</magic1>
+<magic2>Наложение заклинания</magic2>
+<killer0>   </killer0>
+<killer1>Открыть магазин</killer1>
+<combat0>Время:</combat0>
+<numpad>Num Lock</numpad>
+<colourtable0>Использовать</colourtable0>
+<colourtable1>Обмен</colourtable1>
+<hctxt1>Новичку</hctxt1>
+<hctxt2>Все герои</hctxt2>
+<hctxt3>Воины</hctxt3>
+<hctxt4>Маги</hctxt4>
+<hctxt5>Саппорт</hctxt5>
+<hctxt6>Транспорт</hctxt6>
+<zzjw0>Только на карте Глаз Титана вы можете собрать уникальное снаряжение!</zzjw0>
+<zzjw1>Игрок может использовать Кристалл энергии для улучшения снаряжения.</zzjw1>
+<zzjw2>Улучшенное снаряжение обладает более сильными магическими свойствами.</zzjw2>
+<zzjw3>Улучшенное снаряжение позволит вам познать радости боя!</zzjw3>
+<zzjt0>Красный кристалл увеличивает скорость передвижения</zzjt0>
+<zzjt1>Зеленый кристалл восстанавливает НР и МР</zzjt1>
+<zzjt2>Синий кристалл в 2 раза увеличивает силу атаки</zzjt2>
+<zzjt3>Желтый кристалл прибавляет 350 золота</zzjt3>
+<zzjt4>Фиолетовый кристалл прибавляет 500 опыта</zzjt4>
+<zzjt5>Оранжевый кристалл увеличивает маг. урон героя в 2 раза</zzjt5>
+<zzjt6>Перламутровый кристалл - это кристалл энергии</zzjt6>
+<zzjt7/>
+<zzjw4>Кристаллы - это бонусная система карты Глаз Титана.</zzjw4>
+<zzjw5>Один из кристаллов можно получить в алтаре кристаллов</zzjw5>
+<zzjw6>Каждые 2 минуты в алтаре появляется кристалл</zzjw6>
+<zzjw7>Щелкните правой кнопокй мыши и заберите кристалл из алтаря</zzjw7>
+<zzjw8>Получив кристалл, можно нажать кнопку "Сборка" или комбинацию клавиш "CTRL+G", чтобы изменить цвет кристалла.</zzjw8>
+<zzjw9>Для этого вам придется потратить один кристалл энергии.</zzjw9>
+<zzjw10>Получить кристалл можно нажав на иконку или на клавишу "G".</zzjw10>
+<zzjw11>Цветки подземного царства - особая система карты Глаз Титана</zzjw11>
+<zzjw12>Укрывшись под цветком, герой становится невидимым для противника</zzjw12>
+<zzjw13>Если игроки обеих команд одновременно укрываются под цветками, то они могут видеть друг друга</zzjw13>
+<zzjw14>Когда герой использует навык укрытия, его не может увидеть противник, покрытый пыльцой. </zzjw14>
+<zzjbutton3>Система кристаллов</zzjbutton3>
+<zzjbutton4>Сиситема эпического снаряжения</zzjbutton4>
+<zzjbutton5>Система цветков подземного царства</zzjbutton5>
+<zzjbutton6>Особая система карты Глаз Титана</zzjbutton6>
+<zzjbutton7>Нажмите F9 для получения более подробной информации</zzjbutton7>
+<zzjbutton9>Уникальное снаряжение</zzjbutton9>
+<zzjbutton10>Цветки подземного царства</zzjbutton10>
+<zzjbutton11>Назад</zzjbutton11>
+<zzjbutton12>Кристаллы</zzjbutton12>
+</gui_button.xml>
+<gui_text.xml>
+<typeID>b0000005</typeID>
+<name>设置</name>
+<data>Разрешение</data>
+<data>Качество текстур</data>
+<data>Фильтр текстур</data>
+<data>Качество воды</data>
+<data>Качество модели*</data>
+<data>Качество ландшафта</data>
+<data>Деталировка модели</data>
+<data>Качество теней</data>
+<data>В окне</data>
+<data>Деталировка сцен</data>
+<data>Расширенная пост-обработка</data>
+<data>Динамическое освещение</data>
+<data>Основные</data>
+<data>Дополнительные</data>
+<data>Горячие кнопки</data>
+<data>Предмет 1</data>
+<data>Предмет 2</data>
+<data>Предмет 3</data>
+<data>Предмет 4</data>
+<data>Предмет 5</data>
+<data>Предмет 6</data>
+<data>Предмет 7</data>
+<data>Предмет 8</data>
+<data>Навык 1</data>
+<data>Навык 2</data>
+<data>Навык 3</data>
+<data>Навык 4</data>
+<data>Доп. навык</data>
+<data>Вспом. навык 1</data>
+<data>Вспом. навык 2</data>
+<data>Вспом. навык 3</data>
+<data>Нажмите любую клавишу.</data>
+<data>Вернуться в Зал?</data>
+<data>Выйти из игры?</data>
+<data>Вернуть настройки по умолчанию?</data>
+<data>Высокий</data>
+<data>Средний</data>
+<data>Низкий</data>
+<data>Очень низкий</data>
+<data>Нет</data>
+<data>Трилинейная фильтрация</data>
+<data>Билинейная фильтрация</data>
+<data>Точечный фильтр</data>
+<data>Качество текстур и частота кадров</data>
+<data>Управление звуком</data>
+<data>Громкость музыки</data>
+<data>Громкость звуковых эффектов</data>
+<data>Яркость игры</data>
+<data>Вкл.</data>
+<data>Выкл.</data>
+<data>Скорость камеры</data>
+<data>Показать эффекты удара</data>
+<data>Показать заданные эффекты</data>
+<data>Показывать гало</data>
+<data>Показывать эффекты LOD</data>
+<data1>Выход</data1>
+<data1>Вы хотите выйти из игры?</data1>
+<data1>Да</data1>
+<data1>Отмена</data1>
+<data1>Назад в Зал</data1>
+<data1>Вы действительно хотите вернуться в Зал?</data1>
+<data1>За выход из игры полагается штраф, рекомендуется "Сдаться"</data1>
+<data1>Закончить игру (можно применить через 20 мин. после начала)</data1>
+<data1>Перезайти</data1>
+<data1>Вернуться к странице входа?</data1>
+<data2>Святые</data2>
+<data2>Падшие</data2>
+<data2>победили!</data2>
+<data2>Приятной игры! Оставляйте свои замечания, предложения и сообщения об ошибках.</data2>
+<data2>Пожалуйста, зарегистрируйтесь</data2>
+<data2>Ок</data2>
+<data2>Конец игры</data2>
+<data2>Все игроки вышли из игры.</data2>
+<data2>Преждевременный конец игры, результаты недействительны.</data2>
+<data2>Назад в Зал</data2>
+<data2>Победа!</data2>
+<data2>Поражение!</data2>
+<data2>Конец игры</data2>
+<data2>Не отчаивайтесь, попробуйте еще!</data2>
+<data2>Вас ждут новые завоевания!</data2>
+<data3>Советы здоровой игры</data3>
+<data3>OK</data3>
+<data3>Вы не подтвердили отсутствие зависимости,</data3>
+<data3>Вы в игре больше 3 часов. Отдохните немного.</data3>
+<data3>Вы в игре больше 5 часов. Отдохните немного.</data3>
+<data3>щелкните по кнопке и подтвердите свой паспорт</data3>
+<data3>Весь текущий опыт, золото и предметы уменьшаются вдвое.</data3>
+<data3>Текущий опыт, золото и предметы равны 0.</data3>
+<data3>После подтверждения запрос больше не появится.</data3>
+<data3>Через 5 часов после выхода из сети все вернется в норму</data3>
+<data3>Через 5 часов после выхода из сети все вернется в норму</data3>
+<data3>Назад в Зал</data3>
+<data3>Назад</data3>
+<data3>Нет соединения</data3>
+<data3>Связь с сервером прервана.</data3>
+<data3>Восстановить соединение?</data3>
+<data3>Вы отсоединились от сервера Зала.</data3>
+<data3>Выйти из игры</data3>
+<data3>Ошибка аутентификации</data3>
+<data3>Не удалось определить версию игры! Вернитесь на главную страницу.</data3>
+<data3>Войдите в игру после обновления, спасибо!</data3>
+<data3>Соединение</data3>
+<data3>Отмена</data3>
+<data3>Игра не окончена! Вы можете вернуться!</data3>
+<data3>Вернуться</data3>
+<data3>Перезайти</data3>
+<data3>Вы играете слишком долго, это вредно для здоровья.</data3>
+<data3/>
+<data3>Выйдите из игры и отдохните немного.</data3>
+<data3/>
+<data3>Вы не можете войти ни в одну из игр.</data3>
+<data3/>
+<data4>Сдаться</data4>
+<data4>Да</data4>
+<data4>Нет</data4>
+</gui_text.xml>
+<hall_button.xml>//75.150.250.350.500<typeID>b0000006</typeID>
+<name>系统</name>
+<startbar0>Меню</startbar0>
+<startbar1>Время</startbar1>
+<startbar2>Время</startbar2>
+<exit>Выйти</exit>
+<menu0>Перезайти</menu0>
+<menu1>Выйти из игры</menu1>
+<menu2>Новичку</menu2>
+<menu3>Техподдержка</menu3>
+<menu4>Вернуться к игре</menu4>
+<friend0>В сети</friend0>
+<friend1>Не в сети</friend1>
+<friend2>Битва</friend2>
+<friend3>Члены команды</friend3>
+<friend4>Друзья</friend4>
+<friend5>Черный список</friend5>
+<friend6>Друзья</friend6>
+<friend7>Заблокировать</friend7>
+<friend8>Добавить друга</friend8>
+<channel0>Мои чаты</channel0>
+<channel1>Список чатов</channel1>
+<channel2>Имя чата</channel2>
+<channel3> Чел.</channel3>
+<channel4>Общий чат № </channel4>
+<channel5> Чат № </channel5>
+<channel6>Системный</channel6>
+<channel7>Общий</channel7>
+<channel8>Команда</channel8>
+<channel9>Чат</channel9>
+<channel10>Общий чат</channel10>
+<channel11>Сообщение</channel11>
+<channel12>Доступные чаты</channel12>
+<channel13>Всем</channel13>
+<channel14>Знаков: </channel14>
+<channel15>Рупоров: </channel15>
+<channel16>[</channel16>
+<channel17>]</channel17>
+<channel18>Отчет</channel18>
+<channel19> Вы получили %d монет из золотого сундука</channel19>
+<channel20>Выиграл золотой сундук</channel20>
+<channel21>Войти</channel21>
+<channel22>Общий чат</channel22>
+<channel23>Чат команды</channel23>
+<channel24>Создать</channel24>
+<channel25>Обновить</channel25>
+<channel26>%s от </channel26>
+<chat0>Приглашение в команду</chat0>
+<chat1>Добавить друзей</chat1>
+<chat2>Пригласить в игру</chat2>
+<chat3>ОК</chat3>
+<chat4>Закрыть</chat4>
+<chat5>Статус</chat5>
+<chat6>Игроки</chat6>
+<chat7>-</chat7>
+<chat8>Говорит: </chat8>
+<simple0>Друзья</simple0>
+<simple1>Выйти</simple1>
+<simple2>Команда</simple2>
+<list0>Карта: </list0>
+<list1>Мастер комнаты:</list1>
+<list2>   Описание карты:</list2>
+<list3>Введите ключ</list3>
+<list4>%s от типовой карты отряда, размера 5V5</list4>
+<list5>Имя игры</list5>
+<list6>Игроки</list6>
+<list7>Пинг</list7>
+<list8>Карта</list8>
+<list9>Режим</list9>
+<list10>Введите пароль</list10>
+<list11>Неверный пароль!</list11>
+<list12>Вы собираетесь войти в комнату с высокой задержкой. Продолжить?</list12>
+<create0>Имя:</create0>
+<create1>Пароль:</create1>
+<create2>Карта:</create2>
+<create3>Сервер:</create3>
+<create4>Режим:</create4>
+<create5>Простой</create5>
+<create6>Отказ отключившимся игрокам:</create6>
+<create7>Автобаланс:</create7>
+<create8>Долина героев</create8>
+<create9>Автоматический</create9>
+<create10>Все герои</create10>
+<create11>Тренировка</create11>
+<create12>Создать сейчас</create12>
+<create13>Искать сейчас</create13>
+<create14>    игра</create14>
+<create15>Сервер 1</create15>
+<create16>Сервер 2</create16>
+<create17>Создать</create17>
+<create18>Фильтр</create18>
+<create19>Частная игра:</create19>
+<create20>Два провайдера</create20>
+<create21>Иностр.</create21>
+<create22>Капитанский</create22>
+<create23>Банов</create23>
+<create24>Начинают</create24>
+<create25>Случайно</create25>
+<create26>Святые</create26>
+<create27>Падшие</create27>
+<create28>Клоны</create28>
+<create29>Бой с ботами</create29>
+<create30>Слабые</create30>
+<create31>Обычные</create31>
+<create32>Сильные</create32>
+<create33>Боты</create33>
+<create34>Глаз Титана</create34>
+<create35>Назад</create35>
+<create36>В игру</create36>
+<create37>Создать</create37>
+<create38>Вкл.</create38>
+<create39>Выкл.</create39>
+<create40>Руны</create40>
+<create41>Долина героев</create41>
+<create42>Глаз Титана</create42>
+<whisper>[Шепот]</whisper>
+<start>Начать</start>
+<ok>ОК</ok>
+<cancel>Отмена</cancel>
+<forever>Вечный</forever>
+<skip>Пропустить</skip>
+<next>Далее</next>
+<comp>Готово</comp>
+<save>Сохранить</save>
+<head0>Только VIP</head0>
+<head1>По умолчанию</head1>
+<head2>Треб. ур.</head2>
+<head3>Выбрать звание</head3>
+<head4>Выбрать аватар</head4>
+<info0>Изменить</info0>
+<info1>Мой профиль</info1>
+<info2>Статистика</info2>
+<info3>Герой</info3>
+<info4>Навыки</info4>
+<info5>Мои предметы</info5>
+<info6>Закрыто</info6>
+<level>Уровень</level>
+<total0>Побед</total0>
+<total1>Поражений</total1>
+<total2>Выходов</total2>
+<total3>Всего игр:</total3>
+<total4>% побед:</total4>
+<total5>Убито:</total5>
+<total6>Ассистов:</total6>
+<total7>Макс. комбо:</total7>
+<total8>% выходов:</total8>
+<total9>Опыт</total9>
+<total10>Монеты</total10>
+<total11>Убито </total11>
+<total12>Смертей </total12>
+<total13>Ассистов </total13>
+<total14>Последняя игра</total14>
+<total15>Сбор данных</total15>
+<total16>Вы не участвовали ни в одной игре.</total16>
+<total17>Общий счет</total17>
+<total18> Герой</total18>
+<total19> Игр</total19>
+<total20>Счет</total20>
+<total21>Рейтинг</total21>
+<total22>Об эксклюзивных героях</total22>
+<total23>Долина героев</total23>
+<total24>Глаз Титана</total24>
+<total25>Скоро открытие!</total25>
+<tian>д.</tian>
+<hour>ч.</hour>
+<minute>мин.</minute>
+<second>сек.</second>
+<wan>x 10.000</wan>
+<ci>   </ci>
+<page>%d стр.</page>
+<score0>Сыграно игр</score0>
+<score1>Побед</score1>
+<score2>Поражений</score2>
+<score3>Выходов</score3>
+<score4>Убито</score4>
+<score5>Смертей</score5>
+<score6>Ассистов</score6>
+<score7>Золота</score7>
+<score8>Убито солдат</score8>
+<score9>Башни</score9>
+<score10>Убито монстров</score10>
+<score11>Убито Боссов</score11>
+<score12>Нанесенный физ. урон</score12>
+<score13>Нанесенный маг. урон</score13>
+<score14>Полученный урон</score14>
+<score15>Убито</score15>
+<score16>Смертей</score16>
+<score17>Ассистов</score17>
+<score18>Опыт/мин.</score18>
+<score19>Золота/мин.</score19>
+<score20>APM</score20>
+<score21>Время игры </score21>
+<score22>Убито солдат</score22>
+<score23>Сломано башен</score23>
+<score24>Убито монстров</score24>
+<score25>Убито Боссов</score25>
+<score26>Нанесенный физ. урон</score26>
+<score27>Нанесенный маг. урон</score27>
+<score28>Полученный урон</score28>
+<score29>Всего игр</score29>
+<score30>Автоподбор</score30>
+<score31>Тренировка</score31>
+<score32>Макс. убийств за игру</score32>
+<score33>Макс. смертей за игру</score33>
+<score34>Макс. комбо за игру</score34>
+<score35>Макс. побед подряд</score35>
+<score36>Макс. поражений подряд</score36>
+<score37>Макс. физ. урон</score37>
+<score38>Макс. маг. урон</score38>
+<score39>% побед</score39>
+<score40>% поражений</score40>
+<score41>% выходов</score41>
+<score42>Общее время в игре</score42>
+<score43>Автоподбор</score43>
+<score44>Тренировка</score44>
+<score45>Зал</score45>
+<score46>Всего</score46>
+<score47>Время последнего входа: </score47>
+<score48>Статистика</score48>
+<score49>Общий счет игры</score49>
+<score50>Запись</score50>
+<score51>Время</score51>
+<room0>Имя:</room0>
+<room1>Хост:</room1>
+<room2>ID:</room2>
+<room3>Карта:</room3>
+<room4>Игроков:</room4>
+<room5>Режим игры:</room5>
+<room6>Пинг:</room6>
+<room7>Автобаланс:</room7>
+<room8>Другое:</room8>
+<room9>Все</room9>
+<room10>вошел в комнату.</room10>
+<room11>покинул комнату.</room11>
+<room12>Начало игры…</room12>
+<room13>Конец игры!</room13>
+<room14>Начать игру</room14>
+<room15>Отмена</room15>
+<room16>Пригласить игроков</room16>
+<room17>Выйти</room17>
+<room18>Судья</room18>
+<room19>Вкл.</room19>
+<room20>Выкл.</room20>
+<room21>Авто</room21>
+<room22>Судья</room22>
+<room23>Боты</room23>
+<room24>Удалить бота</room24>
+<room25>Слабый бот</room25>
+<room26>Обычный бот</room26>
+<room27>Сильный бот</room27>
+<room28>Начало игры, подождите...</room28>
+<room29>Для участия в соревнованиях необходимо по 5 игроков с каждой стороны.</room29>
+<room30>Для одиночного испытания необходим только 1 игрок (не считая судьи)</room30>
+<outwindow0>Продолжить?</outwindow0>
+<outwindow1>Выход подтвержден</outwindow1>
+<message0>в сети</message0>
+<message1>не в сети</message1>
+<message2>Отправлено</message2>
+<message3>Друг добавлен</message3>
+<message4>Вы в чате</message4>
+<message5>Вы вышли из чата - </message5>
+<message6>Друг удален</message6>
+<message7>Отправлено</message7>
+<message8>Не удалось отправить приглашение в команду</message8>
+<message9>Игрок в битве</message9>
+<message10>Вы в другой команде, нельзя принять приглашение.</message10>
+<message11>Во время автоподбора нельзя принимать приглашения</message11>
+<message12>Вы в игровой комнате, нельзя принимать приглашения.</message12>
+<message13>Подсказка</message13>
+<message14>На выбор предлагается 2 угла обзора: </message14>
+<message15>стандартный обзор и DOTA обзор.</message15>
+<message16>Чтобы настроить угол обзора,</message16>
+<message17>нажмите кнопку "Вращать" внизу карты.</message17>
+<showadd0>хочет добавить вас в друзья.</showadd0>
+<showadd1>хочет добавить вас в команду. </showadd1>
+<add0>Далее</add0>
+<add1>Закрыть</add1>
+<add2>Назад</add2>
+<add3>Ник</add3>
+<add4>Номер учетной записи или e-mail</add4>
+<add5>Игрок</add5>
+<add6>Ур.</add6>
+<add7>Добавить</add7>
+<add8>Введите ник</add8>
+<add9>Введите номер учетной записи</add9>
+<add10>Неверный аккаунт</add10>
+<aka0>Установка</aka0>
+<aka1>Введите свой ник</aka1>
+<aka2>Ваш ник не соответствует требованиям, попробуйте снова.</aka2>
+<aka3>Создайте ник</aka3>
+<aka4>Ваш уровень игры</aka4>
+<aka5>Так как вы - новичок в Rage of Titans,</aka5>
+<aka6>Шаг 1: Инфо об основных настройках</aka6>
+<aka7>Шаг 2: Выбор уровня опыта</aka7>
+<aka8>рекомендуем следовать нашему руководству.</aka8>
+<aka9>Новичок</aka9>
+<aka10>Профи</aka10>
+<aka11>Для новичков</aka11>
+<aka12>Макс. 12 символов</aka12>
+<aka13>    Настройка</aka13>
+<aka14>Добро пожаловать в "Rage of Titans"!</aka14>
+<aka15>Ник и аватар отображаются в чате и списке друзей.</aka15>
+<aka16>Вы можете открыть и получить другие аватары.</aka16>
+<aka17>В зависимости от вашего опыта вы будете встречать и соревноваться с противниками разных уровней.</aka17>
+<aka18>Этот ник уже занят. Выберите другой.</aka18>
+<aka19>Сменить ник</aka19>
+<aka20>Выберите новый ник, отличный от предыдущего, или нажмите Отмена.</aka20>
+<right0>Сообщение</right0>
+<right1>Профиль</right1>
+<right2>Добавить друзей</right2>
+<right3>Удалить</right3>
+<right4>Приглашение в команду</right4>
+<right5>Войти в чат</right5>
+<right6>Удалить чат</right6>
+<right7>Проверить награды</right7>
+<right8>Сравнение наград</right8>
+<trumpet>Основные настройки</trumpet>
+<trumpet>Дополнительные настройки</trumpet>
+<trumpet>Национальный</trumpet>
+<trumpet>Мой регион</trumpet>
+<trumpet>Мой город</trumpet>
+<trumpet>Их регион +мой регион (2 региона)</trumpet>
+<trumpet>Их город + мой город (2 города)</trumpet>
+<trumpet>Отправить в мой регион</trumpet>
+<trumpet>Отправить в мой город</trumpet>
+<trumpet>Добавить</trumpet>
+<trumpet>Национальный</trumpet>
+<trumpet>Весь регион</trumpet>
+<trumpet>Неогр.</trumpet>
+<trumpet>Области отправки:</trumpet>
+<trumpet>След. шаг</trumpet>
+<trumpet>Закрыть</trumpet>
+<trumpet>Послед. шаг</trumpet>
+<trumpet>Отправлено</trumpet>
+<trumpet>Число слов:</trumpet>
+<trumpet>Потрачено очков:</trumpet>
+<trumpet>Осталось очков:</trumpet>
+<trumpet>Рупор</trumpet>
+<cache>Загрузка данных…</cache>
+<cache>Пропустить итоги битвы</cache>
+<cache>Создается комната, подождите…</cache>
+<team0>Выбрать</team0>
+<team1>Пригласить друзей в команду</team1>
+<team2>Никого из друзей нет в сети.</team2>
+<team3>Командный чат</team3>
+<team4>Капитан</team4>
+<team5>Хор.</team5>
+<team6>Обычн.</team6>
+<team7>Плох.</team7>
+<team8>Нет</team8>
+<team9>Пинг: </team9>
+<team10>Запрос</team10>
+<team11>Начало игры</team11>
+<team12>Запрос данных о соединении, начните игру позже.</team12>
+<team13>Игра остановлена!</team13>
+<team14>Для поддержки стабильной скорости соединения у игроков создание команд из игроков China Telecom и China Unicom в текущей версии не поддерживается. Информацию об обновлениях см. на офиц. сайте игры.</team14>
+<automatch0>Подбор</automatch0>
+<automatch1>Соединение с сервером</automatch1>
+<automatch2>Поиск сервера…</automatch2>
+<automatch3>Свернуть</automatch3>
+<automatch4>Сейчас начнется игра!</automatch4>
+<automatch5>Идет поиск</automatch5>
+<automatch6>Идет поиск сервера</automatch6>
+<sync0>Внимание!</sync0>
+<sync1>Ошибка памяти, соединение прервано.</sync1>
+<sync2>Нажмите OK, чтобы выйти из игры, и зайдите позже.</sync2>
+<sync3>Вы слишком долго отсутствовали в игре. </sync3>
+<sync4/>
+<sync5>Внимание!</sync5>
+<login0>Вход</login0>
+<login1>Регистрация</login1>
+<login2>Видео</login2>
+<login3>Титры</login3>
+<login4>Выйти</login4>
+<login5>Введите свой адрес эл. почты.</login5>
+<login6>Введите пароль</login6>
+<login7>Введите 16-значный код активации.</login7>
+<login8>Ошибка активации, этот код можно использовать только 10 октября.</login8>
+<login9>Проверка кода активации. Подождите…</login9>
+<login10>Запрос кода активации</login10>
+<login11>Выберите тип сервера</login11>
+<login12>Ошибка активации! Введен неверный код, либо данный код уже используется. Попробуйте еще раз!</login12>
+<login13>Больше не показывать советы</login13>
+<login14>Рекомендуется установить антивирус. Вы согласны?</login14>
+<index0>Пригласить друзей</index0>
+<index1>Тренировочный режим</index1>
+<index2>Для новичков</index2>
+<index3>Пробная игра</index3>
+<index4>Войти в чат</index4>
+<index5>Начать игру</index5>
+<index6>Нажмите сюда, чтобы пригласить друзей в команду !</index6>
+<index7>Игра в традиционном режиме: сражение в комнатах с другими игроками. Поддерживает несколько режимов игры. (Очки, полученные в тренировочном режиме, не включаются в профиль игрока)</index7>
+<index8>Познакомьтесь с игрой, используя инструкцию для новичков! </index8>
+<index9>Тек. % не в сети:</index9>
+<index10>Сейчас в сети</index10>
+<index11>Игроков в сети из вашего региона:</index11>
+<index12>чел. </index12>
+<index13>Время последнего входа:</index13>
+<index14>Пн</index14>
+<index15>Вт</index15>
+<index16>Ср</index16>
+<index17>Чт</index17>
+<index18>Пт</index18>
+<index19>Сб</index19>
+<index20>Вс</index20>
+<index21>Отправить сообщение об ошибке</index21>
+<index22>Исправлено ошибок: %d шт.</index22>
+<index23>№</index23>
+<index24>   </index24>
+<index25>Ранг</index25>
+<index26>Имя</index26>
+<index27>Квалификационных игр:</index27>
+<index28>Место</index28>
+<index29>Игрок</index29>
+<index30>Карта</index30>
+<index31>Ассистов</index31>
+<index32>Убито</index32>
+<index33>Подробно</index33>
+<index34>Посетите Магазин, чтобы преобразить вашего героя!</index34>
+<index35>Команда</index35>
+<index36>Общий</index36>
+<index37>Прочитать перед игрой</index37>
+<index38>Сломано башен</index38>
+<index39>убито</index39>
+<index40>Выходов: </index40>
+<index41>нет</index41>
+<index42>есть немного</index42>
+<index43>слишком много</index43>
+<index44>Трансляция матча</index44>
+<index45>Опасный</index45>
+<index46>Ниже</index46>
+<index47>Играть</index47>
+<index48>Команда</index48>
+<index49>Обучение</index49>
+<index50>Видео</index50>
+<index51>Поиск игры</index51>
+<index52>   </index52>
+<index53>   </index53>
+<index54>   </index54>
+<year>.</year>
+<month>.</month>
+<day>.</day>
+<dialog0>Покиньте команду и попробуйте снова.</dialog0>
+<dialog1>Покиньте команду и попробуйте снова.</dialog1>
+<dialog2>Обновите игровую комнату и попробуйте снова.</dialog2>
+<dialog3>Не удалось запустить игру!</dialog3>
+<dialog4>Время соединения с сервером истекло.</dialog4>
+<dialog5>Смените линию сервера и попробуйте снова.</dialog5>
+<dialog6>Код активации отправлен, проверьте почту.</dialog6>
+<dialog7>Невозможно, т.к. вы не в списке друзей.</dialog7>
+<dialog8>Проверка временно невозможна. Вернитесь в Зал и попробуйте снова.</dialog8>
+<dialog9>Выйдите из Автоподбора и попробуйте снова.</dialog9>
+<dialog10>Выйдите из Автоподбора и попробуйте снова.</dialog10>
+<dialog11>Выйдите из Автоподбора и попробуйте снова.</dialog11>
+<dialog12>Команда уже начала игру или расформирована.</dialog12>
+<dialog13>Нестабильное соединение. Выбрать вручную?</dialog13>
+<dialog14> покинул игру, загрузка игры прервана!</dialog14>
+<dialog15>Игра прекращена или не существует.</dialog15>
+<dialog16>Вы вышли из матча. Начать следующий можно через</dialog16>
+<dialog17>Вы вышли из матча. Начать следующий можно через</dialog17>
+<dialog18>Не удалось соединиться с сервером.</dialog18>
+<dialog19>Невозможно, т.к. у вас макс. друзей.</dialog19>
+<dialog20>Аккаунт заблокирован.</dialog20>
+<dialog21>Аккаунт заблокирован. Осталось %d мин.</dialog21>
+<dialog22>Не удалось купить предмет %s, попробуйте снова!</dialog22>
+<dialog23>Не удалось, попробуйте снова!</dialog23>
+<dialog24>Предмет %s применен успешно!</dialog24>
+<dialog25>Не удалось применить предмет %s, попробуйте снова!</dialog25>
+<dialog26>Невозможно: у игрока в списке макс. друзей.</dialog26>
+<dialog27>Подбор идет слишком долго. Выбрать сервер вручную?</dialog27>
+<dialog28>Выйдите из игры и попробуйте снова!</dialog28>
+<dialog29>Необходимо открыть окно браузера. Вы согласны?</dialog29>
+<dialog30>Версии видео и игры не совпадают.</dialog30>
+<dialog31>Начать запись видео?</dialog31>
+<dialog32>Имя содержит недопустимые символы.</dialog32>
+<dialog33>Не удалось войти в чат! В чате макс. игроков.</dialog33>
+<dialog34>Одновременно можно находиться макс.в 6 чатах.</dialog34>
+<dialog35>Ваш аккаунт еще не активирован. Проверьте e-mail.</dialog35>
+<dialog36>Не удалось начать игру: создание команд из игроков China Telecom и China Unicom временно не поддерживается.</dialog36>
+<dialog37>Проверьте соединение с сервером.</dialog37>
+<dialog38>Недостаточно рупоров, купите рупоры в магазине и попробуйте снова</dialog38>
+<dialog39>Игра еще не окончена, нельзя начать новую.</dialog39>
+<dialog40>Вы уверены, что хотите отправить это сообщение?</dialog40>
+<dialog41>Количество потраченных рупоров:</dialog41>
+<dialog42>%s - обслуживание сервера, после этого игры нельзя будет записать.</dialog42>
+<dialog43>Учитывайте время игры, чтобы избежать ненужных потерь.</dialog43>
+<dialog44>Подарок уже получен, нельзя получить его еще раз.</dialog44>
+<dialog45>Линия закрыта на обслуживание, попробуйте позже.</dialog45>
+<dialog46>Вы не участвуете в игре или игра уже окончена.</dialog46>
+<dialog47>Не удалось начать игру. Проверьте подключение к интернету или настройки брандмауэра.</dialog47>
+<dialog48>Цель тренировки новичка</dialog48>
+<dialog49>Уничтожить AI-игроков не менее 5 раз.</dialog49>
+<dialog50>Сначала завершите тренировку новичка. Нажмите Начать игру - С компьютером</dialog50>
+<dialog51>Игрок %s не смог начать игру!</dialog51>
+<dialog52>Композитный оценка не соответствует 1750 игроков</dialog52>
+<dialog53>% выходов не достиг статуса "Хорошо".</dialog53>
+<dialog54>%s  - этот герой вами уже приобретен.</dialog54>
+<dialog55>Игра, за которой вы наблюдаете, не существует. Обновите страницу и попробуйте снова.</dialog55>
+<dialog56>Вещание еще не началось, попробуйте позже.</dialog56>
+<dialog57>Слишком много наблюдателей. Попробуйте позже.</dialog57>
+<dialog58>Недостаточно GN. Пополнить счет?</dialog58>
+<dialog59>Вы действительно хотите удалить друга %s?</dialog59>
+<dialog60>В интвентаре все еще нет %s</dialog60>
+<dialog61>Золотой кролик приносит удачу</dialog61>
+<dialog62>Удачная награда</dialog62>
+<dialog63>Я люблю ROT</dialog63>
+<dialog64>Вы уже обменяли эту награду.</dialog64>
+<dialog65>Вы собираетесь послать поздравление</dialog65>
+<dialog66>Отправить?</dialog66>
+<dialog67>Друга нет в сети. Отправка невозможна.</dialog67>
+<dialog68>Эта карта действует с 02.02.11 до 02.09.11.</dialog68>
+<dialog69>Ваш аккаунт заблокирован за использование плагина.</dialog69>
+<dialog70>Ваш аккаунт заблокирован за использование плагина. Осталось примерно %d мин.</dialog70>
+<dialog71>Проверка завершена, благодарим за содействие.</dialog71>
+<dialog72>Успешно!</dialog72>
+<dialog73>Улучшение провалилось. Фрагменты и руны не сочетаются</dialog73>
+<dialog74>Не удалось улучшить. Попробовать еще?</dialog74>
+<dialog75>Не удалось улучшить. Не хватает фрагменов.</dialog75>
+<dialog75/>
+<dialog76/>
+<dialog77/>
+<dialog78/>
+<dialog79/>
+<dialog80>Покупка %s завершена, можете выбрать</dialog80>
+<dialog81>Игрок не попал в 55% удачи</dialog81>
+<dialog82>Не удалось запустить игру, повторите еще раз.</dialog82>
+<dialog83>Ставка слишком высока и не отвечает требованиям!</dialog83>
+<dialog84/>
+<dialog85>Ваша ставка высока! Если Вы продолжите, то не сможете перейти в результаты матча.</dialog85>
+<dialog86>Необходимо потратить 1 сверло рун, вы уверены, что хотите продолжить?</dialog86>
+<dialog87>Успешно открыто!</dialog87>
+<dialog88>Разблокировать не удалось! Предмет уже разблокирован.</dialog88>
+<dialog89>Разблокировать не удалось! Недостаточно сверл рун.</dialog89>
+<dialog90>Навык улучшен. Сохранить?</dialog90>
+<dialog91>Поменяйте части, за исключением мозайки. После успешного сохранения руны, остатки превратятся в мусор.</dialog91>
+<dialog92>Необходимо изменить части улучшения руны. Выход: Выйти из улучшения руны. Отменить расширенный интерфейс.</dialog92>
+<dialog93>Вы уверены, что хотите перейти в режим обучения?</dialog93>
+<dialog94>Вы уверены, что хотите использовать этот предмет?</dialog94>
+<dialog95>В случае неудачи все используемые материалы исчезнут, вы уверены, что хотите продолжить?</dialog95>
+<dialog96>Не получилось открыть, %s недостаточно!</dialog96>
+<dialog97>Нельзя использовать в Магазине и на  Аукционе до достижения 3 уровня</dialog97>
+<dialog98>Потерпев поражение, Ваши боевые заслуги блокируются</dialog98>
+<dialog99>Достигнув 10 уровня, нельзя войти в автоподбор новичка!</dialog99>
+<dialog100>Пока задание не выполнено, вы не можете получить награду</dialog100>
+<dialog101>Вы уже получили эту награду, нельзя получить ее снова</dialog101>
+<dialog102>Вы выбрали неверное количество наград</dialog102>
+<choosemode0>Автоподбор</choosemode0>
+<choosemode1>Боты</choosemode1>
+<choosemode2>Обучение</choosemode2>
+<choosemode3>Комната</choosemode3>
+<choosemode4>Начать</choosemode4>
+<choosemode5>Отменить</choosemode5>
+<choosemode6>Новичок</choosemode6>
+<choosemode7>Обычный</choosemode7>
+<choosemode8>Мастер</choosemode8>
+<choosemode9>Глаз Титана</choosemode9>
+<choosemode10>Долина героев</choosemode10>
+<choosemode11>Развлечение</choosemode11>
+<choosemode12>Соревнование</choosemode12>
+<choosemode13>Слабые боты</choosemode13>
+<choosemode14>Обычные боты</choosemode14>
+<choosemode15>Сильные боты</choosemode15>
+<choosemode16>Долина героев</choosemode16>
+<horn0>[Система]</horn0>
+<horn1>Попробовал играть в "Rage of Titans", на первый взгляд, графика хороша, да и игровой процесс занимательный. - Известный профессиональный игрок в DOTA 2009</horn1>
+<horn2>Появилось и много того, чего в DOTA просто нет. - Известный профессиональный игрок в DOTA 2009</horn2>
+<horn3>В "Rage of Titans" эффекты навыков гораздо красивее, чем в DOTA. Плюс, гораздо больше оригинальных героев. - Известный комментатор DOTA MagicYang</horn3>
+<horn4>Игра "Rage of Titans" продолжает традиции DOTA, но в то же время продвинулась гораздо дальше. - Известный комментатор DOTA MagicYang</horn4>
+<horn5>Rage of Titans - сетевая игра, выпущенная на территории Китая и по-настоящему соответствующая всем ожиданиям игроков. Мало что, может на равных с ней конкурировать. В игре очень удобно создавать видео-клипы и осуществлять их дальнейшую трансляцию. - Известный комментатор DOTA MagicYang</horn5>
+<horn6>В игре очень удобно создавать видео-клипы и осуществлять их дальнейшую трансляцию. - Известный комментатор DOTA </horn6>
+<horn7>Я просто в восторге от энтузиазма производителей игры! Игра обновляется крайне быстро. Сохранять такую скорость долгое время бывает не под силу и крпным компаниям. - Известный комментатор DOTA </horn7>
+<horn8>Прекрсная картинка и захватывающий сюжет делают эту игру достойным преемником DOTA! - Газета "Нинбо"</horn8>
+<horn9>В игре "Rage of Titans" нет таких не так уж много платных функций, которые бы сильно влияли на общий ход игры. - Газета "Нинбо"</horn9>
+<horn10>Игра "Rage of Titans" - не просто одна из версий DOTA. Она представляет собой творческий прорыв!</horn10>
+<horn11>Игра "Rage of Titans" продолжает традиции DOTA, в тоже время представляет собой успешную попытку внедрения традиционной китайской культуры в область киберспорта. - Главный редактор сетеввых журналов Nano</horn11>
+<horn12>Разработчики действительно поняли, как сделать игру увлекательной, и учли все пожелания игроков. - Известный профессиональный игрок в DOTA NS</horn12>
+<horn13>Команда разработчиков "Rage of Titans" постаралась на славу и показала высокий уровень своей подготовки. - Директор Aeria Games Лань Хоан</horn13>
+<hrwindow0>Промо-код</hrwindow0>
+<hrwindow1>Обменять</hrwindow1>
+<hrwindow2>Проверка кода подтверждения, подождите.</hrwindow2>
+<hrwindow3>Код неверен или используется. Попробуйте еще раз.</hrwindow3>
+<hrwindow4>Системные заметки</hrwindow4>
+<hrwindow5>Штрафы за выход из игры:</hrwindow5>
+<hrwindow6>1. Невозможно получить монеты и опыт.</hrwindow6>
+<hrwindow7>2. При победе рейтинг не повышается, при поражении - понижается как обычно.</hrwindow7>
+<hrwindow8>3. +1 отказ.</hrwindow8>
+<hrwindow9>4. До конца игры нельзя начать новую.</hrwindow9>
+<hrwindow10>В течение определенного времени можно заново войти в игру, нажав "Продолжить игру" в левом верхнем углу Зала.</hrwindow10>
+<hrwindow11>Идет игра</hrwindow11>
+<hrwindow12>Через</hrwindow12>
+<hrwindow13>Вы потеряли VIP-статус, а с ним и след. преимущества:</hrwindow13>
+<hrwindow14>1. Особый VIP-знак</hrwindow14>
+<hrwindow15>2. Расширенный список друзей</hrwindow15>
+<hrwindow16>3. Особый VIP-ник</hrwindow16>
+<hrwindow17>4. Верхние позиции в списке чатов и друзей.</hrwindow17>
+<hrwindow18>5. Персональный VIP-аватар.</hrwindow18>
+<hrwindow19>Совет: посетите Магазин, чтобы купить VIP-статус и пользоваться его привилегиями!</hrwindow19>
+<hrwindow20>Остаток заморожен. Он будет восстановлен после повторного получения VIP-статуса.</hrwindow20>
+<hrwindow21>Повторное соединение</hrwindow21>
+<hrwindow22>д. истекает срок действия вашего VIP-статуса. Затем все особые привилегии будут потеряны.</hrwindow22>
+<hrwindow23>Тренировка окончена</hrwindow23>
+<hrwindow24>Поздравляем с завершением тренировки для новичков!</hrwindow24>
+<hrwindow25>Теперь вы можете начать одиночную или командную игру.</hrwindow25>
+<hrwindow26>Одиночная игра: Начать игру → Автоподбор</hrwindow26>
+<hrwindow27>Командная игра: Набрать команду → Пригласить → Начать игру</hrwindow27>
+<hrwindow28>Вы также можете продолжить играть против ботов, чтобы получше ознакомиться с игрой.</hrwindow28>
+<hrwindow29>Достижение завершено</hrwindow29>
+<hrwindow30>Сегодня вы не можете отправить запрос</hrwindow30>
+<hrwindow31>До 31 мая, в любой день, до 10 игр матче Тяньи игроки получат возможность выиграть награду! Каждый день новый шанс на выигрыш!</hrwindow31>
+<hrwindow32>Напоминание: Ежедневно в 00:00 весь дневной рейтинг игроков сбрасывается до 0 очков</hrwindow32>
+<levelup0>Поздравляем с достижением %d ур.! Вы открыли других героев</levelup0>
+<levelup1>и получаете подарок</levelup1>
+<levelup2>Достижение</levelup2>
+<levelup3>Подарок</levelup3>
+<levelup4>Благодарим за участие в ЗБТ "Rage of Titans".</levelup4>
+<levelup5>Добро пожаловать в "Rage of Titans"!</levelup5>
+<levelup6>Вы получаете VIP статус на 2 месяца. Приятной игры!</levelup6>
+<levelup7>Вы получаете VIP статус на 10 дней. Приятной игры!</levelup7>
+<chooseserver0>Выбрать сервер</chooseserver0>
+<chooseserver1>Выбрано:</chooseserver1>
+<chooseserver2>Всего</chooseserver2>
+<chooseserver3>Сервер</chooseserver3>
+<chooseserver4>Ниже 75 мс</chooseserver4>
+<chooseserver5>Ниже 250 мс</chooseserver5>
+<chooseserver6>Ниже 500 мс</chooseserver6>
+<setautomatch0>Настройки Автоподбора</setautomatch0>
+<setautomatch1>Сервер</setautomatch1>
+<setautomatch2>Выбор противника</setautomatch2>
+<setautomatch3>При выборе сервера приоритет - время</setautomatch3>
+<setautomatch4>При выборе сервера приоритет - скорость соединения</setautomatch4>
+<setautomatch5>При выборе противников приоритет - время.</setautomatch5>
+<setautomatch6>При выборе противников приоритет - сила противника.</setautomatch6>
+<setautomatch7>Сохранить настройки</setautomatch7>
+<toprank0>Рейтинг</toprank0>
+<toprank1>Имя игрока</toprank1>
+<toprank2>% побед</toprank2>
+<toprank3>Всего:</toprank3>
+<toprank4>Группа</toprank4>
+<toprank5>Загрузка данных</toprank5>
+<toprank6>Топ 50</toprank6>
+<toprank7>Регион</toprank7>
+<toprank8>Рейтинг</toprank8>
+<toprank9>О рейтинге</toprank9>
+<toprank10>Рейтинг по стране</toprank10>
+<toprank11>Башни</toprank11>
+<toprank12>Карта</toprank12>
+<toprank13>▼</toprank13>
+<toprank14>Важно: показывается только 1 место в каждой группе.</toprank14>
+<toprank15>Ассисты</toprank15>
+<toprank16>Убийства</toprank16>
+<toprank17>Ассисты</toprank17>
+<toprank18>Убито</toprank18>
+<toprank19>Скоро</toprank19>
+<toprank20>Обновление: </toprank20>
+<toprank21>Ежедневный рейтинг</toprank21>
+<toprank22>Башни</toprank22>
+<toprank23>Убито Боссов</toprank23>
+<toprank24>Пример: 12.01.2010</toprank24>
+<toprank25>Месяц и дата должны состоять из двух цифр.</toprank25>
+<toprank26>Герои</toprank26>
+<toprank27>Общий</toprank27>
+<toprank28>Награды</toprank28>
+<toprank29>Игр</toprank29>
+<toprank30>Побед</toprank30>
+<toprank31>Счет</toprank31>
+<toprank32>Всего:</toprank32>
+<playertip0>Побед</playertip0>
+<playertip1>Выходов</playertip1>
+<playertip2>% побед</playertip2>
+<playertip3>Уровень</playertip3>
+<playertip4/>
+<playertip5/>
+<playertip6/>
+<shop0>Главная</shop0>
+<shop1>Герои</shop1>
+<shop2>Облик</shop2>
+<shop3>Другое</shop3>
+<shop4>Наборы</shop4>
+<shop5>Покупки</shop5>
+<shop6>Мои предметы</shop6>
+<shop7>Купить</shop7>
+<shop8>Скидки</shop8>
+<shop9>До:</shop9>
+<shop10>Сейчас:</shop10>
+<shop11>GN</shop11>
+<shop12>Купить</shop12>
+<shop13>Топ</shop13>
+<shop14>Пополнить счет</shop14>
+<shop15>Пароль на обмен</shop15>
+<shop16>Монеты</shop16>
+<shop17>У вас:</shop17>
+<shop18>Цена:</shop18>
+<shop19>Остаток:</shop19>
+<shop20>купить за монеты </shop20>
+<shop21>купить за GN</shop21>
+<shop22>—————</shop22>
+<shop23>Магазин</shop23>
+<shop24>Открыть предмет</shop24>
+<shop25>Применить</shop25>
+<shop26>Применение</shop26>
+<shop27>Остаток</shop27>
+<shop28>Получить предмет</shop28>
+<shop29>Поздравляем! Получен новый предмет.</shop29>
+<shop30>Новый предмет можно найти в  Магазин - Мои предметы </shop30>
+<shop31>Автоматически</shop31>
+<shop32>Введите название</shop32>
+<shop33>Все</shop33>
+<shop34>Пополнить счет</shop34>
+<shop35>Промо</shop35>
+<shop36>Время</shop36>
+<shop37>Справка</shop37>
+<shop38>Способ оплаты</shop38>
+<shop39>Цена</shop39>
+<shop40>Монеты</shop40>
+<shop41>GN</shop41>
+<shop42>Купить</shop42>
+<shop43>Награда за игру</shop43>
+<shop44>Награда из сундука</shop44>
+<shop45>Использовать с помощью лупы</shop45>
+<shop46>Цена</shop46>
+<shop47>Цена</shop47>
+<shop48>Цена</shop48>
+<shop49> / </shop49>
+<shop50>Промо-код</shop50>
+<shop51>Не исп.</shop51>
+<shop52>Лист</shop52>
+<shop53>Получено %d монет</shop53>
+<shop54>Поздравляем! Вы получили %d игровых монет из золотого сундука!</shop54>
+<shop55>Активировать</shop55>
+<shop56>Предмет успешно продан</shop56>
+<shop57>Вернуться к оплате:</shop57>
+<shop58>Получить оплату:</shop58>
+<shop59>Цена:</shop59>
+<shop60>Полный доступ:</shop60>
+<shop61>Истек срок</shop61>
+<shop62>Предметы были возвращены в инвентарь</shop62>
+<shop63>Мои данные</shop63>
+<shop64>Магазин</shop64>
+<shoptip0>Обычная цена</shoptip0>
+<shoptip1>VIP цена</shoptip1>
+<shoptip2>Действует сразу после покупки</shoptip2>
+<shoptip3>Оставшееся время</shoptip3>
+<shoptip4>Этот предмет применяется вручную.</shoptip4>
+<shoptip5>Действует при получении</shoptip5>
+<shoptip6>Не действует</shoptip6>
+<shoptip7>Осталось попыток</shoptip7>
+<shoptip8>Обычная цена</shoptip8>
+<shoptip9>VIP-цена</shoptip9>
+<shoptip10>Является обязательным, нельзя передать</shoptip10>
+<boxchoose0>Выберите сундук. Выбор изменить нельзя.</boxchoose0>
+<boxchoose1>Оценка:</boxchoose1>
+<boxchoose2>Оставшееся время: %d мин.</boxchoose2>
+<boxchoose3>Линза</boxchoose3>
+<boxchoose4/>
+<boxchoose5/>
+<exskillbuild1>Выберите пустую ячейку для улучшения. После улучшения характеристика ячейки будет удалена.</exskillbuild1>
+<exskillbuild2>Удаленную характеристику восстановить нельзя.</exskillbuild2>
+<exskillbuild3>Улучшить</exskillbuild3>
+<exskillbuild4>Удалить</exskillbuild4>
+<exskillbuild5>Пользовательская метка</exskillbuild5>
+<exskillbuild6>Описание характеристики</exskillbuild6>
+<exskillbuild7>Эта ячейка еще не улучшена.</exskillbuild7>
+<exskillbuild8>Треб. ур.</exskillbuild8>
+<exskillbuild9>Новичок</exskillbuild9>
+<exskillbuild10>Обычный</exskillbuild10>
+<exskillbuild11>Мастер</exskillbuild11>
+<exskillbuild12>Улучшить</exskillbuild12>
+<exskillbuild13>Отмена</exskillbuild13>
+<exskillbuild14>Макс. здоровье</exskillbuild14>
+<exskillbuild15>Макс. мана</exskillbuild15>
+<exskillbuild16>Сила атаки:</exskillbuild16>
+<exskillbuild17>Физ. защита</exskillbuild17>
+<exskillbuild18>Маг. Защита</exskillbuild18>
+<exskillbuild19>Сопр. физ. защите</exskillbuild19>
+<exskillbuild20>Сопр. маг. защите</exskillbuild20>
+<exskillbuild21>Скорость передвижения</exskillbuild21>
+<exskillbuild22>Шанс крит</exskillbuild22>
+<exskillbuild23>Сила крит</exskillbuild23>
+<exskillbuild24>Скорость восст. здоровья</exskillbuild24>
+<exskillbuild25>Скорость восст. маны</exskillbuild25>
+<exskillbuild26>Доп. маг. урон</exskillbuild26>
+<exskillbuild27>Сила</exskillbuild27>
+<exskillbuild28>Ловкость</exskillbuild28>
+<exskillbuild29>Интеллект</exskillbuild29>
+<exskillbuild30>Уменьшить перезарядку</exskillbuild30>
+<exskillbuild31>/ур.</exskillbuild31>
+<exskillbuild32>/сек.</exskillbuild32>
+<exskillbuild33>Улучшение божественных навыков</exskillbuild33>
+<exskillbuild34>Плата</exskillbuild34>
+<exskillbuild35>Улучшение божественных навыков</exskillbuild35>
+<exskillbuild36>Успешно улучшено!</exskillbuild36>
+<exskillbuild37>Недостаточно материалов для улучшения.</exskillbuild37>
+<exskillbuild38>Улучшить не удалось</exskillbuild38>
+<exskillbuild39>Отменить улучшение…</exskillbuild39>
+<exskillbuild40>Отменено успешно!</exskillbuild40>
+<exskillbuild41>Вы действительно хотите отменить улучшение?</exskillbuild41>
+<exskillbuild42>Да</exskillbuild42>
+<exskillbuild43>Отмена</exskillbuild43>
+<exskillbuild44>Требуется %d ур.</exskillbuild44>
+<exskillbuild45>Улучшить</exskillbuild45>
+<exskillbuild46>(Новичок)</exskillbuild46>
+<exskillbuild47>(Опытный)</exskillbuild47>
+<exskillbuild48>(Мастер)</exskillbuild48>
+<exskillbuild49>Улучшить до Обычного</exskillbuild49>
+<exskillbuild50>Улучшить до Мастера</exskillbuild50>
+<exskillbuild51>Не куплено</exskillbuild51>
+<video0>Имя</video0>
+<video1>Дата</video1>
+<video2>Версия №</video2>
+<video3>Святые</video3>
+<video4>Падшие</video4>
+<video5>Игрок</video5>
+<video6>Уровень</video6>
+<video7>У/С/А</video7>
+<video8>Враг/Свой</video8>
+<video9>Инфо</video9>
+<video10>ID соревнования: </video10>
+<video11>Карта: </video11>
+<video12>Версия: </video12>
+<video13>Время: </video13>
+<video14>Время: %d мин.</video14>
+<video15>Режим </video15>
+<video16>Записи игр</video16>
+<video17>LIVE</video17>
+<video18>Передача</video18>
+<video19>Итог битвы</video19>
+<video20>Святые</video20>
+<video21>  Падшие</video21>
+<video22>Не окончена</video22>
+<video23>Навык</video23>
+<video24>Предмет</video24>
+<video25>Назад</video25>
+<video26>Закрыть</video26>
+<video27>Текущая версия</video27>
+<video28>Проверить порядок улучшения навыков</video28>
+<video29>Проверить порядок покупки предметов</video29>
+<video30>Коллекция</video30>
+<video31>Просмотр папок</video31>
+<video32>Пред.</video32>
+<video33>След.</video33>
+<video34>Текущий</video34>
+<video35>Название</video35>
+<video36>Карта</video36>
+<video37>Начало</video37>
+<video38>Время</video38>
+<video39>Статус</video39>
+<video40>Live</video40>
+<video41>Готово</video41>
+<video42>Рекомендованная игра</video42>
+<video43>Все игры</video43>
+<video44>Не начато</video44>
+<rep0>Туман войны</rep0>
+<rep1>Блокировка камеры</rep1>
+<rep2>Угол обзора судьи</rep2>
+<rep3>Скорость х</rep3>
+<rep4>Умножение</rep4>
+<rep5>Вперед</rep5>
+<rep6>Переигровка</rep6>
+<rep7/>
+<rep8/>
+<rep9/>
+<help0>Начать игру</help0>
+<help1>Магазин</help1>
+<help2>ЧаВо</help2>
+<help3>Закрыть</help3>
+<help4>Аукцион</help4>
+<help5/>
+<help6/>
+<newplayer0>OK</newplayer0>
+<newplayer1>След.</newplayer1>
+<newplayer2>Закрыть</newplayer2>
+<newplayer3/>
+<newplayer4/>
+<newplayer5/>
+<newplayer6/>
+<hero0>Общее</hero0>
+<hero1>Навык</hero1>
+<hero2>Облик</hero2>
+<hero3>Загрузка…</hero3>
+<hero4/>
+<achieve0>Обзор</achieve0>
+<achieve1>Общее</achieve1>
+<achieve2>Битва</achieve2>
+<achieve3>Союз</achieve3>
+<achieve4>События</achieve4>
+<achieve5>Очков:</achieve5>
+<achieve6>Всего:</achieve6>
+<achieve7>Есть:</achieve7>
+<achieve8>Всего очков: </achieve8>
+<achieve9>Последние</achieve9>
+<achieve10>Все</achieve10>
+<achieve11>Завершенные</achieve11>
+<achieve12>Незавершенные</achieve12>
+<achieve13/>
+<achieve14/>
+<achieve15/>
+<achieve16/>
+<achieve17/>
+<achieve18/>
+<achieve19/>
+<achieve20/>
+<levelup8>Новогодний подарок</levelup8>
+<levelup9>Поздравляем, вы завершили 3 игры и получаете в подарок VIP-статус на 1 день</levelup9>
+<levelup10>Проведя сегодня еще 7 игр, вы получите VIP-статус еще на 3 дня, итого 4 дня VIP-статуса</levelup10>
+<levelup11>Поздравляем, вы получили VIP-статус на 3 дня</levelup11>
+<levelup12>Сегодня вы заслужили VIP-статус на 4 дня. С Новым Годом!</levelup12>
+<levelup13>Системное сообщение</levelup13>
+<newyear0>Выберите друзей в сети</newyear0>
+<newyear1>Далее</newyear1>
+<newyear2>Введите текст поздравления для %s</newyear2>
+<newyear3>В канун Китайского Нового года</newyear3>
+<newyear4>Горячо поздравить с годом Золотого зайца</newyear4>
+<newyear5>Поздравить с годом Золотого зайца</newyear5>
+<newyear6>Поздравить с Новым Годом</newyear6>
+<newyear7>Златой тигр убегает, зайцу место оставляет</newyear7>
+<newyear8>Тигр поет об удаче, заяц приносит благополучие</newyear8>
+<newyear9>Заяц приходит в новогоднюю ночь, встретим ее с друзьями</newyear9>
+<newyear10>Тигр больше не рычит, ловкий заяц к нам бежит</newyear10>
+<newyear11>Тигр оставил претензии, заяц приносит удачу!</newyear11>
+<newyear12>Соберите слова, чтобы выиграть приз!</newyear12>
+<newyear13>Поздравляем, вы собрали слова!</newyear13>
+<newyear14>Код подарка:</newyear14>
+<newyear15>Подарок был отправлен автоматически и уже доступен</newyear15>
+<newyear16>Подарок был обменен</newyear16>
+<newyear17>VIP-статус на 14 дней, карта двойного опыта на 14 дней</newyear17>
+<newyear18>Карта удвоения монет на 14 дней, 200 рупоров</newyear18>
+<newyear19>Игровая мышка Razer DeathAdder в подарок</newyear19>
+<newyear20>Свяжитесь с центром обслуживания, чтобы получить подарок</newyear20>
+<newyear21>VIP-статус на 3 дня, Карта удвоения игровых монет на 3 дня, Карта удвоения опыта на 3 дня, 50 рупоров</newyear21>
+<newyear22/>
+<newyear23>Центр обслуживания: https://support.gamenet.ru/</newyear23>
+<newyear24>Введите текст поздравления</newyear24>
+<newyear25>Новогодний подарок</newyear25>
+<newyear26>(Поздравляем! Вы получаете VIP-статус на 30 дней, Карту удвоения опыта на 30 дней, Карту удвоения монет на 30 дней. Проверьте наличие подарка в Магазине, в разделе "Мои предметы".)</newyear26>
+<newyear27>(Поздравляем! Вы получаете VIP-статус на 7 дней, Карту удвоения опыта на 7 дней, Карту удвоения монет на 7 дней. Проверьте наличие подарка в Магазине, в разделе "Мои предметы".)</newyear27>
+<newyear28>(Поздравляем! Вы получаете Карту удвоения опыта на 30 дней и Карту удвоения монет на 30 дней. Проверьте наличие подарка в Магазине, в разделе "Мои предметы".)</newyear28>
+<newyear29>(Поздравляем! Вы получаете Карту удвоения опыта на 3 дня. Проверьте наличие подарка в Магазине, в разделе "Мои предметы".)</newyear29>
+<newyear30>(Поздравляем! Вы получаете 2 рупора. Проверьте наличие подарка в Магазине, в разделе "Мои предметы".)</newyear30>
+<levelup14>Поздравляем! Вы закончили игру, система автоматически вышлет вам подарок.</levelup14>
+<levelup15>Поздравляем!</levelup15>
+<child0>Данные паспорта не соответствуют. На вас наложено ограничение согласно положению о предупреждении игровой зависимости.</child0>
+<child1>Время в сети: 1 час</child1>
+<child2>Время в сети: 2 часа</child2>
+<child3>Время в сети: 3 часа. Предлагаем вам передохнуть и размяться.</child3>
+<child4>Из-за длительного нахождения в игре для вас наступил период крайней утомляемости, в дальнейшем ваш доход в игре будет составлять лишь 50% от обычного</child4>
+<child5>Столь длительное нахождение в сети может нанести вред вашему здоровью. Рекомендуем вам немедленно покинуть игру.</child5>
+<child6>Общее время нахождения в сети 2 часа 45 мин. Ограничения с целью предупреждения игровой зависимости вступят в силу через 15 мин</child6>
+<child7>Подтверждение</child7>
+<child8>Подтверждение номера паспорта</child8>
+<child9>Предупреждение игровой зависимости</child9>
+<child10>Введите номер паспорта</child10>
+<child11>Имя</child11>
+<child12>Паспорт</child12>
+<child13>Согласно требованиям положения "о предупреждении игровой зависимости у несовершеннолетних":</child13>
+<child14>Несовершеннолетние пользователи и пользователи без подтвержденных данных паспорта попадают под ограничения. В случае нахождения в игре более 3 часов доход уменьшается наполовину, более 5 часов - аннулируется</child14>
+<child15>Пользователи с подтвержденными данными паспорта по ограничения не попадают, остальным следует предоставить достоверные данные, иначе на них будут распространяться ограничения</child15>
+<child16>Имея данные вашего паспорта, мы можем быть уверены относительно вашего возраста, чтобы знать, следует ли, согласно политике государства, ограничивать время вашего нахождения в сети.</child16>
+<child17> Введите номер паспорта</child17>
+<special0>Вы добились исключительных результатов [%s], пусть об этом узнает вся страна!</special0>
+<special1>(Необходимо потратить 100 рупоров)</special1>
+<special2>Больше не показывать</special2>
+<special3>Исключительное достижение</special3>
+<special4>%s первый “%s”%s в сети!</special4>
+<merge0> Доступно</merge0>
+<merge1>Все уровни</merge1>
+<merge2>Уровень 1</merge2>
+<merge3>Уровень 2</merge3>
+<merge4>Уровень 3</merge4>
+<merge5>Уровень 4</merge5>
+<merge6>Уровень 5</merge6>
+<merge7>Тип</merge7>
+<merge8>Успешно скомбинировано!</merge8>
+<merge9>Неверный тип предмета.</merge9>
+<merge10>Неверное количество.</merge10>
+<merge11>Достигнут макс. уровень!</merge11>
+<merge12>Недостаточно монет.</merge12>
+<merge13>Комбинирование провалилось!</merge13>
+<merge14/>
+<merge15>Рецепт</merge15>
+<merge16>Цена</merge16>
+<merge17>Из 3 одинаковых рун, вы получите случайную, но того же уровня.</merge17>
+<merge18>Из 5 одинаковых рун, вы получите случайную, но выше уровнем.</merge18>
+<merge19>Разместите руны</merge19>
+<merge20>Отменить?</merge20>
+<merge21>Необходимо заплатить несколько монет.</merge21>
+<merge22/>
+<merge23/>
+<merge24>Узор</merge24>
+<merge25>Блеск</merge25>
+<merge26>Резьба</merge26>
+<merge27>Триумф</merge27>
+<merge28>Детали:</merge28>
+<merge29>Ок</merge29>
+<merge30>Собрать</merge30>
+<merge31>Улучшить</merge31>
+<sale0>Общее</sale0>
+<sale1>Торг</sale1>
+<sale2>VIP</sale2>
+<sale3>Руны</sale3>
+<sale4>Герой</sale4>
+<sale5>Облик</sale5>
+<sale6>Аксессуары</sale6>
+<sale7>GN</sale7>
+<sale8>VIP</sale8>
+<sale9>Обновить</sale9>
+<sale10>Предмет</sale10>
+<sale11>Статус</sale11>
+<sale12>Цена</sale12>
+<sale13>Сброс</sale13>
+<sale14>Искать</sale14>
+<sale15>Количество</sale15>
+<sale16>Шт./д.</sale16>
+<sale17>Прошло ч.</sale17>
+<sale18>Цена</sale18>
+<sale19>Итог</sale19>
+<sale20>Шт.</sale20>
+<sale21> ч.</sale21>
+<sale22>Хранение:</sale22>
+<sale23>Снять</sale23>
+<sale24>%d предметов на продажу. </sale24>
+<sale25>Предметов в день: (%d шт./%d мес.)</sale25>
+<sale26>Информация</sale26>
+<sale27>Хотите отправить предмет?</sale27>
+<sale28>Хотите восстановить предмет?</sale28>
+<sale29>Пожалуйста, выберите пункты</sale29>
+<sale30>Недостаточно монет</sale30>
+<sale31>Увеличьте срок продажи за счет VIP-аккаунта!</sale31>
+<sale32>Пожалуйста, введите общее</sale32>
+<sale33>Пожалуйста, введите число</sale33>
+<sale34>Аукцион содержит предметы</sale34>
+<sale35>для держателей VIP-аккаунтов!</sale35>
+<sale36>Налог с продажи - 5%.</sale36>
+<sale37>Все</sale37>
+<sale38>Основное</sale38>
+<sale39>Отлично</sale39>
+<sale40>Хорошо</sale40>
+<sale41>Уникально</sale41>
+<sale42>Легендарно</sale42>
+<sale43>Эпично</sale43>
+<sale44>Дар Титанов</sale44>
+<sale45>Предмет</sale45>
+<sale46>Облик</sale46>
+<sale47>Руна</sale47>
+<sale48>Карточка VIP</sale48>
+<sale49>Распродажа</sale49>
+<sale50>Карточка</sale50>
+<sale51>Сундук</sale51>
+<zzjbutton0>Закрыть</zzjbutton0>
+<zzjbutton1>Купить</zzjbutton1>
+<zzjbutton2>Начать   </zzjbutton2>
+<zzjbutton3>Обновить</zzjbutton3>
+<zzjw0>Не напоминать</zzjw0>
+<zzj0>%s </zzj0>
+<zzj1>Осталось %s д.</zzj1>
+<zzj2>Обычный    VIP</zzj2>
+<zzj3>%s д.</zzj3>
+<zzj4>%s GN</zzj4>
+<zzj5>%s времени</zzj5>
+<zzj7>Нажав дважды, получите 1 предмет</zzj7>
+<zzj8>Недостаточно GN</zzj8>
+<zzj9>VIP герой может бесплатно вернуть сессию</zzj9>
+<zzj10>Возвращаетя %s</zzj10>
+<zzj11>Потратить %s GN</zzj11>
+<zzj12>Через %s сек., автоматически получаешь награду</zzj12>
+<zzj13>, потратив 1 GN на приобретение предмета! (VIP - бесплатно)</zzj13>
+<zzj14>Сражаться за сундук</zzj14>
+<zzj15>Получить целиком</zzj15>
+<zzj16>Первое получение VIP - бесплатно!</zzj16>
+<zzj17>Нажмите Начать или Пробел;</zzj17>
+<zzj18>Случайное получение награды после матча</zzj18>
+<zzj19>Надо потратить 1 GN на приобретение предмета</zzj19>
+<zzj20>Нажав дважды, получите 1 предмет</zzj20>
+<zzjUseItem>Хотите использовать %s  сейчас?</zzjUseItem>
+<zzjherochoose0>Добро пожаловать!</zzjherochoose0>
+<randombox0>Пояснительная иконка показывает, что после получения, предмет привязан к игроку и его нельзя передать</randombox0>
+<randombox1>После ипользвания получаете 100 ед. опыта, можно дополнительно получить бонус</randombox1>
+<randombox2>Открыть</randombox2>
+<randombox3>Выбрать героя</randombox3>
+<newtech1>Как играть</newtech1>
+<newtech2>Добро пожаловать в режим обучения!</newtech2>
+<newtech3>Режим обучения поможет вам освоиться в игре.</newtech3>
+<newtech4>   </newtech4>
+<newtech5>   </newtech5>
+<newtech6>Тренировка</newtech6>
+<newtech7>Пред. </newtech7>
+<newtech8>След. </newtech8>
+<newtech9>    </newtech9>
+<newtech10>Добро пожаловать!</newtech10>
+<newtech11>Обучение…</newtech11>
+<map0>Карта</map0>
+<map1>Глаз Титана</map1>
+<map2>Долина героев</map2>
+<level0>Уровень</level0>
+<level1>Новичок</level1>
+<level2>Обычный</level2>
+<level3>Мастер</level3>
+<address0>Карта</address0>
+<address1>Шанхай</address1>
+<address2>Чжэцзян</address2>
+<address3>Цзянсу</address3>
+<createmap0>Долина героев</createmap0>
+<createmap1>Глаз Титана</createmap1>
+<createlevel0>Новичок</createlevel0>
+<createlevel1>Обычный</createlevel1>
+<createlevel2>Мастер</createlevel2>
+<createyz0>Необходимо подтвердить</createyz0>
+<createyz1>Скрыть команду</createyz1>
+<createyz2>Свободный вход</createyz2>
+<zudui2>Добавить в команду</zudui2>
+<zudui3>Команда</zudui3>
+<zudui4>Быстрый вход</zudui4>
+<zudui5>ID команды</zudui5>
+<zudui6>Название команды</zudui6>
+<zudui7>Кол-во игроков</zudui7>
+<creat0>Название команды</creat0>
+<creat1>Карта</creat1>
+<creat2>Уровень</creat2>
+<creat3>Подтверждение</creat3>
+<creat4>Команда</creat4>
+<shezhi>Настройка</shezhi>
+<headline0>Информация о команде</headline0>
+<shezhidetail0>[Команда] создать новую команду </shezhidetail0>
+<shezhidetail1>После выбора команды, нажмите [Добавить в команду]</shezhidetail1>
+<shezhidetail2>[Быстрый вход]автоматически подыскивает команду</shezhidetail2>
+<createbutton0>ОК</createbutton0>
+<createbutton1>Отмена </createbutton1>
+<zuduitip0>Выиграл</zuduitip0>
+<zuduitip1>Уйти</zuduitip1>
+<zuduitip2>Статистика побед</zuduitip2>
+<zuduitip3>Общий счет</zuduitip3>
+<zuduitip4>Просьба о вступлении в команду</zuduitip4>
+<zuduitip5>Принять (%s)</zuduitip5>
+<zuduitip6>Отказ </zuduitip6>
+<quickjointext2>Быстрый вход</quickjointext2>
+<teamchannel0>Глаз Титана</teamchannel0>
+<teamchannel1>Долина героев</teamchannel1>
+<teamchannel2>Новичок</teamchannel2>
+<teamchannel3>Обычный</teamchannel3>
+<teamchannel4>Мастер</teamchannel4>
+<teamchannel5>Свободный вход</teamchannel5>
+<teamchannel6>Запрос активации</teamchannel6>
+<teamchannel7>Скрыть команду</teamchannel7>
+<teamchannel8>ОК</teamchannel8>
+<quest0>Бонусы</quest0>
+<quest1>Получить </quest1>
+<quest2>Награда  </quest2>
+<quest3>Поздравляю с победой</quest3>
+<quest4>Выберите миссию </quest4>
+<quest5/>
+<quest6/>
+<quest7/>
+</hall_button.xml>
+<hall_text.xml>
+<typeID>b0000007</typeID>
+<name>频道等</name>
+<data0>Индивидуальный</data0>
+<data0>Командный</data0>
+<data0>Лига</data0>
+<data0>Победа</data0>
+<data0>Поражение</data0>
+<data0>Статистика побед</data0>
+<data0>Ср. показатель убийств:</data0>
+<data0>Ср. показатель смертей:</data0>
+<data0>Ср. показатель ассистов:</data0>
+<data0>Время игры:</data0>
+<data0>Итого:</data0>
+<data0>Перспективный новичок</data0>
+<data1>Чат 1</data1>
+<data1>Чат 1</data1>
+<data1>Чат 2</data1>
+<data1>Чат 3</data1>
+<data1>Чат 4</data1>
+<data1>Личный чат</data1>
+<data1>Ответить</data1>
+<data1>Общий чат</data1>
+<data1>Активный чат:</data1>
+<data1>Пользователь</data1>
+<data1>Чат</data1>
+<data1>Название чата</data1>
+<data1>Участники</data1>
+<data1>Чат</data1>
+<data1>Друзья</data1>
+<data1>Вы не добавлены этот чат</data1>
+<data1>ОК</data1>
+<data1>Говорит:</data1>
+<data2>Имя:</data2>
+<data2>Подпись:</data2>
+<data2>Щелкните для редактирования</data2>
+<data2>Перспективный новичок</data2>
+<data3>Название игры</data3>
+<data3>Режим игры</data3>
+<data3>Пинг</data3>
+<data3>Кол-во игроков</data3>
+<data3>Другое</data3>
+<data3>aa</data3>
+<data3>aa</data3>
+<data4>Введите название игры</data4>
+<data4>Выберите кол-во игроков</data4>
+<data4>Выберите режим игры</data4>
+<data4>Ограничение силы</data4>
+<data4>Свободный бой</data4>
+<data4>Выбрать карту:</data4>
+<data4>Автобаланс:</data4>
+<data4>Отказать отключившимся игрокам:</data4>
+<data4>Простой режим:</data4>
+<data4>Комната:</data4>
+<data4>Открыть</data4>
+<data4>Закрыть</data4>
+<data4>Общественная</data4>
+<data4>Личная</data4>
+<data5>Личный рейтинг</data5>
+<data5>Рейтинг достижений</data5>
+<data5>Командный рейтинг</data5>
+<data5>Рейтинг активности команды</data5>
+<data6>Название игры:</data6>
+<data6>Хозяин:</data6>
+<data6>ID:</data6>
+<data6>Карта:</data6>
+<data6>Кол-во игроков:</data6>
+<data6>Режим игры:</data6>
+<data6>Пинг:</data6>
+<data6>Автобаланс:</data6>
+<data6>Другое:</data6>
+<data6>Все</data6>
+<data6>Зайти в комнату</data6>
+<data6>Выйти из комнаты</data6>
+<data7>Установить аватар</data7>
+<data7>Аватар героя</data7>
+<data8>Подробно</data8>
+<data8>Добавить друга</data8>
+<data8>Удалить друга</data8>
+<data8>Функция не активизирована</data8>
+<data9>Запомнить пользователя</data9>
+<data9>Предупреждение о ненанесении вреда здоровью</data9>
+<data9>Откажитесь от пиратских игр</data9>
+<data9>Защитите себя от кибер-преступлений</data9>
+<data9>Помните, игровая зависимость наносит вред вашему здоровью</data9>
+<data9>Умейте организовать свое время, наслаждайтесь жизнью</data9>
+<data9>   </data9>
+<data9>Версия игры:</data9>
+<data9>Регистрация невозможна</data9>
+<data9>Регистрация</data9>
+<data9>Подождите</data9>
+<data9>Введите имя аккаунта. Имя аккаунта совпадает с вашим e-mail</data9>
+<data9>Пользователь не существует. Введите верное имя аккаунта.</data9>
+<data9>Пароль неверный. Введите еще раз. Обратите внимание на регистр букв.</data9>
+<data9>Данный пользователь уже зарегистрирован</data9>
+<data9>Время соединения истекло. Проверьте статус соединения и повторите попытку</data9>
+<data9>Попробуйте подключиться еще раз</data9>
+<data9>Сервер на профилактике, попробуйте войти позже</data9>
+<data9>Обновите версию игры прежде, чем зарегистрироваться</data9>
+<data9>Сервер временно недоступен. Посетите официальный сайт за дополнительной информацией</data9>
+<data10>Рейтинг</data10>
+<data10>Колебания рейтинга</data10>
+<data10>Имя игрока</data10>
+<data10>Ранг</data10>
+<data10>Опыт ранга</data10>
+<data10>Выиграл</data10>
+<data10>Проиграл</data10>
+<data10>Статистика побед</data10>
+<data10>Название команды</data10>
+<data10>Общие награды</data10>
+<data10>Название позиции</data10>
+<data10>Потенциальные награды</data10>
+<data10>Кол-во игроков/Макс.</data10>
+<data10>Показатель активности</data10>
+<data10>Установить дату</data10>
+<data10>Общий счет</data10>
+<data11>Системное меню</data11>
+<data11>Выйти из игры</data11>
+<data12>Уже является вашим другом</data12>
+<data12>У вас новый друг</data12>
+<data12>Вы не можете добавить себя в друзья</data12>
+<data12>Неизвестный игрок:</data12>
+<data12>Не является вашим другом</data12>
+<data12>Удалить друга:</data12>
+<data12>Успешно!</data12>
+<data13>Судья</data13>
+<data13>   </data13>
+<data13>№ </data13>
+<data13>Противник</data13>
+<data13>Пробная битва</data13>
+<data13>В магазинах на базе и за ее пределами можно купить все предметы</data13>
+<data13>Находясь вблизи магазина, можно достать предмет из рюкзака</data13>
+<data13>После смерти деньги не потеряются, но зачем рисковать?</data13>
+<data13>Нажмите клавишу "B" для мгновенного открытия/закрытия магазина</data13>
+<data13>Можно повышать уровень магического навыка каждые 10 сек после начала игры, вплоть до 4 уровня</data13>
+<data13>Для вашего удобства вы можете установить горячие клавиши на предметы (главное меню-настройки системы-панель управления)</data13>
+<data13>Вы изменить настройки подсветки предметов в Главном меню (Системные настройки - Вид)</data13>
+<data13>Вы проверяли дальность действия своего навыка? Проверьте, это полезно знать</data13>
+<data13>Когда здоровье ваших солдат ниже 50%, вы можете убить их, чтобы уменьшить потенциальный опыт, заработанный противником</data13>
+<data13>Если здоровье ваших защитных башен ниже 10%, вы можете их уничтожить, чтобы уменьшить потенциальный доход врага</data13>
+<data13>Двойной клик, чтобы телепортироваться обратно к Источнику. Двойной клик по эликсиру здоровья или маны, чтобы их применить</data13>
+<data13>Уничтожение Босса монстров в верхнем углу вражеской базы ослабит оборону защитных башен врага и повысит уровень ваших солдат</data13>
+<data13>Уничтожение Босса монстров в нижнем углу вражеской базы ослабит мощь защитных башен врага, и к тому повысит уровень ваших солдат</data13>
+<data13>Если вам кажется, что поражение неминуемо, вы можете инициировать голосование в своей команде за прекращение текущей игры</data13>
+<data13>Голосование можно провести через 20 мин после начала игры, решение считается принятым с 75% голосов "за"</data13>
+<data13>С помощью автоподбора вам будет подобран соответствующий противник, после окончания игры вы получите  монеты и опыт</data13>
+<data13>Если вы застряли и не можете двигаться, используйте приказ [-unstuck], чтобы вернуться на базу или обучитесь навыку Телепортации</data13>
+<data13>В меню магазина уже использованные предметы обозначены желтым цветом</data13>
+<data13>Чтобы организовать командную игру, в левом верхнем углу Зала  выберите "Создать команду", пригласите друзей и начните автоподбор</data13>
+<data13>Вы можете создать комнату свободного боя и добавить ботов, чтобы в битве с ПК познакомиться с героями и предметами.</data13>
+<data13>При отключенном антивирусе игра будет загружаться в 5 раз быстрее!!!</data13>
+<data13>Нажатие [Ctrl+горячая клавиша навыка] позволяет мгновенно повысить уровень этого навыка</data13>
+<data13>[Ctrl+T] открывает окно обучения магическим навыкам</data13>
+<data13>Клавиша [~] открывает окно сводки боевой обстановки</data13>
+<data13>В магазине можно нажать [Купить все], чтобы купить все необходимые детали для предмета сразу</data13>
+<data13>Ежедневный рейтинг составляется с 20:00 до 23:00 по результатам окончившихся игр</data13>
+<data13>В игре можно нажать [F2], чтобы мгновенно ответить на шепот друга</data13>
+<data13>[F11] позволяет сохранить скриншоты битвы</data13>
+<data13>[F12] позволяет просмотреть историю битвы и историю сообщений</data13>
+<data13>Когда защитная башня атакует того же героя, то повреждения увеличиваются в соответствии с уровнем персонажа</data13>
+<data13>В Магазине в Списке покупок вы можете посмотреть запись о последних покупках</data13>
+<data13>Вы можете создать комнату свободного боя и добавить ботов, чтобы в битве с ПК познакомиться с героями и предметами.</data13>
+<data13>Вы можете в [Системные настройки]→[Настройки игры], включить/выключить подсветку героя</data13>
+<data13>[Системные настройки]→[Настройки игры], можно включить/выключить опцию "Показывать опыт героя"</data13>
+</hall_text.xml>
+<help.xml>
+<typeID>b0000008</typeID>
+<name>帮助文字</name>
+<para>
+<head>
+<name>Не знаете, как играть? Не беда, пройдите Обучающий курс и шаг за шагом познакомьтесь с правилами игры!</name>
+<name>Совет: игрокам, не знакомым с " Rage of Titans", рекомендуется пройти Обучающий курс</name>
+<name>Операция: Левый нижний угол Зала [Главное меню] → [Обучающий курс]</name>Обучающий курс</head>
+<head>
+<name>Вы уже прошли Обучающий курс и ознакомились с правилами игры, но есть вопросы насчет героев и предметов? Не переживайте!</name>
+<name>Проверьте свои силы в поединке против ботов!</name>
+<name>Совет: в поединке с ботами есть возможность лучше ознакомиться с героями, рельефом, предметами и правилами игры.</name>
+<name>Операция: Правый верхний угол Зала [Начать игру] → [Свободный бой] → [Создать игровую комнату] → [Подтвердить] → [Добавить ПК]</name>
+<name>&gt; Нажмите [+], чтобы добавить ПК → [Начать игру]</name>Проверить свои силы в поединке с ботами.</head>
+<head>
+<name>Наигрались с ПК? Готовы к схватке с настоящими игроками?</name>
+<name>Войдите в систему автоподбора. Здесь система, исходя из ваших возможностей, подберет вам соответствующего противника.</name>
+<name>Время подбора зависит от скорости вашего соединения и вашего уровня. Пожалуйста, подождите.</name>
+<name>Совет: рекомендуем ознакомиться с правилами игры и отработать игру по крайней мере двумя героями</name>
+<name>Операция: правый верхний угол Зала [Начать игру] → [Автоподбор]</name>Одиночная игра с автоподбором</head>
+<head>
+<name>Нашли хорошего друга в игре? Повстречали настоящего аса и хотели бы играть с ним в одной команде? Добавьте их в список друзей!</name>
+<name>Добавив друга, можно не только получать уведомления о его нахождении в сети, но и создать с ним premade-команду</name>
+<name>Операция: Правый нижний угол Зала → [Мои друзья] → Нажмите [+] → используя ник или имя аккаунта [Найти] друга</name>
+<name>→ [Добавить] → Ожидание подтверждения другой стороны, друг добавлен</name>Добавить друга</head>
+<head>
+<name>Хотите сыграть со своим другом?</name>
+<name>Используйте настройки командной игры.</name>
+<name>Не стоит беспокоиться о том, что соперник окажется слишком слабым. С помощью автоподбора, или создав premade-команду, можно быть уверенным, что противник будет достойным!</name>
+<name>Для создания premade-команды необходимо сначала добавить друзей. За подробностями обратитесь к тексту выше.</name>
+<name>Операция: левый верхний угол Зала [Создать]команду→ [Пригласить] друзей в сети → Друг принимает приглашение → Начать игру]</name>Командная игра с автоподбором (как создать premade-команду)</head>
+<head>
+<name>Режим создания стандартной игровой комнаты, можно использовать для тренировки с другими игроками</name>
+<name>Операция: правый верхний угол Зала [ Начать игру] → [Свободный бой] → [Создать игровую комнату] → Ожидание входа игроков → [Начать игру]</name>Создать/Войти в игровую комнату</head>
+</para>
+<para>
+<head>
+<name>Нажмите в правом верхнем углу Зала [Магазин], чтобы посетить магазин RoT</name>
+<name>В магазине используются монеты и GN</name>
+<name>"Игровые монеты" можно получить за участие в играх с автоподбором, "монеты Game Net" приобретаются путем пополнения игрового счета </name>Магазин</head>
+<head>
+<name>В магазине есть 3 основные категории предметов: боевые, подарочные и прочие. Для более подробной информации обратитесь к инструкции</name>
+<name>Операция: Правый верхний угол Зала [Магазин] → Найдя необходимый предмет, нажмите [Купить] → Выберите соответствующее время/количество действия</name>
+<name>Оплата игровых монет или монет Game Net - прошла успешно</name>Покупка предметов в магазине</head>
+<head>
+<name>Предмет куплен, как же его использовать?</name>
+<name>Предметы исчисляются согласно времени или количеству, если предмет относится к временному типу, то его не нужно активизировать, он начинает действовать автоматически,</name>
+<name>Вы можете посмотреть оставшееся время в магазине</name>
+<name>Если предмет относится к исчисляемому типу, действуйте согласно инструкции о предметах</name>
+<name>Операция: Правый верхний угол Зала [Магазин] → Выберите раздел [Мои предметы] → Посмотреть/Использовать предмет</name>Осмотреть/Использовать предмет</head>
+<head>
+<name>Кошелек пуст? Нажмите в правом нижнем углу магазина Пополнить счет GN, и следуйте инструкциям</name>Пополнить счет GN</head>
+</para>
+<para>
+<head>
+<name>Ответ: возможно, задержка соединения слишком высокая или разрешение слишком низкое</name>
+<name> Разрешение слишком низкое: в играх разрешение считается недостаточным если оно ниже 25. Это означает, что конфигурация ПК не соответствует требованиям, советуем</name>
+<name>Измените настройки игры</name>
+<name>Задержка соединения: проверьте значок связи. Если он показывает 5 столбиков и они зеленые - значит у вас стабильное соединение. Если меньше 5 -</name>
+<name>Проверьте интернет-соединение, возможно, канал используется другими источниками или программами</name>Вопрос: Игра зависает, что делать?</head>
+<head>
+<name>Ответ: Пробные битвы используются для определения уровня игрока, рейтинг в пробных битвах не указывается и не учитывается</name>
+<name>Первые 5 игр с автоподбором считаются пробными битвами</name>Вопрос: Что такое пробные битвы?</head>
+<head>
+<name>Ответ: Общий счет используется для обозначения мастерства. Вы можете посмотреть его в разделе [Моя страница]</name>
+<name>Общий счет начисляется очень просто, чем больше противников сильнее себя вы одолеваете, тем выше общий счет</name>
+<name>В случае поражения общий счет уменьшается</name>
+<name>Если вы побеждаете противника слабее себя, то общий счет меньше. Если вы проигрываете противнику слабее себя, то теряете еще больше очков</name>
+<name>В случае победы над противником соответствующего уровня вы получаете +/-16ед. Если меньше 16, значит, общий счет противника меньше вашего</name>Вопрос: Что такое общий счет? Где его посмотреть? Как он вычисляется?</head>
+<head>
+<name>Ответ: В момент, когда поражение кажется неминуемым, вы можете предложить команде проголосовать за немедленное прекращение игры.</name>
+<name>Голосование можно провести не раньше, чем через 20 мин после начала игры. Решение считается принятым, если 75% игроков проголосуют "за"</name>
+<name>Операция: Откройте Главное меню (горячая клавиша F10) , выберите [Проголосовать за прекращение игры]</name>Вопрос: Как можно проголосовать? Каковы правила голосования?</head>
+<head>
+<name>Ответ: Войдите в игру, выберите[Меню] (Горячая клавиша  F10) → [Системные настройки] → измените настройки в разделе [Панель управления]</name>Вопрос: Горячие клавиши игры по умолчанию кажутся неудобными, можно ли изменить настройки?</head>
+<head>
+<name>Ответ: Если в процессе автоподбора нестабильность соединения приведет к выходу из игры, можно вновь войти в систему и выбрать [Продолжить игру]</name>
+<name>Вы сможете повторно подключиться к игре</name>Вопрос: Что такое повторное подключение?</head>
+<head>
+<name>Ответ: Если герой решил завершить игру, даже в случае положительной тенденции, он будет не только оштрафован, но и результат игры может быть признан отрицательным . Поэтому</name>
+<name>дождись возвращения ушедшего игрока (вышедший игрок не может начать новую игру до завершения этой) , поддерживайте здоровую состязательную атмосферу</name>Вопрос: Что будет если покинуть игру сразу через несколько секунд после ее начала?</head>
+<head>
+<name>Ответ: За игру в режиме автоподбора в награду дается опыт и монеты, за игру в обучающем режиме опыт не дается. Проверяйте информационное табло игры.</name>Вопрос: Почему иногда опыт дается в награду, а иной раз нет?</head>
+<head>
+<name>Ответ: VIP-статус позволяет расширить возможности списка друзей</name>
+<name>Приобретите VIP-статус, если пределы возможностей списка друзей вас не устраивают. К тому же, он может подарить вам и другие привилегии.</name>
+<name>Операция: Магазин → найдя VIP-статус, нажмите Купить → Выберите время действия VIP-статуса, нажмите Подтвердить</name>Вопрос: Что делать если кол-во друзей достигло допустимого предела?</head>
+</para>
+</help.xml>
+<newtech.xml>
+<typeID>b0000009</typeID>
+<name>新手帮助</name>
+<_unit>
+<item>
+<itemtx>maps/gameUI/newtech/dengluyouxi.tga</itemtx>
+<itemstr>1. Создайте аккаунт в GameNet.</itemstr>
+<itemstr>2. Введите никнейм.</itemstr>
+<itemstr>3. Звыберите свой уровень.</itemstr>
+<itemstr>4. Пройдите обучение.</itemstr>Начало игры</item>
+<item>
+<itemtx>maps/gameUI/newtech/youxidating.tga</itemtx>
+<itemstr>1. Информация о персонаже.</itemstr>
+<itemstr>2. Начать новую игру.</itemstr>
+<itemstr>3. - 4. Магазин и ваш счет.</itemstr>
+<itemstr>5. Начать одиночную игру.</itemstr>
+<itemstr>6. Начать командную игру.</itemstr>
+<itemstr>7. Пройти обучение.</itemstr>
+<itemstr>8. Просмотр видео-повторов.</itemstr>
+<itemstr>9. Основное меню.</itemstr>
+<itemstr>10. Чаты.</itemstr>
+<itemstr>11. Игровое меню.</itemstr>
+<itemstr>12. Список друзей и чатов.</itemstr>
+<itemstr>     </itemstr>Лобби</item>
+<item>
+<itemtx>maps/gameUI/newtech/xiaolabapindao.tga</itemtx>
+<itemstr>В Общий чат могут писать все игроки, у которых есть Рупор.</itemstr>
+<itemstr>Чтобы отправить сообщение длинной в 30 символов в Общий чат, необходимо 100 Рупоров. </itemstr>
+<itemstr>Сообщения общего чата видят все игроки. Рупоры можно приобрести в Магазине.</itemstr>Общий чат</item>
+<item>
+<itemtx>maps/gameUI/newtech/gonggongpindao.tga</itemtx>
+<itemstr>1. Откройте список чатов.</itemstr>
+<itemstr>2. Выберите один из чатов.</itemstr>
+<itemstr>3. Вы можете создать новый чат.</itemstr>
+<itemstr>4. В появившемся окне чата вы можете общаться с другими игроками.</itemstr>Чаты</item>
+<item>
+<itemtx>maps/gameUI/newtech/chazhaohaoyou.tga</itemtx>
+<itemstr>1. Нажмите чтобы начать поиск друзей.</itemstr>
+<itemstr>2. - 3. Введите ник игрока или другие его данные.</itemstr>
+<itemstr>4.Найдя игрока, нажмите +.</itemstr>
+<itemstr>5. В правом нижнем углу экрана появится оповещение.</itemstr>
+<itemstr>   </itemstr>Поиск друзей</item>
+<item>
+<itemtx>maps/gameUI/newtech/yaoqingzudui.tga</itemtx>
+<itemstr>1. Выберите друга, с которым вы хотите создать команду.</itemstr>
+<itemstr>2. После того как друг примет приглашение, появится командный чат.</itemstr>
+<itemstr>3. В командном чате нажмите кнопку "Друзья", чтобы пригласить других игроков в команду.</itemstr>
+<itemstr>4. При успешной отправке приглашения в углу экрана появится оповещение.</itemstr>
+<itemstr>   </itemstr>Создание команды</item>
+<item>
+<itemtx>maps/gameUI/newtech/gerenxinximianban.tga</itemtx>
+<itemstr>Нажав на иконку игрока, вы можете посмотреть его профиль.</itemstr>
+<itemstr>1. Ник игрока и его ID.</itemstr>
+<itemstr>2. Звание игрока.</itemstr>
+<itemstr>3. Уровень игрока.</itemstr>
+<itemstr>4. Статистика игрока.</itemstr>
+<itemstr>5. Ранг игрока.</itemstr>
+<itemstr>6. Результаты последних битв.</itemstr>
+<itemstr>7. Изменить аватар и звание.</itemstr>
+<itemstr>8. Прочее.</itemstr>Профиль</item>
+<item>
+<itemtx>maps/gameUI/newtech/zhuanshuyingxiong.tga</itemtx>
+<itemstr>В этом окне вы можете увидеть, сколько битв провел игрок за того или иного героя.</itemstr>
+<itemstr>Приобретя карту эксклюзивного героя вы можете попасть в рейтинг героев.</itemstr>
+<itemstr>После победы эксклюзивным героем вы получаете в полтора раза больше очков.</itemstr>
+<itemstr>В случае проигрыша вы теряете 50% всех очков рейтинга героя.</itemstr>
+<itemstr>При наличие карты эксклюзивного героя вы можете выбрать его на 5 сек. раньше.</itemstr>Главный герой</item>
+<item>
+<itemtx>maps/gameUI/newtech/zhanjitongji.tga</itemtx>
+<itemstr>Во вкладке "Статистика" вы можете узнать подробную информацию об успехах игрока.</itemstr>
+<itemstr>Статистика отображает количество сыгранных игроком битв, время, проведенное в игре, и многое другое.</itemstr>
+<itemstr>Регулярная проверка своей статистики поможет вам проанализировать свои результаты.</itemstr>Статистика</item>
+<item>
+<itemtx>maps/gameUI/newtech/zaixianshangcheng.tga</itemtx>
+<itemstr>В Магазине вы можете приобрести: героев, облики, транспорт, VIP-аккаунт и многое другое.</itemstr>
+<itemstr>После покупки зайдите в "Мои предметы" для применения. Активированные предметы можно применять в игре.</itemstr>
+<itemstr>Некоторые предметы можно продать на аукционе.</itemstr>Магазин</item>
+<item>
+<itemtx>maps/gameUI/newtech/jiaoyisuo.tga</itemtx>
+<itemstr>На Аукционе вы можете продавать и покупать предметы из Магазина и сундуков, полученных после битвы.</itemstr>
+<itemstr>Аукцион - это важное место для обмена товаров и валюты. Продавайте здесь предметы и получайте прибыль!</itemstr>
+<itemstr>Ежедневно вы можете выставлять на аукцион до трех предметов. (Держатели VIP-аккаунтов - до шести).</itemstr>Аукцион</item>
+<item>
+<itemtx>maps/gameUI/newtech/chengjiu.tga</itemtx>
+<itemstr>Выполняйте задания и участвуйте в рейтинге наград!</itemstr>
+<itemstr>Внимательно ознакомьтесь с условиями получения наград во вкладке "Награды".</itemstr>
+<itemstr>Получить некоторые награды бывает очень нелегко. Испытайте себя!</itemstr>
+<itemstr>    </itemstr>Награды</item>
+<item>
+<itemtx>maps/gameUI/newtech/paihangbang.tga</itemtx>
+<itemstr>В рейтинге отображаются игроки, добившиеся наилучших результатов за день.</itemstr>
+<itemstr>Рейтинг фиксирует следующие игровые показатели: количество убийств, ассистов, разрушенных башен и т.д.</itemstr>
+<itemstr>Комплексный рейтинг совмещает все показатели и отображает текущее положение игроков.</itemstr>
+<itemstr>Достижение высоких позиий в рейтинге говорит об истинном мастерстве игрока.</itemstr>
+<itemstr>Рейтинг обновляется ежедневно.</itemstr>Рейтинг</item>
+<item>
+<itemtx>maps/gameUI/newtech/VIPtequan.tga</itemtx>
+<itemstr>Купив VIP-аккаунт вы прпиобретаете определенные привилегии.</itemstr>
+<itemstr> - VIP аватар</itemstr>
+<itemstr> - Дополнительный опыт в случае победы</itemstr>
+<itemstr> - Ник красного цвета</itemstr>
+<itemstr> - Возможность сохранять настройки горячих клавиш</itemstr>
+<itemstr> - Скидки в магазине</itemstr>
+<itemstr> - Расширенный список друзей</itemstr>
+<itemstr> - Увеличение количества предметов, выставляемых на Аукционе</itemstr>
+<itemstr> </itemstr>
+<itemstr>  </itemstr>VIP привилегии</item>
+<item>
+<itemtx>maps/gameUI/newtech/zhiboxitong.tga</itemtx>
+<itemstr>Вы можете посмотреть записи игр, участие в которых принимали вы или ваши друзья</itemstr>
+<itemstr>   </itemstr>Записи игр</item>Войти в акккаунт</_unit>
+<_unit>
+<item>
+<itemtx>maps/gameUI/newtech/pipeimoshi.tga</itemtx>
+<itemstr>Автоподбор - это система, позволяющая вам сражаться с другими игроками.</itemstr>
+<itemstr>За победу в битве, которую вы находите в системе автоподбора, можно получить опыт, золото и награды.</itemstr>Автоподбор</item>
+<item>
+<itemtx>maps/gameUI/newtech/duizhandiannao.tga</itemtx>
+<itemstr>Вы можете соревноваться не только с игроками, но и с ботами.</itemstr>
+<itemstr>Бой с ботами - это самый простой путь для изучения героев и их навыков.</itemstr>
+<itemstr>1. Список игроков и ботов</itemstr>
+<itemstr>2. Вы можете регулировать количество ботов.</itemstr>
+<itemstr>3. Вы можете наблюдать за боем в качестве судьи.</itemstr>
+<itemstr>4. Вы можете выбрать уровень ботов.</itemstr>
+<itemstr>5. Вы можете просмотреть информацию о создаваемой битве.</itemstr>
+<itemstr>  </itemstr>Бой с ботами</item>
+<item>
+<itemtx>maps/gameUI/newtech/fangjianmoshi.tga</itemtx>
+<itemstr>Создание комнаты аналогично созданию боя с ботами.</itemstr>
+<itemstr>Преимущества комнат в том, что вы можете участвовать в битве вместе со своими друзьями и знакомыми.</itemstr>
+<itemstr>Создатель комнаты может в любой момент начать игру. Участники битвы не получают опыт и золото.</itemstr>
+<itemstr>1. Интерфейс комнаты.</itemstr>
+<itemstr>2. Список комнат.</itemstr>Комнаты</item>
+<item>
+<itemtx>maps/gameUI/newtech/youximoshi.tga</itemtx>
+<itemstr>В игре 3 игровых режима: автоподбор, бой с ботами и комнаты.</itemstr>
+<itemstr>Автоподбор делит игроков на три группы:</itemstr>
+<itemstr>Новичок: игроки от 0 до 10 уровня.</itemstr>
+<itemstr>Обычный: игроки любого уровня.</itemstr>
+<itemstr>Мастер: игроки, чей рейтинг выше 1750 (55% побед и выше).</itemstr>Режимы игры</item>
+<item>
+<itemtx>maps/gameUI/newtech/xuanzeyingxiong.tga</itemtx>
+<itemstr>Игра начинается с выбора героя. Наведите курсор на иконку героя, чтобы просмотреть его навыки. Если вы не выберете героя, то система подберет его самостоятельно.</itemstr>
+<itemstr>1. Выбрать случайного героя.</itemstr>
+<itemstr>2. Поменять героя (смена героя - 10 монет).</itemstr>
+<itemstr>После выбора героя вы можете изменить его облик и транспорт.</itemstr>
+<itemstr>3. Изменить облик</itemstr>
+<itemstr>4. Изменить транспорт</itemstr>
+<itemstr>   </itemstr>Выбор героя  </item>
+<item>
+<itemtx>maps/gameUI/newtech/zairujiemian.tga</itemtx>
+<itemstr>Загрузка игры займет некоторое время.</itemstr>Загрузка</item>
+<item>
+<itemtx>maps/gameUI/newtech/youxijiemian.tga</itemtx>
+<itemstr>1. Иконки вас и ваших союзников.</itemstr>
+<itemstr>2. По миникарте вы можете отслеживать перемещение союзников и врагов.</itemstr>
+<itemstr>3. Вы можете изменить масштаб и угол обзора.</itemstr>
+<itemstr>4. Основные характеристики героя.</itemstr>
+<itemstr>5. Интерфейс навыков и предметов.</itemstr>
+<itemstr>6. Действия героя.</itemstr>
+<itemstr>7. Список друзей и чатов</itemstr>
+<itemstr>8. Подсказки.</itemstr>
+<itemstr>9. Ваша статистика.</itemstr>Начало битвы</item>
+<item>
+<itemtx>maps/gameUI/newtech/jinenglan.tga</itemtx>
+<itemstr>1. Полученные с каждым уровнем очки навыка расходуются на обучение.</itemstr>
+<itemstr>2. С каждым уровнем вы получаете по одному очку навыка. Первые три навыка улучшаются до 4 уровня, четвертый - до 3.</itemstr>
+<itemstr>3. В начале игры интервал между изучением одного и того же навыка - 2 уровня.</itemstr>
+<itemstr>4. В инвентаре вы можете хранить свои предметы (не более 8).</itemstr>
+<itemstr>5. - 6. Вы так же можете обучиться божественному навыку (горячая клавиша Т). Выберите навык в появившемся окне.</itemstr>
+<itemstr>   </itemstr>Основное</item>
+<item>
+<itemtx>maps/gameUI/newtech/youxishangdian.tga</itemtx>
+<itemstr>1. Категории предметов.</itemstr>
+<itemstr>2. Ваше золото.</itemstr>
+<itemstr>3. Ассортимент предметов.</itemstr>
+<itemstr>4. Предметы получаемые при комбинировании.</itemstr>
+<itemstr>5. - 9. Сборка предметов.</itemstr>
+<itemstr>6. Предметы, рекомендуемые для героя.</itemstr>
+<itemstr>7. Уже имеющиеся предметы.</itemstr>
+<itemstr>8. Предметы рюкзака</itemstr>
+<itemstr>10. Покупка и продажа предметов.</itemstr>
+<itemstr>   </itemstr>Магазин</item>
+<item>
+<itemtx>maps/gameUI/newtech/youxishezhi.tga</itemtx>
+<itemstr>При нажатии F10 открываются настройки игры.</itemstr>
+<itemstr>Изменяйте настройки, эксперементируйте!</itemstr>
+<itemstr>   </itemstr>Настройки игры</item>
+<item>
+<itemtx>maps/gameUI/newtech/kuaijiejianshezhi.tga</itemtx>
+<itemstr>Вы можете изменить горячие клавиши и облегчить игровой процесс.</itemstr>
+<itemstr>Изменение значения некоторых клавиш невозможно (например, клавиша открытия Магазина и т.п.)</itemstr>
+<itemstr>   </itemstr>Быстрые клавиши</item>Начало битвы</_unit>
+<_unit>
+<item>
+<itemtx>maps/gameUI/newtech/jibenjieshao.tga</itemtx>
+<itemstr>На карте Долина Героев три линии, а на карте Глаз Титана - две. На каждой линии находятся ваши и вражеские башни.</itemstr>
+<itemstr>Цель игры - уничтожить базу врага.</itemstr>Карта</item>
+<item>
+<itemtx>maps/gameUI/newtech/fangyuta.tga</itemtx>
+<itemstr>Дальность действия башни - 950. Башни наносят большой урон, но при этом они довольно хрупкие.</itemstr>
+<itemstr>Башня - важный стратегический объект. Постарайтесь как можно быстрее разрушить башни врага.</itemstr>
+<itemstr>Когда к башне подходит противник, ее характеристики усиливаются.</itemstr>
+<itemstr>1. Башня Святых </itemstr>
+<itemstr>2. Башня Падших</itemstr>
+<itemstr>   </itemstr>Башни</item>
+<item>
+<itemtx>maps/gameUI/newtech/bingying.tga</itemtx>
+<itemstr>На территории баз наз находятся казармы.</itemstr>
+<itemstr>Разрушив казарму врага, вы уменьшаете количество вражеских солдат.</itemstr>
+<itemstr>Также, уничтожая казармы врага, вы повышаете уровень своих солдат.</itemstr>Казармы</item>
+<item>
+<itemtx>maps/gameUI/newtech/zhujidi.tga</itemtx>
+<itemstr>Цель игры - уничтожить базу врага.</itemstr>
+<itemstr>Базу врага можно разрушить только уничтожив другие постройки.</itemstr>
+<itemstr>   </itemstr>База игрока</item>
+<item>
+<itemtx>maps/gameUI/newtech/diaoxiangxitong.tga</itemtx>
+<itemstr>Статуя - это пункт отправления войск.</itemstr>
+<itemstr>Разрушая статую врага, вы делаете ее своей.</itemstr>
+<itemstr>Захваченная статуя становится дополнительным пунктом отправления ваших солдат.</itemstr>
+<itemstr>   </itemstr>
+<itemstr>   </itemstr>
+<itemstr>    </itemstr>
+<itemstr>    </itemstr>Статуи</item>
+<item>
+<itemtx>maps/gameUI/newtech/zhanzhengmiwu.tga</itemtx>
+<itemstr>Туман войны окутывает территорию, находящуюся вне поял вашего обзора.</itemstr>
+<itemstr>Враги и нейтральные существа, окутанные туманом войны, невидимы для вас.</itemstr>
+<itemstr>Рассеять туман войны можно при помощи специальных предметов.</itemstr>Туман войны</item>
+<item>
+<itemtx>maps/gameUI/newtech/zuoqi.tga</itemtx>
+<itemstr>В режиме развлечений транспорт увеличивает скорость передвижения героя на 20%.</itemstr>
+<itemstr>Транспорт нельзя использовать в бою и в течение 10 секунд после его завершения.</itemstr>
+<itemstr>Для активации транспорта нажмите на подкову или V.</itemstr>Транспорт  </item>
+<item>
+<itemtx>maps/gameUI/newtech/fuwenxitong.tga</itemtx>
+<itemstr>Нажав на кнопку Т, вы можете выбрать один из Божественных навыков.</itemstr>
+<itemstr>Эти дополнительные навыки доступны всем игрокам.</itemstr>
+<itemstr>Каждые 3 минуты вы можете изменить навык на любой другой.</itemstr>
+<itemstr>Каждые 10 минут уровень навыка повышается (максимальный уровень - 4).</itemstr>
+<itemstr>     </itemstr>Навыки</item>
+<item>
+<itemtx>maps/gameUI/newtech/fuwendazao.tga</itemtx>
+<itemstr>Система рун необходима для усиления Божественных навыков.</itemstr>
+<itemstr>Вы можете получить руны в подарок после боя или купив их на Аукционе.</itemstr>
+<itemstr>Существует три вида обычных рун: А, В, С; и высшая руна - Руна-Топ.</itemstr>
+<itemstr>Обычные руны имеют 5 уровней.</itemstr>Усиление рун</item>
+<item>
+<itemtx>maps/gameUI/newtech/fuwenhecheng.tga</itemtx>
+<itemstr>Синтез рун поможет вам создать новые руны.</itemstr>
+<itemstr>Формулы синтеза:</itemstr>
+<itemstr>5 рун одного уровня = 1 руна более высокого уровня.</itemstr>
+<itemstr>3 руны одного уровня = 1 руна более высокого уровня.</itemstr>
+<itemstr>5 одинаковых рун 5 уровня = 1 Топ-Руна</itemstr>
+<itemstr>5 разных рун 5 уровня = 1 руна высокого уровня.</itemstr>
+<itemstr>    </itemstr>Синтез рун</item>Новичку</_unit>
+<_unit>
+<item>
+<itemtx>maps/gameUI/newtech/bingxian.tga</itemtx>
+<itemstr>Шеренга - это постороение солдат на линии - один из тактических боевых приемов.</itemstr>
+<itemstr>    </itemstr>
+<itemstr>   </itemstr>Шеренга</item>
+<item>
+<itemtx>maps/gameUI/newtech/budao.tga</itemtx>
+<itemstr>1. Вы можете не только убивать вражеских солдат, но и добивать своих, а также разрушать свои башни.</itemstr>
+<itemstr>Добивая своих солдат и башни, вы лишаете врага награды за их уничтожение - опыта и золота.</itemstr>
+<itemstr>2. Вы также можете добивать своих союзников. При этом, время воскрешение сокращается, а враг не получает награды за их убийство.</itemstr>
+<itemstr>   </itemstr>Добивание</item>
+<item>
+<itemtx>maps/gameUI/newtech/zhonglishengwu.tga</itemtx>
+<itemstr>Нейтральные монстры находятся в лесу в строго определенных местах.</itemstr>
+<itemstr>Убивая нейтральных монстров вы получаете опыт и золото.</itemstr>
+<itemstr>Нейтральные монстры обладают разными умениями, и с течением игры становятся все сильнее.</itemstr>Монстры</item>
+<item>
+<itemtx>maps/gameUI/newtech/BOSS.tga</itemtx>
+<itemstr>В четырех углах карты Долина героев (и в центре карты Глаз Титана) расположены могучие нейтральные существа - Боссы.</itemstr>
+<itemstr>Убийство Босса снижает эффективность оборонительных башен противника. Через 60 сек. после убийства Босса, он присоединится к вашему отряду и будет атаковать врага вместе с вами. </itemstr>
+<itemstr>Убийство Босса изменит расстановку сил в битве в вашу пользу.</itemstr>
+<itemstr>Босс очень силен, и в одиночку его не победить. Действуйте вместе со своими союзниками и будьте осторожны!</itemstr>BOSS</item>
+<item>
+<itemtx>maps/gameUI/newtech/fengshenxia.tga</itemtx>
+<itemstr>Глаз Титана - это карта  развлечения, как и Долина героев. Разница между ними в том, что на карте Глаз Титана игра динамичнее и быстрее.</itemstr>
+<itemstr>На карте Глаз Титана есть только 2 боевые линии.</itemstr>
+<itemstr>При входе на карту Глаз Титана, вы получаете 750 золота.</itemstr>
+<itemstr>После того, как солдаты обеих команд пойдут в бой, вам ежесекундно будет начисляться по 2 золотых.</itemstr>
+<itemstr>На карте Глаз Титана герой воскресает на 25% быстрее, чем в Долине героев, что делает игру более динамичной и захватывающей.</itemstr>
+<itemstr>Условия победы в Глаз Титана: 1. Выигрывает команда, совершившая 66 убийств. 2. Уничтожение базы противника также обеспечивает победу. </itemstr>
+<itemstr>1, 2, 3, 4, 5 - алтари</itemstr>Глаз Титана</item>
+<item>
+<itemtx>maps/gameUI/newtech/wuseshi.tga</itemtx>
+<itemstr>На карте расположено 5 алтарей кристаллов.</itemstr>
+<itemstr>Каждые 2 минуты в алтаре появляется новый кристалл.</itemstr>
+<itemstr>Нажмите "Сборка" или"CTRL+G", чтобы изменить кристалл.</itemstr>
+<itemstr>Получите кристалл, нажав на иконку или на "G".</itemstr>
+<itemstr>Красный кристалл увеличивает скорость передвижения.</itemstr>
+<itemstr>Зеленый цвет: восстанавливает НР и МР.</itemstr>
+<itemstr>Синий цвет: в 2 раза увеличивает силу атаки.</itemstr>
+<itemstr>Желтый кристалл прибавляет 350 золота.</itemstr>
+<itemstr>Фиолетовый кристалл прибавляет 500 опыта.</itemstr>
+<itemstr>Оранжевый кристалл увеличивает маг. урон героя в 2 раза.</itemstr>
+<itemstr>Перламутровый кристалл - это кристалл энергии.</itemstr>Кристаллы</item>
+<item>
+<itemtx>maps/gameUI/newtech/chaojizhuangbei.tga</itemtx>
+<itemstr>Улучшенное снаряжение позволит вам познать радости боя!</itemstr>
+<itemstr>Игрок может использовать Кристалл энергии для улучшения снаряжения (макс. уровень - 3)</itemstr>
+<itemstr>Улучшенное снаряжение обладает более сильными магическими свойствами.</itemstr>
+<itemstr>Улучшенное снаряжение дает игроку невероятные преимущества, что делает игру еще интереснее!</itemstr>Супер-снаряжение</item>
+<item>
+<itemtx>maps/gameUI/newtech/mingjiehua.tga</itemtx>
+<itemstr>Кусты - это система укрытий карты Глаз Титана.</itemstr>
+<itemstr>Укрывшись в кустах, герой становится невидимым для противника.</itemstr>
+<itemstr>Если игроки обеих команд одновременно укрываются в кустах, они могут видеть друг друга.</itemstr>
+<itemstr>Навык укрытия суммируется со свойствами кустов.  Если герой использует навык укрытия, то противник, укрытый под кустом, не может его увидеть.</itemstr>Кусты</item>
+<item>
+<itemtx>maps/gameUI/newtech/yinshenzhuangtai.tga</itemtx>
+<itemstr>Часть навыков героя может совмещаться с навыком "Уловка". Тогда из режима укрытия, герой переходит режим полуукрытия. </itemstr>
+<itemstr>В режиме укрытия, враг не может вас увидеть или напасть на вас. Но в режиме укрытия использование некоторых навыков невозможно.</itemstr>
+<itemstr>Некоторые предметы можно использовать только в нормальном режиме. Например такие предметы как Волшебная шляпа.</itemstr>
+<itemstr>В режиме укрытия можно использовать скрытые навыки, атаковать или использовать магию. </itemstr>Невидимость</item>
+<item>
+<itemtx>maps/gameUI/newtech/touxiangtoupiao.tga</itemtx>
+<itemstr>Если вы понимаете, что поражение неизбежно, вы можете сдаться. Бой сразу закончится. </itemstr>
+<itemstr>Выберите игрока, который начнет голосование в случае неминуемого поражения.</itemstr>
+<itemstr>Но лучше не сдаваться, взять оружие в руки, сражаться бок о бок с товарищами по команде!</itemstr>Белый флаг</item>Ход игры</_unit>
+</newtech.xml>
+<herointer.xml>
+<typeID>b000000a</typeID>
+<name>属性显示</name>
+<para>
+<content>
+<colour>0xffffffff</colour>Атака:</content>
+</para>
+<para>
+<content>
+<colour>0xffffffff</colour>Физ. защита:</content>
+</para>
+<para>
+<content>
+<colour>0xffffffff</colour>С. атк.:</content>
+</para>
+<para>
+<content>
+<colour>0xffffffff</colour>Маг. защита:</content>
+</para>
+<para>
+<content>
+<colour>0xffffffff</colour>Радиус:</content>
+</para>
+<para>
+<content>
+<colour>0xffffffff</colour>Скорость:</content>
+</para>
+<para>
+<content>
+<colour>0xffffffff</colour>Физ. урон:</content>
+</para>
+<para>
+<content>
+<colour>0xffffffff</colour>Броня:</content>
+</para>
+<para>
+<content>
+<colour>0xffffffff</colour>Маг. урон:</content>
+</para>
+<para>
+<content>
+<colour>0xffffffff</colour>Поддержка:</content>
+</para>
+<para>
+<content>
+<colour>0xffffffff</colour>Сложность</content>
+</para>
+<para>
+<content>
+<colour>0xffffffff</colour>Требуется</content>
+</para>
+<para>
+<content>
+<colour>0xffffffff</colour>Разблокировать героя</content>
+</para>
+<para>
+<content>
+<colour>0xffffffff</colour>Разблокирован</content>
+</para>
+<para>
+<content>
+<colour>0xffffffff</colour>Требуется VIP</content>
+</para>
+</herointer.xml>
+<herochoose.xml>
+<typeID>b000000b</typeID>
+<name>文字颜色</name>
+<para>
+<content>
+<colour>0xff000044</colour>Игрок</content>
+</para>
+<para>
+<content>
+<colour>0xffCBBC09</colour>Все</content>
+</para>
+<para>
+<content>
+<colour>0xffCBBC09</colour>Команда</content>
+</para>
+<para>
+<content>
+<colour>0xff444444</colour>Все</content>
+</para>
+<para>
+<content>
+<colour>0xff444444</colour>Свои</content>
+</para>
+<para>
+<content>
+<colour>0xff444444</colour>Система</content>
+</para>
+<para>
+<content>
+<colour>0xffffffff</colour>Время истекло! Герой не был выбран. ??????</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour>Выбор героя для игрока:</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour> выбрал </content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour>Случайный выбор игрока:</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour>Случайный выбор</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour>Поменять героя, прервать выбор</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour>Прервать выбор героя</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour> уже </content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour>Готов</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour>Выберите героя</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour>Выйти из игры</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour>Противник</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour>Начинаем </content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour> героев</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour> блокировать</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour> (выбор)</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour>Святые</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour>Падшие</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour> приступают к выбору героя</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour>Начать случайным образом</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour> начинает</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour> героев</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour>блокировал героя:</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour>Прервать данную сессию выбора героя</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour>Дополнительное время</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour>также начинает</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour>В данном режиме игры кол-во блокируемых героев: %d</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour> (кол-во героев %d)</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour> выбирать</content>
+</para>
+<para>
+<content>
+<colour>0xff000044</colour>Заблокирован</content>
+</para>
+<para>
+<content>
+<colour>0xffffffff</colour>Будь готовы начать выбор героя</content>
+</para>
+<para>
+<content>
+<colour>0xffffffff</colour>Игрок: %s%s</content>
+</para>
+<para>
+<content>
+<colour>0xffffffff</colour>Вы </content>
+</para>
+<para>
+<content>
+<colour>0xffffffff</colour>Вы можете сменить одежду и транспорт</content>
+</para>
+</herochoose.xml>
+<new_player_tip.xml>
+<typeID>b000000d</typeID>
+<name>大厅文字</name>
+<data0>До входа в систему автоподбора</data0>
+<data1>необходимо завершить Обучающий курс</data1>
+<data2>Нажмите, чтобы начать игру</data2>
+<data3>Цель новичка</data3>
+<data4>Убить всех героев больше 5 раз</data4>
+<data5>Начнем!</data5>
+<data6>Выберите "Битва с ПК".</data6>
+<data7>Вы можете вышвырнуть героя союзника</data7>
+<data8>Ожидайте входа в игру других участников</data8>
+<data9>Нажмите "Создать команду", чтобы играть в автоподборе</data9>
+<data10>Для создания команды необходимо пригласить друзей в сети</data10>
+<data11>Нажмите, чтобы создать игровую комнату</data11>
+<data12>Здесь можно изменить настройки игры.</data12>
+<data13>Щелкните, чтобы добавить бота.</data13>
+<data14>Выберите уровень бота и нажмите "+".</data14>
+<data15>Вы можете установить автоматическое начало игры в момент заполнения комнаты, а также освободить позицию судьи</data15>
+<data16>Просмотр записи игры - отличный способ усовершенствовать свое мастерство</data16>
+<data17>Перетягивая бегунок можно прокрутить запись назад и вперед</data17>
+<data18>Нажмите”+“чтобы добавить друга</data18>
+<data19>Установить собственные горячие клавиши</data19>
+<data20>Хотите узнать о подарках?</data20>
+<data21/>
+<data22/>
+<data23/>
+<data24/>
+<data25/>
+<data26/>
+<data27/>
+<data28/>
+<data29/>
+<data30/>
+<data31/>
+<data32/>
+<data33/>
+<data34/>
+<data35/>
+<data36/>
+<data37/>
+<data38/>
+<data39/>
+<data40/>
+<data41/>
+<data42/>
+<data43/>
+<data44/>
+<data45/>
+<data46/>
+<data47/>
+<data48/>
+<data49/>
+<data50/>
+<data51/>
+<data52/>
+<data53/>
+<data54/>
+<data55/>
+<data56/>
+<data57/>
+<data58/>
+<data59/>
+</new_player_tip.xml>
+<popmessage.xml>
+<typeID>b000000e</typeID>
+<name>游戏相关文字</name>
+<maskStr>
+<data>[</data>
+<data>]</data>
+<data>Убит нейтральным монстром</data>
+<data>Убил сам себя</data>
+<data>Дэнаинг</data>
+<data>убил</data>
+<data>! Заработано</data>
+<data>Золото!</data>
+<data>Помог: </data>
+<data> пролил первую кровь!</data>
+<data> только что совершил</data>
+<data>Двойное убийство</data>
+<data>Тройное убийство</data>
+<data>Вихрь убийства</data>
+<data>В настоящий момент</data>
+<data>Беспощадный</data>
+<data>получил ранг</data>
+<data>Талант</data>
+<data>Мегакиллер</data>
+<data>Ультракиллер</data>
+<data>Берсерк</data>
+<data>Мясник</data>
+<data>Безумец</data>
+<data>Бессмертный</data>
+<data>Чак Норрис</data>
+<data>прервал ранг</data>
+<data>    </data>
+<data> золота будет поделено поровну между игроками</data>
+<data>Нейтральная сторона</data>
+<data>Святые</data>
+<data>Падшие</data>
+<data>уничтожил башню и получает</data>
+<data>получают по</data>
+<data>уничтожили защитную башню! </data>
+<data>добил свою защитную башню!</data>
+<data>игроки получают по</data>
+<data>изучил Божественный навык</data>
+<data>Уровень</data>
+<data>Взята стратегически важная точка</data>
+<data>Победа</data>
+<data>Солдаты обеих сторон стали сильнее</data>
+<data>Нейтральные монстры стали сильнее</data>
+<data>вышел из игры!</data>
+<data>Обратный отсчет! 60 сек до выступления войска!</data>
+<data>Солдаты обеих сторон идут в бой!</data>
+<data>Появились нейтральные монстры!</data>
+<data>База атакована!</data>
+<data>Ваш герой возрожден</data>
+<data>возрожден</data>
+<data>Вы получаете в подарок кристалл, с помощью которого можно улучшить предметы!</data>
+<data>Уровень Божественных навыков повысился! Теперь можно обучиться более сильному навыку!</data>
+<data>Ваши союзники инициировали голосование!</data>
+<data/>
+<data>, все игроки Святых, каждый получает по энергии одного кристалла</data>
+<data>, все игроки Падших, каждый получает по энергии одного кристалла</data>
+<data>%d голосов "за", решение принято! Игра завершится через 5 сек!</data>
+<data>%d голосов "против", голосование недействительно!</data>
+<data>Игроки вражеской стороны проголосовали за прекращение игры! Игра завершится через 5 сек!</data>
+<data>Гримм</data>
+<data>Великая змея</data>
+<data>Мантикора</data>
+<data>Хаос</data>
+<data>Ослабление команды</data>
+<data>Защита зданий уменьшена</data>
+<data>сила защитных башен ослаблена</data>
+<data>Возрождение, оборона всех зданий восстановлена</data>
+<data>Возрождение, сила всех защитных башен восстановлена</data>
+<data>Остановить игру</data>
+<data>Возобновить игру.</data>
+<data>Вы находитесь в состоянии телепортации, если в течение 60 сек вы переместитесь, атакуете или будете атакованы, состояние будет нарушено</data>
+<data>Состояние телепортации нарушено</data>
+<data>Обучаться навыками</data>
+<data>Разделить золото между союзниками</data>
+<data>(Осталось времени:</data>
+<data>, всего золота</data>
+<data>Теперь вы можете управлять своими героями</data>
+<data>Вы потеряли контроль над своими героями</data>
+<data>Теперь вы можете управлять своими героями</data>
+<data>Вы потеряли</data>
+<data>над своими героями</data>
+<data>контроль</data>
+<data>Монеты</data>
+<data>"Выбрать другого героя"</data>
+<data>Купите касную, черную и зеленую яшму для синтеза трехцветной яшмы.</data>
+<data>Механизм анти-кража защитной башни включен, защитная башня в процессе самовосстановления</data>
+<data>Скриншот сохранен</data>
+<data>Замечание: клавиша F2 позволяет открыть диалоговое окно, чтобы ответить на шепот друга</data>
+<data>Вы уже долго не предпринимаете никаких действий!</data>
+<data>Вы неактивны уже более 5 мин назад. Вы можете использовать команду -kickafk %d, чтобы вывести игрока</data>
+<data> был был неактивен слишком долго и выведен из игры.</data>
+<data>Вы не можете выбросить этого участника из игры</data>
+<data>Замечание: Игра была завершена до вывода войск, результат игры недействителен</data>
+<data>вернулся в игру!</data>
+<data>вышел из игры!</data>
+<data>Портал к Боссу откроется через %d мин...</data>
+<data>Портал к Боссу открыт!</data>
+<data>уничтожили все </data>
+<data>лагеря, их солдаты стали сильнее!</data>
+<data>Мы начнем битву через 60 сек.</data>
+<data>Начать битву</data>
+<data>NB: Вы находитесь в режиме тестирования. Баги этого режима не влияют на игру в нормальном режиме</data>
+<data>Предупреждение: игроки противника перемещаются к статуе</data>
+<data>Вы</data>
+<data>убраны из черного списка</data>
+<data>добавлены в черный список</data>
+<data>Поздравляем, вы прошли курс новичка</data>
+<data>Вы можете вернуться в Зал или продолжить игру</data>
+<data>Скорость передвижения героя увеличилась до 750</data>
+<data>Ускорение процесса восстановления здоровья и маны</data>
+<data>получил удвоение урона</data>
+<data>получил 350 ед. золота</data>
+<data>получил 500 ед. опыта</data>
+<data>получил энергию кристалла</data>
+<data>получил усиление магии</data>
+<data>Цветной камень обновлен</data>
+<data>Добро пожаловать на божественную карту развлечений</data>
+<data>Условия победы</data>
+<data>1.уничтожение базы противника</data>
+<data>2.общий показатель убийств команды</data>
+<data>Получить %d энергии </data>
+<data>,%d потратить энергии для награды</data>
+<data>Добро пожаловать в Долину героев!</data>
+</maskStr>
+</popmessage.xml>
+<systemmessage.xml>
+<typeID>b000000f</typeID>
+<name>游戏提示文字</name>
+<commStr>
+<data>Время восстановление навыка не истекло</data>
+<data>Недостаточно маны</data>
+<data>Иммунитет к магии</data>
+<data>Иммунитет к физической атаке</data>
+<data>Расстояние недостаточно</data>
+<data>Золота недостаточно</data>
+<data>Ваш рюкзак переполнен</data>
+<data>Вы только можете переложить предмет или продать его магазину</data>
+<data>Вы не в магазине</data>
+<data>Предметы были перемещены из вашего рюкзака</data>
+<data>Выберите предмет в магазине</data>
+<data>Выберите предмет в вашем рюкзаке</data>
+<data>Вы не можете лишние предметы из вашего рюкзака положить на землю</data>
+<data>Предмет в процессе восстановления, подождите</data>
+<data>Вы не можете атаковать Босса</data>
+<data>Выберите магический навык для обучения героя</data>
+<data>Для преображения необходимо потратить энергию %d кристаллов (можно купить в магазине на базе или в лесу)</data>
+<data>Недостаточно игровых монет</data>
+<data>Транспорт можно использовать через 10 сек. после выхода из боя</data>
+</commStr>
+<maskStr>
+<data>Вы не можете целиться в себя</data>
+<data>Вы не можете целиться в союзников</data>
+<data>Вы не можете целиться во врагов</data>
+<data>Вы не можете целиться в нейтральных существ</data>
+<data>Вы не можете целиться в землю</data>
+<data>Вы не можете целиться в героев</data>
+<data>Вы не можете целиться в здания</data>
+<data>Вы не можете целиться в охранников</data>
+<data>Вы не можете целиться в предметы</data>
+<data>Вы не можете целиться в солдат</data>
+<data>Вы не можете целиться в питомцев</data>
+<data>Вы не можете целиться в деревья</data>
+<data>Вы не можете целиться в призванных существ </data>
+<data>Вы не можете целиться в механизмы</data>
+<data>Вы не можете целиться в Боссов</data>
+</maskStr>
+</systemmessage.xml>
+<tip_gui_text.xml>
+<typeID>b0000010</typeID>
+<name>游戏中tips</name>
+<name0>${ $cffffffff $| щелкните для изменения цвета$}</name0>
+<name1>${ $cffffffff $|Карта Пинг (горячая клавиша:$}${ $cffffff00 $|Alt+ЛКМ$}${ $cffffffff $|)$}</name1>
+<name2>${ $cffffffff $|Главное меню (горячая клавиша:$}${ $cffffff00 $|F10$}${ $cffffffff $|) $}</name2>
+<name3>${ $cffffffff $|Боевая обстановка (горячая клавиша: $}${ $cffffff00 $|~$}${ $cffffffff $|) $}</name3>
+<name4>${ $cffffffff $|Открыть/закрыть магазин (горячая клавиша:$}${ $cffffff00 $|B$}${ $cffffffff $|) $}</name4>
+<name5>${ $cffffffff $|Атака(горячая клавиша:$}${ $cffffff00 $|A$}${ $cffffffff $|)$}</name5>
+<name6>${ $cffffffff $|Стоп(горячая клавиша:$}${ $cffffff00 $|S$}${ $cffffffff $|)$}</name6>
+<name7>${ $cffffffff $|Стоять на месте(горячая клавиша:$}${ $cffffff00 $|H$}${ $cffffffff $|)$}</name7>
+<name8>${ $cffffffff $|Блокировка героя (горячая клавиша:$}${ $cffffff00 $|Num Lock*$}${ $cffffffff $|)$}</name8>
+<name9>${ $cffffffff $|Патруль(горячая клавиша:$}${ $cffffff00 $|P$}${ $cffffffff $|)$}</name9>
+<name10>${ $cffffffff $|золота:$}</name10>
+<name11>${ $cffffffff $|Время в игре$}</name11>
+<name12>${ $cffffffff $|До дня/ночи осталось:$}</name12>
+<name13>${ $cffffffff $|Открыть/скрыть аватар союзника$}</name13>
+<name14>${ $cffffffff $|У/С/А$}</name14>
+<name15>${ $cffffffff $|FPS$}</name15>
+<name16>${ $cffffffff $|Щелкните, чтобы получить информацию о магическом навыке$}</name16>
+<name17>${ $cffffffff $|Загрузка:$}</name17>
+<name18>${ $cffffffff $|Статистика убийств Святых$}</name18>
+<name19>${ $cffffffff $|Статистика убийств Падших$}</name19>
+<name20>${ $cffffffff $|Статус$}</name20>
+<name21>${ $cffffffff $|Игрок$}</name21>
+<name22>${ $cffffffff $|Добивание противника/Добивание своих$}</name22>
+<name23>${ $cffffffff $|Время восстановления$}</name23>
+<name24>${ $cffffffff $|золота$}</name24>
+<name25>${ $cffffffff $|Предмет$}</name25>
+<name26>${ $cffffffff $|Остаток времени:$}</name26>
+<name27>${ $cffffffff $|Голосовать за отказ от игры$}</name27>
+<name28>${ $cffffffff $|Купить все$}</name28>
+<name29>${ $cffffffff $|Друзья в сети/Мои друзья$}</name29>
+<name30>${ $cffffffff $|Добавленные чаты/Список чатов$}</name30>
+<name31>${ $cffffffff $|Добавить друга$}</name31>
+<name32>${ $cffffffff $|Свободный бой$}</name32>
+<name33>${ $cffffffff $|Обучиться магическому навыку$}</name33>
+<name34>${ $cffffffff $|Поменять угол обзора (Горячая клавиша: $}${ $cffffff00 $|Insert$}${ $cffffffff $|)$}</name34>
+<name35>${ $cffffffff $|Пауза$}</name35>
+<name36>${ $cffffffff $|Старт$}</name36>
+<name37>${ $cffffffff $|Ускорить(Горячая клавиша: $}${ $cffffff00 $|+$}${ $cffffffff $|)$}</name37>
+<name38>${ $cffffffff $|Замедлить(Горячая клавиша: $}${ $cffffff00 $|-$}${ $cffffffff $|)$}</name38>
+<name39>${ $cffffffff $|Проиграть заново$}</name39>
+<name40>${ $cffffffff $|Щелкните или перетащите для проведения операции$}</name40>
+<name41>${ $cffffffff $|Поделиться операцией$}</name41>
+<name42>${ $cffffffff $|Блокировать разговор с игроком$}</name42>
+<name43>${ $cffffffff $|Активизировать эффект это цветного камня (горячая клавиша: $}${ $cffffff00 $|G$}${ $cffffffff $|)$}</name43>
+<name44>${ $cffffffff $|Чтобы обменять цветной камень, необходимо потратить энергию кристалла. Чем больше число обменов, тем больше необходимо энергии, крайний предел - 6. Цветной камень, использованный в этом раунде, не может появиться в нем снова(горячая клавиша: $}${ $cffffff00 $|Ctrl+G$}${ $cffffffff $|)$}</name44>
+<name45>${ $cffffffff $|Цветной камень-красный, увеличивает скорость передвижения героя до 750$}</name45>
+<name46>${ $cffffffff $|Цветной камень- зеленый, ускоряет процесс восстановления здоровья и маны$}</name46>
+<name47>${ $cffffffff $|Цветной камень- синий, удваивает силу обычного атаки$}</name47>
+<name48>${ $cffffffff $|Цветной камень- желтый, приносит 350 ед золота$}</name48>
+<name49>${ $cffffffff $|Цветной камень- фиолетовый, приносит 500 ед опыта$}</name49>
+<name50>${ $cffffffff $|Энергия кристалла.  Получена энергия кристалла$}</name50>
+<name51>${ $cffffffff $|Цветной камень - оранжевый. Получено усиление магии$}</name51>
+<name55>${ $cffffffff $|Транспорт (горячая клавиша: $}${ $cffffff00 $|V$}${ $cffffffff $|) $}</name55>
+<data0>${ $cffffffff $|Режим 1: Каждый герой отмечен на карте своим цветом.$}</data0>
+<data1>${ $cffffffff $|Данная функция позволяет отправлять мини-карту и обозначения на игровой карте на взятый момент времени всем союзникам.$}</data1>
+<data2>${ $cffffffff $|Открыв меню игры, можно изменить настройки (например, горячие клавиши графики и звука), также можно вернуться в Зал или выйти из игры.$}</data2>
+<data3>${ $cffffffff $|Удерживайте клавишу '~', чтобы увидеть обновления боевой обстановки. Здесь же вы можете узнать уровни всех игроков, предметы, которыми они обладают и пр.$}</data3>
+<data4>${ $cffffffff $|Открыть/закрыть интерфейс магазина $}</data4>
+<data5>${ $cffffffff $|Приказать своим героям выдвигаться к цели. По пути к цели они будут атаковать всех встретившихся врагов. Если вы отдадите приказ относительно конкретной цели, они могут продолжить атаковать врага до полного уничтожения.$}</data5>
+<data6>${ $cffffffff $|Остановить деятельность героев, игнорировать отданный прежде приказ.$}</data6>
+<data7>${ $cffffffff $|Приказать героям оставаться на месте и не атаковать врага. $}</data7>
+<data8>${ $cffffffff $|Удерживает героя в середине картинки. В этом случае картинку нельзя будет сместить ни с помощью мышки, ни с помощью клавиатуры или карты.$}</data8>
+<data9>${ $cffffffff $|Приказать герою патрулировать территорию между местом нахождения и целью. Атаковать врага в зоне досягаемости.$}</data9>
+<data10>${ $cffffffff $|Вы заработаете больше золота с течением времени в игре, также можете получить награду в виде золота, убивая врагов и героев.$}</data10>
+<data13>${ $cffffffff $|Режим 2: Все герои - $}${ $cff1deecd $|союзники$}${ $cffffffff $| и $}${ $cffff0000 $|враги $}${ $cffffffff $|- показаны на карте двумя цветами.$}</data13>
+<data14>${ $cffffffff $|Провести голосование среди игроков лагеря в течение 60 сек, решение принимается 75% голосов "за". Игра завершается через 5 сек после голосования. Команде, инициировавшей голосование, присваивается поражение.$}</data14>
+<data15>${ $cffffffff $|Голос игрока, инициировавшего голосование, по умолчанию воспринимается как "за", воздержание от голосования через 60 сек по умолчанию воспринимается как "против"$}</data15>
+<data16>${ $cffffffff $|Голосование можно проводить только через $}${ $cffffff00 $|20$}${ $cffffffff $|мин. после начала игры, по прошествии голосование закрывается через 2 мин. после его начала. $}</data16>
+<data17>${ $cffffffff $|Приобретите все необходимые части предмета сразу, если у вас достаточно золота. $}</data17>
+<data18>${ $cffffff00 $|Доступно только в магазине.$}</data18>
+<data19>${ $cffffffff $|В тренировочном режиме нет многих преимуществ традиционного режима состязания с другими игроками:" $}</data19>
+<data20>${ $cffffffff $|командная игра не поддерживается; $}</data20>
+<data21>${ $cffffffff $|нельзя получить опыт уровня Зала; $}</data21>
+<data22>${ $cffffffff $|нельзя получить монеты$}</data22>
+<data23>${ $cffffffff $|данные не сохраняются.$}</data23>
+<data24>После овладения магическим навыком, необходимо 3 мин на восстановление. Через 3 мин можно поменять навык. Уровень магического навыка повышается 1 раз через 10, 20 и 30 мин.</data24>
+<data25>${ $cffffffff $|Предлагается 2 типа обзора в зависимости от предпочтений игрока$}</data25>
+<data26>${ $cffffffff $|- Стандартный обзор$}</data26>
+<data27>${ $cffffffff $|- DOTA обзор$}</data27>
+</tip_gui_text.xml>
+<tip_hrwindow_text.xml>
+<typeID>b0000011</typeID>
+<name>大厅tips表</name>
+<nameA1>${ $cffffffff $|Просмотреть мою страницу$}</nameA1>
+<nameA2>${ $cffffff00 $|Создать команду $}</nameA2>
+<nameA3>${ $cffffffff $|Пригласить в команду друзей, находящихся в сети$}</nameA3>
+<nameA4>${ $cffffffff $|Покинуть команду$}</nameA4>
+<nameA5>${ $cffffffff $|Уровень$}</nameA5>
+<nameA6>${ $cffffffff $|Вы не являетесь членом клуба. Членство дает преимущество по более чем 10 позициям.$}</nameA6>
+<nameA7>${ $cffffffff $| Член клуба  Rage of Titans $}</nameA7>
+<nameA8>${ $cffffff00 $|Монеты$}</nameA8>
+<nameA9>${ $cffffffff $|монеты за игру с автоподбором$}</nameA9>
+<nameA10>${ $cffffffff $|Можно использовать для покупки предметов в Магазине$}</nameA10>
+<nameA11>${ $cffffffff $|Можно использовать для открытия игровых элементов$}</nameA11>
+<nameA12>${ $cffffffff $|Карта удвоения монет позволяет ускорить получение монет$}</nameA12>
+<nameA13>${ $cffffff00 $|GN$}</nameA13>
+<nameA14>${ $cffffffff $|можно использовать для покупки предметов в Магазине$}</nameA14>
+<nameA15>${ $cffffffff $|Войдите в Магазин для пополнения кошелька$}</nameA15>
+<nameA16>${ $cffffffff $|Начать игру$}</nameA16>
+<nameA17>${ $cffffffff $|Магазин$}</nameA17>
+<nameA18>${ $cffffffff $|Главная$}</nameA18>
+<nameA19>${ $cffffffff $|Моя страница$}</nameA19>
+<nameA20>${ $cffffffff $|Рейтинг$}</nameA20>
+<nameA21>${ $cffffffff $|Повторы и прямой эфир$}</nameA21>
+<nameA22>${ $cffffffff $|Бонусы за пополнение счета$}</nameA22>
+<nameA23>${ $cffffffff $|Мои награды$}</nameA23>
+<nameA24>${ $cffffffff $|Мои предметы$}</nameA24>
+<nameA25>${ $cffffffff $|ЧаВо$}</nameA25>
+<nameA26>${ $cffffffff $|Аукцион$}</nameA26>
+<nameA27>${ $cffffffff $|Божественные навыки$}</nameA27>
+<nameA28>${ $cffffffff $|Отменить автоподбор$}</nameA28>
+<nameA29>${ $cffffff00 $|Жалобы и предложения$}</nameA29>
+<nameA30>${ $cffffffff $|Спасибо за участие в тестировании Rage of Titans. Надеемся, что вы поделитесь с нами своими впечатлениями$}</nameA30>
+<nameA31>${ $cffffffff $|Войти в свой чат$}</nameA31>
+<nameA32>${ $cffffffff $|Главное меню$}</nameA32>
+<nameA33>${ $cffffffff $|Друзья в сети/Мои друзья$}</nameA33>
+<nameA34>${ $cffffffff $|Добавленные чаты/Список чатов$}</nameA34>
+<nameA35>${ $cffffffff $|Время$}</nameA35>
+<nameA36>${ $cffffff00 $|Автоподбор$}</nameA36>
+<nameA37>${ $cffffffff $|С помощью системы автоподбора система  подберет вам соответствующего по уровню соперника.$}</nameA37>
+<nameA38>${ $cffffffff $|Скорость подбора соперника зависит от вашего уровня и скорости подключения.$}</nameA38>
+<nameA39>${ $cffffffff $|Вы можете заработать опыт уровня Зала$}</nameA39>
+<nameA40>${ $cffffffff $|Полученные монеты можно использовать для покупки предметов в Магазине$}</nameA40>
+<nameA41>${ $cffffffff $|Сохранить игру$}</nameA41>
+<nameA42>${ $cffffff00 $|Командная игра и  автоподбор $}</nameA42>
+<nameA43>${ $cffffffff $|Вы можете провести командную игру с автоподбором $}</nameA43>
+<nameA44>${ $cffffffff $|Создайте команду и пригласте друзей! $}</nameA44>
+<nameA45>${ $cffffffff $|Также вы можете присоединиться к команде, приняв приглашение, отправленное другими игроками.$}</nameA45>
+<nameA46>${ $cffffff00 $|Обучающий курс$}</nameA46>
+<nameA47>${ $cffffffff $|Не знаете, как играть? Пройдя этот курс, вы сможете шаг за шагом ознакомиться с правилами игры!$}</nameA47>
+<nameA48>${ $cffffffff $|Рекомендуем игрокам, не знакомым с игрой Rage of Titans, пройти Обучающий курс.$}</nameA48>
+<nameA49>${ $cffffff00 $|В комнате$}</nameA49>
+<nameA50>${ $cffffffff $|Тренируйтесь с друзьями в традиционном режиме комнаты. $}</nameA50>
+<nameA51>${ $cffffffff $|Командная игра не поддерживается.$}</nameA51>
+<nameA52>${ $cffffffff $|Временно нельзя получить опыт уровня Зала$}</nameA52>
+<nameA53>${ $cffffffff $|Временно нельзя получить монеты$}</nameA53>
+<nameA54>${ $cffffff00 $|Тренировочная игра против ботов$}</nameA54>
+<nameA55>${ $cffffffff $|Пригласить друзей в сети в команду и начать игру с автоподбором$}</nameA55>
+<nameA56>${ $cffffffff $|Создать игровую комнату$}</nameA56>
+<nameA57>${ $cffffffff $|Войти в игровую комнату$}</nameA57>
+<nameA58>${ $cffffffff $|Обновить список комнат$}</nameA58>
+<nameA59>${ $cffffffff $|Присвоить комнате имя$}</nameA59>
+<nameA60>${ $cffffffff $|Установить пароль на игровую комнату. Можно пропустить$}</nameA60>
+<nameA61>${ $cffffffff $|На данную комнату пароль уже установлен$}</nameA61>
+<nameA62>${ $cffffffff $|Изменить аватар$}</nameA62>
+<nameA63>${ $cffffffff $|Ник (номер аккаунта) $}</nameA63>
+<nameA64>${ $cffffffff $|Ценности ника$}</nameA64>
+<nameA65>${ $cffffffff $|Случайный выбор героя$}</nameA65>
+<nameA66>${ $cffffffff $|Выбрать другого героя$}</nameA66>
+<nameA67>${ $cffffffff $|Завершено$}</nameA67>
+<nameA68>${ $cffffffff $|Осталось времени$}</nameA68>
+<nameA69>${ $cffffffff $|Испытай это первым$}</nameA69>
+<nameA70>${ $cffffffff $|Случайный выбор героя$}</nameA70>
+<nameA71>${ $cffffffff $|Смена героя уменьшает количество полученных за игру $}${ $cffffff00 $|10$}${ $cffffffff $|монет$}</nameA71>
+<nameA72>${ $cffffffff $|Игроки, не имеющие опыт игры в тактические игры типа DOTA или Dynasty Warriors$}</nameA72>
+<nameA73>${ $cffffffff $|Игроки, имеющие опыт игры в тактические игры типа DOTA или Dynasty Warriors$}</nameA73>
+<nameA74>${ $cffffffff $|Игроки, имеющие блестящий опыт игры в тактические игры типа DOTA или Dynasty Warriors$}</nameA74>
+<nameA75>${ $cffffffff $|Обновить список чатов$}</nameA75>
+<nameA76>${ $cffffffff $|Добавьте друга, введя его ник, имя аккаунта или email$}</nameA76>
+<nameA77>${ $cffffffff $|Добавить друга$}</nameA77>
+<nameA78>${ $cffffffff $|Пригласить друга в команду$}</nameA78>
+<nameA79>${ $cffffffff $|Игра начнется сразу, как только все игроки будут готовы! $}</nameA79>
+<nameA80>${ $cffffffff $|Настройки автоподбора$}</nameA80>
+<nameA81>${ $cffffff00 $|Приоритет дан согласно времени подбора$}</nameA81>
+<nameA82>${ $cffffffff $|В пределах определенного времени приоритет дается серверам с меньшей задержкой$}</nameA82>
+<nameA83>${ $cffffffff $|Задержка начала игры может привести к поиску другого сервера, возможно, будет выбран сервер со средней задержкой соединения, с целью скорейшего подбора сопреника$}</nameA83>
+<nameA84>${ $cffffff00 $|Приоритет дается в соответствии со скоростью сервера $}</nameA84>
+<nameA85>${ $cffffffff $|В процессе подбора выбираются серверы с наименьшей задержкой$}</nameA85>
+<nameA86>${ $cffffffff $|Даже если игра не будет начата вовремя, радиус поиска сервера не будет расширен$}</nameA86>
+<nameA87>${ $cffffff00 $|Приоритет дан согласно времени подбора$}</nameA87>
+<nameA88>${ $cffffffff $|В пределах определенного времени приоритет отдается игрокам соответствующих уровней. $}</nameA88>
+<nameA89>${ $cffffffff $|В случае задержки начала игры, могут быть выбраны игроки с более высоким уровнем, с целью скорее подобрать противника$}</nameA89>
+<nameA90>${ $cffffff00 $|Приоритет дан согласно уровню противника$}</nameA90>
+<nameA91>${ $cffffffff $|В процессе автоподбора выбираются игроки соответствующих уровней$}</nameA91>
+<nameA92>${ $cffffffff $|Даже если отложить начало игры, силы игрока не возрастут$}</nameA92>
+<nameA93>${ $cffffff00 $|Общий рейтинг$}</nameA93>
+<nameA94>${ $cffffffff $|Рейтинг игрока обновляется каждый день в 0:00. $}</nameA94>
+<nameA95>${ $cffffffff $|Требуемый минимум побед: 10$}</nameA95>
+<nameA96>${ $cffffff00 $|Ежедневный рейтинг$}</nameA96>
+<nameA97>${ $cffffffff $|Ежедневно в определенное время выявляются 50 лучших игроков согласно анализу данных о убийствах/ассистах/башнях. $}</nameA97>
+<nameA98>${ $cffffffff $|Анализ проводится с 20: 00 до 23: 00. $}</nameA98>
+<nameA99>${ $cffffff00 $|Анализируется только игры с автоподбором$}</nameA99>
+<nameA103>${ $cffffffff $|Если вы желаете ознакомиться с новыми героями и предметами, вы можете состязаться с ботами.$}</nameA103>
+<nameA104>${ $cffffffff $|Создайте игровую комнату, добавьте ботов и начинайте игру! $}</nameA104>
+<nameA105>${ $cffffffff $|Щелкните, чтобы использовать рентген для осмотра содержимого сундука$}</nameA105>
+<nameA106>${ $cffffffff $|Необходимо потратить 5 монет$}</nameA106>
+<nameA107>${ $cffffffff $|Щелкните ПКМ, чтобы отключить рентген$}</nameA107>
+<nameA108>${ $cffffffff $|Вы не обладаете VIP-статусом Rage of Titans$}</nameA108>
+<nameA109>${ $cffffffff $|Rage of Titans VIP$}</nameA109>
+<nameA110>${ $cffffffff $|Купить VIP-статус$}</nameA110>
+<nameA111>${ $cffffffff $|Купить ник$}</nameA111>
+<nameA112>${ $cffffff00 $|Нажмите, чтобы просмотреть  обучающий курс$}</nameA112>
+<nameA113/>
+<nameA114/>
+<nameA115>${ $cffffffff $|Вернуться в игру$}</nameA115>
+<nameA116>${ $cffffff00 $|Курс для новичка: состязание с ботами$}</nameA116>
+<nameA117>${ $cffffffff $|Создать игровую комнату для состязания с компьютером чтобы познакомиться с героями, предметами и ландшафтами$}</nameA117>
+<nameA118>${ $cffffffff $|В данном режиме нельзя отключить 5 игроков со стороны Святых. $}</nameA118>
+<nameA119>${ $cffffffff $|Если вы хотите состязаться против ПК с другими игроками, убедитесь, что вы отключили позицию ПК на стороне Святых$}</nameA119>
+<nameA120>${ $cffffff00 $|Посмотреть историю рейтинга$}</nameA120>
+<nameA121>${ $cffffffff $|Введите год, месяц и число - всего 8 цифр$}</nameA121>
+<nameA122>${ $cffffffff $|Например: 20101010 или 2010.01.01$}</nameA122>
+<nameA123>${ $cffffff00 $|Для всех$}</nameA123>
+<nameA124>${ $cffffffff $|неиерархические ограничения$}</nameA124>
+<nameA125>${ $cffffffff $|Количество выходов не имеет значения.$}</nameA125>
+<nameA126>${ $cffffff00 $|Для мастеров $}</nameA126>
+<nameA127>${ $cffffffff $|Счет выше 1750 очков$}</nameA127>
+<nameA128>${ $cffffffff $|Более 55% побед$}</nameA128>
+<nameA129>${ $cffffffff $|Минимальное количество выходов$}</nameA129>
+<nameA130>${ $cffffffff $|Щелкните, чтобы посмотреть героя/сведения об одежде$}</nameA130>
+<nameA131>${ $cffffff00 $|Обычный рецепт:$}</nameA131>
+<nameA132>${ $cffffffff $|5 фрагментов одного уровня = 1 случайный фрагмент более выского уровня$}</nameA132>
+<nameA133>${ $cffffffff $|3 фрагментов одного уровня = 1 случайный фрагмент того же уровня$}</nameA133>
+<nameA134>${ $cffffff00 $|Фрагмент высокого уровня（вероятность получения): $}</nameA134>
+<nameA135>${ $cffffffff $|5 одинаковых фрагментов 5 уровня = 1 соответствующая руна триумфа$}</nameA135>
+<nameA136>${ $cffffffff $|5 неодинаковых фрагментов 5 уровня = 1 случайная руна триумфа$}</nameA136>
+<nameA137>${ $cffffff00 $|Приобретая VIP статус сейчас, вы получите эксклюзивные привилегии$}</nameA137>
+<nameA138>${ $cffffffff $|1.Победив, получаете 50% боевых успехов（минимум+2）$}</nameA138>
+<nameA139>${ $cffffffff $|2.Потерпев поражение, отнамается 50% боевых успехов$}</nameA139>
+<nameA140>${ $cffffffff $|3.Прежде чем сделать выбор, у героя есть 5 сек.$}</nameA140>
+<nameA141>${ $cffffffff $|После игры вы можете получить из сундука карту VIP статуса, или приобрести на аукционе другие интересующие вас предметы$}</nameA141>
+<nameA142>${ $cffffff00 $|Для новичков$}</nameA142>
+<nameA143>${ $cffffffff $|Уровень ниже 10$}</nameA143>
+<nameA144>${ $cffffffff $|Нажмите дважды, чтобы купить героя или поменять экипировку$}</nameA144>
+<nameC1>${ $cffffffff $|Начать игру$}</nameC1>
+<nameC2>${ $cffffffff $|Пригласить в команду друзей, которые находятся в сети$}</nameC2>
+<nameC3>${ $cffffffff $|Отправьте приглашение друзьям в сети. Чтобы войти в вашу игровую комнату им нужно лишь принять приглашение.$}</nameC3>
+<nameC4>${ $cffffffff $|Покинуть игровую комнату$}</nameC4>
+<nameC5>${ $cffffffff $|Пост судьи (опция для хозяина комнаты) $}</nameC5>
+<nameC6>${ $cffffff00 $|Начать игру автоматически (опция для хозяина комнаты) $}</nameC6>
+<nameC7>${ $cffffffff $|Игра начнется автоматически если кол-во человек в комнате достигнет допустимого предела$}</nameC7>
+<nameC8>${ $cffffffff $|После утверждения поста судьи потребуется 12 игроков, вместо стандартных 10.$}</nameC8>
+<nameC9>${ $cffffffff $|Передать сообщение всем игрокам$}</nameC9>
+<nameC10>${ $cffffffff $|Рупор$}</nameC10>
+<nameC11>${ $cffffffff $|При использовании рупора ваши сообщения увидят игроки со всей страны$}</nameC11>
+<nameC12>${ $cffffffff $|VIP$}</nameC12>
+<nameC13>${ $cffffffff $|Исключить из игры$}</nameC13>
+<nameC14>${ $cffffffff $|Черный список$}</nameC14>
+<nameD1>${ $cffffffff $|Добавить друга$}</nameD1>
+<nameD2>${ $cffffffff $|Обновить список чатов$}</nameD2>
+<nameD3>${ $cffffff00 $|в $}</nameD3>
+<nameD4>${ $cffffff00 $| получил достижение$}</nameD4>
+<nameE1>${ $cffffff00 $|% выходов$}</nameE1>
+<nameE2>${ $cffffffff $|Выходов в этой игре: $}</nameE2>
+<nameE3>${ $cffffffff $|% выходов$}</nameE3>
+<nameE4>${ $cffffffff $|Для игроков с высоким показателем выходов доступны ограниченные возможности игр.$}</nameE4>
+<nameE5>${ $cffffffff $|Выход из игры в момент выбора героя или преждевременный выход могут привести к росту среднего показателя выходов.$}</nameE5>
+<nameE6>${ $cffffffff $|Всего игр$}</nameE6>
+<nameE7>${ $cffffffff $|Отлично$}</nameE7>
+<nameE8>${ $cffffffff $|Хорошо$}</nameE8>
+<nameE9>${ $cffffffff $|Опасно$}</nameE9>
+<nameE10>${ $cffffffff $|Плохо$}</nameE10>
+<nameF1>${ $cffffffff $|Статус: $}</nameF1>
+<nameF2>${ $cffffff00 $|Не разблокировано$}</nameF2>
+<nameF3>${ $cffffff00 $|Уже разблокировано$}</nameF3>
+<nameF4>${ $cffffffff $|Можно инкрустировать: $}</nameF4>
+<nameF5>${ $cff00ff00 $|Разблокировать - щелчок левой кнопкой мыши$}</nameF5>
+<nameF6>${ $cffffff00 $|（Уже инкрустировано）$}</nameF6>
+<nameF7>${ $cffffffff $|Функции:$}</nameF7>
+<nameF8>${ $cff00ff00 $|Перетащите левой кнопкой мыши$}</nameF8>
+</tip_hrwindow_text.xml>
+<tutorialmsg.xml>
+<typeID>b0000012</typeID>
+<name>新手教程表</name>
+<outputmsg>
+<msg10/>
+<msg11/>
+<msg12/>
+<msg13/>
+<msg14/>
+<msg20>Переместите героя к цели, используя ПКМ.</msg20>
+<msg21/>
+<msg211>Переместите героя в зеленый круг.</msg211>
+<msg212/>
+<msg213>Поздравляем, вы научились перемещаться!</msg213>
+<msg214>Щелкните ПКМ, чтобы атаковать.</msg214>
+<msg221>Вы научились атаковать!</msg221>
+<msg222>Щелкните Обучение навыку, чтобы овладеть навыком Рев ветра.</msg222>
+<msg231>Вы обучились навыку!</msg231>
+<msg232>Используйте Рев ветра, чтобы уничтожить противников!</msg232>
+<msg24/>
+<msg30>Выберите Обучение Маг. навыку, чтобы овладеть навыком Целительство.</msg30>
+<msg311>Поздравляем, вы научились использовать Маг. Навыки!</msg311>
+<msg312>Используйте маг. навык Целительство для восстановления HP.</msg312>
+<msg321>Вы научились использовать Маг. навыки!</msg321>
+<msg322>Вернитесь к Источнику</msg322>
+<msg332>Вы научились восстанавливать HP и MP!</msg332>
+<msg333/>
+<msg40>Нажмите клавишу (B), чтобы открыть магазин.</msg40>
+<msg41/>
+<msg411>Купите Красную, Черную и Зеленую яшму для синтеза Трехцветной яшмы.</msg411>
+<msg421>Поздравляем, вы научились покупать предметы и синтезировать их!</msg421>
+<msg422>С помощью Замка Героя вы можете регулировать угол обзора.</msg422>
+<msg431>Вы научились пользоваться кнопками блокировки угла обзора!</msg431>
+<msg432/>
+<msg50>Уничтожьте вражескую защитную башню на второй линии.</msg50>
+<msg513>Поздравляем, вы уничтожили защитные башни врага!</msg513>
+<msg514>Займите вторую линию обороны противника.</msg514>
+<msg522>Вы заняли линию обороны противника!</msg522>
+<msg523>Уничтожьте базу противника!</msg523>
+<msg53>Победа!</msg53>
+<next>Далее</next>
+</outputmsg>
+<titlemsg>
+<tip101>Rage of Titans - это игра-стратегия, в которой вы можете управлять одним героем и сотрудничать или состязаться с остальными игроками</tip101>
+<tip111>Игра представляет собой состязание двух лагерей - Святых и Падших, которые находятся на карте соответственно слева и справа. Главной задачей игры является уничтожить базу противника. + Это база Святых, расположенная в левой части карты</tip111>
+<tip121>Это база Падших, расположенная в правой части карты</tip121>
+<tip131>На карте еще остались пометки о локации нейтральных монстров и Боссов! Потрясающие открытия ожидают вас в игре!</tip131>
+<tip132>На карте еще остались пометки о локации нейтральных монстров и Боссов! Потрясающие открытия ожидают вас в игре!</tip132>
+<tip133>На карте еще остались пометки о локации нейтральных монстров и Боссов! Потрясающие открытия ожидают вас в игре!</tip133>
+<tip134>На карте еще остались пометки о локации нейтральных монстров и Боссов! Потрясающие открытия ожидают вас в игре!</tip134>
+<tip141>На карте еще остались пометки о локации нейтральных монстров и Боссов! Потрясающие открытия ожидают вас в игре!</tip141>
+<tip20/>
+<tip21>Переместить героя +*щелкните ПКМ для перемещения в нужное место +*нажав (A), щелкните (ЛКМ) по месту, и герой начнет перемещение, уничтожая противников на пути.</tip21>
+<tip22>Уничтожить всех солдат противника+*Щелкните ПМК на противника и продолжайте атаковать цель до ее уничтожения.</tip22>
+<tip23>Обучиться навыку Рев ветра+*щелкните ЛКМ по иконке Совершенствование навыка внизу экрана, чтобы обучиться навыку+* Повышая уровень героя, вы получаете очки, которые можно использовать для повышения уровня навыка+*(Ctrl＋Q/W/E/R) горячие клавиши для обучения навыку.</tip23>
+<tip24>Использование навыка Рев ветра +*щелкните (ЛКМ) по иконке навыка, чтобы его использовать+*Q, W, E, R горячие клавиши для использования всех навыков.</tip24>
+<tip30>111222</tip30>
+<tip31>Обучение навыку Целительство +* Нажмите Обучение маг. навыку+*Дважды щелкните ЛКМ по иконке навыка+*Маг. навык каждые 15 мин. повышается на 1 уровень вплоть до 4+*спустя 5 мин. после обучения маг. навыку, его можно поменять.</tip31>
+<tip311>311</tip311>
+<tip32>Используйте магический навык Врачевание+*щелкните по иконке Маг. навыка для его использования+* (T) - горячая клавиша навыка.</tip32>
+<tip33>Вернуться к Источнику жизни+*Источник жизни способствует стремительному восстановлению HP и MP.</tip33>
+<tip41>41</tip41>
+<tip411>Синтезированный предмет Трехцветная яшма + *щелкните по иконке магазина (горячая клавиша B), чтобы купить предмет+*щелкните (ЛКМ), чтобы получить сведения о синтезированном предмете, щелкните ПКМ, чтобы купить данный предмет+*нажмите в магазине на кнопку [купить все], чтобы сразу купить этот предмет</tip411>
+<tip412>Синтезированный предмет Трехцветная яшма + *щелкните по иконке магазина (горячая клавиша B), чтобы купить предмет+*щелкните (ЛКМ), чтобы получить сведения о синтезированном предмете, щелкните ПКМ, чтобы купить данный предмет+*нажмите в магазине на кнопку [купить все части], чтобы сразу купить этот предмет</tip412>
+<tip413>Синтезированный предмет Трехцветная яшма + *щелкните по иконке магазина (горячая клавиша B), чтобы купить предмет+*щелкните (ЛКМ), чтобы получить сведения о синтезированном предмете, щелкните ПКМ, чтобы купить данный предмет+*нажмите в магазине на кнопку [купить все части], чтобы сразу купить этот предмет</tip413>
+<tip414>Синтезированный предмет Трехцветная яшма + *щелкните по иконке магазина (горячая клавиша B), чтобы купить предмет+*щеклните (ЛКМ), чтобы получить сведения о синтезированном предмете, щелкните ПКМ, чтобы купить данный предмет+*нажмите в магазине на кнопку [купить все части], чтобы сразу купить этот предмет</tip414>
+<tip42>Закрыть магазин+*Еще раз нажмите клавишу (B), чтобы закрыть магазин+*Золото можно заработать, убивая противников и уничтожая их здания+*Выбирая или покупая предмет, позаботьтесь о безопасности героя.</tip42>
+<tip43>Разблокировать Замок героя+*нажмите в правом нижнем углу экрана на Замок героя и разблокируйте обзор+*с помощью Num Lock можно мгновенно включить или выключить функцию блокировки+*Разблокировав Замок героя, вы сможете, перемещая мышку по краям экрана, видеть ход боевых действий в любом месте.</tip43>
+<tip51>Уничтожение защитных башен противника+*Защитная башня будет атаковать вас и ваших солдат+*Держитесь за спинами своих солдат, чтобы  уменьшить наносимый герою урон.</tip51>
+<tip52>Захват статуи противника+*Из захваченной вами статуи противника появляются ваши солдаты +*у обеих сторон на 1, 2 и 3 линиях есть статуи. </tip52>
+<tip53>Уничтожение базы противника+*Вы можете выиграть бой, уничтожив базу противника или принудив его сдаться.</tip53>
+</titlemsg>
+<panelinfo>
+<part1>Сведения о карте игры</part1>
+<part2>Основные операции героя</part2>
+<part3>Освоение магических навыков</part3>
+<part4>Покупка и синтез предметов</part4>
+<part5>Боевые учения: уничтожить базу противника</part5>
+<btnstart>Начать</btnstart>
+<btnrestart>Начать</btnrestart>
+</panelinfo>
+</tutorialmsg.xml>
+</gui>
+</roots>

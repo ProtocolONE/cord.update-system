@@ -15,13 +15,12 @@
 #include <QtCore/QString>
 #include <QtCore/QObject>
 #include <QtCore/QMetaType>
-#include <QtCore/QDataStream>
 
 namespace GGS 
 {
   namespace UpdateSystem
   {
-    class UPDATESYSTEMSHARED_EXPORT UpdateFileInfo : public QObject
+    class UPDATESYSTEMSHARED_EXPORT UpdateFileInfo : QObject
     {
       Q_OBJECT
     public:
@@ -60,6 +59,5 @@ namespace GGS
 }
 
 Q_DECLARE_METATYPE(GGS::UpdateSystem::UpdateFileInfo);
-Q_DECLARE_METATYPE(GGS::UpdateSystem::UpdateFileInfo *);
 
 #endif // _GGS_UPDATESYSTEM_UPDATEFILEINFO_H_
