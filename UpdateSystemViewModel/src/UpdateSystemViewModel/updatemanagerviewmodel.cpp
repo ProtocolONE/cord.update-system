@@ -82,6 +82,14 @@ namespace GGS {
       qDebug() << "[DEBUG] UpdateLater called";
     }
 
+    void UpdateManagerViewModel::startCheckUpdateRetry() {
+      if (!this->_updateManagerWorker) {
+        return;
+      }
+
+      QMetaObject::invokeMethod(this->_updateManagerWorker, "checkUpdate", Qt::QueuedConnection);
+    }
+
     void UpdateManagerViewModel::startCheckUpdate()
     {
       this->_updateThread = new QThread();

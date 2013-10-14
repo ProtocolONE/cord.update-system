@@ -68,6 +68,7 @@ namespace GGS {
 
 		public slots:
 			void startCheckUpdate();
+      		void startCheckUpdateRetry();
 
     signals:
       void updateUrlChanged();

@@ -10,6 +10,7 @@
 
 #include <UpdateSystem/updatemanager.h>
 #include <QtCore/QDebug>
+#include <windows.h>
 
 namespace GGS { 
   namespace UpdateSystem {
@@ -18,6 +19,17 @@ namespace GGS {
     {
       this->_changeContainer = new UpdateInfoContainer(this);
     }
+
+	int getDiskFreeSpaceInMb(LPCWSTR drive)
+	{
+		ULARGE_INTEGER freeBytes;
+		freeBytes.QuadPart = 0L;
+
+		if (!GetDiskFreeSpaceEx(drive, &freeBytes, NULL, NULL))
+			return 0;
+
+		return freeBytes.QuadPart / 1048576;
+	}
 
     void UpdateManager::infoGetterUpdateProggress(quint64 current, quint64 total){
     }
@@ -30,6 +42,7 @@ namespace GGS {
       this->_updateInstaller->clearOldFiles();
       this->getUpdateList();
     }
+
     void UpdateManager::setUpdateInfoGetter(UpdateInfoGetterInterface *updateInfoGetter) { 
       this->_updateInfoGetter = updateInfoGetter; 
       this->_updateInfoGetter->setResultCallback(this);
@@ -47,6 +60,12 @@ namespace GGS {
     void UpdateManager::getUpdateList()
     {
       emit updateStateChanged(crcFileDownload);
+
+	  if (getDiskFreeSpaceInMb(L".") < 10) {
+		  this->updateInfoCallback(NotEnoughSpace); 
+		  return;
+	  }
+
       this->_updateInfoGetter->start();
     }
 
@@ -71,6 +90,7 @@ namespace GGS {
       UpdateInfoContainer *updateInfo = this->_updateInfoGetter->updateInfo(); 
       const QList<UpdateFileInfo* > *info = updateInfo->getFiles();
       QList<UpdateFileInfo* >::const_iterator end = info->end();
+	  quint64 rawSize = 0;
 
       for (QList<UpdateFileInfo* >::const_iterator it = info->begin(); it != end; ++it) {
         QString hash = (*it)->hash();
@@ -88,10 +108,17 @@ namespace GGS {
           fileInfo->setRawLength((*it)->rawLength());
           fileInfo->setArchiveLength((*it)->archiveLength());
           fileInfo->setForceCheck((*it)->forceCheck());
-          
+
+		  rawSize +=  fileInfo->archiveLength() + fileInfo->rawLength();
+
           this->_changeContainer->addFileInfo(fileInfo);
         }
       }
+
+	  if (rawSize > 0 && getDiskFreeSpaceInMb(L".") < (rawSize / 1048576)) {
+		  this->updateInfoCallback(NotEnoughSpace); 
+		  return;
+	  }
 
       updateInfo->clear();
       this->downloadChangedFiles();  

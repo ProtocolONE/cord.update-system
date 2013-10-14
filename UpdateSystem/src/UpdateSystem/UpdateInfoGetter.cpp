@@ -254,7 +254,7 @@ namespace GGS {
         this->_updateInfo->addFileInfo(fileInfo);
       }
 
-      this->_updateInfoResultCallback->updateInfoCallback( NoError );
+      this->_updateInfoResultCallback->updateInfoCallback(NoError);
     }
 
     void UpdateInfoGetter::setResultCallback(GGS::UpdateSystem::UpdateInfoGetterResultInterface *result)

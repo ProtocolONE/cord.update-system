@@ -8,8 +8,8 @@
 ** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 ****************************************************************************/
 
-#ifndef _GGS_UPDATE_SYSTEM_UPDATE_INFO_GETTER_INTERFACE_H_
-#define _GGS_UPDATE_SYSTEM_UPDATE_INFO_GETTER_INTERFACE_H_
+#pragma once
+
 #include "UpdateSystem_global.h"
 #include "UpdateInfoContainer.h"
 
@@ -23,23 +23,25 @@ namespace GGS {
       XmlContentError = 3,
       BadArguments = 4,
       CanNotDeleteOldUpdateFiles = 5,
+      NotEnoughSpace = 6
     };
-	
-	class UPDATESYSTEMSHARED_EXPORT UpdateInfoGetterResultsWrapper 
-    : public QObject
-	{
-		Q_OBJECT
-		Q_ENUMS(UpdateInfoGetterResultsEnum)
-	public:
-		enum UpdateInfoGetterResultsEnum {
-      NoError = 0,
-      DownloadError = 1,
-      ExtractError = 2,
-      XmlContentError = 3,
-      BadArguments = 4,
-      CanNotDeleteOldUpdateFiles = 5,
-		};
-	};
+
+    class UPDATESYSTEMSHARED_EXPORT UpdateInfoGetterResultsWrapper 
+      : public QObject
+    {
+      Q_OBJECT
+        Q_ENUMS(UpdateInfoGetterResultsEnum)
+    public:
+      enum UpdateInfoGetterResultsEnum {
+        NoError = 0,
+        DownloadError = 1,
+        ExtractError = 2,
+        XmlContentError = 3,
+        BadArguments = 4,
+        CanNotDeleteOldUpdateFiles = 5,
+        NotEnoughSpace = 6
+      };
+    };
 
     class UPDATESYSTEMSHARED_EXPORT UpdateInfoGetterResultInterface {
     public:
@@ -49,4 +51,3 @@ namespace GGS {
     };
   }
 }
-#endif //_GGS_UPDATE_SYSTEM_UPDATE_INFO_GETTER_INTERFACE_H_
