@@ -43,7 +43,7 @@ namespace GGS {
       retryDownloader2->setMaxRetry(GGS::Downloader::DynamicRetryTimeout::InfinityRetryCount);
       retryDownloader2->setTimeout(dynamicRetryTimeout);
 
-       GGS::Downloader::DownloadManager* downloader2 = new GGS::Downloader::DownloadManager(this);     
+      GGS::Downloader::DownloadManager* downloader2 = new GGS::Downloader::DownloadManager(this);     
       retryDownloader2->setDownloader(downloader2);
 
       GGS::Downloader::MultiFileDownloader* multi = new GGS::Downloader::MultiFileDownloader(this);
@@ -84,7 +84,7 @@ namespace GGS {
       connect(
         this->_manager, SIGNAL(updateError(int)), 
         this, SIGNAL(updateError(int)));
-      
+
       connect(
         this->_manager, SIGNAL(updateStateChanged(int)), 
         this, SIGNAL(updateStateChanged(int)));
@@ -111,12 +111,13 @@ namespace GGS {
       delete this->_extractor;
     }
 
-    void UpdateManagerWorker::setWorkingDir(const QString& wDir) { 
+    void UpdateManagerWorker::setWorkingDir(const QString& wDir) 
+    { 
       this->_workingDir = wDir; 
       this->_updateInfoGetter->setCurrentDir(workingDir());
       this->_updateInfoGetter->setUpdateFileName(updateCrcFileName);
 
-      if (_updateUrl.isEmpty()){
+      if (_updateUrl.isEmpty()) {
         qDebug() << "[ERROR] No update url set.";
         return;
       }
@@ -131,7 +132,8 @@ namespace GGS {
       this->_manager->setTargetDirectory(workDir);
     }
 
-    void UpdateManagerWorker::setUpdateUrl(const QString& updateUrl) { 
+    void UpdateManagerWorker::setUpdateUrl(const QString& updateUrl) 
+    { 
       QString updateCrcUrl = updateUrl;
       updateCrcUrl.append(updateCrcFileName + ".7z");
 
@@ -139,7 +141,9 @@ namespace GGS {
       this->_updateUrl = updateUrl; 
     }
 
-    void UpdateManagerWorker::checkUpdate( ) {
+    void UpdateManagerWorker::checkUpdate()
+    {
+      qsrand(QDateTime::currentMSecsSinceEpoch());
       this->_manager->checkUpdate();
     }
 

@@ -20,18 +20,21 @@ namespace GGS {
       this->_changeContainer = new UpdateInfoContainer(this);
     }
 
-	int getDiskFreeSpaceInMb(LPCWSTR drive)
-	{
-		ULARGE_INTEGER freeBytes;
-		freeBytes.QuadPart = 0L;
+    int getDiskFreeSpaceInMb(LPCWSTR drive)
+    {
+      ULARGE_INTEGER freeBytes;
+      freeBytes.QuadPart = 0L;
 
-		if (!GetDiskFreeSpaceEx(drive, &freeBytes, NULL, NULL))
-			return 0;
+      if (!GetDiskFreeSpaceEx(drive, &freeBytes, NULL, NULL))
+        return 0;
 
-		return freeBytes.QuadPart / 1048576;
-	}
+      return freeBytes.QuadPart / 1048576;
+    }
 
-    void UpdateManager::infoGetterUpdateProggress(quint64 current, quint64 total){
+    void UpdateManager::infoGetterUpdateProggress(quint64 current, quint64 total)
+    {
+      Q_UNUSED(current);
+      Q_UNUSED(total);
     }
 
     void UpdateManager::checkUpdate()
@@ -61,10 +64,10 @@ namespace GGS {
     {
       emit updateStateChanged(crcFileDownload);
 
-	  if (getDiskFreeSpaceInMb(L".") < 10) {
-		  this->updateInfoCallback(NotEnoughSpace); 
-		  return;
-	  }
+      if (getDiskFreeSpaceInMb(L".") < 10) {
+        this->updateInfoCallback(NotEnoughSpace); 
+        return;
+      }
 
       this->_updateInfoGetter->start();
     }
@@ -90,7 +93,7 @@ namespace GGS {
       UpdateInfoContainer *updateInfo = this->_updateInfoGetter->updateInfo(); 
       const QList<UpdateFileInfo* > *info = updateInfo->getFiles();
       QList<UpdateFileInfo* >::const_iterator end = info->end();
-	  quint64 rawSize = 0;
+      quint64 rawSize = 0;
 
       for (QList<UpdateFileInfo* >::const_iterator it = info->begin(); it != end; ++it) {
         QString hash = (*it)->hash();
@@ -101,7 +104,7 @@ namespace GGS {
         if (realHash.compare(hash) != 0) {
           qDebug() << "UpdateManager: Changed file " << (*it)->relativePath();
           this->_totalUpdateSize += (*it)->archiveLength();
-          
+
           UpdateFileInfo* fileInfo = new UpdateFileInfo();
           fileInfo->setPath((*it)->relativePath());
           fileInfo->setHash((*it)->hash());
@@ -109,16 +112,16 @@ namespace GGS {
           fileInfo->setArchiveLength((*it)->archiveLength());
           fileInfo->setForceCheck((*it)->forceCheck());
 
-		  rawSize +=  fileInfo->archiveLength() + fileInfo->rawLength();
+          rawSize +=  fileInfo->archiveLength() + fileInfo->rawLength();
 
           this->_changeContainer->addFileInfo(fileInfo);
         }
       }
 
-	  if (rawSize > 0 && getDiskFreeSpaceInMb(L".") < (rawSize / 1048576)) {
-		  this->updateInfoCallback(NotEnoughSpace); 
-		  return;
-	  }
+      if (rawSize > 0 && getDiskFreeSpaceInMb(L".") < (rawSize / 1048576)) {
+        this->updateInfoCallback(NotEnoughSpace); 
+        return;
+      }
 
       updateInfo->clear();
       this->downloadChangedFiles();  
@@ -156,8 +159,9 @@ namespace GGS {
       emit this->fileDownloadString(filePath);
     }
 
-    void UpdateManager::downloadResult( bool isError, GGS::Downloader::DownloadResults error )
+    void UpdateManager::downloadResult(bool isError, GGS::Downloader::DownloadResults error)
     {
+      Q_UNUSED(isError);
       emit updatesFound();
 
       if (error != GGS::Downloader::NoError)
@@ -172,13 +176,16 @@ namespace GGS {
       } 
     }
 
-    void UpdateManager::downloadProgress( quint64 downloadSize, quint64 currentFileDownloadSize, quint64 currestFileSize )
+    void UpdateManager::downloadProgress(quint64 downloadSize, quint64 currentFileDownloadSize, quint64 currestFileSize)
     {
+      Q_UNUSED(currentFileDownloadSize);
+      Q_UNUSED(currestFileSize);
       emit this->downloadUpdateProgress(downloadSize, this->_totalUpdateSize);
     }
 
-    void UpdateManager::downloadWarning( bool isError, GGS::Downloader::DownloadResults error )
+    void UpdateManager::downloadWarning(bool isError, GGS::Downloader::DownloadResults error)
     {
+      Q_UNUSED(isError);
       emit this->downloadUpdateWarning(error);
     }
 

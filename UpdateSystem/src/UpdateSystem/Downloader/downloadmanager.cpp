@@ -10,6 +10,8 @@
 
 #include <UpdateSystem/Downloader/downloadmanager.h>
 
+#include <QtCore/QDateTime>
+
 namespace GGS {
   namespace Downloader {
     void DownloadManager::downloadFile(const QString &url, const QString &filePath)
@@ -25,6 +27,8 @@ namespace GGS {
         return;
       }
 
+      uri.addQueryItem(QString::number(qrand()), QString::number(QDateTime::currentMSecsSinceEpoch()));
+      
       QString cleanPath = QDir::cleanPath(filePath);
       int lastIndex = cleanPath.lastIndexOf('/');
       if(lastIndex != -1) {

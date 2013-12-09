@@ -74,7 +74,7 @@ namespace GGS {
 
     void UpdateManagerViewModel::updateThreadFinished()
     {
-      if (_updateThread){
+      if (_updateThread) {
         _updateThread->deleteLater();
         _updateThread = 0;
       }
