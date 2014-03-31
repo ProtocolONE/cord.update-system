@@ -10,7 +10,7 @@ MockFileDownloader::~MockFileDownloader(void)
 {
 }
 
-void MockFileDownloader::downloadFile( const QString& url,const QString& filePath )
+void MockFileDownloader::downloadFile(const QString& url,const QString& filePath)
 {
   if(this->_fakeFiles.contains(url)) {
     QString fakeFilePath = this->_fakeFiles[url];
@@ -48,12 +48,12 @@ void MockFileDownloader::downloadFile( const QString& url,const QString& filePat
 }
 
 
-void MockFileDownloader::addDownloadeInfo( const QString& expectedUrl, const QString& pathToFakeFile )
+void MockFileDownloader::addDownloadeInfo(const QString& expectedUrl, const QString& pathToFakeFile)
 {
   this->_fakeFiles[expectedUrl] = pathToFakeFile;
 }
 
-void MockFileDownloader::setResultCallback( GGS::Downloader::DownloadResultInterface *result )
+void MockFileDownloader::setResultCallback(GGS::Downloader::DownloadResultInterface *result)
 {
   this->_resultCallback = result;
 }

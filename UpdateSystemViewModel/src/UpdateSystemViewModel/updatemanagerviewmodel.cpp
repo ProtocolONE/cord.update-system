@@ -14,13 +14,10 @@ namespace GGS {
   namespace UpdateSystem {
 
     UpdateManagerViewModel::UpdateManagerViewModel()
+      : _updateState(-1)
+      , _updateThread(0)
     {
-      _updateState = -1;
-
       this->_updateManagerWorker = new GGS::UpdateSystem::UpdateManagerWorker(0);
-      //this->setUpdateUrl(url);
-      //this->setUpdateUrl("http://fs0.gamenet.ru/update/qgna/live/");
-      _updateThread = 0;
 
       connect(
         this->_updateManagerWorker, SIGNAL(allCompleted(bool)), 
@@ -69,14 +66,14 @@ namespace GGS {
 
     void UpdateManagerViewModel::setUpdateState(int updateState) { 
       this->_updateState = updateState; 
-      emit updateStateChanged(updateState);
+      emit this->updateStateChanged(updateState);
     }
 
     void UpdateManagerViewModel::updateThreadFinished()
     {
-      if (_updateThread) {
-        _updateThread->deleteLater();
-        _updateThread = 0;
+      if (this->_updateThread) {
+        this->_updateThread->deleteLater();
+        this->_updateThread = 0;
       }
 
       qDebug() << "[DEBUG] UpdateLater called";
@@ -94,22 +91,24 @@ namespace GGS {
     {
       this->_updateThread = new QThread();
       this->_updateThread->setObjectName("Update manager thread");
-      connect( _updateThread, SIGNAL(finished()), this, SLOT(updateThreadFinished()));
+      connect(this->_updateThread, SIGNAL(finished()), this, SLOT(updateThreadFinished()));
 
-      this->_updateManagerWorker->setInstallSubDir(installPath());
+      this->_updateManagerWorker->setInstallSubDir(this->installPath());
       this->_updateManagerWorker->setWorkingDir(QCoreApplication::applicationDirPath());
-      this->_updateManagerWorker->moveToThread(_updateThread);
+      this->_updateManagerWorker->moveToThread(this->_updateThread);
 
-      _updateThread->start();
+      this->_updateThread->start();
       QMetaObject::invokeMethod(this->_updateManagerWorker, "checkUpdate", Qt::QueuedConnection);
     }
 
-    void UpdateManagerViewModel::setUpdateUrl( const QString& updateUrl )
+    void UpdateManagerViewModel::setUpdateUrl(const QString& updateUrl)
     {
       if (this->_updateUrl != updateUrl) {
         this->_updateUrl = updateUrl;
+
         if (this->_updateManagerWorker)
           this->_updateManagerWorker->setUpdateUrl(this->_updateUrl);
+
         emit this->updateUrlChanged();
       }
     }
@@ -122,27 +121,20 @@ namespace GGS {
       }
     }
 
-    void UpdateManagerViewModel::setUpdateArea(QString area)
+    QString UpdateManagerViewModel::updateUrl() const
     {
-      // by Igor Bygaev
-      // Функция не нужна. Сейчас updateUrl собирается на стороне приложения, в зависимости
-      // от типа сборки tstm pts, live. Изменять здесь updateArea не нужно.
-      // обсудить это
-
-      return; 
-
-      if (this->_updateArea != area) {
-        this->_updateArea = area;
-        QString url = QString("http://fs0.gamenet.ru/update/qgna/%1/").arg(area);
-        this->setUpdateUrl(url);
-        emit this->updateAreaChanged();
-      }
+      return this->_updateUrl;
     }
 
-    QString UpdateManagerViewModel::updateArea() const
-    { 
-      return this->_updateUrl; //см. выше
-      return this->_updateArea;
+    QString UpdateManagerViewModel::installPath() const
+    {
+      return this->_installPath;
     }
+
+    int UpdateManagerViewModel::updateState()
+    {
+      return this->_updateState;
+    }
+
   }
 }
