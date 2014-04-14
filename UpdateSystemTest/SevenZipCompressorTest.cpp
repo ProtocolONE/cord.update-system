@@ -15,7 +15,7 @@
   GGS::Hasher::Md5FileHasher hasher; \
   ASSERT_EQ(hasher.getFileHash(f1), hasher.getFileHash(f2)); \
 }
-bool RemoveDirectory(QDir &aDir);
+bool RemoveDirectoryFull(QDir &aDir);
 
 TEST(SevenZipCompressor, CompressorTest) 
 {

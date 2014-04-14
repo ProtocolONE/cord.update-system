@@ -12,8 +12,8 @@
 #include "MemoryLeaksChecker.h"
 #include "MockFileDownloader.h"
 
-// HACK: убрать в какой-то хелпер.
-bool RemoveDirectory(QDir &aDir);
+
+bool RemoveDirectoryFull(QDir &aDir);
 
 class MockUpdateInfoGetterResult : public GGS::UpdateSystem::UpdateInfoGetterResultInterface
 {
@@ -164,7 +164,7 @@ public:
 
     QDir dir(this->workingDir);
     if(dir.exists(this->workingDir)){
-      RemoveDirectory(dir);
+      RemoveDirectoryFull(dir);
     }
 
     dir.mkpath(this->workingDir);

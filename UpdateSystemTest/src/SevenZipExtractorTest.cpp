@@ -4,13 +4,12 @@
 #include <QtCore/QString>
 #include <QtCore/QDir>
 #include <QtCore/QFile>
-#include <QtCore>
-#include <QDebug>
+#include <QtCore/QDebug>
 
 #include <UpdateSystem/Extractor/ExtractorInterface.h>
 #include <UpdateSystem/Extractor/SevenZipExtractor.h>
 
-bool RemoveDirectory(QDir &aDir)
+bool RemoveDirectoryFull(QDir &aDir)
 {
   bool has_err = false;
   if (aDir.exists())//QDir::NoDotAndDotDot
@@ -25,7 +24,7 @@ bool RemoveDirectory(QDir &aDir)
       QString path = entryInfo.absoluteFilePath();
       if (entryInfo.isDir())
       {
-        has_err &= RemoveDirectory(QDir(path));
+        has_err &= RemoveDirectoryFull(QDir(path));
       }
       else
       {
@@ -54,7 +53,7 @@ TEST(SevenZipExtractor, ExtractTest)
   
   QDir workDir(workingPath);
   if(workDir.exists()) {
-    RemoveDirectory(workDir);
+    RemoveDirectoryFull(workDir);
   }
 
   ASSERT_TRUE( workDir.mkpath(workingPath) );

@@ -1,7 +1,7 @@
 #include "DownloadManagerTestWorker.h"
 
 // HACK: убрать в какой-то хелпер.
-bool RemoveDirectory(QDir &aDir);
+bool RemoveDirectoryFull(QDir &aDir);
 
 DownloadManagerTestWorker::DownloadManagerTestWorker(void)
 {
