@@ -42,6 +42,21 @@
 
 #define HRESULT_NOT_ENOUGH_SPACE 0x80070070
 
+
+GGS::Extractor::SevenZipExtactor::SevenZipExtactor(QObject *parent)
+  : QObject(parent)
+{
+  this->_lib = new SevenZip::SevenZipLibrary;
+  this->_lib->Load();
+}
+
+
+GGS::Extractor::SevenZipExtactor::~SevenZipExtactor()
+{
+  delete this->_lib;
+}
+
+
 GGS::Extractor::ExtractionResult GGS::Extractor::SevenZipExtactor::extract(const QString& archivePath, const QString& extractDirectory)
 {
   if (!QFile::exists(archivePath))
@@ -60,10 +75,7 @@ GGS::Extractor::ExtractionResult GGS::Extractor::SevenZipExtactor::extract(const
   target[length] = L'\0';
 
   try {
-    SevenZip::SevenZipLibrary lib;
-    lib.Load();
-
-    SevenZip::SevenZipExtractor extractor(lib, archive);
+    SevenZip::SevenZipExtractor extractor(*this->_lib, archive);
     extractor.ExtractArchive(target);
 
   } catch(SevenZip::OpenArchiveException& ex) {
@@ -106,11 +118,6 @@ GGS::Extractor::ExtractionResult GGS::Extractor::SevenZipExtactor::extract(const
   return GGS::Extractor::NoError;
 }
 
-GGS::Extractor::SevenZipExtactor::SevenZipExtactor(QObject *parent)
-  : QObject(parent)
-{
-}
-
 GGS::Extractor::ExtractionResult GGS::Extractor::SevenZipExtactor::slowExtract(const QString& archivePath, const QString& extractDirectory)
 {
   wchar_t *archive = new wchar_t[archivePath.size() + 1];
@@ -122,10 +129,7 @@ GGS::Extractor::ExtractionResult GGS::Extractor::SevenZipExtactor::slowExtract(c
   target[length] = L'\0';
 
   try {
-    SevenZip::SevenZipLibrary lib;
-    lib.Load();
-
-    SevenZip::SevenZipExtractor extractor(lib, archive);
+    SevenZip::SevenZipExtractor extractor(*this->_lib, archive);
     extractor.ExtractArchive(target);
   } catch(SevenZip::OpenArchiveException& ex) {
     delete [] archive;
@@ -181,9 +185,3 @@ GGS::Extractor::ExtractionResult GGS::Extractor::SevenZipExtactor::slowExtract(c
 
   return NoError;
 }
-
-GGS::Extractor::SevenZipExtactor::~SevenZipExtactor()
-{
-
-}
-

@@ -15,6 +15,10 @@
 #include <UpdateSystem/Extractor/ExtractorInterface.h>
 #include <QtCore/QObject>
 
+namespace SevenZip {
+  class SevenZipLibrary;
+}
+
 namespace GGS {
   namespace Extractor {
     class UPDATESYSTEMSHARED_EXPORT SevenZipExtactor : public QObject, public ExtractorInterface 
@@ -28,6 +32,8 @@ namespace GGS {
 
     private:
       ExtractionResult slowExtract(const QString& archivePath, const QString& extractDirectory);
+
+      SevenZip::SevenZipLibrary* _lib;
     };
   }
 }
