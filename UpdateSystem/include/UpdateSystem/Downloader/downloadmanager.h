@@ -36,22 +36,22 @@ namespace GGS {
     public:
       explicit DownloadManager(QObject *parent = 0);
 
-      ~DownloadManager();
+      virtual ~DownloadManager();
       void downloadFile(const QString& url, const QString& filePath);
 
-      public slots:
-        void slotDownloadProgress(qint64 recieved, qint64 total);
-        void slotReadyRead();
-        void slotReplyDownloadFinished();
-        void slotError(QNetworkReply::NetworkError error);
-        void setResultCallback(DownloadResultInterface *result);
+    public slots:
+      void slotDownloadProgress(qint64 recieved, qint64 total);
+      void slotReadyRead();
+      void slotReplyDownloadFinished();
+      void slotError(QNetworkReply::NetworkError error);
+      void setResultCallback(DownloadResultInterface *result);
 
-        virtual QNetworkReply::NetworkError getNetworkError() { return this->_networkError; }
+      virtual QNetworkReply::NetworkError getNetworkError();
 
     private :
-      QNetworkAccessManager * _manager;
+      QNetworkAccessManager *_manager;
       QPointer<QFile> _file;
-      QNetworkReply * _reply;
+      QNetworkReply *_reply;
 
       QNetworkReply::NetworkError _networkError;
       DownloadResultInterface *_resultCallback;

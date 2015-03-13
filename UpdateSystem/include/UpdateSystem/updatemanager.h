@@ -42,8 +42,10 @@ namespace GGS {
     {
       Q_OBJECT
     public:
+      friend class UpdateManagerWorker;
+
       explicit UpdateManager(QObject *parrent = 0);
-      ~UpdateManager() {};
+      virtual ~UpdateManager();;
       void checkUpdate();
 
       void setTargetDirectory(const QString& targetDirectory); 

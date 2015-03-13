@@ -23,7 +23,7 @@ namespace GGS {
     {
     }
 
-    void MultiFileDownloaderWithExtracter::addFile( const QString& url, const QString& targetFilePath )
+    void MultiFileDownloaderWithExtracter::addFile(const QString& url, const QString& targetFilePath)
     {
       QString archiveUrl = url;
       archiveUrl.append(".7z");
@@ -56,33 +56,33 @@ namespace GGS {
       this->_resultCallback->fileDownloaded(path);
     }
 
-    void MultiFileDownloaderWithExtracter::downloadResult( bool isError, DownloadResults error )
+    void MultiFileDownloaderWithExtracter::downloadResult(bool isError, DownloadResults error)
     {
       this->_resultCallback->downloadResult(isError, error);
     }
 
-    void MultiFileDownloaderWithExtracter::downloadProgress( quint64 downloadSize, quint64 currentFileDownloadSize, quint64 currestFileSize )
+    void MultiFileDownloaderWithExtracter::downloadProgress(quint64 downloadSize, quint64 currentFileDownloadSize, quint64 currestFileSize)
     {
       this->_resultCallback->downloadProgress(downloadSize, currentFileDownloadSize, currestFileSize);
     }
 
-    void MultiFileDownloaderWithExtracter::downloadWarning( bool isError, DownloadResults error )
+    void MultiFileDownloaderWithExtracter::downloadWarning(bool isError, DownloadResults error)
     {
       this->_resultCallback->downloadWarning(isError, error);
     }
 
-    void MultiFileDownloaderWithExtracter::setMultiDownloader( MultiFileDownloader *multiDownloader )
+    void MultiFileDownloaderWithExtracter::setMultiDownloader(MultiFileDownloader *multiDownloader)
     {
       this->_multiDownloader = multiDownloader; 
       this->_multiDownloader->setResultCallback(this);
     }
 
-    void MultiFileDownloaderWithExtracter::setExtractor( GGS::Extractor::ExtractorInterface *extractor )
+    void MultiFileDownloaderWithExtracter::setExtractor(GGS::Extractor::ExtractorInterface *extractor)
     {
       this->_extractor = extractor;
     }
 
-    void MultiFileDownloaderWithExtracter::setResultCallback( MultiFileDownloadResultInterface *resultCallback )
+    void MultiFileDownloaderWithExtracter::setResultCallback(MultiFileDownloadResultInterface *resultCallback)
     {
       this->_resultCallback = resultCallback;
     }

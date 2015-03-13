@@ -26,7 +26,7 @@ namespace GGS {
         request.setRawHeader("If-Modified-Since", this->_lastModified.toLatin1());
 
       QNetworkReply *reply = this->_manager->head(request);
-      SIGNAL_CONNECT_CHECK(connect(reply, SIGNAL(finished()), this, SLOT(slotReplyDownloadFinished())));
+      SIGNAL_CONNECT_CHECK(QObject::connect(reply, &QNetworkReply::finished, this, &CheckUpdateHelper::slotReplyDownloadFinished));
     }
 
     void CheckUpdateHelper::setUpdateUrl(const QString& updateUrl)

@@ -20,6 +20,10 @@ namespace GGS {
       this->_changeContainer = new UpdateInfoContainer(this);
     }
 
+    UpdateManager::~UpdateManager()
+    {
+    }
+
     int getDiskFreeSpaceInMb(LPCWSTR drive)
     {
       ULARGE_INTEGER freeBytes;
@@ -75,7 +79,7 @@ namespace GGS {
     void UpdateManager::updateInfoCallback( UpdateInfoGetterResults error )
     {
       qDebug() << "UpdateManager: Getting update info result " << error;
-      if(error != NoError){
+      if (error != NoError){
         switch(error){
           case NoError:  qDebug() << "[ERROR] Update no error"; break;
           case DownloadError:  qDebug() << "[ERROR] Update download error"; break;
@@ -211,7 +215,7 @@ namespace GGS {
 
     const QString& UpdateManager::getUpdateSubDir()
     {
-      return _updateSubDir;
+      return this->_updateSubDir;
     }
 
   }

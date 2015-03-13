@@ -15,15 +15,27 @@
 
 namespace GGS {
   namespace Downloader {
+
+    DownloadManager::~DownloadManager() 
+    {
+    }
+
+    DownloadManager::DownloadManager(QObject *parent)
+      : QObject(parent)
+      , _resultCallback(0)
+      , _reply(0)
+      , _manager(new QNetworkAccessManager(this))
+    {
+    }
+
     void DownloadManager::downloadFile(const QString &url, const QString &filePath)
     {
-      if(!this->_resultCallback) {
+      if (!this->_resultCallback) {
         throw new std::exception("can't download file without result callback");
       }
 
       QUrl uri(url);
-      if(!uri.isValid())
-      {
+      if(!uri.isValid()) {
         this->_resultCallback->downloadResult(true, BadUrl);
         return;
       }
@@ -53,10 +65,12 @@ namespace GGS {
       this->_networkError = QNetworkReply::NoError;
       this->_reply = this->_manager->get(QNetworkRequest(uri));
 
-      connect(this->_reply, SIGNAL(readyRead()), this, SLOT(slotReadyRead()));
-      connect(this->_reply, SIGNAL(downloadProgress(qint64,qint64)), this, SLOT(slotDownloadProgress(qint64,qint64)));
-      connect(this->_reply, SIGNAL(finished()), this, SLOT(slotReplyDownloadFinished()));
-      connect(this->_reply, SIGNAL(error(QNetworkReply::NetworkError)), this, SLOT(slotError(QNetworkReply::NetworkError)));
+      QObject::connect(this->_reply, &QNetworkReply::readyRead, this, &DownloadManager::slotReadyRead);
+      QObject::connect(this->_reply, &QNetworkReply::downloadProgress, this, &DownloadManager::slotDownloadProgress);
+      QObject::connect(this->_reply, &QNetworkReply::finished, this, &DownloadManager::slotReplyDownloadFinished);
+      QObject::connect(
+        this->_reply, static_cast<void (QNetworkReply::*)(QNetworkReply::NetworkError)>(&QNetworkReply::error), 
+        this, &DownloadManager::slotError);
     }
 
     void DownloadManager::slotDownloadProgress(qint64 recieved, qint64 total)
@@ -81,7 +95,7 @@ namespace GGS {
     {
       if (this->_file) {
         this->_file->close();
-        delete this->_file;        
+        delete this->_file;
       }
 
       QVariant statusCodeV;
@@ -101,19 +115,7 @@ namespace GGS {
       }
     }
 
-    DownloadManager::~DownloadManager() 
-    {
-    }
-
-    DownloadManager::DownloadManager( QObject *parent )
-      : QObject(parent)
-    {
-      this->_resultCallback = 0;
-      this->_reply = 0;
-      this->_manager = new QNetworkAccessManager(this);
-    }
-
-    void DownloadManager::slotError( QNetworkReply::NetworkError error )
+    void DownloadManager::slotError(QNetworkReply::NetworkError error)
     {
       if (this->_file) {
         this->_file->close();
@@ -129,9 +131,14 @@ namespace GGS {
       this->_reply->deleteLater();
     }
 
-    void DownloadManager::setResultCallback( DownloadResultInterface *result )
+    void DownloadManager::setResultCallback(DownloadResultInterface *result)
     {
       this->_resultCallback = result;
+    }
+
+    QNetworkReply::NetworkError DownloadManager::getNetworkError()
+    {
+      return this->_networkError;
     }
 
   }

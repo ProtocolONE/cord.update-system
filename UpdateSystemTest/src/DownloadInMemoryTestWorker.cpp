@@ -35,7 +35,7 @@ void DownloadInMemoryTestWorker::slotFixtureDowloadComplite()
 {
   QString responseString(this->_response);
   QString expectiongString("Test string. Please do not delete or change.");
-  if(responseString.compare(expectiongString) == 0) {
+  if (responseString.compare(expectiongString) == 0) {
     this->IsFinished = true;
   } else {
     this->IsFinished = false;

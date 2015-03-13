@@ -15,9 +15,10 @@
 
 namespace GGS {
   namespace Downloader {
-    class UPDATESYSTEMSHARED_EXPORT RetryTimeoutInterface {
+    class UPDATESYSTEMSHARED_EXPORT RetryTimeoutInterface 
+    {
     public:
-      ~RetryTimeoutInterface() {}
+      virtual ~RetryTimeoutInterface() {}
       virtual int getTimeout(int retryCount) = 0;
     };
   }

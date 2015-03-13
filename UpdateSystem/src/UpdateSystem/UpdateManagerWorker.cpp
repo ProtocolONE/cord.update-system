@@ -34,7 +34,7 @@ namespace GGS {
       retryDownloader->setMaxRetry(GGS::Downloader::DynamicRetryTimeout::InfinityRetryCount);
       retryDownloader->setTimeout(dynamicRetryTimeout);
 
-      GGS::Downloader::DownloadManager* downloader = new GGS::Downloader::DownloadManager(this);     
+      GGS::Downloader::DownloadManager* downloader = new GGS::Downloader::DownloadManager(this);
       retryDownloader->setDownloader(downloader);
 
       this->_updateInfoGetter->setDownloader(retryDownloader);
@@ -43,7 +43,7 @@ namespace GGS {
       retryDownloader2->setMaxRetry(GGS::Downloader::DynamicRetryTimeout::InfinityRetryCount);
       retryDownloader2->setTimeout(dynamicRetryTimeout);
 
-      GGS::Downloader::DownloadManager* downloader2 = new GGS::Downloader::DownloadManager(this);     
+      GGS::Downloader::DownloadManager* downloader2 = new GGS::Downloader::DownloadManager(this);
       retryDownloader2->setDownloader(downloader2);
 
       GGS::Downloader::MultiFileDownloader* multi = new GGS::Downloader::MultiFileDownloader(this);
@@ -65,45 +65,35 @@ namespace GGS {
 
       this->_manager->setUpdateInstaller(this->_updateInstaller);
 
-      connect(
-        this->_manager, SIGNAL(allCompleted(bool)), 
-        this, SLOT(allComplete(bool)));
+      connect(this->_manager, &UpdateManager::allCompleted,
+        this, &UpdateManagerWorker::allComplete);
 
-      connect(
-        this->_manager, SIGNAL(fileDownloadString(QString)), 
-        this, SIGNAL(fileDownloadedString(QString)));
+      connect(this->_manager, &UpdateManager::fileDownloadString,
+        this, &UpdateManagerWorker::fileDownloadedString);
 
-      connect(
-        this->_manager, SIGNAL(downloadUpdateProgress(quint64, quint64)), 
-        this, SIGNAL(updateProgressChanged(quint64, quint64)));
+      connect(this->_manager, &UpdateManager::downloadUpdateProgress,
+        this, &UpdateManagerWorker::updateProgressChanged);
 
-      connect(
-        this->_manager, SIGNAL(downloadUpdateWarning(GGS::Downloader::DownloadResults)), 
-        this, SIGNAL(updateWarning(GGS::Downloader::DownloadResults)));
+      connect(this->_manager, &UpdateManager::downloadUpdateWarning,
+        this, &UpdateManagerWorker::updateWarning);
 
-      connect(
-        this->_manager, SIGNAL(updateError(int)), 
-        this, SIGNAL(updateError(int)));
+      connect(this->_manager, &UpdateManager::updateError,
+        this, &UpdateManagerWorker::updateError);
 
-      connect(
-        this->_manager, SIGNAL(updateStateChanged(int)), 
-        this, SIGNAL(updateStateChanged(int)));
+      connect(this->_manager, &UpdateManager::updateStateChanged,
+        this, &UpdateManagerWorker::updateStateChanged);
 
-      connect(
-        this->_manager, SIGNAL(noUpdatesFound()), 
-        this, SIGNAL(noUpdatesFound()));
+      connect(this->_manager, &UpdateManager::noUpdatesFound,
+        this, &UpdateManagerWorker::noUpdatesFound);
 
-      connect(
-        this->_manager, SIGNAL(updatesFound()), 
-        this, SIGNAL(updatesFound()));
+      connect(this->_manager, &UpdateManager::updatesFound,
+        this, &UpdateManagerWorker::updatesFound);
 
-      connect(
-        this, SIGNAL(installUpdates()),
-        this->_manager, SLOT(installUpdates()));
+      connect(this, &UpdateManagerWorker::installUpdates,
+        this->_manager, &UpdateManager::installUpdates);
 
-      connect(
-        retryDownloader, SIGNAL(downloadRetryNumber(int)),
-        this, SIGNAL(downloadRetryNumber(int)));
+      connect(retryDownloader, &GGS::Downloader::RetryFileDownloader::downloadRetryNumber,
+        this, &UpdateManagerWorker::downloadRetryNumber);
     }
 
     UpdateManagerWorker::~UpdateManagerWorker(void)

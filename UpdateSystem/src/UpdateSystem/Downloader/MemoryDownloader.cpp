@@ -22,7 +22,7 @@ namespace GGS {
     {
     }
 
-    void MemoryDownloader::DownloadUrl( const QString& url, QByteArray *responseBuffer )
+    void MemoryDownloader::DownloadUrl(const QString& url, QByteArray *responseBuffer)
     {
       QUrl uri(url);
       if(!uri.isValid())

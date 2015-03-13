@@ -25,75 +25,81 @@ namespace GGS {
       this->_currentDir = ".";
       this->_archiveFile  = ".";
       this->_updateFile  = ".";
-
     }
 
-    UpdateInfoGetter::~UpdateInfoGetter() {
+    UpdateInfoGetter::~UpdateInfoGetter()
+    {
     }
 
-    void UpdateInfoGetter::downloadProgress(quint64 current, quint64 total) {
+    void UpdateInfoGetter::downloadProgress(quint64 current, quint64 total)
+    {
        this->_updateInfoResultCallback->infoGetterUpdateProggress(current, total);
     }
 
-    void UpdateInfoGetter::downloadWarning(bool isError, GGS::Downloader::DownloadResults error){
+    void UpdateInfoGetter::downloadWarning(bool isError, GGS::Downloader::DownloadResults error)
+    {
+      Q_UNUSED(isError);
+      Q_UNUSED(error);
     }
 
-    void UpdateInfoGetter::setUpdateFileName(const QString& updateFileName){
-      _archiveFile = QString(getCurrentDir()).append("/" + updateFileName + ".7z");
-      _updateFile = QString(getCurrentDir()).append("/" + updateFileName );
+    void UpdateInfoGetter::setUpdateFileName(const QString& updateFileName)
+    {
+      this->_archiveFile = QString(getCurrentDir()).append("/" + updateFileName + ".7z");
+      this->_updateFile = QString(getCurrentDir()).append("/" + updateFileName );
     }
 
-    void UpdateInfoGetter::setCurrentDir(const QString& currentDir){ 
-      if (currentDir[currentDir.size()-1] == QChar('/'))        
-        this->_currentDir = QString(currentDir.data(), currentDir.size() - 1); 
+    void UpdateInfoGetter::setCurrentDir(const QString& currentDir)
+    {
+      if (currentDir[currentDir.size()-1] == QChar('/'))
+        this->_currentDir = QString(currentDir.data(), currentDir.size() - 1);
       else
         this->_currentDir = currentDir;
     }
 
-    void UpdateInfoGetter::setDownloader(GGS::Downloader::FileDownloaderInterface *downloader) { 
+    void UpdateInfoGetter::setDownloader(GGS::Downloader::FileDownloaderInterface *downloader)
+    { 
       if (!downloader) {
         qDebug() << "[ERROR][UpdateInfoGetter][ERROR] No downloader set.";
         return;
       }
 
-      this->_downloader = downloader; 
-      this->_downloader->setResultCallback(this);       
+      this->_downloader = downloader;
+      this->_downloader->setResultCallback(this);
     }
 
     void UpdateInfoGetter::start()
     {
-      if(!this->_updateInfoResultCallback)
-      {
+      if (!this->_updateInfoResultCallback) {
         qDebug() << "[ERROR][UpdateInfoGetter][ERROR] No update info result callback set.";
         return;
       }
 
-      if ( _currentDir == "." ){
+      if (this->_currentDir == "." ) {
         qDebug() << "[ERROR][UpdateInfoGetter][ERROR] No current directory set.";
-        this->_updateInfoResultCallback->updateInfoCallback( BadArguments );
+        this->_updateInfoResultCallback->updateInfoCallback(BadArguments);
         return;
       }
 
-      if ( _archiveFile[0] == '.'){
+      if (this->_archiveFile[0] == '.') {
         qDebug() << "[ERROR][UpdateInfoGetter][ERROR] No update file name set.";
-        this->_updateInfoResultCallback->updateInfoCallback( BadArguments );
+        this->_updateInfoResultCallback->updateInfoCallback(BadArguments);
         return;
       }
 
-      if ( _updateCrcUrl == QString()){
+      if (this->_updateCrcUrl.isEmpty()) {
         qDebug() << "[ERROR][UpdateInfoGetter][ERROR] Attempt to start(), but no updateCrcUrl set.";
-        this->_updateInfoResultCallback->updateInfoCallback( BadArguments );
+        this->_updateInfoResultCallback->updateInfoCallback(BadArguments);
         return;
       }
 
       if(!this->_downloader || !this->_extractor)
       {
-        this->_updateInfoResultCallback->updateInfoCallback( BadArguments );
+        this->_updateInfoResultCallback->updateInfoCallback(BadArguments);
         return;
       }
 
       if (!this->deleteOldUpdateFiles()) {
-        this->_updateInfoResultCallback->updateInfoCallback( CanNotDeleteOldUpdateFiles );
+        this->_updateInfoResultCallback->updateInfoCallback(CanNotDeleteOldUpdateFiles);
         return;
       }
 
@@ -102,8 +108,10 @@ namespace GGS {
 
     void UpdateInfoGetter::downloadResult(bool isError, GGS::Downloader::DownloadResults error)
     {
-      if(isError) {
-        this->_updateInfoResultCallback->updateInfoCallback( DownloadError );
+      Q_UNUSED(error);
+
+      if (isError) {
+        this->_updateInfoResultCallback->updateInfoCallback(DownloadError);
         return;
       }
 
@@ -125,20 +133,18 @@ namespace GGS {
 
     bool UpdateInfoGetter::deleteOldUpdateFiles()
     {
-      if (!this->deleteFileWithRename(getArchiveFile()) ) {
+      if (!this->deleteFileWithRename(getArchiveFile()))
         return false;
-      }
 
-      if (!this->deleteFileWithRename(getUpdateFile())) {
+      if (!this->deleteFileWithRename(getUpdateFile()))
         return false;
-      }
 
       return true;
     }
 
     bool UpdateInfoGetter::deleteFileWithRename(const QString& filePath)
     {
-      if(!QFile::exists(filePath)) {
+      if (!QFile::exists(filePath)) {
         return true;
       }
 
@@ -151,13 +157,11 @@ namespace GGS {
       int randomValue = qrand() % 900 + 100;
       QString tempFileName = QString("%1.old.%2.old").arg(filePath).arg(randomValue);
 
-      if(QFile::exists(tempFileName) && !QFile::remove(tempFileName)) {
+      if (QFile::exists(tempFileName) && !QFile::remove(tempFileName))
         return false;
-      }
 
-      if(!QFile::rename(filePath, tempFileName)) {
+      if (!QFile::rename(filePath, tempFileName))
         return false;
-      }
 
       return true;
     }
@@ -182,21 +186,21 @@ namespace GGS {
       QFile::remove(filePath);
 
       QDomElement updateFileList = doc.firstChildElement("UpdateFileList");
-      if(updateFileList.isNull()) {
+      if (updateFileList.isNull()) {
         qDebug() << "[DEBUG][UpdateInfoGetter][ERROR] update file list is null.";
         this->_updateInfoResultCallback->updateInfoCallback( XmlContentError );
         return;
       }
 
       QDomElement files = updateFileList.firstChildElement("files");
-      if(files.isNull()) {
+      if (files.isNull()) {
         qDebug() << "[DEBUG][UpdateInfoGetter][ERROR] No xml content child <files>.";
         this->_updateInfoResultCallback->updateInfoCallback( XmlContentError );
         return;
       }
 
       QDomElement fileInfo = files.firstChildElement("file");
-      if(fileInfo.isNull()) {
+      if (fileInfo.isNull()) {
         this->_updateInfoResultCallback->updateInfoCallback( XmlContentError );
         return;
       }
@@ -221,20 +225,20 @@ namespace GGS {
 
         bool convertCheck;
         quint64 rawLength = rawLengthString.toULongLong(&convertCheck);
-        if(!convertCheck) {
+        if (!convertCheck) {
           qDebug() << "[DEBUG][UpdateInfoGetter][ERROR] Xml content no raw length.";
           this->_updateInfoResultCallback->updateInfoCallback( XmlContentError );
           return;
         }
         quint64 archiveLength = archiveLengthString.toULongLong(&convertCheck);
-        if(!convertCheck) {
+        if (!convertCheck) {
           qDebug() << "[DEBUG][UpdateInfoGetter][ERROR] Xml content no archive length.";
           this->_updateInfoResultCallback->updateInfoCallback( XmlContentError );
           return;
         }
 
         bool check;
-        if(QString::compare(checkString, "true") == 0) {
+        if (QString::compare(checkString, "true") == 0) {
           check = true;
         } else if (QString::compare(checkString, "false") == 0) {
           check = false;
@@ -291,7 +295,5 @@ namespace GGS {
     {
       return this->_updateFile;
     }
-
-
   }
 }

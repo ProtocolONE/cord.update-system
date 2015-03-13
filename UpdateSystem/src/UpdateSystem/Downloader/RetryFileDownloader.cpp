@@ -15,17 +15,22 @@ namespace GGS {
   namespace Downloader {
     RetryFileDownloader::RetryFileDownloader(QObject *parrent)
       : QObject(parrent)
-    {
-      this->_maxRetryCount = 0;
-      this->_retryCount = 0;
-      this->_networkError = QNetworkReply::NoError;
-    }
-
-    RetryFileDownloader::~RetryFileDownloader(void)
+      , _maxRetryCount(0)
+      , _retryCount(0)
+      , _networkError(QNetworkReply::NoError)
     {
     }
 
-    void RetryFileDownloader::downloadFile( const QString& url,const QString& filePath )
+    RetryFileDownloader::~RetryFileDownloader()
+    {
+    }
+
+    void RetryFileDownloader::setResultCallback(DownloadResultInterface *result)
+    {
+      this->_resultCallback = result;
+    }
+
+    void RetryFileDownloader::downloadFile(const QString& url,const QString& filePath)
     {
       this->_url = url;
       this->_filePath = filePath;
@@ -34,7 +39,7 @@ namespace GGS {
       this->internalStartDownload();
     }
 
-    void RetryFileDownloader::downloadResult( bool isError, DownloadResults error )
+    void RetryFileDownloader::downloadResult(bool isError, DownloadResults error)
     {
       if(!isError) {
         this->_resultCallback->downloadResult(false, NoError);
@@ -60,9 +65,29 @@ namespace GGS {
       }
     }
 
-    void RetryFileDownloader::downloadProgress( quint64 current, quint64 total )
+    void RetryFileDownloader::downloadProgress(quint64 current, quint64 total)
     {
       this->_resultCallback->downloadProgress(current, total);
+    }
+
+    void RetryFileDownloader::setDownloader(FileDownloaderInterface *downloader)
+    {
+      this->_downloader = downloader;
+    }
+
+    void RetryFileDownloader::setTimeout(RetryTimeoutInterface *timeout)
+    {
+      this->_timeout = timeout;
+    }
+
+    void RetryFileDownloader::setMaxRetry(qint32 maxRetryCount)
+    {
+      this->_maxRetryCount = maxRetryCount;
+    }
+
+    QNetworkReply::NetworkError RetryFileDownloader::getNetworkError()
+    {
+      return this->_networkError;
     }
 
     void RetryFileDownloader::internalStartDownload()
@@ -70,7 +95,7 @@ namespace GGS {
       this->_downloader->downloadFile(this->_url, this->_filePath);
     }
 
-    void RetryFileDownloader::downloadWarning( bool isError, DownloadResults error )
+    void RetryFileDownloader::downloadWarning(bool isError, DownloadResults error)
     {
       this->_resultCallback->downloadWarning(isError, error);
     }

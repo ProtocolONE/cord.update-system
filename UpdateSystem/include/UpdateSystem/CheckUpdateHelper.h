@@ -23,7 +23,7 @@ namespace GGS {
       };
 
       explicit CheckUpdateHelper(QObject *parent = 0);
-      ~CheckUpdateHelper();
+      virtual ~CheckUpdateHelper();
 
       void setUpdateUrl(const QString& updateUrl);
 

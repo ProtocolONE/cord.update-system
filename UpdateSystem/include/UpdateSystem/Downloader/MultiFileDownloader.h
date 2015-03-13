@@ -24,7 +24,7 @@
 
 namespace GGS {
   namespace Downloader {
-    class UPDATESYSTEMSHARED_EXPORT MultiFileDownloader : 
+    class UPDATESYSTEMSHARED_EXPORT MultiFileDownloader :
       public QObject,
       public DownloadResultInterface,
       public MultiFileDownloadInterface
@@ -32,18 +32,14 @@ namespace GGS {
       Q_OBJECT
     public:
       explicit MultiFileDownloader(QObject *parrent = 0);
-      virtual ~MultiFileDownloader(void);
+      virtual ~MultiFileDownloader();
 
-      void setDownloader(FileDownloaderInterface *downloader)  { 
-        this->_downloader = downloader;
-        this->_downloader->setResultCallback(this);
-      }
+      void setDownloader(FileDownloaderInterface *downloader);
 
       //MultiFileDownloadInterface
-      void setResultCallback(MultiFileDownloadResultInterface *resultCallback) { this->_resultCallback = resultCallback; }
+      void setResultCallback(MultiFileDownloadResultInterface *resultCallback);
       void addFile(const QString& url, const QString& targetFilePath);
       void start();
-
 
       // DownloadResultInterface
       virtual void downloadResult( bool isError, DownloadResults error );

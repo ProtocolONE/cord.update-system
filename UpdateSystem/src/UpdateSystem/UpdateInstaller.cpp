@@ -17,33 +17,36 @@ namespace GGS {
     UpdateInstaller::UpdateInstaller(QObject *parrent)
       : QObject(parrent)
     {
-      _updateSubDir = ".";
+      this->_updateSubDir = ".";
     }
 
-    UpdateInstaller::~UpdateInstaller(){
+    UpdateInstaller::~UpdateInstaller()
+    {
     }
 
-    void UpdateInstaller::setUpdateSubDir(const QString& updateSubDir) { 
-      _updateSubDir = updateSubDir; 
+    void UpdateInstaller::setUpdateSubDir(const QString& updateSubDir)
+    {
+      this->_updateSubDir = updateSubDir;
 
-      if (_updateSubDir[_updateSubDir.size()-1] == QChar('/'))        
-        _updateSubDir = QString(_updateSubDir.data(), _updateSubDir.size() - 1); 
+      if (this->_updateSubDir[_updateSubDir.size()-1] == QChar('/'))
+        this->_updateSubDir = QString(_updateSubDir.data(), this->_updateSubDir.size() - 1);
     }
 
-    void UpdateInstaller::setTargetDirectory(const QString& targetDirectory) { 
+    void UpdateInstaller::setTargetDirectory(const QString& targetDirectory)
+    {
       this->_targetDirectory = targetDirectory; 
     }
 
-    void UpdateInstaller::installUpdate( UpdateInfoContainer *changedInfo )
+    void UpdateInstaller::installUpdate(UpdateInfoContainer *changedInfo)
     {
       qDebug() << "UpdateInstaller: Start installing update";
       const QList<UpdateFileInfo* > *changedFiles = changedInfo->getFiles();
-      if ( changedFiles->count() <= 0 ) {
+      if (changedFiles->count() <= 0) {
         emit updateError(noChangeFiles);
         return;
       }
 
-      if (_updateSubDir == "."){
+      if (this->_updateSubDir == ".") {
         qDebug() << "[ERROR][UpdateInstaller] updateSubDir not set.";
       }
 
@@ -59,14 +62,14 @@ namespace GGS {
         QString oldFilePath = this->_targetDirectory;
         oldFilePath.append((*it)->relativePath());
 
-        if( !this->deleteFileWithRename(oldFilePath) ) {
+        if (!this->deleteFileWithRename(oldFilePath)) {
           emit updateError(cannotDeletedFilesWithRename);
           return;
         }
 
         QString cleanPath = QDir::cleanPath(oldFilePath);
         int lastIndex = cleanPath.lastIndexOf('/');
-        if(lastIndex != -1) {
+        if (lastIndex != -1) {
           QString targetDirectory = cleanPath.mid(0, lastIndex + 1);
           QDir targetPath(cleanPath);
           if(!targetPath.exists(targetDirectory)) {
@@ -80,13 +83,11 @@ namespace GGS {
 
     bool UpdateInstaller::deleteFileWithRename( const QString& filePath )
     {
-      if(!QFile::exists(filePath)) {
+      if (!QFile::exists(filePath))
         return true;
-      }
 
-      if (QFile::remove(filePath)) {
+      if (QFile::remove(filePath))
         return true;
-      }
 
       QTime time = QTime::currentTime();
       qsrand((uint)time.msec());
@@ -109,7 +110,7 @@ namespace GGS {
       this->deleteOldFilesInDirectoryRecursive(this->_targetDirectory);
     }
 
-    void UpdateInstaller::deleteOldFilesInDirectoryRecursive( QString& targetDirPath )
+    void UpdateInstaller::deleteOldFilesInDirectoryRecursive(QString& targetDirPath)
     {
       QStringList filters;
       filters << "*.old.*.old";

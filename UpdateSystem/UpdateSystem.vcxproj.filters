@@ -69,12 +69,6 @@
     <ClCompile Include="src\UpdateSystem\Downloader\RetryFileDownloader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Debug\moc_SevenZipExtractor.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc_SevenZipExtractor.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
     <ClCompile Include="src\UpdateSystem\CheckUpdateHelper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -116,6 +110,12 @@
     </ClCompile>
     <ClCompile Include="src\UpdateSystem\Compressor\SevenZipCompressor.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_SevenZipExtractor.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_SevenZipExtractor.cpp">
+      <Filter>Generated Files\Release</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -176,11 +176,13 @@
     <CustomBuild Include="include\UpdateSystem\Downloader\MemoryDownloader.h" />
     <CustomBuild Include="include\UpdateSystem\Downloader\MultiFileDownloader.h" />
     <CustomBuild Include="include\UpdateSystem\Downloader\RetryFileDownloader.h" />
-    <CustomBuild Include="include\UpdateSystem\Extractor\SevenZipExtractor.h" />
     <CustomBuild Include="include\UpdateSystem\CheckUpdateHelper.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="include\UpdateSystem\Compressor\ZevenZipCompressor.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="include\UpdateSystem\Extractor\SevenZipExtractor.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>
