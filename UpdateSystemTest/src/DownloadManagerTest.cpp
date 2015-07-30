@@ -68,9 +68,9 @@ class DownloadManagerResultLamda : public GGS::Downloader::DownloadResultInterfa
 public:
   ~DownloadManagerResultLamda() {}
   DownloadManagerResultLamda() 
-    : _downloadProgressFunction(0)
-    , _downloadResultFunction(0)
-    , _downloadWarningFunction(0)
+    : _downloadProgressFunction(nullptr)
+    , _downloadResultFunction(nullptr)
+    , _downloadWarningFunction(nullptr)
   {}
 
   virtual void downloadResult( bool isError, GGS::Downloader::DownloadResults error ) 

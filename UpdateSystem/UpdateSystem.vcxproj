@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -19,11 +19,13 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120_xp</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120_xp</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -60,6 +62,7 @@
       <AdditionalIncludeDirectories>$(QTDIR)\include\QtCore;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtXml;$(QTDIR)\include;.\include;$(QTDIR)\include\ActiveQt;.\debug;c:\QtSDK\Desktop\Qt\4.7.4\msvc2008\mkspecs\default;.\GeneratedFiles;$(QTDIR)\include\QtDeclarative;$(QTDIR)\include\QtGui;$(VLDDIR)\include;.\;$(QGNACOMMONDIR)\SevenZip\trunk\include;.\include\UpdateSystem\Extractor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories>$(QTDIR)\include\QtCore;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtXml;$(QTDIR)\include;.\include;$(QTDIR)\include\ActiveQt;.\debug;c:\QtSDK\Desktop\Qt\4.7.4\msvc2008\mkspecs\default;.\GeneratedFiles;$(QTDIR)\include\QtDeclarative;$(QTDIR)\include\QtGui;$(VLDDIR)\include;.\;$(QGNACOMMONDIR)\SevenZip\trunk\include;.\include\UpdateSystem\Extractor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories>$(QTDIR)\include;.\include;.\debug;c:\QtSDK\Desktop\Qt\4.7.4\msvc2008\mkspecs\default;.\GeneratedFiles;$(VLDDIR)\include;.\;$(QGNACOMMONDIR)\SevenZip\trunk\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(QTDIR)\include\QtCore;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtXml;$(QTDIR)\include;.\include;$(QTDIR)\include\ActiveQt;.\debug;.\GeneratedFiles;$(QTDIR)\include\QtDeclarative;$(QTDIR)\include\QtGui;$(VLDDIR)\include;.\;$(QGNACOMMONDIR)\SevenZip\1.0.vs13\include;.\include\UpdateSystem\Extractor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>debug\</AssemblerListingLocation>
       <BufferSecurityCheck>false</BufferSecurityCheck>
@@ -82,14 +85,14 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>Qt5Xmld.lib;Qt5Networkd.lib;Qt5Cored.lib;Qt5Declaratived.lib;Qt5Guid.lib;SevenZip++d.lib;Qt5AxBase.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;c:\QtSDK\Desktop\Qt\4.7.4\msvc2008\lib;$(VLDDIR)\lib\Win32\;$(QGNACOMMONDIR)\SevenZip\trunk\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(VLDDIR)\lib\Win32\;$(QGNACOMMONDIR)\SevenZip\1.0.vs13\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <LinkTimeCodeGeneration>
       </LinkTimeCodeGeneration>
       <OutputFile>$(TargetPath)</OutputFile>
       <ProgramDatabaseFile>
       </ProgramDatabaseFile>
-      <SubSystem>NotSet</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <ShowProgress>NotSet</ShowProgress>
     </Link>
@@ -127,6 +130,7 @@ EXIT /B 1
       <AdditionalIncludeDirectories>$(QTDIR)\include\QtCore;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtXml;$(QTDIR)\include;.\include;$(QTDIR)\include\ActiveQt;.\release;c:\QtSDK\Desktop\Qt\4.7.4\msvc2008\mkspecs\default;.\GeneratedFiles;$(QTDIR)\include\QtDeclarative;$(QTDIR)\include\QtGui;.\;$(QGNACOMMONDIR)\SevenZip\trunk\include;.\include\UpdateSystem\Extractor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories>$(QTDIR)\include\QtCore;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtXml;$(QTDIR)\include;.\include;$(QTDIR)\include\ActiveQt;.\release;c:\QtSDK\Desktop\Qt\4.7.4\msvc2008\mkspecs\default;.\GeneratedFiles;$(QTDIR)\include\QtDeclarative;$(QTDIR)\include\QtGui;.\;$(QGNACOMMONDIR)\SevenZip\trunk\include;.\include\UpdateSystem\Extractor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories>$(QTDIR)\include;.\include;.\release;c:\QtSDK\Desktop\Qt\4.7.4\msvc2008\mkspecs\default;.\GeneratedFiles;.\;$(QGNACOMMONDIR)\SevenZip\trunk\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(QTDIR)\include\QtCore;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtXml;$(QTDIR)\include;.\include;$(QTDIR)\include\ActiveQt;.\release;.\GeneratedFiles;$(QTDIR)\include\QtDeclarative;$(QTDIR)\include\QtGui;.\;$(QGNACOMMONDIR)\SevenZip\1.0.vs13\include;.\include\UpdateSystem\Extractor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>release\</AssemblerListingLocation>
       <BufferSecurityCheck>false</BufferSecurityCheck>
@@ -150,14 +154,14 @@ EXIT /B 1
     </ClCompile>
     <Link>
       <AdditionalDependencies>Qt5Xml.lib;Qt5Network.lib;Qt5Core.lib;Qt5Declarative.lib;Qt5Gui.lib;SevenZip++.lib;Qt5AxBase.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;c:\QtSDK\Desktop\Qt\4.7.4\msvc2008\lib;$(VLDDIR)\lib\Win32\;$(QGNACOMMONDIR)\SevenZip\trunk\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(VLDDIR)\lib\Win32\;$(QGNACOMMONDIR)\SevenZip\1.0.vs13\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <LinkTimeCodeGeneration>
       </LinkTimeCodeGeneration>
       <OutputFile>$(TargetPath)</OutputFile>
       <ProgramDatabaseFile>
       </ProgramDatabaseFile>
-      <SubSystem>NotSet</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Link>
     <Midl>
