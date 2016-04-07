@@ -9,12 +9,20 @@
 ****************************************************************************/
 
 #include <UpdateSystem/Downloader/downloadmanager.h>
+#include <UpdateSystem/Hasher/Md5FileHasher>
 
 #include <QtCore/QDateTime>
 #include <QtCore/QUrlQuery>
+#include <QtCore/QUuid>
+#include <QtCore/QCryptographicHash>
+
+#include <QtNetwork/QSslError>
 
 namespace GGS {
   namespace Downloader {
+    using GGS::Hasher::Md5FileHasher;
+
+    const QByteArray salt("uvG4A1CG2FiDBATvVIyQukWVPq70nVbL");
 
     DownloadManager::~DownloadManager() 
     {
@@ -44,33 +52,53 @@ namespace GGS {
       query.addQueryItem(QString::number(qrand()), QString::number(QDateTime::currentMSecsSinceEpoch()));
       uri.setQuery(query);
       
-      QString cleanPath = QDir::cleanPath(filePath);
-      int lastIndex = cleanPath.lastIndexOf('/');
+      this->_filePath = QDir::cleanPath(filePath);
+      
+      int lastIndex = this->_filePath.lastIndexOf('/');
       if(lastIndex != -1) {
-        QString targetDirectory = cleanPath.mid(0, lastIndex + 1);
-        QDir targetPath(cleanPath);
+        QString targetDirectory = this->_filePath.mid(0, lastIndex + 1);
+        QDir targetPath(this->_filePath);
         if(!targetPath.exists(targetDirectory)) {
           targetPath.mkpath(targetDirectory);
         }
       }
 
-      this->_file = new QFile(cleanPath);
+      this->_file = new QFile(this->_filePath);
       if(!this->_file->open(QIODevice::WriteOnly)) {
         delete this->_file;
         this->_resultCallback->downloadResult(true, CanNotOpenTargetFile);
         return;
       }
-
+            
       this->_isResultCallbackCalled = false;
       this->_networkError = QNetworkReply::NoError;
-      this->_reply = this->_manager->get(QNetworkRequest(uri));
 
-      QObject::connect(this->_reply, &QNetworkReply::readyRead, this, &DownloadManager::slotReadyRead);
-      QObject::connect(this->_reply, &QNetworkReply::downloadProgress, this, &DownloadManager::slotDownloadProgress);
-      QObject::connect(this->_reply, &QNetworkReply::finished, this, &DownloadManager::slotReplyDownloadFinished);
-      QObject::connect(
+      QNetworkRequest request(uri);
+      if (uri.scheme() == "https") {
+        this->_requestSalt = QCryptographicHash::hash(QUuid::createUuid().toByteArray(), QCryptographicHash::Md5).toHex();
+        request.setRawHeader("Content-MD5", this->_requestSalt.toBase64());
+      } else {
+        this->_requestSalt.clear();
+      }
+      
+      QList<QSslError> expectedSslErrors;
+      expectedSslErrors.append(QSslError(QSslError::CertificateExpired));
+
+      this->_reply = this->_manager->get(request);
+      this->_reply->ignoreSslErrors(expectedSslErrors);
+
+      connect(this->_reply, &QNetworkReply::readyRead, this, &DownloadManager::slotReadyRead);
+      connect(this->_reply, &QNetworkReply::downloadProgress, this, &DownloadManager::slotDownloadProgress);
+      connect(this->_reply, &QNetworkReply::finished, this, &DownloadManager::slotReplyDownloadFinished);
+      connect(
         this->_reply, static_cast<void (QNetworkReply::*)(QNetworkReply::NetworkError)>(&QNetworkReply::error), 
         this, &DownloadManager::slotError);
+
+      connect(this->_reply, &QNetworkReply::sslErrors, [=](QList<QSslError> errors) {
+        foreach(auto error, errors) {
+            qDebug() << "SSL error: " << error;
+        }
+      });
     }
 
     void DownloadManager::slotDownloadProgress(qint64 recieved, qint64 total)
@@ -106,13 +134,41 @@ namespace GGS {
 
       this->_reply->deleteLater();
 
-      if (!this->_isResultCallbackCalled) {
-        this->_isResultCallbackCalled = true;
-        if(statusCodeV == 200)
-          this->_resultCallback->downloadResult(false, NoError);
-        else
-          this->_resultCallback->downloadResult(true, NetworkErrok);
+      if (this->_isResultCallbackCalled)
+        return;
+
+      this->_isResultCallbackCalled = true;
+      if (statusCodeV != 200) {
+        this->_resultCallback->downloadResult(true, NetworkErrok);
+        return;
       }
+
+      if (0 == this->_requestSalt.length()) {
+        this->_resultCallback->downloadResult(false, NoError);
+        return;
+      }
+
+      if (!reply2->hasRawHeader("Content-MD5")) {
+        this->_resultCallback->downloadResult(true, NetworkErrok);
+        return;
+      }
+
+      QString checkMd5 = QString(QByteArray::fromBase64(reply2->rawHeader("Content-MD5")));
+
+      Md5FileHasher hasher;
+      QString hash = hasher.getFileHash(this->_filePath);
+
+      this->_requestSalt.append(salt);
+      this->_requestSalt.append(hash);
+      
+      QString realMd5 = QString(QCryptographicHash::hash(this->_requestSalt, QCryptographicHash::Md5).toHex());
+
+      if (checkMd5 != realMd5) {
+        this->_resultCallback->downloadResult(true, NetworkErrok);
+        return;
+      }
+      
+      this->_resultCallback->downloadResult(false, NoError);
     }
 
     void DownloadManager::slotError(QNetworkReply::NetworkError error)

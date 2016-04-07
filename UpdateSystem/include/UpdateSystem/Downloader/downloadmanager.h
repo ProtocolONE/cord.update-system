@@ -52,6 +52,8 @@ namespace GGS {
       QNetworkAccessManager *_manager;
       QPointer<QFile> _file;
       QNetworkReply *_reply;
+      QString _filePath;
+      QByteArray _requestSalt;
 
       QNetworkReply::NetworkError _networkError;
       DownloadResultInterface *_resultCallback;
