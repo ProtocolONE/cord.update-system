@@ -1,5 +1,4 @@
-#ifndef _GGS_TEST_UPDATE_MANAGER_TEST_WORKER_H_
-#define _GGS_TEST_UPDATE_MANAGER_TEST_WORKER_H_
+#pragma once
 
 #include <UpdateSystem/updatemanager.h>
 #include <UpdateSystem/UpdateInfoGetterInterface.h>
@@ -20,9 +19,7 @@ public:
   UpdateManagerTestWorker(QObject *parrent = 0);
   virtual ~UpdateManagerTestWorker(void);
 
-  GGS::UpdateSystem::UpdateManager *_target;
+  P1::UpdateSystem::UpdateManager *_target;
 public slots:
   void doSimpleTest();
 };
-
-#endif // _GGS_TEST_UPDATE_MANAGER_TEST_WORKER_H_

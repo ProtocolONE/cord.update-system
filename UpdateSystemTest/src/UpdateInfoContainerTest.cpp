@@ -1,7 +1,7 @@
 #include <UpdateSystem/UpdateFileInfo.h>
 #include <UpdateSystem/UpdateInfoContainer.h>
 
-#include "gtest\gtest.h"
+#include <gtest/gtest.h>
 
 #include "MemoryLeaksChecker.h"
 #include <QtCore/QDebug>
@@ -32,8 +32,8 @@ private:
 
 TEST_F(UpdateInfoContainerTest, ConstructorTest) 
 {
-  using GGS::UpdateSystem::UpdateFileInfo;
-  using GGS::UpdateSystem::UpdateInfoContainer;
+  using P1::UpdateSystem::UpdateFileInfo;
+  using P1::UpdateSystem::UpdateInfoContainer;
 
   QString longhash1("123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123");
   QString path1("123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123");

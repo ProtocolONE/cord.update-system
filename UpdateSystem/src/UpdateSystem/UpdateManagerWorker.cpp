@@ -1,19 +1,9 @@
-/****************************************************************************
-** This file is a part of Syncopate Limited GameNet Application or it parts.
-**
-** Copyright (©) 2011 - 2012, Syncopate Limited and/or affiliates.
-** All rights reserved.
-**
-** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
-** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-****************************************************************************/
-
 #include <UpdateSystem/UpdateManagerWorker.h>
 
 #include <QtCore/QDebug>
 #include <QtCore/QThread>
 
-namespace GGS {
+namespace P1 {
   namespace UpdateSystem {
 
     const QString updateSubDir = "update";
@@ -22,37 +12,37 @@ namespace GGS {
     UpdateManagerWorker::UpdateManagerWorker(QObject * parrent)
       : QObject(parrent)
     {
-      this->_updateInfoGetter = new GGS::UpdateSystem::UpdateInfoGetter(this);
+      this->_updateInfoGetter = new P1::UpdateSystem::UpdateInfoGetter(this);
 
-      this->_extractor = new GGS::Extractor::SevenZipExtactor();
+      this->_extractor = new P1::Extractor::SevenZipExtactor();
       this->_updateInfoGetter->setExtractor(this->_extractor);
 
-      GGS::Downloader::DynamicRetryTimeout* dynamicRetryTimeout = new GGS::Downloader::DynamicRetryTimeout(this);
+      P1::Downloader::DynamicRetryTimeout* dynamicRetryTimeout = new P1::Downloader::DynamicRetryTimeout(this);
       *dynamicRetryTimeout << 5000 << 10000 << 15000 << 30000;
 
-      GGS::Downloader::RetryFileDownloader* retryDownloader = new GGS::Downloader::RetryFileDownloader(this);
-      retryDownloader->setMaxRetry(GGS::Downloader::DynamicRetryTimeout::InfinityRetryCount);
+      P1::Downloader::RetryFileDownloader* retryDownloader = new P1::Downloader::RetryFileDownloader(this);
+      retryDownloader->setMaxRetry(P1::Downloader::DynamicRetryTimeout::InfinityRetryCount);
       retryDownloader->setTimeout(dynamicRetryTimeout);
 
-      GGS::Downloader::DownloadManager* downloader = new GGS::Downloader::DownloadManager(this);
+      P1::Downloader::DownloadManager* downloader = new P1::Downloader::DownloadManager(this);
       retryDownloader->setDownloader(downloader);
 
       this->_updateInfoGetter->setDownloader(retryDownloader);
 
-      GGS::Downloader::RetryFileDownloader* retryDownloader2 = new GGS::Downloader::RetryFileDownloader(this);
-      retryDownloader2->setMaxRetry(GGS::Downloader::DynamicRetryTimeout::InfinityRetryCount);
+      P1::Downloader::RetryFileDownloader* retryDownloader2 = new P1::Downloader::RetryFileDownloader(this);
+      retryDownloader2->setMaxRetry(P1::Downloader::DynamicRetryTimeout::InfinityRetryCount);
       retryDownloader2->setTimeout(dynamicRetryTimeout);
 
-      GGS::Downloader::DownloadManager* downloader2 = new GGS::Downloader::DownloadManager(this);
+      P1::Downloader::DownloadManager* downloader2 = new P1::Downloader::DownloadManager(this);
       retryDownloader2->setDownloader(downloader2);
 
-      GGS::Downloader::MultiFileDownloader* multi = new GGS::Downloader::MultiFileDownloader(this);
+      P1::Downloader::MultiFileDownloader* multi = new P1::Downloader::MultiFileDownloader(this);
       multi->setDownloader(retryDownloader2);
-      GGS::Downloader::MultiFileDownloaderWithExtracter* multiExtractor = new GGS::Downloader::MultiFileDownloaderWithExtracter(this);
+      P1::Downloader::MultiFileDownloaderWithExtracter* multiExtractor = new P1::Downloader::MultiFileDownloaderWithExtracter(this);
       multiExtractor->setExtractor(this->_extractor);
       multiExtractor->setMultiDownloader(multi);
 
-      GGS::Hasher::Md5FileHasher* hasher = new GGS::Hasher::Md5FileHasher(this);
+      P1::Hasher::Md5FileHasher* hasher = new P1::Hasher::Md5FileHasher(this);
 
       this->_manager = new UpdateManager(this);
       this->_manager->setUpdateInfoGetter(this->_updateInfoGetter);
@@ -92,7 +82,7 @@ namespace GGS {
       connect(this, &UpdateManagerWorker::installUpdates,
         this->_manager, &UpdateManager::installUpdates);
 
-      connect(retryDownloader, &GGS::Downloader::RetryFileDownloader::downloadRetryNumber,
+      connect(retryDownloader, &P1::Downloader::RetryFileDownloader::downloadRetryNumber,
         this, &UpdateManagerWorker::downloadRetryNumber);
     }
 

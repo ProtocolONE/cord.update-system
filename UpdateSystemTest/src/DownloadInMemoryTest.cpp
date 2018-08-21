@@ -1,4 +1,4 @@
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 
 #include <QtCore/QThread>
 
@@ -35,8 +35,8 @@ private:
 
 TEST_F(DownloadInMemoryTest, test1)
 {
-  using GGS::Downloader::DownloadInMemoryInterface;
-  using GGS::Downloader::MemoryDownloader;
+  using P1::Downloader::DownloadInMemoryInterface;
+  using P1::Downloader::MemoryDownloader;
   
   QThread *thread = new QThread();
   DownloadInMemoryTestWorker * worker = new DownloadInMemoryTestWorker();
@@ -61,8 +61,8 @@ TEST_F(DownloadInMemoryTest, test1)
 
 TEST_F(DownloadInMemoryTest, test2)
 {
-  using GGS::Downloader::DownloadInMemoryInterface;
-  using GGS::Downloader::MemoryDownloader;
+  using P1::Downloader::DownloadInMemoryInterface;
+  using P1::Downloader::MemoryDownloader;
 
   QThread *thread = new QThread();
   DownloadInMemoryTestWorker * worker = new DownloadInMemoryTestWorker();

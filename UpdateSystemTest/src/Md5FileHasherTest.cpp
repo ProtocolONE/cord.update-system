@@ -1,6 +1,6 @@
 #include <UpdateSystem/Hasher/Md5FileHasher.h>
 
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 #include "MemoryLeaksChecker.h"
 
 #include <QtCore/QCoreApplication>
@@ -36,7 +36,7 @@ public:
 
   QString getHashString(const QString& name)
   {
-    GGS::Hasher::Md5FileHasher hasher;
+    P1::Hasher::Md5FileHasher hasher;
     QString file = this->fixture;
     file.append(name);
     return hasher.getFileHash(file);

@@ -1,4 +1,4 @@
-﻿#include "gtest/gtest.h"
+﻿#include <gtest/gtest.h>
 
 #include <QtWidgets/QApplication>
 #include <QtCore/QString>
@@ -61,29 +61,29 @@ TEST(SevenZipExtractor, ExtractTest)
   QString normalArchive = fixturePath;
   normalArchive.append("1_update.crc.7z");
 
-  GGS::Extractor::SevenZipExtactor *extractor = new GGS::Extractor::SevenZipExtactor();
-  GGS::Extractor::ExtractorInterface *iextractor = static_cast<GGS::Extractor::ExtractorInterface *>(extractor);
-  GGS::Extractor::ExtractionResult result = iextractor->extract(normalArchive, workingPath);
+  P1::Extractor::SevenZipExtactor *extractor = new P1::Extractor::SevenZipExtactor();
+  P1::Extractor::ExtractorInterface *iextractor = static_cast<P1::Extractor::ExtractorInterface *>(extractor);
+  P1::Extractor::ExtractionResult result = iextractor->extract(normalArchive, workingPath);
 
-  ASSERT_EQ(GGS::Extractor::NoError, result);
+  ASSERT_EQ(P1::Extractor::NoError, result);
 
   result = iextractor->extract(normalArchive, workingPath);
-  ASSERT_EQ(GGS::Extractor::NoError, result);
+  ASSERT_EQ(P1::Extractor::NoError, result);
 
   QString notExistingArchive = rootDirPath;
   notExistingArchive.append("some_fake_archive.7z");
   result = iextractor->extract(notExistingArchive, workingPath);
-  ASSERT_EQ(GGS::Extractor::NoArchive, result);
+  ASSERT_EQ(P1::Extractor::NoArchive, result);
 
   QString badArchive = fixturePath;
   badArchive.append("test.txt");
   result = iextractor->extract(badArchive, workingPath);
-  ASSERT_EQ(GGS::Extractor::BadArchive, result);
+  ASSERT_EQ(P1::Extractor::BadArchive, result);
 
   QString badArchive2 = fixturePath;
   badArchive2.append("currupted_test.txt.7z");
   result = iextractor->extract(badArchive2, workingPath);
-  ASSERT_EQ(GGS::Extractor::BadArchive, result);
+  ASSERT_EQ(P1::Extractor::BadArchive, result);
 
   delete extractor;
 

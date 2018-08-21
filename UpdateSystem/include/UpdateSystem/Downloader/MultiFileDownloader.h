@@ -1,15 +1,4 @@
-/****************************************************************************
-** This file is a part of Syncopate Limited GameNet Application or it parts.
-**
-** Copyright (©) 2011 - 2012, Syncopate Limited and/or affiliates.
-** All rights reserved.
-**
-** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
-** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-****************************************************************************/
-
-#ifndef _GGS_UPDATESYSTEM_DOWNLOADER_MULTIFILEDOWNLOADER_H_
-#define _GGS_UPDATESYSTEM_DOWNLOADER_MULTIFILEDOWNLOADER_H_
+#pragma once
 
 #include <UpdateSystem/UpdateSystem_global.h>
 #include <UpdateSystem/Downloader/filedownloaderinterface.h>
@@ -22,7 +11,7 @@
 #include <QtCore/QString>
 #include <QtCore/QDir>
 
-namespace GGS {
+namespace P1 {
   namespace Downloader {
     class UPDATESYSTEMSHARED_EXPORT MultiFileDownloader :
       public QObject,
@@ -64,4 +53,3 @@ namespace GGS {
     };
   }
 }
-#endif // _GGS_UPDATESYSTEM_DOWNLOADER_MULTIFILEDOWNLOADER_H_

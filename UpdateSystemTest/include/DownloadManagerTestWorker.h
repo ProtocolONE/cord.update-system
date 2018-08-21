@@ -1,6 +1,4 @@
-#ifndef _GGS_DOWNLOAD_MANAGE_TEST_WORKER_H_
-#define _GGS_DOWNLOAD_MANAGE_TEST_WORKER_H_
-
+#pragma once
 
 #include <QtCore/QObject>
 #include <QtCore/QCoreApplication>
@@ -16,15 +14,13 @@ public:
   DownloadManagerTestWorker(void);
   ~DownloadManagerTestWorker(void);
 
-  void setResultCallback(GGS::Downloader::DownloadResultInterface *result) { this->_resultCallback = result; }
+  void setResultCallback(P1::Downloader::DownloadResultInterface *result) { this->_resultCallback = result; }
 
 public slots:
   void downloadUpdateCrcTest(const QString& uri, const QString& path);
 
 private:
-  GGS::Downloader::DownloadResultInterface *_resultCallback;
-  GGS::Downloader::DownloadManager *_manager;
+  P1::Downloader::DownloadResultInterface *_resultCallback;
+  P1::Downloader::DownloadManager *_manager;
 
 };
-
-#endif // _GGS_DOWNLOAD_MANAGE_TEST_WORKER_H_

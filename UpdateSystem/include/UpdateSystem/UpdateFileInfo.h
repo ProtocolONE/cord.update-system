@@ -1,22 +1,11 @@
-/****************************************************************************
-** This file is a part of Syncopate Limited GameNet Application or it parts.
-**
-** Copyright (©) 2011 - 2012, Syncopate Limited and/or affiliates.
-** All rights reserved.
-**
-** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
-** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-****************************************************************************/
+#pragma once
 
-#ifndef _GGS_UPDATESYSTEM_UPDATEFILEINFO_H_
-#define _GGS_UPDATESYSTEM_UPDATEFILEINFO_H_
-
-#include "UpdateSystem_global.h"
+#include <UpdateSystem/UpdateSystem_global.h>
 #include <QtCore/QString>
 #include <QtCore/QObject>
 #include <QtCore/QMetaType>
 
-namespace GGS 
+namespace P1 
 {
   namespace UpdateSystem
   {
@@ -58,6 +47,4 @@ namespace GGS
   }
 }
 
-Q_DECLARE_METATYPE(GGS::UpdateSystem::UpdateFileInfo);
-
-#endif // _GGS_UPDATESYSTEM_UPDATEFILEINFO_H_
+Q_DECLARE_METATYPE(P1::UpdateSystem::UpdateFileInfo);

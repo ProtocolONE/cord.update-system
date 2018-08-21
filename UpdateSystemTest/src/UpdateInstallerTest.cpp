@@ -1,4 +1,4 @@
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 #include "MemoryLeaksChecker.h"
 
 #include <QtCore/QString>
@@ -93,7 +93,7 @@ TEST_F(UpdateInstallerTest, removeOldFilesTest)
   //targetDir.setNameFilters(filters);
   //QFileInfoList list = targetDir.entryInfoList();
 
-  GGS::UpdateSystem::UpdateInstaller installer;
+  P1::UpdateSystem::UpdateInstaller installer;
   installer.setTargetDirectory(this->workingDir);
   installer.clearOldFiles();
   ASSERT_FALSE(QFile::exists(ff1));

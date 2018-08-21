@@ -1,20 +1,19 @@
-#ifndef _GGS_UPDATESYSTEM_CHECKUPDATEHELPER_H_
-#define _GGS_UPDATESYSTEM_CHECKUPDATEHELPER_H_
+#pragma once
 
-#include <UpdateSystem/UpdateSystem_global>
+#include <UpdateSystem/UpdateSystem_global.h>
 
 #include <QtCore/QObject>
 #include <QtCore/QString>
 #include <QtCore/QMetaType>
 #include <QtNetwork/QNetworkReply>
 
-namespace GGS {
+namespace P1 {
   namespace UpdateSystem {
 
     class UPDATESYSTEMSHARED_EXPORT CheckUpdateHelper : public QObject
     {
       Q_OBJECT
-      Q_ENUMS(GGS::UpdateSystem::CheckUpdateHelper::Results)
+      Q_ENUMS(P1::UpdateSystem::CheckUpdateHelper::Results)
     public:
       enum Results {
         NotFound = 0,
@@ -31,7 +30,7 @@ namespace GGS {
       void checkUpdate();
 
     signals:
-      void finished(GGS::UpdateSystem::CheckUpdateHelper::Results result);
+      void finished(P1::UpdateSystem::CheckUpdateHelper::Results result);
 
     private slots:
       void slotReplyDownloadFinished();
@@ -46,5 +45,4 @@ namespace GGS {
   }
 }
 
-Q_DECLARE_METATYPE(GGS::UpdateSystem::CheckUpdateHelper::Results);
-#endif // _GGS_UPDATESYSTEM_CHECKUPDATEHELPER_H_
+Q_DECLARE_METATYPE(P1::UpdateSystem::CheckUpdateHelper::Results);

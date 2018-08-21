@@ -3,7 +3,7 @@
 #include <QtCore/QDebug>
 #define CRITICAL_LOG qCritical() << __FILE__ << __LINE__ << __FUNCTION__
 
-namespace GGS {
+namespace P1 {
   namespace UpdateSystem {
 
     CheckUpdateHelper::CheckUpdateHelper(QObject *parent)

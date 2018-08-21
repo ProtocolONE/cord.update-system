@@ -1,18 +1,8 @@
-/****************************************************************************
-** This file is a part of Syncopate Limited GameNet Application or it parts.
-**
-** Copyright (©) 2011 - 2012, Syncopate Limited and/or affiliates.
-** All rights reserved.
-**
-** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
-** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-****************************************************************************/
-
 #include <UpdateSystem/updatemanager.h>
 #include <QtCore/QDebug>
 #include <windows.h>
 
-namespace GGS { 
+namespace P1 { 
   namespace UpdateSystem {
     UpdateManager::UpdateManager(QObject *parrent)
       : QObject(parrent)
@@ -55,7 +45,7 @@ namespace GGS {
       this->_updateInfoGetter->setResultCallback(this);
     }
 
-    void UpdateManager::setMultiDownloader(GGS::Downloader::MultiFileDownloadInterface *multidownloader) { 
+    void UpdateManager::setMultiDownloader(P1::Downloader::MultiFileDownloadInterface *multidownloader) { 
       this->_multiDownloader = multidownloader; 
       this->_multiDownloader->setResultCallback(this);
     }
@@ -163,12 +153,12 @@ namespace GGS {
       emit this->fileDownloadString(filePath);
     }
 
-    void UpdateManager::downloadResult(bool isError, GGS::Downloader::DownloadResults error)
+    void UpdateManager::downloadResult(bool isError, P1::Downloader::DownloadResults error)
     {
       Q_UNUSED(isError);
       emit updatesFound();
 
-      if (error != GGS::Downloader::NoError)
+      if (error != P1::Downloader::NoError)
         emit this->downloadError(error);
     }
 
@@ -187,7 +177,7 @@ namespace GGS {
       emit this->downloadUpdateProgress(downloadSize, this->_totalUpdateSize);
     }
 
-    void UpdateManager::downloadWarning(bool isError, GGS::Downloader::DownloadResults error)
+    void UpdateManager::downloadWarning(bool isError, P1::Downloader::DownloadResults error)
     {
       Q_UNUSED(isError);
       emit this->downloadUpdateWarning(error);
@@ -203,7 +193,7 @@ namespace GGS {
       this->_updateBaseUrl = baseUrl;
     }
 
-    void UpdateManager::setFileHasher(GGS::Hasher::FileHashInterface *fileHasher)
+    void UpdateManager::setFileHasher(P1::Hasher::FileHashInterface *fileHasher)
     {
       this->_fileHasher = fileHasher;
     }

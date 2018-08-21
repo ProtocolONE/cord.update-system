@@ -1,5 +1,5 @@
 
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 #include "MemoryLeaksChecker.h"
 
 #include <UpdateSystem/Downloader/DownloadResultInterface.h>
@@ -30,12 +30,12 @@ private:
   MemoryLeaksChecker leakChecker;
 };
 
-class MockFailDownloader : public GGS::Downloader::FileDownloaderInterface {
+class MockFailDownloader : public P1::Downloader::FileDownloaderInterface {
 public:
   MockFailDownloader() { this->_failCount = 0; this->_retryCount = 0; }
   ~MockFailDownloader() {}
 
-  virtual void setResultCallback( GGS::Downloader::DownloadResultInterface *result ) 
+  virtual void setResultCallback( P1::Downloader::DownloadResultInterface *result ) 
   {
     this->_resultCallback = result;
   }
@@ -43,16 +43,16 @@ public:
   virtual void downloadFile( const QString& url,const QString& filePath ) 
   {
     if(this->_failCount <= 0) {
-      this->_resultCallback->downloadResult(false, GGS::Downloader::NoError);
+      this->_resultCallback->downloadResult(false, P1::Downloader::NoError);
       return;
     }
 
     this->_retryCount++;
     if(this->_retryCount <= this->_failCount) {
       this->_networkError = QNetworkReply::UnknownNetworkError;
-      this->_resultCallback->downloadResult(true, GGS::Downloader::NetworkErrok);
+      this->_resultCallback->downloadResult(true, P1::Downloader::NetworkErrok);
     } else {
-      this->_resultCallback->downloadResult(false, GGS::Downloader::NoError);
+      this->_resultCallback->downloadResult(false, P1::Downloader::NoError);
     }
   }
 
@@ -64,24 +64,24 @@ private:
   int _failCount;
   int _retryCount;
   QHash<QString, QString> _fakeFiles;
-  GGS::Downloader::DownloadResultInterface *_resultCallback;
+  P1::Downloader::DownloadResultInterface *_resultCallback;
   QNetworkReply::NetworkError _networkError;
 };
 
-class MockFailDownloadResultCallback : public GGS::Downloader::DownloadResultInterface
+class MockFailDownloadResultCallback : public P1::Downloader::DownloadResultInterface
 {
 public:
   MockFailDownloadResultCallback() 
   : _resultCount(0)
   , _warningCount(0)
-  , _lastError(GGS::Downloader::NoError)
-  , _lastWarning(GGS::Downloader::NoError)
+  , _lastError(P1::Downloader::NoError)
+  , _lastWarning(P1::Downloader::NoError)
   { 
   }
 
   ~MockFailDownloadResultCallback() {}
 
-  virtual void downloadResult( bool isError, GGS::Downloader::DownloadResults error ) 
+  virtual void downloadResult( bool isError, P1::Downloader::DownloadResults error ) 
   {
     this->_resultCount++;
     this->_lastError = error;
@@ -91,7 +91,7 @@ public:
   {
   }
 
-  virtual void downloadWarning( bool isError, GGS::Downloader::DownloadResults error ) 
+  virtual void downloadWarning( bool isError, P1::Downloader::DownloadResults error ) 
   {
     this->_warningCount++;
     this->_lastWarning = error;
@@ -99,15 +99,15 @@ public:
 
   int _resultCount;
   int _warningCount;
-  GGS::Downloader::DownloadResults _lastError;
-  GGS::Downloader::DownloadResults _lastWarning;
+  P1::Downloader::DownloadResults _lastError;
+  P1::Downloader::DownloadResults _lastWarning;
 };
 
 TEST_F(RetryFileDownloaderTest, NormalTest)
 {
-  GGS::Downloader::RetryFileDownloader target;
+  P1::Downloader::RetryFileDownloader target;
   MockFailDownloadResultCallback retryResult;
-  GGS::Downloader::DynamicRetryTimeout timeout;
+  P1::Downloader::DynamicRetryTimeout timeout;
   MockFailDownloader downloader;
   downloader.setFailCountBeforeGood(0);
   
@@ -124,9 +124,9 @@ TEST_F(RetryFileDownloaderTest, NormalTest)
 
 TEST_F(RetryFileDownloaderTest, SingleFailThenGood)
 {
-  GGS::Downloader::RetryFileDownloader target;
+  P1::Downloader::RetryFileDownloader target;
   MockFailDownloadResultCallback retryResult;
-  GGS::Downloader::DynamicRetryTimeout timeout;
+  P1::Downloader::DynamicRetryTimeout timeout;
   MockFailDownloader downloader;
   downloader.setFailCountBeforeGood(3);
 
@@ -145,9 +145,9 @@ TEST_F(RetryFileDownloaderTest, SingleFailThenGood)
 
 TEST_F(RetryFileDownloaderTest, FailSingleTry)
 {
-  GGS::Downloader::RetryFileDownloader target;
+  P1::Downloader::RetryFileDownloader target;
   MockFailDownloadResultCallback retryResult;
-  GGS::Downloader::DynamicRetryTimeout timeout;
+  P1::Downloader::DynamicRetryTimeout timeout;
   MockFailDownloader downloader;
   downloader.setFailCountBeforeGood(5);
 
@@ -159,7 +159,7 @@ TEST_F(RetryFileDownloaderTest, FailSingleTry)
 
   target.downloadFile(QString("qwe"), QString("asd"));
 
-  ASSERT_EQ(GGS::Downloader::NetworkErrok, retryResult._lastError);
+  ASSERT_EQ(P1::Downloader::NetworkErrok, retryResult._lastError);
   ASSERT_EQ(1, retryResult._resultCount);
   ASSERT_EQ(1, retryResult._warningCount);
 }

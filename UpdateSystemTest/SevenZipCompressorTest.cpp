@@ -1,4 +1,4 @@
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 
 #include <QtWidgets/QApplication>
 #include <QtCore/QString>
@@ -12,15 +12,15 @@
 #include <UpdateSystem/Hasher/Md5FileHasher.h>
 
 #define assertFileEqual(f1, f2) { \
-  GGS::Hasher::Md5FileHasher hasher; \
+  P1::Hasher::Md5FileHasher hasher; \
   ASSERT_EQ(hasher.getFileHash(f1), hasher.getFileHash(f2)); \
 }
 bool RemoveDirectoryFull(QDir &aDir);
 
 TEST(SevenZipCompressor, CompressorTest) 
 {
-  GGS::Compressor::SevenZipCompressor comp;
-  comp.setCompressionLevel(GGS::Compressor::SevenZipCompressor::Low);
+  P1::Compressor::SevenZipCompressor comp;
+  comp.setCompressionLevel(P1::Compressor::SevenZipCompressor::Low);
 
   QString rootDirPath = QApplication::applicationDirPath();
   QString fixturePath = rootDirPath;
@@ -42,7 +42,7 @@ TEST(SevenZipCompressor, CompressorTest)
 
   comp.compressFile(fullSourcePath, targetPath);
   ASSERT_TRUE(QFile::exists(targetPath));
-  assertFileEqual(expectedTarget, targetPath);
+  assertFileEqual(expectedTarget, targetPath); // UNDONE comressor changed and test failed.
 }
 
 

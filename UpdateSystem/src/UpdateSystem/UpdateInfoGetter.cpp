@@ -1,18 +1,8 @@
-/****************************************************************************
-** This file is a part of Syncopate Limited GameNet Application or it parts.
-**
-** Copyright (©) 2011 - 2012, Syncopate Limited and/or affiliates.
-** All rights reserved.
-**
-** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
-** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-****************************************************************************/
-
 #include <UpdateSystem/UpdateInfoGetter.h>
 
 #include <QtCore/QDebug>
 
-namespace GGS {
+namespace P1 {
   namespace UpdateSystem {
 
     UpdateInfoGetter::UpdateInfoGetter(QObject *parrent)
@@ -36,7 +26,7 @@ namespace GGS {
        this->_updateInfoResultCallback->infoGetterUpdateProggress(current, total);
     }
 
-    void UpdateInfoGetter::downloadWarning(bool isError, GGS::Downloader::DownloadResults error)
+    void UpdateInfoGetter::downloadWarning(bool isError, P1::Downloader::DownloadResults error)
     {
       Q_UNUSED(isError);
       Q_UNUSED(error);
@@ -56,7 +46,7 @@ namespace GGS {
         this->_currentDir = currentDir;
     }
 
-    void UpdateInfoGetter::setDownloader(GGS::Downloader::FileDownloaderInterface *downloader)
+    void UpdateInfoGetter::setDownloader(P1::Downloader::FileDownloaderInterface *downloader)
     { 
       if (!downloader) {
         qDebug() << "[ERROR][UpdateInfoGetter][ERROR] No downloader set.";
@@ -106,7 +96,7 @@ namespace GGS {
       this->_downloader->downloadFile(this->_updateCrcUrl, getArchiveFile());
     }
 
-    void UpdateInfoGetter::downloadResult(bool isError, GGS::Downloader::DownloadResults error)
+    void UpdateInfoGetter::downloadResult(bool isError, P1::Downloader::DownloadResults error)
     {
       Q_UNUSED(error);
 
@@ -115,15 +105,15 @@ namespace GGS {
         return;
       }
 
-      GGS::Extractor::ExtractionResult result = this->_extractor->extract(getArchiveFile(), getCurrentDir());
+      P1::Extractor::ExtractionResult result = this->_extractor->extract(getArchiveFile(), getCurrentDir());
       QFile::remove(getArchiveFile());
 
       switch(result){
-      case GGS::Extractor::NoError:
+      case P1::Extractor::NoError:
         this->_updateInfo->clear();
         this->readUpdateInfoXml(getUpdateFile());
         break;
-      case GGS::Extractor::NoArchive:
+      case P1::Extractor::NoArchive:
         this->_updateInfoResultCallback->updateInfoCallback( DownloadError );
         break;
       default:
@@ -261,7 +251,7 @@ namespace GGS {
       this->_updateInfoResultCallback->updateInfoCallback(NoError);
     }
 
-    void UpdateInfoGetter::setResultCallback(GGS::UpdateSystem::UpdateInfoGetterResultInterface *result)
+    void UpdateInfoGetter::setResultCallback(P1::UpdateSystem::UpdateInfoGetterResultInterface *result)
     {
       this->_updateInfoResultCallback = result;
     }

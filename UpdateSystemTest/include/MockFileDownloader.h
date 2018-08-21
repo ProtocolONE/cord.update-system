@@ -1,5 +1,4 @@
-#ifndef _GGS_UPDATESYSTEM_TEST_MOCK_FILE_DOWNLOADER_H_
-#define _GGS_UPDATESYSTEM_TEST_MOCK_FILE_DOWNLOADER_H_
+#pragma once
 
 #include <QtCore/QObject>
 #include <QtCore/QHash>
@@ -10,7 +9,7 @@
 #include <UpdateSystem/Downloader/DownloadResultInterface.h>
 
 class MockFileDownloader: public QObject,
-                          public GGS::Downloader::FileDownloaderInterface
+                          public P1::Downloader::FileDownloaderInterface
 {
   Q_OBJECT
 
@@ -21,7 +20,7 @@ public:
   void addDownloadeInfo(const QString& expectedUrl, const QString& pathToFakeFile);
 
   virtual void downloadFile( const QString& url,const QString& filePath );
-  virtual void setResultCallback( GGS::Downloader::DownloadResultInterface *result );
+  virtual void setResultCallback( P1::Downloader::DownloadResultInterface *result );
   virtual QNetworkReply::NetworkError getNetworkError() { return this->_networkError; }
   
 signals:
@@ -31,7 +30,5 @@ signals:
 private:
   QNetworkReply::NetworkError _networkError;
   QHash<QString, QString> _fakeFiles;
-  GGS::Downloader::DownloadResultInterface *_resultCallback;
+  P1::Downloader::DownloadResultInterface *_resultCallback;
 };
-
-#endif // _GGS_UPDATESYSTEM_TEST_MOCK_FILE_DOWNLOADER_H_

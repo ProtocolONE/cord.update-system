@@ -7,7 +7,7 @@
 #include <QtCore/QTimer>
 #include <QtTest/QSignalSpy>
 
-using namespace GGS::UpdateSystem;
+using namespace P1::UpdateSystem;
 class CheckUpdateHelperTest : public ::testing::Test
 {
 public:
@@ -16,9 +16,9 @@ public:
   void check() {
     QEventLoop loop;
     TestEventLoopFinisher killer(&loop, 50000);
-    QObject::connect(&_helper, SIGNAL(finished(GGS::UpdateSystem::CheckUpdateHelper::Results)), 
+    QObject::connect(&_helper, SIGNAL(finished(P1::UpdateSystem::CheckUpdateHelper::Results)), 
       &killer, SLOT(terminateLoop()));
-    QSignalSpy spy(&_helper, SIGNAL(finished(GGS::UpdateSystem::CheckUpdateHelper::Results)));
+    QSignalSpy spy(&_helper, SIGNAL(finished(P1::UpdateSystem::CheckUpdateHelper::Results)));
 
     QTimer::singleShot(0, &_helper, SLOT(checkUpdate()));
     loop.exec();
@@ -26,7 +26,7 @@ public:
     ASSERT_EQ(1, spy.count());
 
     QList<QVariant> arguments = spy.takeFirst();
-    this->_result = arguments.at(0).value<GGS::UpdateSystem::CheckUpdateHelper::Results>();
+    this->_result = arguments.at(0).value<P1::UpdateSystem::CheckUpdateHelper::Results>();
   }
 
   CheckUpdateHelper::Results _result;
@@ -37,7 +37,7 @@ TEST_F(CheckUpdateHelperTest, FakeUrlTest)
 {
   _helper.setUpdateUrl("fakeUrl");
   check();
-  ASSERT_EQ(GGS::UpdateSystem::CheckUpdateHelper::Error, this->_result);
+  ASSERT_EQ(P1::UpdateSystem::CheckUpdateHelper::Error, this->_result);
 }
 
 TEST_F(CheckUpdateHelperTest, NormalTest)

@@ -1,12 +1,9 @@
-#include <UpdateSystem/CheckUpdateHelper.h>
+#ifndef UPDATESYSTEM_STATIC_LIBRARY
 
 #include <Windows.h>
 #include <QtCore/QMetaType>
 
-void registerTypes()
-{
-  qRegisterMetaType<GGS::UpdateSystem::CheckUpdateHelper::Results>("GGS::UpdateSystem::CheckUpdateHelper::Results");
-}
+#include <UpdateSystem/RegisterTypes.h>
 
 BOOL WINAPI DllMain(
   HINSTANCE hinstDLL,  // handle to DLL module
@@ -22,7 +19,7 @@ BOOL WINAPI DllMain(
   case DLL_PROCESS_ATTACH:
     // Initialize once for each new process.
     // Return FALSE to fail DLL load.
-    registerTypes();
+    P1::UpdateSystem::registerTypes();
     break;
 
   case DLL_THREAD_ATTACH:
@@ -39,3 +36,5 @@ BOOL WINAPI DllMain(
   }
   return TRUE;  // Successful DLL_PROCESS_ATTACH.
 }
+
+#endif

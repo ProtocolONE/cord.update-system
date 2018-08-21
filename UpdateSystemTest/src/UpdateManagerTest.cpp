@@ -1,7 +1,7 @@
 
 
 
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 #include "MemoryLeaksChecker.h"
 
 #include <QtCore/QThread>
@@ -82,25 +82,25 @@ TEST_F(UpdateManagerTest, test1)
 {
   // UNDONE: вынести в поток и сделать нормальный тест
   UpdateManagerTestWorker worker(0);
-  GGS::UpdateSystem::UpdateManager manager(&worker);
+  P1::UpdateSystem::UpdateManager manager(&worker);
 
-  GGS::Extractor::SevenZipExtactor extractor;
-  GGS::Downloader::DownloadManager downloader(&worker);
-  GGS::UpdateSystem::UpdateInfoGetter updateInfoGetter(&worker);
+  P1::Extractor::SevenZipExtactor extractor;
+  P1::Downloader::DownloadManager downloader(&worker);
+  P1::UpdateSystem::UpdateInfoGetter updateInfoGetter(&worker);
   updateInfoGetter.setDownloader(&downloader);
   updateInfoGetter.setExtractor(&extractor);
   updateInfoGetter.setCurrentDir(QCoreApplication::applicationDirPath());
 
   manager.setUpdateInfoGetter(&updateInfoGetter);
 
-  GGS::Hasher::Md5FileHasher hasher;
+  P1::Hasher::Md5FileHasher hasher;
   manager.setFileHasher(&hasher);
 
-  GGS::Downloader::DownloadManager downloader2(&worker);
-  GGS::Downloader::MultiFileDownloader multi;
+  P1::Downloader::DownloadManager downloader2(&worker);
+  P1::Downloader::MultiFileDownloader multi;
   multi.setDownloader(&downloader2);
 
-  GGS::Downloader::MultiFileDownloaderWithExtracter multi2;
+  P1::Downloader::MultiFileDownloaderWithExtracter multi2;
   multi2.setExtractor(&extractor);
   multi2.setMultiDownloader(&multi);
 
@@ -113,20 +113,11 @@ TEST_F(UpdateManagerTest, test1)
   QThread thread;
 
   worker.moveToThread(&thread);
-  
-  //QMetaObject::invokeMethod(&worker, "doSimpleTest", Qt::QueuedConnection);
-
-  //thread.start();
-  //thread.wait(500000);
-  //GGS::Downloader::
-  //manager.set
-  // 
-
 }
 
 TEST_F(UpdateManagerTest, createUpdateWorkerTest)
 {
-  GGS::UpdateSystem::UpdateManagerWorker worker(0);
+  P1::UpdateSystem::UpdateManagerWorker worker(0);
   worker.setWorkingDir(QCoreApplication::applicationDirPath());
   worker.setUpdateUrl(QString("http://fs0.gamenet.ru/update/gna/live/update.crc.7z"));
 }

@@ -1,5 +1,4 @@
-#ifndef _GGS_GAMEDOWNLOADER_TEST_SIGNALCOUNTER_H_
-#define _GGS_GAMEDOWNLOADER_TEST_SIGNALCOUNTER_H_
+#pragma once
 
 #include <QtCore/QObject>
 
@@ -18,5 +17,3 @@ public slots:
 private:
   int _eventCount;
 };
-
-#endif // _GGS_GAMEDOWNLOADER_TEST_SIGNALCOUNTER_H_

@@ -1,15 +1,4 @@
-/****************************************************************************
-** This file is a part of Syncopate Limited GameNet Application or it parts.
-**
-** Copyright (©) 2011 - 2012, Syncopate Limited and/or affiliates.
-** All rights reserved.
-**
-** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
-** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-****************************************************************************/
-
-#ifndef _GGS_UPDATESYSTEM_SEVENZIPEXTRACTOR_H_
-#define _GGS_UPDATESYSTEM_SEVENZIPEXTRACTOR_H_
+#pragma once
 
 #include <UpdateSystem/UpdateSystem_global.h>
 #include <UpdateSystem/Extractor/ExtractorInterface.h>
@@ -19,7 +8,7 @@ namespace SevenZip {
   class SevenZipLibrary;
 }
 
-namespace GGS {
+namespace P1 {
   namespace Extractor {
     class UPDATESYSTEMSHARED_EXPORT SevenZipExtactor : public QObject, public ExtractorInterface 
     {
@@ -37,4 +26,3 @@ namespace GGS {
     };
   }
 }
-#endif //_GGS_UPDATESYSTEM_SEVENZIPEXTRACTOR_H_

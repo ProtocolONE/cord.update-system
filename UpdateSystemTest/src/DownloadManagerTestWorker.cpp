@@ -18,7 +18,7 @@ DownloadManagerTestWorker::~DownloadManagerTestWorker(void)
 
 void DownloadManagerTestWorker::downloadUpdateCrcTest(const QString& uri, const QString& path)
 {
-  this->_manager = new GGS::Downloader::DownloadManager();
+  this->_manager = new P1::Downloader::DownloadManager();
   this->_manager->setResultCallback(this->_resultCallback);
   this->_manager->downloadFile(uri, path);
 }

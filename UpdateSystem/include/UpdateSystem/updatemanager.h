@@ -1,34 +1,23 @@
-/****************************************************************************
-** This file is a part of Syncopate Limited GameNet Application or it parts.
-**
-** Copyright (©) 2011 - 2012, Syncopate Limited and/or affiliates.
-** All rights reserved.
-**
-** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
-** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-****************************************************************************/
+#pragma once
 
-#ifndef UPDATEMANAGER_H
-#define UPDATEMANAGER_H
-
-#include <UpdateSystem/UpdateSystem_global>
+#include <UpdateSystem/UpdateSystem_global.h>
 
 #include <QtCore/QString>
 #include <QtCore/QList>
 
-#include <UpdateSystem/Hasher/FileHashInterface>
+#include <UpdateSystem/Hasher/FileHashInterface.h>
 
-#include <UpdateSystem/Downloader/downloadmanager>
-#include <UpdateSystem/Downloader/MultiFileDownloader>
-#include <UpdateSystem/Downloader/MultiFileDownloadInterface>
+#include <UpdateSystem/Downloader/downloadmanager.h>
+#include <UpdateSystem/Downloader/MultiFileDownloader.h>
+#include <UpdateSystem/Downloader/MultiFileDownloadInterface.h>
 
-#include <UpdateSystem/UpdateFileInfo>
-#include <UpdateSystem/UpdateInfoContainer>
-#include <UpdateSystem/UpdateInfoGetterInterface>
-#include <UpdateSystem/UpdateInfoGetterResultInterface>
-#include <UpdateSystem/UpdateInstallerInterface>
+#include <UpdateSystem/UpdateFileInfo.h>
+#include <UpdateSystem/UpdateInfoContainer.h>
+#include <UpdateSystem/UpdateInfoGetterInterface.h>
+#include <UpdateSystem/UpdateInfoGetterResultInterface.h>
+#include <UpdateSystem/UpdateInstallerInterface.h>
 
-namespace GGS { 
+namespace P1 { 
   namespace UpdateSystem {
 
     enum UpdateState{
@@ -38,7 +27,7 @@ namespace GGS {
 
     class UPDATESYSTEMSHARED_EXPORT UpdateManager : public QObject,
       public UpdateInfoGetterResultInterface,
-      public GGS::Downloader::MultiFileDownloadResultInterface
+      public P1::Downloader::MultiFileDownloadResultInterface
     {
       Q_OBJECT
     public:
@@ -51,10 +40,10 @@ namespace GGS {
       void setTargetDirectory(const QString& targetDirectory); 
       void setUpdateBaseUrl(const QString& baseUrl); 
       void setUpdateSubDir(const QString& updateSubDir);
-      void setFileHasher(GGS::Hasher::FileHashInterface *fileHasher); 
+      void setFileHasher(P1::Hasher::FileHashInterface *fileHasher); 
       void setUpdateInstaller(UpdateInstallerInterface *updateInstaller);
       void setUpdateInfoGetter(UpdateInfoGetterInterface *updateInfoGetter);
-      void setMultiDownloader(GGS::Downloader::MultiFileDownloadInterface *multidownloader);
+      void setMultiDownloader(P1::Downloader::MultiFileDownloadInterface *multidownloader);
 
       const QString& getUpdateSubDir();
 
@@ -62,15 +51,15 @@ namespace GGS {
 
       // MultiFileDownloadResultInterface
       virtual void fileDownloaded(const QString& filePath);
-      virtual void downloadResult( bool isError, GGS::Downloader::DownloadResults error );
+      virtual void downloadResult( bool isError, P1::Downloader::DownloadResults error );
       virtual void downloadProgress( quint64 downloadSize, quint64 currentFileDownloadSize, quint64 currestFileSize );
-      virtual void downloadWarning( bool isError, GGS::Downloader::DownloadResults error );
+      virtual void downloadWarning( bool isError, P1::Downloader::DownloadResults error );
 
     signals:
       void fileDownloadString(QString str);      
       void allCompleted(bool isNeedRestart);
       void downloadUpdateProgress(quint64 currentSize, quint64 totalSize);
-      void downloadUpdateWarning(GGS::Downloader::DownloadResults error);
+      void downloadUpdateWarning(P1::Downloader::DownloadResults error);
 
       void downloadError(int);
       void updateError(int);
@@ -93,8 +82,8 @@ namespace GGS {
       UpdateInfoContainer *_changeContainer;
 
       UpdateInfoGetterInterface *_updateInfoGetter;
-      GGS::Downloader::MultiFileDownloadInterface *_multiDownloader;
-      GGS::Hasher::FileHashInterface *_fileHasher;
+      P1::Downloader::MultiFileDownloadInterface *_multiDownloader;
+      P1::Hasher::FileHashInterface *_fileHasher;
       UpdateInstallerInterface *_updateInstaller;
 
       quint64 _totalUpdateSize;
@@ -102,4 +91,3 @@ namespace GGS {
 
   }
 }
-#endif // UPDATEMANAGER_H

@@ -1,34 +1,79 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="GeneratedFiles\Debug\moc_DownloadManagerTestWorker.cpp" />
-    <ClCompile Include="GeneratedFiles\Debug\moc_UpdateManagerTestWorker.cpp" />
-    <ClCompile Include="GeneratedFiles\Release\moc_DownloadManagerTestWorker.cpp" />
-    <ClCompile Include="GeneratedFiles\Release\moc_UpdateManagerTestWorker.cpp" />
-    <ClCompile Include="src\DownloadManagerTest.cpp" />
-    <ClCompile Include="src\DownloadManagerTestWorker.cpp" />
-    <ClCompile Include="GeneratedFiles\Debug\moc_DownloadInMemoryTestWorker.cpp" />
-    <ClCompile Include="GeneratedFiles\Release\moc_DownloadInMemoryTestWorker.cpp" />
-    <ClCompile Include="src\DownloadInMemoryTestWorker.cpp" />
-    <ClCompile Include="GeneratedFiles\Debug\moc_MockFileDownloader.cpp" />
-    <ClCompile Include="GeneratedFiles\Release\moc_MockFileDownloader.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="src\DownloadInMemoryTest.cpp" />
-    <ClCompile Include="src\DynamicRetryTimeoutTest.cpp" />
-    <ClCompile Include="src\Md5FileHasherTest.cpp" />
-    <ClCompile Include="src\MockFileDownloader.cpp" />
-    <ClCompile Include="src\MemoryLeaksChecker.cpp" />
-    <ClCompile Include="src\MultiFileDownloaderTest.cpp" />
-    <ClCompile Include="src\RetryFileDownloaderTest.cpp" />
-    <ClCompile Include="src\SevenZipExtractorTest.cpp" />
-    <ClCompile Include="src\UpdateFileInfoContainerTest.cpp" />
-    <ClCompile Include="src\UpdateInfoContainerTest.cpp" />
-    <ClCompile Include="src\UpdateInfoGetterTest.cpp" />
-    <ClCompile Include="src\UpdateInstallerTest.cpp" />
-    <ClCompile Include="src\UpdateManagerTest.cpp" />
-    <ClCompile Include="src\UpdateManagerTestWorker.cpp" />
-    <ClCompile Include="src\utils.cpp">
+    <ClCompile Include="SevenZipCompressorTest.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\gmock-gtest-all.cc" />
+    <ClCompile Include="GeneratedFiles\Debug\moc_DownloadInMemoryTestWorker.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_DownloadInMemoryTestWorker.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_DownloadManagerTestWorker.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_DownloadManagerTestWorker.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_MockFileDownloader.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_MockFileDownloader.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_UpdateManagerTestWorker.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_UpdateManagerTestWorker.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Static Release\moc_DownloadInMemoryTestWorker.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Static Debug\moc_DownloadInMemoryTestWorker.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_DownloadInMemoryTestWorker.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_DownloadInMemoryTestWorker.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Static Release\moc_DownloadManagerTestWorker.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Static Debug\moc_DownloadManagerTestWorker.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_DownloadManagerTestWorker.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_DownloadManagerTestWorker.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Static Release\moc_MockFileDownloader.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Static Debug\moc_MockFileDownloader.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_MockFileDownloader.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_MockFileDownloader.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Static Release\moc_SignalCounter.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Static Debug\moc_SignalCounter.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_SignalCounter.cpp">
       <Filter>Generated Files\Debug</Filter>
@@ -36,42 +81,104 @@
     <ClCompile Include="GeneratedFiles\Release\moc_SignalCounter.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="GeneratedFiles\Static Release\moc_TestEventLoopFinisher.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Static Debug\moc_TestEventLoopFinisher.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_TestEventLoopFinisher.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_TestEventLoopFinisher.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="src\TestEventLoopFinisher.cpp">
+    <ClCompile Include="GeneratedFiles\Static Release\moc_UpdateManagerTestWorker.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Static Debug\moc_UpdateManagerTestWorker.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_UpdateManagerTestWorker.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_UpdateManagerTestWorker.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CheckUpdateHelperTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DownloadInMemoryTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DownloadInMemoryTestWorker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DownloadManagerTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DownloadManagerTestWorker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DynamicRetryTimeoutTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Md5FileHasherTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MemoryLeaksChecker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MockFileDownloader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MultiFileDownloaderTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RetryFileDownloaderTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SevenZipExtractorTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\SignalCounter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\CheckUpdateHelperTest.cpp">
+    <ClCompile Include="src\TestEventLoopFinisher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SevenZipCompressorTest.cpp">
+    <ClCompile Include="src\UpdateFileInfoContainerTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UpdateInfoContainerTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UpdateInfoGetterTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UpdateInstallerTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UpdateManagerTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UpdateManagerTestWorker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\MemoryLeaksChecker.h" />
+    <ClInclude Include="deps\gmock\gmock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\gtest\gtest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MemoryLeaksChecker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="include\Utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="include\UpdateManagerTestWorker.h" />
-    <CustomBuild Include="include\DownloadInMemoryTestWorker.h" />
-    <CustomBuild Include="include\DownloadManagerTestWorker.h" />
-    <CustomBuild Include="include\MockFileDownloader.h" />
-    <CustomBuild Include="include\SignalCounter.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\TestEventLoopFinisher.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
@@ -99,5 +206,25 @@
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="include\DownloadInMemoryTestWorker.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="include\DownloadManagerTestWorker.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="include\MockFileDownloader.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="include\SignalCounter.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="include\TestEventLoopFinisher.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="include\UpdateManagerTestWorker.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>

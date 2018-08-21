@@ -1,20 +1,9 @@
-/****************************************************************************
-** This file is a part of Syncopate Limited GameNet Application or it parts.
-**
-** Copyright (©) 2011 - 2012, Syncopate Limited and/or affiliates.
-** All rights reserved.
-**
-** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
-** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-****************************************************************************/
-
-#ifndef _GGS_DOWNLOAD_RESULT_INTERFACE_H_
-#define _GGS_DOWNLOAD_RESULT_INTERFACE_H_
+#pragma once
 
 #include <UpdateSystem/UpdateSystem_global.h>
 #include <QtNetwork/QNetworkReply>
 
-namespace GGS {
+namespace P1 {
   namespace Downloader {
     enum DownloadResults {
       NoError = 0,
@@ -49,4 +38,3 @@ namespace GGS {
     };
   }
 }
-#endif // _GGS_DOWNLOAD_RESULT_INTERFACE_H_

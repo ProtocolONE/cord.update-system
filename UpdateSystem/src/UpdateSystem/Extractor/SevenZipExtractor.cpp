@@ -1,13 +1,3 @@
-/****************************************************************************
-** This file is a part of Syncopate Limited GameNet Application or it parts.
-**
-** Copyright (©) 2011 - 2012, Syncopate Limited and/or affiliates.
-** All rights reserved.
-**
-** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
-** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-****************************************************************************/
-
 #include <UpdateSystem/Extractor/SevenZipExtractor.h>
 #include <SevenZip/SevenZipExtractor.h>
 #include <SevenZip/SevenZipException.h>
@@ -43,7 +33,7 @@
 #define HRESULT_NOT_ENOUGH_SPACE 0x80070070
 
 
-GGS::Extractor::SevenZipExtactor::SevenZipExtactor(QObject *parent)
+P1::Extractor::SevenZipExtactor::SevenZipExtactor(QObject *parent)
   : QObject(parent)
 {
   this->_lib = new SevenZip::SevenZipLibrary;
@@ -51,13 +41,13 @@ GGS::Extractor::SevenZipExtactor::SevenZipExtactor(QObject *parent)
 }
 
 
-GGS::Extractor::SevenZipExtactor::~SevenZipExtactor()
+P1::Extractor::SevenZipExtactor::~SevenZipExtactor()
 {
   delete this->_lib;
 }
 
 
-GGS::Extractor::ExtractionResult GGS::Extractor::SevenZipExtactor::extract(const QString& archivePath, const QString& extractDirectory)
+P1::Extractor::ExtractionResult P1::Extractor::SevenZipExtactor::extract(const QString& archivePath, const QString& extractDirectory)
 {
   if (!QFile::exists(archivePath))
     return NoArchive;
@@ -115,10 +105,10 @@ GGS::Extractor::ExtractionResult GGS::Extractor::SevenZipExtactor::extract(const
     return BadArchive;
   }
 
-  return GGS::Extractor::NoError;
+  return P1::Extractor::NoError;
 }
 
-GGS::Extractor::ExtractionResult GGS::Extractor::SevenZipExtactor::slowExtract(const QString& archivePath, const QString& extractDirectory)
+P1::Extractor::ExtractionResult P1::Extractor::SevenZipExtactor::slowExtract(const QString& archivePath, const QString& extractDirectory)
 {
   wchar_t *archive = new wchar_t[archivePath.size() + 1];
   wchar_t *target = new wchar_t[extractDirectory.size() + 1];

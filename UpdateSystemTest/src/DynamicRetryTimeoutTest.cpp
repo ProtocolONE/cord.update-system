@@ -1,4 +1,4 @@
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 #include "MemoryLeaksChecker.h"
 
 #include <UpdateSystem/Downloader/DynamicRetryTimeout.h>
@@ -29,7 +29,7 @@ private:
 
 TEST_F(DynamicRetryTimeoutTest, EmptyTest)
 {
-  GGS::Downloader::DynamicRetryTimeout timeout;
+  P1::Downloader::DynamicRetryTimeout timeout;
   ASSERT_EQ( 0, timeout.getTimeout(-1) );
   ASSERT_EQ( 0, timeout.getTimeout(0) );
   ASSERT_EQ( 0, timeout.getTimeout(10) );
@@ -37,7 +37,7 @@ TEST_F(DynamicRetryTimeoutTest, EmptyTest)
 
 TEST_F(DynamicRetryTimeoutTest, SingleTest)
 {
-  GGS::Downloader::DynamicRetryTimeout timeout;
+  P1::Downloader::DynamicRetryTimeout timeout;
   timeout.addTimeout(1000);
   ASSERT_EQ( 0, timeout.getTimeout(-1) );
   ASSERT_EQ( 0, timeout.getTimeout(0) );
@@ -47,7 +47,7 @@ TEST_F(DynamicRetryTimeoutTest, SingleTest)
 
 TEST_F(DynamicRetryTimeoutTest, MultiTest)
 {
-  GGS::Downloader::DynamicRetryTimeout timeout;
+  P1::Downloader::DynamicRetryTimeout timeout;
   timeout.addTimeout(1000);
   timeout.addTimeout(2000);
   timeout.addTimeout(3000);

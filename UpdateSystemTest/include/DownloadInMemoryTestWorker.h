@@ -1,5 +1,4 @@
-#ifndef _GGS_TEST_UTILS_DOWNLOAD_IN_MEMORY_WORKER_H_
-#define _GGS_TEST_UTILS_DOWNLOAD_IN_MEMORY_WORKER_H_
+#pragma once
 
 #include <QtCore/QObject>
 #include <QtCore/QByteArray>
@@ -15,7 +14,7 @@ public:
   DownloadInMemoryTestWorker(void);
   virtual ~DownloadInMemoryTestWorker(void);
 
-  GGS::Downloader::MemoryDownloader *_downloader;
+  P1::Downloader::MemoryDownloader *_downloader;
   QByteArray _response;
   bool IsFinished;
 public slots:
@@ -28,5 +27,3 @@ public slots:
   void slotTestShouldNotComplite();
   void slotTestShoulFail();
 };
-
-#endif // _GGS_TEST_UTILS_DOWNLOAD_IN_MEMORY_WORKER_H_

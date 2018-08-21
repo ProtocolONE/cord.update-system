@@ -12,7 +12,7 @@ DownloadInMemoryTestWorker::~DownloadInMemoryTestWorker(void)
 
 void DownloadInMemoryTestWorker::slotStartDowloadFixtureTest()
 {
-  this->_downloader = new GGS::Downloader::MemoryDownloader(this);
+  this->_downloader = new P1::Downloader::MemoryDownloader(this);
   this->IsFinished = false;
   QString uri("http://gnlupdate.tst.local/qgna_memorydownloader_fixture.txt");
   // this->_downloader
@@ -22,7 +22,7 @@ void DownloadInMemoryTestWorker::slotStartDowloadFixtureTest()
 
 void DownloadInMemoryTestWorker::slotFailDownloadTest()
 {
-  this->_downloader = new GGS::Downloader::MemoryDownloader(this);
+  this->_downloader = new P1::Downloader::MemoryDownloader(this);
   this->IsFinished = false;
   
   QString uri;

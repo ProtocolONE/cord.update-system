@@ -1,15 +1,4 @@
-/****************************************************************************
-** This file is a part of Syncopate Limited GameNet Application or it parts.
-**
-** Copyright (©) 2011 - 2012, Syncopate Limited and/or affiliates.
-** All rights reserved.
-**
-** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
-** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-****************************************************************************/
-
-#ifndef FILEDOWNLOADERINTERFACE_H
-#define FILEDOWNLOADERINTERFACE_H
+#pragma once
 
 #include <UpdateSystem/UpdateSystem_global.h>
 #include <UpdateSystem/Downloader/DownloadResultInterface.h>
@@ -17,7 +6,7 @@
 #include <QtCore/QString>
 #include <QtNetwork/QNetworkReply>
 
-namespace GGS {
+namespace P1 {
   namespace Downloader {
 
     class UPDATESYSTEMSHARED_EXPORT FileDownloaderInterface
@@ -34,4 +23,4 @@ namespace GGS {
 
   }
 }
-#endif // FILEDOWNLOADERINTERFACE_H
+

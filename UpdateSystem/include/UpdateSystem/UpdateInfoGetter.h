@@ -1,15 +1,4 @@
-/****************************************************************************
-** This file is a part of Syncopate Limited GameNet Application or it parts.
-**
-** Copyright (©) 2011 - 2012, Syncopate Limited and/or affiliates.
-** All rights reserved.
-**
-** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
-** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-****************************************************************************/
-
-#ifndef _GGS_UPDATESYSTEM_UPDATEINFOGETTER_H_
-#define _GGS_UPDATESYSTEM_UPDATEINFOGETTER_H_
+#pragma once
 
 #include "UpdateSystem_global.h"
 
@@ -28,12 +17,12 @@
 #include <QtCore/QTime>
 #include <QtXml/QDomDocument>
 
-namespace GGS {
+namespace P1 {
   namespace UpdateSystem {
 
     class UPDATESYSTEMSHARED_EXPORT UpdateInfoGetter : public QObject,
-      public GGS::Downloader::DownloadResultInterface,
-      public GGS::UpdateSystem::UpdateInfoGetterInterface
+      public P1::Downloader::DownloadResultInterface,
+      public P1::UpdateSystem::UpdateInfoGetterInterface
     {
       Q_OBJECT
 
@@ -41,19 +30,19 @@ namespace GGS {
       explicit UpdateInfoGetter(QObject *parrent = 0);
       ~UpdateInfoGetter();
 
-      void setResultCallback(GGS::UpdateSystem::UpdateInfoGetterResultInterface *result);
+      void setResultCallback(P1::UpdateSystem::UpdateInfoGetterResultInterface *result);
       void setUpdateCrcUrl(const QString& url);
       void setCurrentDir(const QString& currentDir);
       void setUpdateFileName(const QString& updateFileName);
 
       UpdateInfoContainer *updateInfo() const;
 
-      void setDownloader(GGS::Downloader::FileDownloaderInterface *downloader);
+      void setDownloader(P1::Downloader::FileDownloaderInterface *downloader);
       void setExtractor(Extractor::ExtractorInterface *extractor);
 
-      virtual void downloadResult( bool isError, GGS::Downloader::DownloadResults error );
+      virtual void downloadResult( bool isError, P1::Downloader::DownloadResults error );
       virtual void downloadProgress(quint64 current, quint64 total); 
-      virtual void downloadWarning(bool isError, GGS::Downloader::DownloadResults error);
+      virtual void downloadWarning(bool isError, P1::Downloader::DownloadResults error);
 
     public slots:
       void start();
@@ -73,13 +62,12 @@ namespace GGS {
       QString _currentDir;
       QString _archiveFile;
       QString _updateFile;
-      GGS::Downloader::FileDownloaderInterface *_downloader;
+      P1::Downloader::FileDownloaderInterface *_downloader;
       Extractor::ExtractorInterface *_extractor;
-      GGS::UpdateSystem::UpdateInfoGetterResultInterface *_updateInfoResultCallback;
+      P1::UpdateSystem::UpdateInfoGetterResultInterface *_updateInfoResultCallback;
 
       UpdateInfoContainer *_updateInfo;     
     };
 
   }
 }
-#endif //_GGS_UPDATESYSTEM_UPDATEINFOGETTER_H_

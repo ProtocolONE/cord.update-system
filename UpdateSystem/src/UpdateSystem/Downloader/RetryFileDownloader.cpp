@@ -1,17 +1,7 @@
-/****************************************************************************
-** This file is a part of Syncopate Limited GameNet Application or it parts.
-**
-** Copyright (©) 2011 - 2012, Syncopate Limited and/or affiliates.
-** All rights reserved.
-**
-** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
-** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-****************************************************************************/
-
 #include <UpdateSystem/Downloader/RetryFileDownloader.h>
 #include <UpdateSystem/Downloader/DynamicRetryTimeout.h>
 
-namespace GGS {
+namespace P1 {
   namespace Downloader {
     RetryFileDownloader::RetryFileDownloader(QObject *parrent)
       : QObject(parrent)
@@ -49,7 +39,7 @@ namespace GGS {
       this->_networkError = this->_downloader->getNetworkError();
       this->_retryCount++;
 
-      if(this->_maxRetryCount == GGS::Downloader::DynamicRetryTimeout::InfinityRetryCount || this->_retryCount < this->_maxRetryCount) {
+      if(this->_maxRetryCount == P1::Downloader::DynamicRetryTimeout::InfinityRetryCount || this->_retryCount < this->_maxRetryCount) {
         this->_resultCallback->downloadWarning(true, error);
 
         int timeout = this->_timeout->getTimeout(this->_retryCount);

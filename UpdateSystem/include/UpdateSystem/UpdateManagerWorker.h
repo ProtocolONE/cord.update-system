@@ -1,22 +1,4 @@
-/****************************************************************************
-** This file is a part of Syncopate Limited GameNet Application or it parts.
-**
-** Copyright (©) 2011 - 2012, Syncopate Limited and/or affiliates.
-** All rights reserved.
-**
-** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
-** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-****************************************************************************/
-
-#ifndef _GGS_UPDATESYSTEM_UPDATE_MANAGER_WORKER_H_
-#define _GGS_UPDATESYSTEM_UPDATE_MANAGER_WORKER_H_
-
-//#ifdef _DEBUG
-//  #ifdef WIN32
-//    #include <Windows.h>
-//  #endif
-//  #include <vld.h>
-//#endif
+#pragma once
 
 #include "UpdateSystem_global.h"
 
@@ -34,7 +16,7 @@
 #include <QtCore/QObject>
 #include <QtCore/QString>
 
-namespace GGS {
+namespace P1 {
   namespace UpdateSystem {
 
     class UPDATESYSTEMSHARED_EXPORT UpdateManagerWorker : public QObject
@@ -62,7 +44,7 @@ namespace GGS {
         void fileDownloadedString(QString str);
         void allCompleted(bool isNeedRestart);
         void updateProgressChanged(quint64 currentSize, quint64 totalSize);
-        void updateWarning(GGS::Downloader::DownloadResults error);
+        void updateWarning(P1::Downloader::DownloadResults error);
         void updateError(int);
         void updateStateChanged(int);
         void noUpdatesFound();
@@ -78,10 +60,9 @@ namespace GGS {
       UpdateManager *_manager;
       UpdateInstaller *_updateInstaller;
 
-      GGS::Extractor::SevenZipExtactor *_extractor;
-      GGS::UpdateSystem::UpdateInfoGetter *_updateInfoGetter; 
+      P1::Extractor::SevenZipExtactor *_extractor;
+      P1::UpdateSystem::UpdateInfoGetter *_updateInfoGetter; 
     };
 
   }
 }
-#endif // _GGS_UPDATESYSTEM_UPDATE_MANAGER_WORKER_H_

@@ -1,6 +1,3 @@
-#ifndef _GGS_DOWNLOAD_MANAGER_TEST_H_
-#define _GGS_DOWNLOAD_MANAGER_TEST_H_
-
 #include <UpdateSystem/Downloader/DownloadResultInterface.h>
 #include <UpdateSystem/Downloader/filedownloaderinterface.h>
 
@@ -16,11 +13,11 @@
 #include "SignalCounter.h"
 #include <functional>
 
-class DownloadResultCallback : public GGS::Downloader::DownloadResultInterface
+class DownloadResultCallback : public P1::Downloader::DownloadResultInterface
 {
 public:
   DownloadResultCallback(){
-    this->_downloadResultError = GGS::Downloader::NoError;
+    this->_downloadResultError = P1::Downloader::NoError;
     this->_networkResult = QNetworkReply::NoError;
     this->_downloadResultCalled = false;
     this->_totalResponseSize = 0;
@@ -30,7 +27,7 @@ public:
 
   virtual ~DownloadResultCallback() {};
   
-  void downloadResult(bool isError, GGS::Downloader::DownloadResults error)
+  void downloadResult(bool isError, P1::Downloader::DownloadResults error)
   {
     this->_downloadResultError = error;
     this->_downloadResultCalled = true;
@@ -46,13 +43,13 @@ public:
 
   void setThread(QThread *thread) {this->_thread = thread;}
 
-  virtual void downloadWarning( bool isError, GGS::Downloader::DownloadResults error ) 
+  virtual void downloadWarning( bool isError, P1::Downloader::DownloadResults error ) 
   {
     this->_isWarningCalled = true;
   }
 
   QNetworkReply::NetworkError _networkResult;
-  GGS::Downloader::DownloadResults _downloadResultError;
+  P1::Downloader::DownloadResults _downloadResultError;
   bool _downloadResultCalled;
   quint64 _totalResponseSize;
   bool _downloadProgressCalled;
@@ -63,7 +60,7 @@ private:
   QThread *_thread;
 };
 
-class DownloadManagerResultLamda : public GGS::Downloader::DownloadResultInterface
+class DownloadManagerResultLamda : public P1::Downloader::DownloadResultInterface
 {
 public:
   ~DownloadManagerResultLamda() {}
@@ -73,7 +70,7 @@ public:
     , _downloadWarningFunction(nullptr)
   {}
 
-  virtual void downloadResult( bool isError, GGS::Downloader::DownloadResults error ) 
+  virtual void downloadResult( bool isError, P1::Downloader::DownloadResults error ) 
   {
     if (this->_downloadResultFunction)
       this->_downloadResultFunction(isError, error);
@@ -85,15 +82,15 @@ public:
       this->_downloadProgressFunction(current, total);
   }
 
-  virtual void downloadWarning( bool isError, GGS::Downloader::DownloadResults error ) 
+  virtual void downloadWarning( bool isError, P1::Downloader::DownloadResults error ) 
   {
     if (this->_downloadWarningFunction)
       this->_downloadWarningFunction(isError, error);
   }
 
-  std::tr1::function<void (bool, GGS::Downloader::DownloadResults)> _downloadResultFunction;
+  std::tr1::function<void (bool, P1::Downloader::DownloadResults)> _downloadResultFunction;
   std::tr1::function<void (quint64, quint64)> _downloadProgressFunction;
-  std::tr1::function<void (bool, GGS::Downloader::DownloadResults)> _downloadWarningFunction;
+  std::tr1::function<void (bool, P1::Downloader::DownloadResults)> _downloadWarningFunction;
 
 };
 
@@ -287,7 +284,7 @@ TEST_F(DownloadManagerTest, downloadUpdateCrcFailWithEmptyUrlTest)
   ASSERT_TRUE(resultCallback->_isAnyError);
   ASSERT_TRUE(resultCallback->_downloadResultCalled);
   ASSERT_FALSE(resultCallback->_downloadProgressCalled);
-  ASSERT_EQ(GGS::Downloader::BadUrl, resultCallback->_downloadResultError);
+  ASSERT_EQ(P1::Downloader::BadUrl, resultCallback->_downloadResultError);
   //ASSERT_EQ(QNetworkReply::NetworkError::UnknownNetworkError, test.getNetwork
   //  resultCallback->_downloadResultError);
 
@@ -315,7 +312,7 @@ TEST_F(DownloadManagerTest, downloadUpdateCrcFailWithEmptyFileTest)
   ASSERT_TRUE(resultCallback->_isAnyError);
   ASSERT_TRUE(resultCallback->_downloadResultCalled);
   ASSERT_FALSE(resultCallback->_downloadProgressCalled);
-  ASSERT_EQ(GGS::Downloader::CanNotOpenTargetFile, resultCallback->_downloadResultError);
+  ASSERT_EQ(P1::Downloader::CanNotOpenTargetFile, resultCallback->_downloadResultError);
 
   delete thread;
   delete test;
@@ -324,7 +321,7 @@ TEST_F(DownloadManagerTest, downloadUpdateCrcFailWithEmptyFileTest)
 
 TEST(DownloadManagerTests, FailTest)
 {
-  GGS::Downloader::DownloadManager manager;
+  P1::Downloader::DownloadManager manager;
   QEventLoop loop;
   DownloadManagerResultLamda result;
   int progresCount = 0;
@@ -336,7 +333,7 @@ TEST(DownloadManagerTests, FailTest)
     progresCount++;
   };
 
-  result._downloadResultFunction = [&] (bool isError, GGS::Downloader::DownloadResults result1) mutable {
+  result._downloadResultFunction = [&] (bool isError, P1::Downloader::DownloadResults result1) mutable {
     resultCallCount++;
     if (isError)
       resultIsError++;
@@ -344,7 +341,7 @@ TEST(DownloadManagerTests, FailTest)
     QTimer::singleShot(1000, &loop, SLOT(quit()));
   };
 
-  result._downloadWarningFunction = [&] (bool isError, GGS::Downloader::DownloadResults result1) mutable {
+  result._downloadWarningFunction = [&] (bool isError, P1::Downloader::DownloadResults result1) mutable {
     warningCount++;
     if (isError)
       warningIsError++;
@@ -372,5 +369,3 @@ TEST(DownloadManagerTests, FailTest)
   ASSERT_EQ(0, warningCount);
   ASSERT_EQ(0, warningIsError);
 }
-
-#endif // _GGS_DOWNLOAD_MANAGER_TEST_H_

@@ -1,16 +1,6 @@
-/****************************************************************************
-** This file is a part of Syncopate Limited GameNet Application or it parts.
-**
-** Copyright (©) 2011 - 2012, Syncopate Limited and/or affiliates.
-** All rights reserved.
-**
-** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
-** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-****************************************************************************/
-
 #include <UpdateSystem/Downloader/MultiFileDownloaderWithExtracter.h>
 
-namespace GGS {
+namespace P1 {
   namespace Downloader {
 
     MultiFileDownloaderWithExtracter::MultiFileDownloaderWithExtracter(QObject *parrent)
@@ -42,8 +32,8 @@ namespace GGS {
       int q = filePath.lastIndexOf('/');
       QString extractedFile = filePath.mid(0, q);
 
-      GGS::Extractor::ExtractionResult result = this->_extractor->extract(filePath, extractedFile);
-      if(result != GGS::Extractor::NoError) {
+      P1::Extractor::ExtractionResult result = this->_extractor->extract(filePath, extractedFile);
+      if(result != P1::Extractor::NoError) {
         this->_resultCallback->downloadResult(true, ExtractionError);
         return;
       }
@@ -77,7 +67,7 @@ namespace GGS {
       this->_multiDownloader->setResultCallback(this);
     }
 
-    void MultiFileDownloaderWithExtracter::setExtractor(GGS::Extractor::ExtractorInterface *extractor)
+    void MultiFileDownloaderWithExtracter::setExtractor(P1::Extractor::ExtractorInterface *extractor)
     {
       this->_extractor = extractor;
     }

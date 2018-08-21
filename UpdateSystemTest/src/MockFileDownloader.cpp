@@ -16,21 +16,21 @@ void MockFileDownloader::downloadFile(const QString& url,const QString& filePath
     QString fakeFilePath = this->_fakeFiles[url];
     if(!QFile::exists(fakeFilePath)) {
       this->_networkError = QNetworkReply::HostNotFoundError;
-        this->_resultCallback->downloadResult(true, GGS::Downloader::NetworkErrok);
+        this->_resultCallback->downloadResult(true, P1::Downloader::NetworkErrok);
         return;
     }
 
     if(QFile::exists(filePath)) {
       if(!QFile::remove(filePath)) {
         this->_networkError = QNetworkReply::ContentOperationNotPermittedError;
-        this->_resultCallback->downloadResult(true, GGS::Downloader::NetworkErrok);
+        this->_resultCallback->downloadResult(true, P1::Downloader::NetworkErrok);
         return;
       }
     }
 
     if(!QFile::copy(fakeFilePath, filePath)) {
       this->_networkError = QNetworkReply::ContentOperationNotPermittedError;
-      this->_resultCallback->downloadResult(true, GGS::Downloader::NetworkErrok);
+      this->_resultCallback->downloadResult(true, P1::Downloader::NetworkErrok);
     } else {
       QFileInfo fileInfo(filePath);
       quint64 fileSize = fileInfo.size();
@@ -38,12 +38,12 @@ void MockFileDownloader::downloadFile(const QString& url,const QString& filePath
       this->_resultCallback->downloadProgress(0, fileSize);
       this->_resultCallback->downloadProgress(fileSize, fileSize);
       this->_networkError = QNetworkReply::NoError;
-      this->_resultCallback->downloadResult(false, GGS::Downloader::NoError);
+      this->_resultCallback->downloadResult(false, P1::Downloader::NoError);
     }
 
   } else {
     this->_networkError = QNetworkReply::HostNotFoundError;
-    this->_resultCallback->downloadResult(true, GGS::Downloader::NetworkErrok);
+    this->_resultCallback->downloadResult(true, P1::Downloader::NetworkErrok);
   }
 }
 
@@ -53,7 +53,7 @@ void MockFileDownloader::addDownloadeInfo(const QString& expectedUrl, const QStr
   this->_fakeFiles[expectedUrl] = pathToFakeFile;
 }
 
-void MockFileDownloader::setResultCallback(GGS::Downloader::DownloadResultInterface *result)
+void MockFileDownloader::setResultCallback(P1::Downloader::DownloadResultInterface *result)
 {
   this->_resultCallback = result;
 }

@@ -1,4 +1,4 @@
-#include "gtest\gtest.h"
+#include <gtest/gtest.h>
 
 #include "MemoryLeaksChecker.h"
 
@@ -30,7 +30,7 @@ private:
 
 TEST_F(UpdateFileInfoTest, ConstructorTest) 
 {
-  using GGS::UpdateSystem::UpdateFileInfo;
+  using P1::UpdateSystem::UpdateFileInfo;
   QString path("somefile.txt");
   QString hash("12378902345902345");
   quint64 rawLength = 123123;

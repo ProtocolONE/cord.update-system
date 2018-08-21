@@ -1,13 +1,3 @@
-/****************************************************************************
-** This file is a part of Syncopate Limited GameNet Application or it parts.
-**
-** Copyright (©) 2011 - 2012, Syncopate Limited and/or affiliates.
-** All rights reserved.
-**
-** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
-** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-****************************************************************************/
-
 #include <UpdateSystem/Compressor/ZevenZipCompressor.h>
 #include <SevenZip/SevenZipCompressor.h>
 #include <SevenZip/SevenZipException.h>
@@ -18,9 +8,10 @@
 #include <QtCore/QByteArray>
 #include <QtCore/QFile>
 #include <QTCore/QDir>
+#include <QTCore/QDebug>
 #include <WinError.h>
 
-using namespace GGS::Compressor;
+using namespace P1::Compressor;
 
 SevenZipCompressor::SevenZipCompressor(QObject *parent)
   : QObject(parent), _level(Ultra), _numThreads(1)

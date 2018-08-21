@@ -1,4 +1,4 @@
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 #include "MemoryLeaksChecker.h"
 
 #include <UpdateSystem/Downloader/MultiDownloadResultInterface.h>
@@ -32,7 +32,7 @@ private:
 };
 
 class MultiFileDownloaderTest_MockMultiFileDownloaderResult 
-  : public GGS::Downloader::MultiFileDownloadResultInterface
+  : public P1::Downloader::MultiFileDownloadResultInterface
 {
 public:
   MultiFileDownloaderTest_MockMultiFileDownloaderResult() {
@@ -44,7 +44,7 @@ public:
 
   ~MultiFileDownloaderTest_MockMultiFileDownloaderResult() {};
 
-  virtual void downloadResult( bool isError, GGS::Downloader::DownloadResults error ) 
+  virtual void downloadResult( bool isError, P1::Downloader::DownloadResults error ) 
   {
     this->_resultCalledCount++;
     this->_downloadResult = error;
@@ -57,7 +57,7 @@ public:
     this->_totalProgresList << downloadSize;
   }
 
-  virtual void downloadWarning( bool isError, GGS::Downloader::DownloadResults error ) 
+  virtual void downloadWarning( bool isError, P1::Downloader::DownloadResults error ) 
   {
     this->_warningCalledCount++;
     this->_warningResult = error;
@@ -73,14 +73,14 @@ public:
   quint64 _progressCalledCount;
   quint64 _fileDownloadedCount;
 
-  GGS::Downloader::DownloadResults _downloadResult;
-  GGS::Downloader::DownloadResults _warningResult;
+  P1::Downloader::DownloadResults _downloadResult;
+  P1::Downloader::DownloadResults _warningResult;
 
   QList<quint64> _progresList;
   QList<quint64> _totalProgresList;
 };
 
-class MultiFileDownloaderTest_MockFileDownloaderResult : public GGS::Downloader::DownloadResultInterface{
+class MultiFileDownloaderTest_MockFileDownloaderResult : public P1::Downloader::DownloadResultInterface{
 public:
   MultiFileDownloaderTest_MockFileDownloaderResult() {
     this->_resultCalledCount = 0;
@@ -90,7 +90,7 @@ public:
 
   ~MultiFileDownloaderTest_MockFileDownloaderResult(){}
 
-  virtual void downloadResult( bool isError, GGS::Downloader::DownloadResults error ) 
+  virtual void downloadResult( bool isError, P1::Downloader::DownloadResults error ) 
   {
     this->_resultCalledCount++;
     this->_downloadResult = error;
@@ -101,7 +101,7 @@ public:
     this->_progressCalledCount++;
   }
 
-  virtual void downloadWarning( bool isError, GGS::Downloader::DownloadResults error ) 
+  virtual void downloadWarning( bool isError, P1::Downloader::DownloadResults error ) 
   {
     this->_warningCalledCount++;
     this->_warningResult = error;
@@ -111,17 +111,17 @@ public:
   quint32 _warningCalledCount;
   quint32 _progressCalledCount;
 
-  GGS::Downloader::DownloadResults _downloadResult;
-  GGS::Downloader::DownloadResults _warningResult;
+  P1::Downloader::DownloadResults _downloadResult;
+  P1::Downloader::DownloadResults _warningResult;
 };
 
 class MultiFileDownloaderTest_FailDownloader 
-  : public GGS::Downloader::FileDownloaderInterface {
+  : public P1::Downloader::FileDownloaderInterface {
 public:
   MultiFileDownloaderTest_FailDownloader() { this->_isFail = false; }
   ~MultiFileDownloaderTest_FailDownloader() {}
 
-  virtual void setResultCallback( GGS::Downloader::DownloadResultInterface *result ) 
+  virtual void setResultCallback( P1::Downloader::DownloadResultInterface *result ) 
   {
     this->_resultCallback = result;
   }
@@ -130,15 +130,15 @@ public:
   {
     if(!this->_isFail && this->_fakeFiles.contains(url)) {
       for (int i = 0; i < this->_warningCount; i++) {
-        this->_resultCallback->downloadWarning(true, GGS::Downloader::NetworkErrok);
+        this->_resultCallback->downloadWarning(true, P1::Downloader::NetworkErrok);
       }
 
       quint64 t = this->_fakeFiles[url];
       this->_resultCallback->downloadProgress(t, t);
-      this->_resultCallback->downloadResult(false, GGS::Downloader::NoError);
+      this->_resultCallback->downloadResult(false, P1::Downloader::NoError);
     } else {
       this->_networkError = QNetworkReply::UnknownNetworkError;
-      this->_resultCallback->downloadResult(true, GGS::Downloader::NetworkErrok);
+      this->_resultCallback->downloadResult(true, P1::Downloader::NetworkErrok);
     }
   }
 
@@ -151,14 +151,14 @@ public:
   bool _isFail;
   QHash<QString, quint64 > _fakeFiles;
   QHash<QString, quint64 > _fakeFilesFailCount;
-  GGS::Downloader::DownloadResultInterface *_resultCallback;
+  P1::Downloader::DownloadResultInterface *_resultCallback;
   QNetworkReply::NetworkError _networkError;
 };
 
 
 TEST_F(MultiFileDownloaderTest, FailTest)
 {
-  GGS::Downloader::MultiFileDownloader multidownloader;
+  P1::Downloader::MultiFileDownloader multidownloader;
   
   MultiFileDownloaderTest_FailDownloader failDownloader;
   MultiFileDownloaderTest_MockMultiFileDownloaderResult multiResult;
@@ -171,12 +171,12 @@ TEST_F(MultiFileDownloaderTest, FailTest)
   multidownloader.start();
   
   ASSERT_EQ(1, multiResult._resultCalledCount);
-  ASSERT_EQ(GGS::Downloader::NetworkErrok, multiResult._downloadResult);
+  ASSERT_EQ(P1::Downloader::NetworkErrok, multiResult._downloadResult);
 }
 
 TEST_F(MultiFileDownloaderTest, GoodTest)
 {
-  GGS::Downloader::MultiFileDownloader multidownloader;
+  P1::Downloader::MultiFileDownloader multidownloader;
 
   MultiFileDownloaderTest_FailDownloader failDownloader;
   MultiFileDownloaderTest_MockMultiFileDownloaderResult multiResult; 
@@ -198,7 +198,7 @@ TEST_F(MultiFileDownloaderTest, GoodTest)
 
   ASSERT_EQ(3, multiResult._fileDownloadedCount);
   ASSERT_EQ(1, multiResult._resultCalledCount);
-  ASSERT_EQ(GGS::Downloader::NoError, multiResult._downloadResult);
+  ASSERT_EQ(P1::Downloader::NoError, multiResult._downloadResult);
   
   ASSERT_EQ(10, multiResult._progresList[0]);
   ASSERT_EQ(20, multiResult._progresList[1]);

@@ -1,5 +1,4 @@
-#ifndef UTILS_H
-#define UTILS_H
+#pragma once
  
 #include <QString>
 #include <QDir>
@@ -11,4 +10,3 @@ public:
     static bool removeDir(const QDir &dirName);
 };
  
-#endif // UTILS_H
