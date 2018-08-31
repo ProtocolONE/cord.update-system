@@ -1,0 +1,19 @@
+[settings]
+os=Windows
+arch=x86
+os_build=Windows
+arch_build=x86
+compiler=Visual Studio
+compiler.version=15
+compiler.runtime=MDd
+compiler.toolset=v141_xp
+build_type=Debug
+
+[options]
+shared=False
+SevenZip:shared=False
+
+[build_requires]
+SevenZip/1.0.0@common/stable
+
+[env]
