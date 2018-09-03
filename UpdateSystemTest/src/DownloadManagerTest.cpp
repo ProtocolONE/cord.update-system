@@ -129,7 +129,7 @@ TEST_F(DownloadManagerTest, downloadUpdateCrcTest)
   test->setResultCallback(resultCallback);
   test->moveToThread(thread);
 
-  QString uri("http://gnlupdate.tst.local/qgna_memorydownloader_fixture.txt");
+  QString uri("http://gnlupdate.tst.local/launcher_memorydownloader_fixture.txt");
   QString testDirectory = QCoreApplication::applicationDirPath();
   testDirectory.append("/DownloadManagerTestWorker");
   QDir dir(testDirectory);
@@ -174,7 +174,7 @@ TEST_F(DownloadManagerTest, downloadUpdateCrcInSubDirectoryTest)
   test->setResultCallback(resultCallback);
   test->moveToThread(thread);
 
-  QString uri("http://gnlupdate.tst.local/qgna_memorydownloader_fixture.txt");
+  QString uri("http://gnlupdate.tst.local/launcher_memorydownloader_fixture.txt");
   QString testDirectory = QCoreApplication::applicationDirPath();
   testDirectory.append("/DownloadManagerTestWorker");
   QDir dir(testDirectory);
@@ -219,7 +219,7 @@ TEST_F(DownloadManagerTest, downloadUpdateCrcTest2)
   test->setResultCallback(resultCallback);
   test->moveToThread(thread);
 
-  QString uri("http://gnlupdate.tst.local/qgna_memorydownloader_fixture.txt");
+  QString uri("http://gnlupdate.tst.local/launcher_memorydownloader_fixture.txt");
   QString testDirectory = QCoreApplication::applicationDirPath();
   testDirectory.append("/DownloadManagerTestWorker");
   QDir dir(testDirectory);
@@ -303,7 +303,7 @@ TEST_F(DownloadManagerTest, downloadUpdateCrcFailWithEmptyFileTest)
   test->setResultCallback(resultCallback);
   test->moveToThread(thread);
 
-  QString uri("http://gnlupdate.tst.local/qgna_memorydownloader_fixture.txt");
+  QString uri("http://gnlupdate.tst.local/launcher_memorydownloader_fixture.txt");
   QMetaObject::invokeMethod(test, "downloadUpdateCrcTest", Qt::QueuedConnection, Q_ARG(QString, uri), Q_ARG(QString, 0));
 
   thread->start();
@@ -360,7 +360,7 @@ TEST(DownloadManagerTests, FailTest)
   QString testFilePath = testDirectory;
   testFilePath.append("/update.crc");
   
-  manager.downloadFile("http://fs0w.gamenet.ru/fake.txt", testFilePath);
+  manager.downloadFile("http://fs0w.protocol.one/fake.txt", testFilePath);
   loop.exec();
 
   ASSERT_LT(0, progresCount);

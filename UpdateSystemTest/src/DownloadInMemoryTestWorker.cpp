@@ -14,7 +14,7 @@ void DownloadInMemoryTestWorker::slotStartDowloadFixtureTest()
 {
   this->_downloader = new P1::Downloader::MemoryDownloader(this);
   this->IsFinished = false;
-  QString uri("http://gnlupdate.tst.local/qgna_memorydownloader_fixture.txt");
+  QString uri("http://gnlupdate.tst.local/launcher_memorydownloader_fixture.txt");
   // this->_downloader
   connect(this->_downloader, SIGNAL(downloadComplited()), this, SLOT(slotFixtureDowloadComplite()));
   this->_downloader->DownloadUrl(uri, &this->_response);

@@ -107,7 +107,7 @@ TEST_F(UpdateManagerTest, test1)
   manager.setMultiDownloader(&multi2);
 
   manager.setTargetDirectory(this->workingDir);
-  manager.setUpdateBaseUrl(QString("http://fs0.gamenet.ru/update/gna/live/"));
+  manager.setUpdateBaseUrl(QString("http://fs0.protocol.one/update/gna/live/"));
 
   worker._target = &manager;
   QThread thread;
@@ -119,5 +119,5 @@ TEST_F(UpdateManagerTest, createUpdateWorkerTest)
 {
   P1::UpdateSystem::UpdateManagerWorker worker(0);
   worker.setWorkingDir(QCoreApplication::applicationDirPath());
-  worker.setUpdateUrl(QString("http://fs0.gamenet.ru/update/gna/live/update.crc.7z"));
+  worker.setUpdateUrl(QString("http://fs0.protocol.one/update/gna/live/update.crc.7z"));
 }

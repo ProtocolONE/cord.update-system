@@ -182,14 +182,14 @@ public:
   void XmlUpdateCrcTest(const QString& xmlContent, P1::UpdateSystem::UpdateInfoGetterResults expectedError) 
   {
     MockSimpleStringDownloader downloader;
-    downloader.addDownloadeInfo("http://fs0.gamenet.ru/update/gna/live/update.crc.7z", xmlContent);
+    downloader.addDownloadeInfo("http://fs0.protocol.one/update/gna/live/update.crc.7z", xmlContent);
     MockSimpleCopyExtractor extractor;
     MockUpdateInfoGetterResult getterResult;
 
     P1::UpdateSystem::UpdateInfoGetter getter;
     getter.setCurrentDir(QCoreApplication::applicationDirPath());
     getter.setUpdateFileName("update.crc");
-    getter.setUpdateCrcUrl(QString("http://fs0.gamenet.ru/update/gna/live/update.crc.7z"));
+    getter.setUpdateCrcUrl(QString("http://fs0.protocol.one/update/gna/live/update.crc.7z"));
     getter.setDownloader(&downloader);
     getter.setExtractor(&extractor);
     getter.setResultCallback(&getterResult);
@@ -221,7 +221,7 @@ TEST_F(UpdateInfoGetterTest, DISABLED_NormalUpdateCrcArchiveTest)
   updateCrcFile.append("/fullpack/update.crc.7z");
 
   // Добавляем в доунлоадер update.crc
-  downloader->addDownloadeInfo("http://fs0.gamenet.ru/update/gna/live/update.crc.7z", updateCrcFile);
+  downloader->addDownloadeInfo("http://fs0.protocol.one/update/gna/live/update.crc.7z", updateCrcFile);
 
   P1::Extractor::SevenZipExtactor *extractor = new P1::Extractor::SevenZipExtactor();
   MockSevenZipExtractor mockExtractor(extractor);
@@ -231,7 +231,7 @@ TEST_F(UpdateInfoGetterTest, DISABLED_NormalUpdateCrcArchiveTest)
   MockUpdateInfoGetterResult getterResult;
   getter->setCurrentDir(QCoreApplication::applicationDirPath());
   getter->setUpdateFileName("update.crc");
-  getter->setUpdateCrcUrl(QString("http://fs0.gamenet.ru/update/gna/live/update.crc.7z"));
+  getter->setUpdateCrcUrl(QString("http://fs0.protocol.one/update/gna/live/update.crc.7z"));
   getter->setDownloader(downloader);
   getter->setExtractor(&mockExtractor);
   getter->setResultCallback(&getterResult);
@@ -301,20 +301,20 @@ TEST_F(UpdateInfoGetterTest, BadXmlTest1)
 
    // Отсутствие какого либо из аттрибутов
    this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file crc=\"a26883cf98a9f120a3136cf9dd7abe33\" rawLength=\"2780456\" archiveLength=\"1147688\" check=\"true\" /></files></UpdateFileList>", xmlError);
-   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"GameNet.exe\" rawLength=\"2780456\" archiveLength=\"1147688\" check=\"true\" /></files></UpdateFileList>", xmlError);
-   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"GameNet.exe\" crc=\"a26883cf98a9f120a3136cf9dd7abe33\" archiveLength=\"1147688\" check=\"true\" /></files></UpdateFileList>", xmlError);
-   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"GameNet.exe\" crc=\"a26883cf98a9f120a3136cf9dd7abe33\" rawLength=\"2780456\" check=\"true\" /></files></UpdateFileList>", xmlError);
-   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"GameNet.exe\" crc=\"a26883cf98a9f120a3136cf9dd7abe33\" rawLength=\"2780456\" archiveLength=\"1147688\"/></files></UpdateFileList>", xmlError);
+   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"ProtocolOne.exe\" rawLength=\"2780456\" archiveLength=\"1147688\" check=\"true\" /></files></UpdateFileList>", xmlError);
+   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"ProtocolOne.exe\" crc=\"a26883cf98a9f120a3136cf9dd7abe33\" archiveLength=\"1147688\" check=\"true\" /></files></UpdateFileList>", xmlError);
+   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"ProtocolOne.exe\" crc=\"a26883cf98a9f120a3136cf9dd7abe33\" rawLength=\"2780456\" check=\"true\" /></files></UpdateFileList>", xmlError);
+   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"ProtocolOne.exe\" crc=\"a26883cf98a9f120a3136cf9dd7abe33\" rawLength=\"2780456\" archiveLength=\"1147688\"/></files></UpdateFileList>", xmlError);
 
    // Плохи атрибуты числа/или булеаны
-   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"GameNet.exe\" crc=\"a26883cf98a9f120a3136cf9dd7abe33\" rawLength=\"278a0456\" archiveLength=\"1147688\" check=\"true\" /></files></UpdateFileList>", xmlError);
-   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"GameNet.exe\" crc=\"a26883cf98a9f120a3136cf9dd7abe33\" rawLength=\"-2780456\" archiveLength=\"1147688\" check=\"true\" /></files></UpdateFileList>", xmlError);
-   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"GameNet.exe\" crc=\"a26883cf98a9f120a3136cf9dd7abe33\" rawLength=\"2780456\" archiveLength=\"1147df688\" check=\"true\" /></files></UpdateFileList>", xmlError);
-   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"GameNet.exe\" crc=\"a26883cf98a9f120a3136cf9dd7abe33\" rawLength=\"2780456\" archiveLength=\"-1147688\" check=\"true\" /></files></UpdateFileList>", xmlError);
-   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"GameNet.exe\" crc=\"a26883cf98a9f120a3136cf9dd7abe33\" rawLength=\"2780456\" archiveLength=\"1147688\" check=\"t2rue\" /></files></UpdateFileList>", xmlError);
+   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"ProtocolOne.exe\" crc=\"a26883cf98a9f120a3136cf9dd7abe33\" rawLength=\"278a0456\" archiveLength=\"1147688\" check=\"true\" /></files></UpdateFileList>", xmlError);
+   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"ProtocolOne.exe\" crc=\"a26883cf98a9f120a3136cf9dd7abe33\" rawLength=\"-2780456\" archiveLength=\"1147688\" check=\"true\" /></files></UpdateFileList>", xmlError);
+   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"ProtocolOne.exe\" crc=\"a26883cf98a9f120a3136cf9dd7abe33\" rawLength=\"2780456\" archiveLength=\"1147df688\" check=\"true\" /></files></UpdateFileList>", xmlError);
+   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"ProtocolOne.exe\" crc=\"a26883cf98a9f120a3136cf9dd7abe33\" rawLength=\"2780456\" archiveLength=\"-1147688\" check=\"true\" /></files></UpdateFileList>", xmlError);
+   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"ProtocolOne.exe\" crc=\"a26883cf98a9f120a3136cf9dd7abe33\" rawLength=\"2780456\" archiveLength=\"1147688\" check=\"t2rue\" /></files></UpdateFileList>", xmlError);
 
-   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"GameNet.exe\" crc=\"a26883cf98a9f120a3136cf9dd7abe33\" rawLength=\"2780456\" archiveLength=\"1147688\" check=\"true\" /></UpdateFileList>", xmlError);
-   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"GameNet.exe\" crc=\"a26883cf98a9f120a3136cf9dd7abe33\" rawLength=\"2780456\" archiveLength=\"1147688\" check=\"true\" /></files></UpdateFileList>", P1::UpdateSystem::NoError);
+   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"ProtocolOne.exe\" crc=\"a26883cf98a9f120a3136cf9dd7abe33\" rawLength=\"2780456\" archiveLength=\"1147688\" check=\"true\" /></UpdateFileList>", xmlError);
+   this->XmlUpdateCrcTest("<?xml version=\"1.0\" encoding=\"utf-8\"?><UpdateFileList><files><file path=\"ProtocolOne.exe\" crc=\"a26883cf98a9f120a3136cf9dd7abe33\" rawLength=\"2780456\" archiveLength=\"1147688\" check=\"true\" /></files></UpdateFileList>", P1::UpdateSystem::NoError);
 
 }
 
@@ -327,7 +327,7 @@ TEST_F(UpdateInfoGetterTest, CanNotDownload)
   P1::UpdateSystem::UpdateInfoGetter getter;
   getter.setCurrentDir(QCoreApplication::applicationDirPath());
   getter.setUpdateFileName("update.crc");
-  getter.setUpdateCrcUrl(QString("http://fs0.gamenet.ru/update/gna/live/update.crc.7z"));
+  getter.setUpdateCrcUrl(QString("http://fs0.protocol.one/update/gna/live/update.crc.7z"));
   getter.setDownloader(&downloader);
   getter.setExtractor(&extractor);
   getter.setResultCallback(&getterResult);
@@ -347,7 +347,7 @@ TEST_F(UpdateInfoGetterTest, NoDownloader)
   getter.setDownloader(0);
   getter.setCurrentDir(QCoreApplication::applicationDirPath());
   getter.setUpdateFileName("update.crc");
-  getter.setUpdateCrcUrl(QString("http://fs0.gamenet.ru/update/gna/live/update.crc.7z"));
+  getter.setUpdateCrcUrl(QString("http://fs0.protocol.one/update/gna/live/update.crc.7z"));
   getter.setExtractor(&extractor);
   getter.setResultCallback(&getterResult);
   getter.start();
@@ -365,7 +365,7 @@ TEST_F(UpdateInfoGetterTest, NoExtractor)
   getter.setDownloader(&downloader);
   getter.setCurrentDir(QCoreApplication::applicationDirPath());
   getter.setUpdateFileName("update.crc");
-  getter.setUpdateCrcUrl(QString("http://fs0.gamenet.ru/update/gna/live/update.crc.7z"));
+  getter.setUpdateCrcUrl(QString("http://fs0.protocol.one/update/gna/live/update.crc.7z"));
   getter.setExtractor(0);
   getter.setResultCallback(&getterResult);
   getter.start();

@@ -42,12 +42,12 @@ TEST_F(CheckUpdateHelperTest, FakeUrlTest)
 
 TEST_F(CheckUpdateHelperTest, NormalTest)
 {
-  _helper.setUpdateUrl("http://fs0.gamenet.ru/update/qgna/live/update.crc.7z");
+  _helper.setUpdateUrl("http://fs0.protocol.one/update/launcher/live/update.crc.7z");
   check();
   ASSERT_EQ(CheckUpdateHelper::NotFound, this->_result);
   check();
   ASSERT_EQ(CheckUpdateHelper::NotFound, this->_result);
-  _helper.setUpdateUrl("http://fs0.gamenet.ru/update/qgna/tst/update.crc.7z");
+  _helper.setUpdateUrl("http://fs0.protocol.one/update/launcher/tst/update.crc.7z");
   check();
   ASSERT_EQ(CheckUpdateHelper::FoundUpdate, this->_result);
 }
