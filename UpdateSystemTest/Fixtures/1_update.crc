@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UpdateFileList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <files>
+    <file path="GameNet.exe" crc="a26883cf98a9f120a3136cf9dd7abe33" rawLength="2780456" archiveLength="1147688" check="true" />
+    <file path="тест\GameNet.exe" crc="a26883cf98a9f120a3136cf9dd7abe33" rawLength="17179869184" archiveLength="17179869185" check="false" />
+  </files>
+  <reg_keys />
+</UpdateFileList>

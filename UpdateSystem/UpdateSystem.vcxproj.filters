@@ -4,210 +4,6 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_ZevenZipCompressor.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_ZevenZipCompressor.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_ZevenZipCompressor.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_ZevenZipCompressor.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_downloadmanager.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_downloadmanager.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_downloadmanager.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_downloadmanager.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_DownloadResultInterface.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_DownloadResultInterface.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_DownloadResultInterface.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_DownloadResultInterface.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_DynamicRetryTimeout.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_DynamicRetryTimeout.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_DynamicRetryTimeout.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_DynamicRetryTimeout.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_MemoryDownloader.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_MemoryDownloader.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_MemoryDownloader.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_MemoryDownloader.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_MultiFileDownloader.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_MultiFileDownloader.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_MultiFileDownloader.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_MultiFileDownloader.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_RetryFileDownloader.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_RetryFileDownloader.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_RetryFileDownloader.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_RetryFileDownloader.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_SevenZipExtractor.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_SevenZipExtractor.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_SevenZipExtractor.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_SevenZipExtractor.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_Md5FileHasher.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_Md5FileHasher.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_Md5FileHasher.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_Md5FileHasher.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_CheckUpdateHelper.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_CheckUpdateHelper.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_CheckUpdateHelper.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_CheckUpdateHelper.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_UpdateFileInfo.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_UpdateFileInfo.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_UpdateFileInfo.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_UpdateFileInfo.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_UpdateInfoContainer.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_UpdateInfoContainer.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_UpdateInfoContainer.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_UpdateInfoContainer.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_UpdateInfoGetter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_UpdateInfoGetter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_UpdateInfoGetter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_UpdateInfoGetter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_UpdateInfoGetterResultInterface.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_UpdateInfoGetterResultInterface.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_UpdateInfoGetterResultInterface.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_UpdateInfoGetterResultInterface.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_UpdateInstaller.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_UpdateInstaller.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_UpdateInstaller.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_UpdateInstaller.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_updatemanager.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_updatemanager.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_updatemanager.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_updatemanager.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_UpdateManagerWorker.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_UpdateManagerWorker.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_UpdateManagerWorker.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_UpdateManagerWorker.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\UpdateSystem\Compressor\SevenZipCompressor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -241,17 +37,6 @@
     <ClCompile Include="src\UpdateSystem\RegisterTypes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Debug\moc_ZevenZipCompressor.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc_ZevenZipCompressor.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\UpdateSystem\Compressor\SevenZipCompressor.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug\moc_DownloadResultInterface.cpp">
-      <Filter>Generated Files\Debug</Filter>
     <ClCompile Include="src\UpdateSystem\UpdateFileInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -352,56 +137,56 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="include\UpdateSystem\Compressor\ZevenZipCompressor.h">
+    <QtMoc Include="include\UpdateSystem\Compressor\ZevenZipCompressor.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\UpdateSystem\Downloader\downloadmanager.h">
+    </QtMoc>
+    <QtMoc Include="include\UpdateSystem\Downloader\downloadmanager.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\UpdateSystem\Downloader\DownloadResultInterface.h">
+    </QtMoc>
+    <QtMoc Include="include\UpdateSystem\Downloader\DownloadResultInterface.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\UpdateSystem\Downloader\DynamicRetryTimeout.h">
+    </QtMoc>
+    <QtMoc Include="include\UpdateSystem\Downloader\DynamicRetryTimeout.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\UpdateSystem\Downloader\MemoryDownloader.h">
+    </QtMoc>
+    <QtMoc Include="include\UpdateSystem\Downloader\MemoryDownloader.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\UpdateSystem\Downloader\MultiFileDownloader.h">
+    </QtMoc>
+    <QtMoc Include="include\UpdateSystem\Downloader\MultiFileDownloader.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\UpdateSystem\Downloader\RetryFileDownloader.h">
+    </QtMoc>
+    <QtMoc Include="include\UpdateSystem\Downloader\RetryFileDownloader.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\UpdateSystem\Extractor\SevenZipExtractor.h">
+    </QtMoc>
+    <QtMoc Include="include\UpdateSystem\Extractor\SevenZipExtractor.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\UpdateSystem\Hasher\Md5FileHasher.h">
+    </QtMoc>
+    <QtMoc Include="include\UpdateSystem\Hasher\Md5FileHasher.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\UpdateSystem\CheckUpdateHelper.h">
+    </QtMoc>
+    <QtMoc Include="include\UpdateSystem\CheckUpdateHelper.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\UpdateSystem\UpdateFileInfo.h">
+    </QtMoc>
+    <QtMoc Include="include\UpdateSystem\UpdateFileInfo.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\UpdateSystem\UpdateInfoContainer.h">
+    </QtMoc>
+    <QtMoc Include="include\UpdateSystem\UpdateInfoContainer.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\UpdateSystem\UpdateInfoGetter.h">
+    </QtMoc>
+    <QtMoc Include="include\UpdateSystem\UpdateInfoGetter.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\UpdateSystem\UpdateInfoGetterResultInterface.h">
+    </QtMoc>
+    <QtMoc Include="include\UpdateSystem\UpdateInfoGetterResultInterface.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\UpdateSystem\UpdateInstaller.h">
+    </QtMoc>
+    <QtMoc Include="include\UpdateSystem\UpdateInstaller.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\UpdateSystem\updatemanager.h">
+    </QtMoc>
+    <QtMoc Include="include\UpdateSystem\updatemanager.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\UpdateSystem\UpdateManagerWorker.h">
+    </QtMoc>
+    <QtMoc Include="include\UpdateSystem\UpdateManagerWorker.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
   </ItemGroup>
 </Project>
