@@ -6,50 +6,14 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="deps\gmock-gtest-all.cc" />
-    <ClCompile Include="GeneratedFiles\Debug\moc_DownloadInMemoryTestWorker.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_DownloadInMemoryTestWorker.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_DownloadManagerTestWorker.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_DownloadManagerTestWorker.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_MockFileDownloader.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_MockFileDownloader.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_UpdateManagerTestWorker.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_UpdateManagerTestWorker.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
     <ClCompile Include="src\Utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_DownloadInMemoryTestWorker.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_DownloadInMemoryTestWorker.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_DownloadInMemoryTestWorker.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_DownloadInMemoryTestWorker.cpp">
       <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_DownloadManagerTestWorker.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_DownloadManagerTestWorker.cpp">
-      <Filter>Generated Files</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_DownloadManagerTestWorker.cpp">
       <Filter>Generated Files\Debug</Filter>
@@ -57,47 +21,11 @@
     <ClCompile Include="GeneratedFiles\Release\moc_DownloadManagerTestWorker.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_MockFileDownloader.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_MockFileDownloader.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_MockFileDownloader.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_MockFileDownloader.cpp">
       <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_SignalCounter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_SignalCounter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_SignalCounter.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_SignalCounter.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_TestEventLoopFinisher.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_TestEventLoopFinisher.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_TestEventLoopFinisher.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_TestEventLoopFinisher.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Release\moc_UpdateManagerTestWorker.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Static Debug\moc_UpdateManagerTestWorker.cpp">
-      <Filter>Generated Files</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_UpdateManagerTestWorker.cpp">
       <Filter>Generated Files\Debug</Filter>
@@ -208,23 +136,23 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="include\DownloadInMemoryTestWorker.h">
+    <QtMoc Include="include\DownloadInMemoryTestWorker.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\DownloadManagerTestWorker.h">
+    </QtMoc>
+    <QtMoc Include="include\DownloadManagerTestWorker.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\MockFileDownloader.h">
+    </QtMoc>
+    <QtMoc Include="include\MockFileDownloader.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\SignalCounter.h">
+    </QtMoc>
+    <QtMoc Include="include\SignalCounter.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\TestEventLoopFinisher.h">
+    </QtMoc>
+    <QtMoc Include="include\TestEventLoopFinisher.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="include\UpdateManagerTestWorker.h">
+    </QtMoc>
+    <QtMoc Include="include\UpdateManagerTestWorker.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
   </ItemGroup>
 </Project>
