@@ -24,7 +24,7 @@ namespace P1 {
       Q_OBJECT
 
     public:
-      explicit UpdateManagerWorker(QObject * parrent = 0);
+      explicit UpdateManagerWorker(P1::Extractor::ExtractorInterface* extractor, QObject * parrent = 0);
       ~UpdateManagerWorker(void);
 
       const QString& updateUrl() const { return this->_updateUrl; }
@@ -60,7 +60,7 @@ namespace P1 {
       UpdateManager *_manager;
       UpdateInstaller *_updateInstaller;
 
-      P1::Extractor::SevenZipExtactor *_extractor;
+      P1::Extractor::ExtractorInterface *_extractor;
       P1::UpdateSystem::UpdateInfoGetter *_updateInfoGetter; 
     };
 

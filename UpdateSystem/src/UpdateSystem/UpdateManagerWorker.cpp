@@ -9,12 +9,11 @@ namespace P1 {
     const QString updateSubDir = "update";
     const QString updateCrcFileName = "update.crc";
 
-    UpdateManagerWorker::UpdateManagerWorker(QObject * parrent)
-      : QObject(parrent)
+    UpdateManagerWorker::UpdateManagerWorker(P1::Extractor::ExtractorInterface* extractor,  QObject * parrent)
+      : _extractor(extractor), QObject(parrent)
     {
       this->_updateInfoGetter = new P1::UpdateSystem::UpdateInfoGetter(this);
 
-      this->_extractor = new P1::Extractor::SevenZipExtactor();
       this->_updateInfoGetter->setExtractor(this->_extractor);
 
       P1::Downloader::DynamicRetryTimeout* dynamicRetryTimeout = new P1::Downloader::DynamicRetryTimeout(this);
