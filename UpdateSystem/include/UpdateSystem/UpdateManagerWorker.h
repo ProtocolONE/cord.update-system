@@ -2,8 +2,6 @@
 
 #include "UpdateSystem_global.h"
 
-#include "Extractor/SevenZipExtractor.h"
-
 #include "updatemanager.h"
 #include "UpdateInfoGetter.h"
 #include "Downloader/DynamicRetryTimeout.h"

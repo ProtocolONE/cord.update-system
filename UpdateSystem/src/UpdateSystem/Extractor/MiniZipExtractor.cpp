@@ -84,6 +84,9 @@ ExtractionResult MiniZipExtactor::extractFile(unzFile uf, const QString& extract
 
   if (file_info.size_file_extra > 0) {
 
+    // Read extra fields to obtain unicode filename
+    // see https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT (4.5, 4.6.9)
+
     const char* p = extraFields.data();
     while (p <= extraFields.data() + file_info.size_file_extra - sizeof(short)) {
       
