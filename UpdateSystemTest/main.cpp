@@ -15,7 +15,6 @@
 #include <UpdateSystem/CheckUpdateHelper.h>
 #include <UpdateSystem/RegisterTypes.h>
 
-
 int main(int argc, char *argv[])
 {
   QCoreApplication app(argc, argv);

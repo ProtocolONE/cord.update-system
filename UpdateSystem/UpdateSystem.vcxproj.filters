@@ -55,6 +55,12 @@
     <ClCompile Include="src\UpdateSystem\UpdateManagerWorker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\UpdateSystem\Compressor\MiniZipCompressor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UpdateSystem\Extractor\MiniZipExtractor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -137,9 +143,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="include\UpdateSystem\Compressor\ZevenZipCompressor.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
     <QtMoc Include="include\UpdateSystem\Downloader\downloadmanager.h">
       <Filter>Header Files</Filter>
     </QtMoc>
@@ -186,6 +189,15 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="include\UpdateSystem\UpdateManagerWorker.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="include\UpdateSystem\Compressor\MiniZipCompressor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="include\UpdateSystem\Compressor\SevenZipCompressor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="include\UpdateSystem\Extractor\MiniZipExtractor.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

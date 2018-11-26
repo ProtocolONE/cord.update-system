@@ -41,7 +41,6 @@ bool RemoveDirectoryFull(QDir &aDir)
   return(has_err);
 }
 
-
 TEST(SevenZipExtractor, ExtractTest) 
 {
   QString rootDirPath = QApplication::applicationDirPath();
@@ -71,7 +70,7 @@ TEST(SevenZipExtractor, ExtractTest)
   ASSERT_EQ(P1::Extractor::NoError, result);
 
   QString notExistingArchive = rootDirPath;
-  notExistingArchive.append("some_fake_archive.7z");
+  notExistingArchive.append("\\some_fake_archive.7z");
   result = iextractor->extract(notExistingArchive, workingPath);
   ASSERT_EQ(P1::Extractor::NoArchive, result);
 

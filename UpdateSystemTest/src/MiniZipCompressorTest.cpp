@@ -1,4 +1,4 @@
-#include <gtest/gtest.h>
+﻿#include <gtest/gtest.h>
 
 #include <QtWidgets/QApplication>
 #include <QtCore/QString>
@@ -7,8 +7,7 @@
 #include <QtCore>
 #include <QDebug>
 
-#include <UpdateSystem/Extractor/ExtractorInterface.h>
-#include <UpdateSystem/Compressor/ZevenZipCompressor.h>
+#include <UpdateSystem/Compressor/MiniZipCompressor.h>
 #include <UpdateSystem/Hasher/Md5FileHasher.h>
 
 #define assertFileEqual(f1, f2) { \
@@ -17,28 +16,30 @@
 }
 bool RemoveDirectoryFull(QDir &aDir);
 
-TEST(SevenZipCompressor, CompressorTest) 
+TEST(MiniZipCompressor, CompressorTest) 
 {
-  P1::Compressor::SevenZipCompressor comp;
-  comp.setCompressionLevel(P1::Compressor::SevenZipCompressor::Low);
+  P1::Compressor::MiniZipCompressor comp;
+  comp.setCompressionLevel(P1::Compressor::MiniZipCompressor::Best);
 
   QString rootDirPath = QApplication::applicationDirPath();
   QString fixturePath = rootDirPath;
   fixturePath.append("/UpdateSystemTestFixtures/ca/");
+  //fixturePath += QString::fromUtf16((const char16_t *)L"/Жи-Ши не пеши через Ы/ca/");
 
   QString relativePath("1950/123.txt");
+  //QString relativePath = QString::fromUtf16((const char16_t *)L"1950/첫 번째 주문 .txt");
 
   QString fullSourcePath = fixturePath;
   fullSourcePath.append("live/");
   fullSourcePath.append(relativePath);
 
   QString expectedTarget = fullSourcePath;
-  expectedTarget.append(".7z");
+  expectedTarget.append(".zip");
   
   QString targetPath = fixturePath;
   targetPath.append("new/");
   targetPath.append(relativePath);
-  targetPath.append(".7z");
+  targetPath.append(".zip");
 
   comp.compressFile(fullSourcePath, targetPath);
   ASSERT_TRUE(QFile::exists(targetPath));

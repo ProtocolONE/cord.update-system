@@ -14,17 +14,18 @@
     <ProjectGuid>{BF8B9419-E66E-4286-B6DF-42ABE588D423}</ProjectGuid>
     <Keyword>Qt4VSv1.0</Keyword>
     <ProjectName>UpdateSystemTest</ProjectName>
+    <WindowsTargetPlatformVersion>7.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <PropertyGroup Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">
@@ -76,6 +77,7 @@
       <AdditionalLibraryDirectories>$(QTDIR)\lib;$(ProjectDir)lib;$(SolutionDir)!build\UpdateSystem\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Xmld.lib;Qt5Networkd.lib;Qt5Testd.lib;UpdateSystemX86d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <PreBuildEvent>
       <Command>xcopy /Y /I /R "$(TargetDir)..\..\UpdateSystem\$(ConfigurationName)\*.dll" "$(TargetDir)"
@@ -106,6 +108,7 @@ xcopy /Y /I /R "$(QGNACOMMONDIR)\SevenZip\1.0.vs13\bin\7za.dll" "$(TargetDir)"
       <AdditionalLibraryDirectories>$(QTDIR)\lib;$(ProjectDir)lib;$(SolutionDir)!build\UpdateSystem\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Xml.lib;Qt5Network.lib;Qt5Test.lib;UpdateSystemX86.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <PreBuildEvent>
       <Command>xcopy /Y /I /R "$(TargetDir)..\..\UpdateSystem\$(ConfigurationName)\*.dll" "$(TargetDir)"
@@ -121,7 +124,6 @@ xcopy /Y /I /R "$(QGNACOMMONDIR)\SevenZip\1.0.vs13\bin\7za.dll" "$(TargetDir)"</
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="deps\gmock-gtest-all.cc" />
-    <ClCompile Include="SevenZipCompressorTest.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\CheckUpdateHelperTest.cpp" />
     <ClCompile Include="src\DownloadInMemoryTest.cpp" />
@@ -131,9 +133,12 @@ xcopy /Y /I /R "$(QGNACOMMONDIR)\SevenZip\1.0.vs13\bin\7za.dll" "$(TargetDir)"</
     <ClCompile Include="src\DynamicRetryTimeoutTest.cpp" />
     <ClCompile Include="src\Md5FileHasherTest.cpp" />
     <ClCompile Include="src\MemoryLeaksChecker.cpp" />
+    <ClCompile Include="src\MiniZipCompressorTest.cpp" />
+    <ClCompile Include="src\MiniZipExtractorTest.cpp" />
     <ClCompile Include="src\MockFileDownloader.cpp" />
     <ClCompile Include="src\MultiFileDownloaderTest.cpp" />
     <ClCompile Include="src\RetryFileDownloaderTest.cpp" />
+    <ClCompile Include="src\SevenZipCompressorTest.cpp" />
     <ClCompile Include="src\SevenZipExtractorTest.cpp" />
     <ClCompile Include="src\SignalCounter.cpp" />
     <ClCompile Include="src\TestEventLoopFinisher.cpp" />

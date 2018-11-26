@@ -12,8 +12,10 @@ arch_build=x86
 [options]
 shared=False
 SevenZip:shared=False
+minizip:shared=False
 
 [build_requires]
 SevenZip/1.0.0@common/stable
+minizip/1.2.11@common/stable
 
 [env]

@@ -20,13 +20,13 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v120_xp</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v120_xp</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <PropertyGroup Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">
@@ -100,6 +100,7 @@
       <SubSystem>Windows</SubSystem>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <ShowProgress>NotSet</ShowProgress>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Midl>
       <DefaultCharType>Unsigned</DefaultCharType>
@@ -159,6 +160,7 @@ $(QTDIR)\bin\lupdate.exe "$(ProjectDir)\." -ts "$(ProjectDir)\i18n\$(ProjectName
       </ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Midl>
       <DefaultCharType>Unsigned</DefaultCharType>
@@ -186,6 +188,7 @@ $(QTDIR)\bin\lupdate.exe "$(ProjectDir)\." -ts "$(ProjectDir)\i18n\$(ProjectName
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\UpdateSystem\CheckUpdateHelper.cpp" />
+    <ClCompile Include="src\UpdateSystem\Compressor\MiniZipCompressor.cpp" />
     <ClCompile Include="src\UpdateSystem\Compressor\SevenZipCompressor.cpp" />
     <ClCompile Include="src\UpdateSystem\Downloader\downloadmanager.cpp" />
     <ClCompile Include="src\UpdateSystem\Downloader\DynamicRetryTimeout.cpp" />
@@ -193,6 +196,7 @@ $(QTDIR)\bin\lupdate.exe "$(ProjectDir)\." -ts "$(ProjectDir)\i18n\$(ProjectName
     <ClCompile Include="src\UpdateSystem\Downloader\MultiFileDownloader.cpp" />
     <ClCompile Include="src\UpdateSystem\Downloader\MultiFileDownloaderWithExtracter.cpp" />
     <ClCompile Include="src\UpdateSystem\Downloader\RetryFileDownloader.cpp" />
+    <ClCompile Include="src\UpdateSystem\Extractor\MiniZipExtractor.cpp" />
     <ClCompile Include="src\UpdateSystem\Extractor\SevenZipExtractor.cpp" />
     <ClCompile Include="src\UpdateSystem\Hasher\Md5FileHasher.cpp" />
     <ClCompile Include="src\UpdateSystem\RegisterTypes.cpp" />
@@ -206,7 +210,14 @@ $(QTDIR)\bin\lupdate.exe "$(ProjectDir)\." -ts "$(ProjectDir)\i18n\$(ProjectName
   <ItemGroup>
     <QtMoc Include="include\UpdateSystem\CheckUpdateHelper.h" />
     <ClInclude Include="include\UpdateSystem\Compressor\CompressorInferface.h" />
-    <QtMoc Include="include\UpdateSystem\Compressor\ZevenZipCompressor.h" />
+    <QtMoc Include="include\UpdateSystem\Compressor\SevenZipCompressor.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)include;.\GeneratedFiles\$(ConfigurationName)\.;.\GeneratedFiles;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtXml;$(QTDIR)\include;d:\.conan\minizip\1.2.11\common\stable\package\3d16d926de9b3b06034ae1de4c796a92cf92b401\include;d:\.conan\minizip\1.2.11\common\stable\package\3d16d926de9b3b06034ae1de4c796a92cf92b401\include\minizip;d:\.conan\Qt\5.5.1\common\stable\package\333e69ac00eb936364053dce8d4cab2a1a5a9a11\include;d:\.conan\SevenZip\1.0.0\common\stable\package\3d16d926de9b3b06034ae1de4c796a92cf92b401\include;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)include;.\GeneratedFiles\$(ConfigurationName)\.;.\GeneratedFiles;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtXml;$(QTDIR)\include;d:\.conan\minizip\1.2.11\common\stable\package\4a4dee728f45654d729e8a4562482100aaab855b\include;d:\.conan\minizip\1.2.11\common\stable\package\4a4dee728f45654d729e8a4562482100aaab855b\include\minizip;d:\.conan\Qt\5.5.1\common\stable\package\333e69ac00eb936364053dce8d4cab2a1a5a9a11\include;d:\.conan\SevenZip\1.0.0\common\stable\package\4a4dee728f45654d729e8a4562482100aaab855b\include;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+    </QtMoc>
+    <QtMoc Include="include\UpdateSystem\Compressor\MiniZipCompressor.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)include;.\GeneratedFiles\$(ConfigurationName)\.;.\GeneratedFiles;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtXml;$(QTDIR)\include;d:\.conan\minizip\1.2.11\common\stable\package\3d16d926de9b3b06034ae1de4c796a92cf92b401\include;d:\.conan\minizip\1.2.11\common\stable\package\3d16d926de9b3b06034ae1de4c796a92cf92b401\include\minizip;d:\.conan\Qt\5.5.1\common\stable\package\333e69ac00eb936364053dce8d4cab2a1a5a9a11\include;d:\.conan\SevenZip\1.0.0\common\stable\package\3d16d926de9b3b06034ae1de4c796a92cf92b401\include;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)include;.\GeneratedFiles\$(ConfigurationName)\.;.\GeneratedFiles;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtXml;$(QTDIR)\include;d:\.conan\minizip\1.2.11\common\stable\package\4a4dee728f45654d729e8a4562482100aaab855b\include;d:\.conan\minizip\1.2.11\common\stable\package\4a4dee728f45654d729e8a4562482100aaab855b\include\minizip;d:\.conan\Qt\5.5.1\common\stable\package\333e69ac00eb936364053dce8d4cab2a1a5a9a11\include;d:\.conan\SevenZip\1.0.0\common\stable\package\4a4dee728f45654d729e8a4562482100aaab855b\include;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+    </QtMoc>
     <ClInclude Include="include\UpdateSystem\Downloader\DownloadInMemoryInterface.h" />
     <QtMoc Include="include\UpdateSystem\Downloader\downloadmanager.h" />
     <QtMoc Include="include\UpdateSystem\Downloader\DownloadResultInterface.h" />
@@ -221,6 +232,10 @@ $(QTDIR)\bin\lupdate.exe "$(ProjectDir)\." -ts "$(ProjectDir)\i18n\$(ProjectName
     <ClInclude Include="include\UpdateSystem\Downloader\RetryTimeoutInterface.h" />
     <ClInclude Include="include\UpdateSystem\Extractor\ExtractorInterface.h" />
     <QtMoc Include="include\UpdateSystem\Extractor\SevenZipExtractor.h" />
+    <QtMoc Include="include\UpdateSystem\Extractor\MiniZipExtractor.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)include;.\GeneratedFiles\$(ConfigurationName)\.;.\GeneratedFiles;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtXml;$(QTDIR)\include;d:\.conan\minizip\1.2.11\common\stable\package\3d16d926de9b3b06034ae1de4c796a92cf92b401\include;d:\.conan\minizip\1.2.11\common\stable\package\3d16d926de9b3b06034ae1de4c796a92cf92b401\include\minizip;d:\.conan\Qt\5.5.1\common\stable\package\333e69ac00eb936364053dce8d4cab2a1a5a9a11\include;d:\.conan\SevenZip\1.0.0\common\stable\package\3d16d926de9b3b06034ae1de4c796a92cf92b401\include;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)include;.\GeneratedFiles\$(ConfigurationName)\.;.\GeneratedFiles;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtXml;$(QTDIR)\include;d:\.conan\minizip\1.2.11\common\stable\package\4a4dee728f45654d729e8a4562482100aaab855b\include;d:\.conan\minizip\1.2.11\common\stable\package\4a4dee728f45654d729e8a4562482100aaab855b\include\minizip;d:\.conan\Qt\5.5.1\common\stable\package\333e69ac00eb936364053dce8d4cab2a1a5a9a11\include;d:\.conan\SevenZip\1.0.0\common\stable\package\4a4dee728f45654d729e8a4562482100aaab855b\include;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+    </QtMoc>
     <ClInclude Include="include\UpdateSystem\Hasher\FileHashInterface.h" />
     <QtMoc Include="include\UpdateSystem\Hasher\Md5FileHasher.h" />
     <ClInclude Include="include\UpdateSystem\RegisterTypes.h" />

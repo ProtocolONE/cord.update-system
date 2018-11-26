@@ -1,4 +1,4 @@
-#include <UpdateSystem/Compressor/ZevenZipCompressor.h>
+#include <UpdateSystem/Compressor/SevenZipCompressor.h>
 #include <SevenZip/SevenZipCompressor.h>
 #include <SevenZip/SevenZipException.h>
 #include <SevenZip/OpenArchiveException.h>
