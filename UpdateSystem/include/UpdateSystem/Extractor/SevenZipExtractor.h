@@ -10,12 +10,12 @@ namespace SevenZip {
 
 namespace P1 {
   namespace Extractor {
-    class UPDATESYSTEMSHARED_EXPORT SevenZipExtactor : public QObject, public ExtractorInterface 
+    class UPDATESYSTEMSHARED_EXPORT SevenZipExtractor : public QObject, public ExtractorInterface 
     {
       Q_OBJECT
     public:
-      explicit SevenZipExtactor(QObject *parent = 0);
-      ~SevenZipExtactor();
+      explicit SevenZipExtractor(QObject *parent = 0);
+      ~SevenZipExtractor();
 
       ExtractionResult extract(const QString& archivePath, const QString& extractDirectory);
 

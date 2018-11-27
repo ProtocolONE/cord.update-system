@@ -32,7 +32,7 @@ TEST(MiniZipExtractor, ExtractTest)
   normalArchive.append("1_update.crc.zip");
   //normalArchive += QString::fromUtf16((const char16_t *)L"첫 번째 주문 .zip");
 
-  P1::Extractor::MiniZipExtactor *extractor = new P1::Extractor::MiniZipExtactor();
+  P1::Extractor::MiniZipExtractor *extractor = new P1::Extractor::MiniZipExtractor();
   P1::Extractor::ExtractorInterface *iextractor = static_cast<P1::Extractor::ExtractorInterface *>(extractor);
   P1::Extractor::ExtractionResult result = iextractor->extract(normalArchive, workingPath);
 

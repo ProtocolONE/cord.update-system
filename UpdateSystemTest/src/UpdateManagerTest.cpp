@@ -84,7 +84,7 @@ TEST_F(UpdateManagerTest, test1)
   UpdateManagerTestWorker worker(0);
   P1::UpdateSystem::UpdateManager manager(&worker);
 
-  P1::Extractor::SevenZipExtactor extractor;
+  P1::Extractor::SevenZipExtractor extractor;
   P1::Downloader::DownloadManager downloader(&worker);
   P1::UpdateSystem::UpdateInfoGetter updateInfoGetter(&worker);
   updateInfoGetter.setDownloader(&downloader);

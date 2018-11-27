@@ -15,16 +15,16 @@
 
 using namespace P1::Extractor;
 
-MiniZipExtactor::MiniZipExtactor(QObject *parent)
+MiniZipExtractor::MiniZipExtractor(QObject *parent)
   : QObject(parent)
 {
 }
 
-MiniZipExtactor::~MiniZipExtactor()
+MiniZipExtractor::~MiniZipExtractor()
 {
 }
 
-ExtractionResult MiniZipExtactor::extract(const QString& archivePath, const QString& extractDirectory)
+ExtractionResult MiniZipExtractor::extract(const QString& archivePath, const QString& extractDirectory)
 {
   if (!QFile::exists(archivePath))
     return NoArchive;
@@ -66,7 +66,7 @@ ExtractionResult MiniZipExtactor::extract(const QString& archivePath, const QStr
   return P1::Extractor::NoError;
 }
 
-ExtractionResult MiniZipExtactor::extractFile(unzFile uf, const QString& extractDirectory) const
+ExtractionResult MiniZipExtractor::extractFile(unzFile uf, const QString& extractDirectory) const
 {
   unz_file_info64 file_info;
   std::vector<char> filename;
@@ -146,7 +146,7 @@ ExtractionResult MiniZipExtactor::extractFile(unzFile uf, const QString& extract
   return NoError;
 }
 
-std::wstring MiniZipExtactor::a2w(const std::string& str) const
+std::wstring MiniZipExtractor::a2w(const std::string& str) const
 {
   std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>, wchar_t> conversion;
   return conversion.from_bytes(str);

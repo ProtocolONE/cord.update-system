@@ -12,12 +12,12 @@ typedef void* unzFile;
 
 namespace P1 {
   namespace Extractor {
-    class UPDATESYSTEMSHARED_EXPORT MiniZipExtactor : public QObject, public ExtractorInterface 
+    class UPDATESYSTEMSHARED_EXPORT MiniZipExtractor : public QObject, public ExtractorInterface 
     {
       Q_OBJECT
     public:
-      explicit MiniZipExtactor(QObject *parent = 0);
-      ~MiniZipExtactor();
+      explicit MiniZipExtractor(QObject *parent = 0);
+      ~MiniZipExtractor();
 
       ExtractionResult extract(const QString& archivePath, const QString& extractDirectory);
 

@@ -60,7 +60,7 @@ TEST(SevenZipExtractor, ExtractTest)
   QString normalArchive = fixturePath;
   normalArchive.append("1_update.crc.7z");
 
-  P1::Extractor::SevenZipExtactor *extractor = new P1::Extractor::SevenZipExtactor();
+  P1::Extractor::SevenZipExtractor *extractor = new P1::Extractor::SevenZipExtractor();
   P1::Extractor::ExtractorInterface *iextractor = static_cast<P1::Extractor::ExtractorInterface *>(extractor);
   P1::Extractor::ExtractionResult result = iextractor->extract(normalArchive, workingPath);
 

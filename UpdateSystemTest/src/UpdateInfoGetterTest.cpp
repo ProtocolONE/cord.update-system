@@ -223,7 +223,7 @@ TEST_F(UpdateInfoGetterTest, DISABLED_NormalUpdateCrcArchiveTest)
   // Добавляем в доунлоадер update.crc
   downloader->addDownloadeInfo("http://fs0.protocol.one/update/gna/live/update.crc.7z", updateCrcFile);
 
-  P1::Extractor::SevenZipExtactor *extractor = new P1::Extractor::SevenZipExtactor();
+  P1::Extractor::SevenZipExtractor *extractor = new P1::Extractor::SevenZipExtractor();
   MockSevenZipExtractor mockExtractor(extractor);
 
   P1::UpdateSystem::UpdateInfoGetter *getter = new P1::UpdateSystem::UpdateInfoGetter();

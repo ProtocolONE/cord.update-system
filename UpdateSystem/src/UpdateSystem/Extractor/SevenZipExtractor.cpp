@@ -33,7 +33,7 @@
 #define HRESULT_NOT_ENOUGH_SPACE 0x80070070
 
 
-P1::Extractor::SevenZipExtactor::SevenZipExtactor(QObject *parent)
+P1::Extractor::SevenZipExtractor::SevenZipExtractor(QObject *parent)
   : QObject(parent)
 {
   this->_lib = new SevenZip::SevenZipLibrary;
@@ -41,13 +41,13 @@ P1::Extractor::SevenZipExtactor::SevenZipExtactor(QObject *parent)
 }
 
 
-P1::Extractor::SevenZipExtactor::~SevenZipExtactor()
+P1::Extractor::SevenZipExtractor::~SevenZipExtractor()
 {
   delete this->_lib;
 }
 
 
-P1::Extractor::ExtractionResult P1::Extractor::SevenZipExtactor::extract(const QString& archivePath, const QString& extractDirectory)
+P1::Extractor::ExtractionResult P1::Extractor::SevenZipExtractor::extract(const QString& archivePath, const QString& extractDirectory)
 {
   if (!QFile::exists(archivePath))
     return NoArchive;
@@ -108,7 +108,7 @@ P1::Extractor::ExtractionResult P1::Extractor::SevenZipExtactor::extract(const Q
   return P1::Extractor::NoError;
 }
 
-P1::Extractor::ExtractionResult P1::Extractor::SevenZipExtactor::slowExtract(const QString& archivePath, const QString& extractDirectory)
+P1::Extractor::ExtractionResult P1::Extractor::SevenZipExtractor::slowExtract(const QString& archivePath, const QString& extractDirectory)
 {
   wchar_t *archive = new wchar_t[archivePath.size() + 1];
   wchar_t *target = new wchar_t[extractDirectory.size() + 1];
